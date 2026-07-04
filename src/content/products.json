@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Atlas CRM",
+    "status": "In Development",
+    "oneLiner": "A lightweight CRM for small teams that live in WhatsApp — every inquiry, one inbox, zero spreadsheets.",
+    "link": ""
+  },
+  {
+    "name": "Bookably",
+    "status": "Beta",
+    "oneLiner": "Simple appointment booking for clinics — patients book in seconds, your front desk breathes again.",
+    "link": ""
+  },
+  {
+    "name": "LaunchKit",
+    "status": "In Development",
+    "oneLiner": "Conversion-tested landing page blocks that let us ship campaign pages in a day, not a month.",
+    "link": ""
+  }
+]

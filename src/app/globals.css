@@ -1,0 +1,500 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ── Theme tokens ─────────────────────────────────────────────────────
+   Change --accent below to rebrand the entire site (pending final brand
+   confirmation — emerald is the working default). */
+:root {
+  --accent: #22c55e;
+  --accent-strong: #4ade80;
+  --accent-ink: #04250f;
+
+  --bg: #0a0a0a;
+  --surface: #101012;
+  --card: #141417;
+  --fg: #f4f4f5;
+  --muted: #a2a2ab;
+  --line: rgba(255, 255, 255, 0.09);
+  --glass: rgba(255, 255, 255, 0.05);
+  --accent-fg: var(--accent-strong);
+  --blob-opacity: 0.45;
+}
+
+:root[data-theme="light"] {
+  --bg: #fafafa;
+  --surface: #f1f1f3;
+  --card: #ffffff;
+  --fg: #131316;
+  --muted: #5c5c66;
+  --line: rgba(19, 19, 22, 0.1);
+  --glass: rgba(255, 255, 255, 0.55);
+  --accent-fg: #15803d;
+  --blob-opacity: 0.28;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-fg: var(--accent-fg);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ── Base ───────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  /* Content protection: nothing on the site is selectable… */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* …except form fields, which stay fully usable. */
+input,
+textarea,
+select {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+img,
+svg {
+  -webkit-user-drag: none;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Smooth theme switch — class applied briefly by the toggle. */
+.theme-anim,
+.theme-anim *,
+.theme-anim *::before,
+.theme-anim *::after {
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease !important;
+}
+
+/* ── Layout primitives ──────────────────────────────────────────────── */
+.wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 76rem;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    padding-inline: 2rem;
+  }
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
+  border-radius: 1.25rem;
+}
+
+/* ── Scroll reveals (animate only when JS is present) ───────────────── */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--rd, 0ms);
+}
+
+html.js .reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Hero ambience (home hero only) ─────────────────────────────────── */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: var(--blob-opacity);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.hero-blob--a {
+  width: 34rem;
+  height: 34rem;
+  top: -12%;
+  left: 56%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    color-mix(in srgb, var(--accent) 55%, transparent),
+    transparent 65%
+  );
+  animation: drift-a 22s ease-in-out infinite alternate;
+}
+
+.hero-blob--b {
+  width: 30rem;
+  height: 30rem;
+  bottom: -22%;
+  left: -12%;
+  background: radial-gradient(
+    circle at 60% 40%,
+    color-mix(in srgb, var(--accent) 24%, transparent),
+    transparent 60%
+  );
+  opacity: calc(var(--blob-opacity) * 0.7);
+  animation: drift-b 28s ease-in-out infinite alternate;
+}
+
+@keyframes drift-a {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-8rem, 5rem, 0) scale(1.18);
+  }
+}
+
+@keyframes drift-b {
+  from {
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  to {
+    transform: translate3d(6rem, -4rem, 0) scale(0.95);
+  }
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 90% 65% at 50% 35%, black 15%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 65% at 50% 35%, black 15%, transparent 78%);
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.tw-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.1em;
+  background: var(--accent);
+  animation: caret-blink 1.1s steps(2) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.scroll-hint {
+  width: 1.5px;
+  height: 3rem;
+  background: linear-gradient(var(--accent), transparent);
+  animation: hint-drop 1.8s ease-in-out infinite;
+  transform-origin: top;
+}
+
+@keyframes hint-drop {
+  0% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+/* ── Bento cells ────────────────────────────────────────────────────── */
+.bento-cell {
+  background:
+    linear-gradient(
+      155deg,
+      color-mix(in srgb, var(--tint, var(--accent)) 9%, transparent) 0%,
+      transparent 55%
+    ),
+    var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.bento-cell:hover {
+  border-color: color-mix(in srgb, var(--tint, var(--accent)) 45%, var(--line));
+  transform: translateY(-3px);
+}
+
+/* ── Accordion ──────────────────────────────────────────────────────── */
+.acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.acc-panel > div {
+  overflow: hidden;
+}
+
+.acc-open .acc-panel {
+  grid-template-rows: 1fr;
+}
+
+/* ── Custom cursor (bullseye) ───────────────────────────────────────── */
+@media (pointer: fine) and (min-width: 1024px) {
+  html[data-cursor="on"],
+  html[data-cursor="on"] * {
+    cursor: none !important;
+  }
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.cursor-live .cursor-dot,
+.cursor-live .cursor-ring {
+  opacity: 1;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--cursor-c, var(--accent));
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--cursor-c, var(--accent));
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    opacity 0.2s ease;
+}
+
+.cursor-ring::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--cursor-c, var(--accent));
+  border-right-color: var(--cursor-c, var(--accent));
+  opacity: 0;
+}
+
+.is-hover {
+  --cursor-c: var(--fg);
+}
+
+.is-hover .cursor-ring {
+  width: 52px;
+  height: 52px;
+}
+
+.is-down .cursor-ring {
+  width: 22px;
+  height: 22px;
+  background: var(--cursor-c, var(--accent));
+}
+
+.is-down .cursor-dot {
+  opacity: 0;
+}
+
+.is-loading .cursor-ring {
+  width: 46px;
+  height: 46px;
+  border-color: transparent;
+}
+
+.is-loading .cursor-ring::after {
+  opacity: 1;
+  animation: cursor-spin 0.7s linear infinite;
+}
+
+@keyframes cursor-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Footer wordmark ────────────────────────────────────────────────── */
+.footer-word {
+  font-size: clamp(4rem, 15vw, 13rem);
+  line-height: 0.9;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--fg) 16%, transparent);
+  pointer-events: none;
+}
+
+/* ── Prose (blog posts & legal pages) ───────────────────────────────── */
+.prose {
+  line-height: 1.75;
+}
+
+.prose p {
+  color: var(--muted);
+  margin-block: 1.1rem;
+}
+
+.prose h2 {
+  color: var(--fg);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose h3 {
+  color: var(--fg);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose ul,
+.prose ol {
+  color: var(--muted);
+  padding-left: 1.4rem;
+  margin-block: 1.1rem;
+}
+
+.prose ul {
+  list-style: disc;
+}
+
+.prose ol {
+  list-style: decimal;
+}
+
+.prose li {
+  margin-block: 0.45rem;
+}
+
+.prose li::marker {
+  color: var(--accent-fg);
+}
+
+.prose strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.prose a {
+  color: var(--accent-fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  margin-block: 1.5rem;
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin-block: 2.5rem;
+}
+
+.prose code {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.15em 0.4em;
+  font-size: 0.9em;
+}
+
+/* ── Reduced motion: calm everything down ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-blob--a,
+  .hero-blob--b,
+  .tw-caret,
+  .scroll-hint {
+    animation: none;
+  }
+
+  .theme-anim,
+  .theme-anim *,
+  .theme-anim *::before,
+  .theme-anim *::after {
+    transition: none !important;
+  }
+}

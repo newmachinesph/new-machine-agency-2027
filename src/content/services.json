@@ -1,0 +1,92 @@
+[
+  {
+    "phase": 1,
+    "slug": "website-design",
+    "name": "Website Design",
+    "icon": "monitor",
+    "tint": "#22c55e",
+    "outcome": "Websites that turn visitors into inquiries.",
+    "description": "A custom-designed website built around one job: convincing your visitors to get in touch. Fast, mobile-first and designed to look like the business you want to be — not a template everyone has seen before.",
+    "includes": [
+      "Custom design (no templates)",
+      "Mobile-first build",
+      "Copy guidance for every page",
+      "Contact & inquiry flows",
+      "Speed & SEO foundations",
+      "Analytics setup"
+    ],
+    "forWho": "Businesses whose current site looks dated, loads slowly, or simply doesn't bring in customers."
+  },
+  {
+    "phase": 1,
+    "slug": "landing-pages",
+    "name": "Landing Pages",
+    "icon": "zap",
+    "tint": "#38bdf8",
+    "outcome": "Focused pages built to convert one visitor into one action.",
+    "description": "One page, one goal. Whether it's bookings, sign-ups or sales, we design landing pages that remove distractions and guide every visitor toward a single clear action.",
+    "includes": [
+      "Conversion-focused layout",
+      "Persuasive copy structure",
+      "A/B-test-ready sections",
+      "Fast load times",
+      "Form or WhatsApp capture",
+      "Campaign tracking setup"
+    ],
+    "forWho": "Anyone running ads or campaigns who needs clicks to actually become customers."
+  },
+  {
+    "phase": 1,
+    "slug": "corporate-websites",
+    "name": "Corporate Websites",
+    "icon": "building",
+    "tint": "#a78bfa",
+    "outcome": "A credible home for your company that wins trust before the first call.",
+    "description": "For established companies, your website is your handshake. We build corporate sites that communicate scale, credibility and professionalism — so prospects arrive at the meeting already convinced.",
+    "includes": [
+      "Multi-page architecture",
+      "Team, services & project sections",
+      "Multilingual-ready structure",
+      "Careers & news modules",
+      "Brand-consistent design system",
+      "Easy content updates"
+    ],
+    "forWho": "Established companies whose online presence hasn't caught up with their real-world reputation."
+  },
+  {
+    "phase": 1,
+    "slug": "social-media-management",
+    "name": "Social Media Management",
+    "icon": "share",
+    "tint": "#f472b6",
+    "outcome": "Consistent, on-brand content that keeps you in front of your audience.",
+    "description": "Posting consistently is hard when you're running a business. We plan, design and publish content that sounds like you, looks professional, and keeps your brand top-of-mind.",
+    "includes": [
+      "Monthly content calendar",
+      "Branded post & story design",
+      "Caption writing",
+      "Scheduling & publishing",
+      "Community engagement",
+      "Monthly performance report"
+    ],
+    "forWho": "Businesses that know they should be active on social media but don't have the time or team to do it well."
+  },
+  {
+    "phase": 1,
+    "slug": "lead-generation",
+    "name": "Lead Generation",
+    "icon": "magnet",
+    "tint": "#fbbf24",
+    "outcome": "Campaigns that fill your pipeline with people ready to buy.",
+    "description": "Traffic is easy — qualified leads are the hard part. We combine targeted campaigns, focused landing pages and clear offers to bring you inquiries from people who actually want what you sell.",
+    "includes": [
+      "Audience & offer strategy",
+      "Campaign setup & management",
+      "Dedicated landing pages",
+      "Lead capture & routing",
+      "Weekly optimization",
+      "Transparent reporting"
+    ],
+    "forWho": "Businesses ready to grow who want a predictable flow of inquiries, not just likes and impressions."
+  }
+]
