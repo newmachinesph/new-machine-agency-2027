@@ -139,11 +139,23 @@ export default function Footer() {
           <p className="mt-7 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
             Offices
           </p>
-          <ul className="mt-4 space-y-2.5">
+          <ul className="mt-4 space-y-4">
             {site.offices.map((office) => (
-              <li key={office.region} className="text-sm text-muted">
-                <span className="block text-fg">{office.flag} {office.region}</span>
-                {office.country}
+              <li key={office.region} className="text-sm leading-relaxed text-muted">
+                <span className="block text-fg">
+                  {office.flag} {office.region}
+                </span>
+                {office.address.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+                <a
+                  href={`tel:${office.phone.replace(/[^+\d]/g, "")}`}
+                  className="mt-1 inline-block transition-colors hover:text-fg"
+                >
+                  {office.phone}
+                </a>
               </li>
             ))}
           </ul>
