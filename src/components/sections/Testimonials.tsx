@@ -1,4 +1,5 @@
 import { site } from "@/config/site";
+import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -8,7 +9,7 @@ export default function Testimonials() {
     <section className="bg-surface py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="06"
+          number="07"
           eyebrow="Client words"
           title="Don’t take our word for it."
         />
@@ -29,9 +30,16 @@ export default function Testimonials() {
                 <p className="relative mt-14 text-lg font-medium leading-relaxed md:text-xl">
                   {testimonial.quote}
                 </p>
-                <div className="mt-6 border-t border-border pt-5">
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted">{testimonial.role}</p>
+                <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
+                  <DuotoneImage
+                    src={`https://i.pravatar.cc/96?u=${encodeURIComponent(testimonial.name)}`}
+                    className="h-10 w-10 shrink-0"
+                    sizes="40px"
+                  />
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-muted">{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
             </Reveal>

@@ -42,6 +42,7 @@ export default function Navbar() {
   const isActive = (href: string) => pathname.startsWith(href);
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors ${
         scrolled || open
@@ -94,9 +95,12 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+    </header>
+
+      {/* Mobile menu — outside <header>: its backdrop-blur creates a containing
+          block that would trap this fixed overlay and collapse its height. */}
       {open ? (
-        <div className="fixed inset-0 top-16 z-40 flex flex-col gap-6 bg-bg px-6 py-10 md:hidden">
+        <div className="fixed inset-0 top-16 z-40 flex flex-col gap-6 overflow-y-auto bg-bg px-6 py-10 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -113,6 +117,6 @@ export default function Navbar() {
           </div>
         </div>
       ) : null}
-    </header>
+    </>
   );
 }

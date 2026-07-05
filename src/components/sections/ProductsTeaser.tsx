@@ -16,7 +16,7 @@ export default function ProductsTeaser() {
     <section className="bg-surface py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="07"
+          number="08"
           eyebrow="Products"
           title="We build our own products, too."
           lead="The same team, the same standards — pointed at problems we kept seeing our clients face."

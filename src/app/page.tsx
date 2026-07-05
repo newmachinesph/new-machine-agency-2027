@@ -4,6 +4,7 @@ import JsonLd from "@/components/ui/JsonLd";
 import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
 import StatsBar from "@/components/sections/StatsBar";
+import SelectedWork from "@/components/sections/SelectedWork";
 import ServicesBento from "@/components/sections/ServicesBento";
 import WhyItMatters from "@/components/sections/WhyItMatters";
 import WhoWeHelp from "@/components/sections/WhoWeHelp";
@@ -25,6 +26,7 @@ export default function Home() {
       <Marquee />
       <StatsBar />
       <ServicesBento />
+      <SelectedWork />
       <WhyItMatters />
       <WhoWeHelp />
       <Process />

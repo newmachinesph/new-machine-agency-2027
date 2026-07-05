@@ -30,7 +30,7 @@ export default function WhyTrustUs() {
     <section className="py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="05"
+          number="06"
           eyebrow="Why trust us"
           title="Big-agency output. Small-team honesty."
           lead="Everything you actually want from an agency — none of the overhead."

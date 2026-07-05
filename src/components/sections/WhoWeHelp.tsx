@@ -46,7 +46,7 @@ export default function WhoWeHelp() {
     <section className="py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="03"
+          number="04"
           eyebrow="Who we help"
           title="Built around your industry, not a generic checklist."
           lead="Different industries win customers in different ways. We shape every engagement around how yours actually works."

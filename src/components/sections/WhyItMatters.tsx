@@ -13,7 +13,7 @@ export default function WhyItMatters() {
     <section className="bg-surface py-24 md:py-32">
       <div className="wrap grid gap-14 md:grid-cols-[1fr_1.2fr]">
         <SectionHeading
-          number="02"
+          number="03"
           eyebrow="Why it matters"
           title="Your website is your hardest-working employee."
           lead="It never sleeps, never takes leave — and most businesses still treat it as an afterthought. The numbers say otherwise."
