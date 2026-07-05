@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/fix-rsc-segments.mjs",
     "start": "next start",
     "lint": "eslint"
   },
