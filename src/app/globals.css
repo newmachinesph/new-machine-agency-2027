@@ -61,17 +61,6 @@ body {
   color: var(--fg);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  /* Content protection: nothing on the site is selectable… */
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-/* …except form fields, which stay fully usable. */
-input,
-textarea,
-select {
-  -webkit-user-select: text;
-  user-select: text;
 }
 
 img,

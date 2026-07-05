@@ -28,7 +28,7 @@ export default function Footer() {
         <p className="footer-word relative text-center">NOMAD</p>
       </div>
 
-      <div className="wrap grid gap-10 py-14 md:grid-cols-4">
+      <div className="wrap grid gap-10 py-14 md:grid-cols-[1.7fr_1fr_1fr_1fr]">
         <div>
           <p className="font-display text-lg font-bold uppercase tracking-tight">
             Nomad<span className="text-accent-fg">*</span>Media
