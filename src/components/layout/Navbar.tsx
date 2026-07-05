@@ -283,7 +283,7 @@ export default function Navbar() {
       >
         <div className="wrap relative flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center" aria-label="Nomad Media home">
-            <Logo className="h-5 w-auto" />
+            <Logo className="h-5 w-auto transition duration-200 hover:brightness-75" />
           </Link>
 
           {/* Desktop nav */}

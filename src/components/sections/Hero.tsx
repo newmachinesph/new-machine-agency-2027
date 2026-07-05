@@ -1,6 +1,6 @@
 import HeroIntro from "@/components/sections/HeroIntro";
 import PatternMosaic from "@/components/ui/PatternMosaic";
-import PatternTrace from "@/components/ui/PatternTrace";
+import PatternSignal from "@/components/ui/PatternSignal";
 
 export default function Hero() {
   return (
@@ -8,10 +8,7 @@ export default function Hero() {
       <div className="hero-blob hero-blob--a" aria-hidden="true" />
       <div className="hero-blob hero-blob--b" aria-hidden="true" />
       <div className="hero-trace" aria-hidden="true">
-        <PatternTrace
-          idPrefix="hero"
-          className="h-full w-full text-accent-deep opacity-40"
-        />
+        <PatternSignal className="h-full w-full opacity-[0.2]" />
       </div>
       <div className="noise" aria-hidden="true" />
 

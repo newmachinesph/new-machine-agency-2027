@@ -54,12 +54,15 @@
 html {
   scroll-behavior: smooth;
   background: var(--bg);
+  font-size: 16px;
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -92,7 +95,7 @@ svg {
 .wrap {
   margin-inline: auto;
   width: 100%;
-  max-width: 76rem;
+  max-width: 96rem;
   padding-inline: 1.5rem;
 }
 
@@ -100,6 +103,11 @@ svg {
   .wrap {
     padding-inline: 2rem;
   }
+}
+
+/* Readable line length for body copy on the wide 2xl canvas. */
+.measure {
+  max-width: 68ch;
 }
 
 .panel {
