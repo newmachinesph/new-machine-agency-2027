@@ -613,9 +613,14 @@ footer .wrap a:hover::after {
 }
 
 /* Floating buttons keep their fixed placement (utilities are layered,
-   so the sheen rule above would otherwise override them). */
+   so the sheen rule above would otherwise override them). Same reason the
+   VideoEmbed play button needs its absolute centering back. */
 .chamfer.bg-accent.fixed {
   position: fixed;
+}
+
+.chamfer.bg-accent.absolute {
+  position: absolute;
 }
 
 .chamfer.bg-accent::before {
