@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { site, whatsappHref } from "@/config/site";
 import Button from "@/components/ui/Button";
+import DuotoneImage from "@/components/ui/DuotoneImage";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -71,6 +72,11 @@ export default function AboutPage() {
                 market or one way of doing things — just to results.
               </p>
             </div>
+            <DuotoneImage
+              src="https://picsum.photos/seed/nomad-about/1200/750"
+              className="mt-8 aspect-[16/10] w-full"
+              sizes="(min-width: 768px) 55vw, 100vw"
+            />
           </Reveal>
         </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import products from "@/content/products.json";
 import Button from "@/components/ui/Button";
+import DuotoneImage from "@/components/ui/DuotoneImage";
 import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
@@ -42,7 +43,13 @@ export default function ProductsPage() {
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {products.map((product, i) => (
             <Reveal key={product.name} delay={i * 90}>
-              <div className="panel flex h-full flex-col p-7">
+              <div className="panel flex h-full flex-col overflow-hidden">
+                <DuotoneImage
+                  src={`https://picsum.photos/seed/${encodeURIComponent(product.name)}/800/500`}
+                  className="h-40 w-full"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+                <div className="flex flex-1 flex-col p-7">
                 <span
                   className={`inline-block self-start border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
                 >
@@ -60,6 +67,7 @@ export default function ProductsPage() {
                     Visit →
                   </a>
                 ) : null}
+                </div>
               </div>
             </Reveal>
           ))}

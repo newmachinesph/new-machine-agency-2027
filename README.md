@@ -138,6 +138,7 @@ Build produces a fully static site in `/out`:
 
 ## Notes
 
+- **Placeholder photos.** Product, service, about and blog images are dummy placeholders from `picsum.photos` (seeded per item, so they're stable) rendered through `DuotoneImage` (`src/components/ui/DuotoneImage.tsx`), which applies the brand green duotone. Replace by swapping the `src` URLs with real assets in `/public` — the treatment applies automatically. The footer uses `/public/nomad-background.jpg` (2.3 MB — compress before launch).
 - **No OG image yet.** Add `/public/og.png` (1200×630) and reference it in `src/app/layout.tsx` under `metadata.openGraph.images` when brand assets are ready.
 - **Motion budget.** Framer Motion ships lean via `LazyMotion`/`m` (domAnimation feature set only — no drag/layout features). Total home-page JS is ~220 KB gzipped: ~151 KB React 19 + Next 16 runtime floor, ~30 KB motion features, ~35 KB app code. All of it is deferred; pages are fully pre-rendered HTML, so LCP is unaffected.
 - **Testimonials** live in their own home section (`src/components/sections/Testimonials.tsx`), fed by `site.testimonials`.

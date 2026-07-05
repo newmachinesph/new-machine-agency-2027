@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
+import DuotoneImage from "@/components/ui/DuotoneImage";
 import JsonLd from "@/components/ui/JsonLd";
 
 type PageProps = {
@@ -76,6 +77,12 @@ export default async function BlogPostPage({ params }: PageProps) {
           ))}
         </div>
       ) : null}
+
+      <DuotoneImage
+        src={`https://picsum.photos/seed/${post.meta.slug}/1200/600`}
+        className="mt-10 aspect-[2/1] w-full"
+        sizes="(min-width: 768px) 48rem, 100vw"
+      />
 
       <div className="prose mt-10">
         <MDXRemote source={post.content} />

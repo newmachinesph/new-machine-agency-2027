@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { PostMeta } from "@/lib/blog";
+import DuotoneImage from "@/components/ui/DuotoneImage";
 
 const PAGE_SIZE = 9;
 
@@ -46,8 +47,14 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}/`}
-            className="panel group block p-6 transition-colors hover:border-accent"
+            className="panel group block overflow-hidden transition-colors hover:border-accent"
           >
+            <DuotoneImage
+              src={`https://picsum.photos/seed/${post.slug}/800/450`}
+              className="h-40 w-full"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+            />
+            <div className="p-6">
             <p className="text-xs text-muted">
               {formatDate(post.date)} · {post.readingMinutes} min read
             </p>
@@ -68,6 +75,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
             </h2>
             <p className="mt-2 line-clamp-3 text-sm text-muted">{post.description}</p>
             <p className="mt-4 text-sm text-accent-fg">Read →</p>
+            </div>
           </Link>
         ))}
       </div>

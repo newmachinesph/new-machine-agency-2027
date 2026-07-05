@@ -14,6 +14,7 @@ import services from "@/content/services.json";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
 import JsonLd from "@/components/ui/JsonLd";
+import DuotoneImage from "@/components/ui/DuotoneImage";
 import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
@@ -98,7 +99,12 @@ export default function ServicesPage() {
                     </Reveal>
 
                     <Reveal delay={120} className={reversed ? "md:order-1" : ""}>
-                      <div className="panel p-7">
+                      <DuotoneImage
+                        src={`https://picsum.photos/seed/${service.slug}/960/540`}
+                        className="aspect-[16/9] w-full"
+                        sizes="(min-width: 768px) 55vw, 100vw"
+                      />
+                      <div className="panel mt-4 p-7">
                         <p className="text-sm font-semibold">What’s included</p>
                         <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
                           {service.includes.map((item) => (
