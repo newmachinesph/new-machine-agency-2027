@@ -6,6 +6,8 @@ type VideoEmbedProps = {
   id: string;
   title: string;
   className?: string;
+  /** Eager-load the thumbnail — set on above-the-fold embeds (e.g. the hero). */
+  priority?: boolean;
 };
 
 /**
@@ -15,9 +17,11 @@ type VideoEmbedProps = {
  * YouTube JS ships. On activate we mount the nocookie embed with autoplay.
  * A real <button> gives Enter/Space activation + focus-visible for free.
  */
-export default function VideoEmbed({ id, title, className = "" }: VideoEmbedProps) {
+export default function VideoEmbed({ id, title, className = "", priority = false }: VideoEmbedProps) {
   const [active, setActive] = useState(false);
-  const thumbnail = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+  const [thumbnail, setThumbnail] = useState(
+    `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
+  );
 
   return (
     <div className={`chamfer relative aspect-video overflow-hidden bg-card ${className}`.trim()}>
@@ -43,7 +47,9 @@ export default function VideoEmbed({ id, title, className = "" }: VideoEmbedProp
             aria-hidden="true"
             width={1280}
             height={720}
-            loading="lazy"
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : "auto"}
+            onError={() => setThumbnail(`https://img.youtube.com/vi/${id}/hqdefault.jpg`)}
             className="absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
           />
           {/* green duotone — matches DuotoneImage / Footer band */}

@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  IconArrowRight,
-  IconChat,
-  IconSpeed,
-  IconLanding,
-  type BrandIcon,
-} from "@/components/ui/icons";
+import { IconArrowRight, IconChat } from "@/components/ui/icons";
 import products from "@/content/products.json";
-import { whatsappHref } from "@/config/site";
+import { site, whatsappHref } from "@/config/site";
+import { productIcons, productBadgeClasses } from "@/lib/products";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
@@ -22,18 +17,6 @@ export const metadata: Metadata = {
     "Software products we build in-house — born from problems we kept seeing our clients face.",
   alternates: { canonical: "/products/" },
 };
-
-const icons: Record<string, BrandIcon> = {
-  chat: IconChat,
-  speed: IconSpeed,
-  landing: IconLanding,
-};
-
-function badgeClasses(status: string): string {
-  if (status === "Live") return "border-accent bg-accent/10 text-accent-fg";
-  if (status === "Beta") return "border-accent text-accent-fg";
-  return "border-border text-muted";
-}
 
 export default function ProductsPage() {
   return (
@@ -78,7 +61,7 @@ export default function ProductsPage() {
 
         <div className="mt-16 grid gap-5 md:grid-cols-3">
           {products.map((product, i) => {
-            const Icon = icons[product.icon] ?? IconChat;
+            const Icon = productIcons[product.icon] ?? IconChat;
             return (
               <Reveal key={product.slug} delay={i * 90}>
                 <Link
@@ -103,7 +86,7 @@ export default function ProductsPage() {
                       <span className="h-2.5 w-2.5 bg-muted/25" />
                     </span>
                     <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                      nomadmedia.ae/products/{product.slug}
+                      {site.domain}/products/{product.slug}
                     </span>
                   </div>
                   {/* Screenshot with centered solid-white wordmark */}
@@ -127,7 +110,7 @@ export default function ProductsPage() {
                         <Icon size={18} className="text-accent-ink" />
                       </span>
                       <span
-                        className={`inline-block border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
+                        className={`inline-block border px-2.5 py-0.5 text-xs ${productBadgeClasses(product.status)}`}
                       >
                         {product.status}
                       </span>

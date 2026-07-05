@@ -40,7 +40,7 @@ export default function HeroIntro() {
         <m.div variants={item} className="flex items-center gap-2.5">
           <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-            Full-lifecycle startup studio · Remote-first, worldwide
+            Full-lifecycle studio · Remote-first
           </span>
         </m.div>
 
@@ -52,13 +52,8 @@ export default function HeroIntro() {
           <span className="text-accent-fg">actually converts.</span>
         </m.h1>
 
-        <m.p variants={item} className="mt-6 text-lg font-medium text-muted md:text-2xl">
+        <m.p variants={item} className="mt-6 text-lg font-medium text-fg/80 md:text-2xl">
           Built for <TypeWriter words={site.builtFor} className="text-fg" />
-        </m.p>
-
-        <m.p variants={item} className="measure mt-4 text-muted">
-          From brand to build to launch to grow to scale — clear pricing,
-          fast delivery, no jargon.
         </m.p>
 
         <m.div variants={item} className="mt-8 flex flex-wrap gap-4">
@@ -92,7 +87,7 @@ export default function HeroIntro() {
           className="pointer-events-none absolute -bottom-6 -right-6 h-40 w-40 opacity-25 sm:h-52 sm:w-52"
         />
         <div className="beam chamfer relative border border-border bg-surface p-2">
-          <VideoEmbed id="ScMzIvxBSi4" title="Nomad Media — how we build" />
+          <VideoEmbed id={site.videoId} title="Nomad Media — how we build" priority />
         </div>
       </m.div>
     </m.div>

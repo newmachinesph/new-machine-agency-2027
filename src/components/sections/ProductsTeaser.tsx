@@ -1,5 +1,6 @@
 import Link from "next/link";
 import products from "@/content/products.json";
+import { site } from "@/config/site";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
@@ -38,7 +39,7 @@ export default function ProductsTeaser() {
                     <span className="h-2.5 w-2.5 bg-muted/25" />
                   </span>
                   <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                    nomadmedia.co/products/{product.slug}
+                    {site.domain}/products/{product.slug}
                   </span>
                 </div>
                 {/* Screenshot placeholder with centered solid-white wordmark */}

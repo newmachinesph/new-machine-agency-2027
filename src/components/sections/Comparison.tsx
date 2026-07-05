@@ -1,3 +1,4 @@
+import { site } from "@/config/site";
 import { IconCheck } from "@/components/ui/icons";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -64,7 +65,7 @@ export default function Comparison() {
               </div>
               <div className="bg-accent/10 p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-fg">
-                  Nomad Media
+                  {site.name}
                 </p>
               </div>
             </div>
@@ -87,7 +88,7 @@ export default function Comparison() {
 
                 <div className="mt-4 md:mt-0 md:bg-accent/[0.06] md:p-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.15em] text-accent-fg/80 md:hidden">
-                    Nomad Media
+                    {site.name}
                   </p>
                   <div className="mt-1.5 flex items-start gap-2.5 md:mt-0">
                     <IconCheck size={16} className="mt-0.5 shrink-0 text-accent-fg" />

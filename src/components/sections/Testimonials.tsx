@@ -8,7 +8,7 @@ import VideoEmbed from "@/components/ui/VideoEmbed";
 /** Representative sample videos, 1:1 with site.testimonials, plus one bonus
  *  reel below — no real client footage exists yet, so every embed is framed
  *  as "representative" (same honesty policy as site.ts testimonials). */
-const videoIds = ["ScMzIvxBSi4", "aqz-KE-bpKQ", "ysz5S6PUM-U"] as const;
+const videoIds = [site.videoId, "aqz-KE-bpKQ", "ysz5S6PUM-U"] as const;
 
 export default function Testimonials() {
   return (
