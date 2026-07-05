@@ -2,7 +2,7 @@
 
 import * as m from "motion/react-m";
 import { useReducedMotion, type Variants } from "motion/react";
-import { ArrowRight } from "lucide-react";
+import { IconArrowRight } from "@/components/ui/icons";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
 import TypeWriter from "@/components/ui/TypeWriter";
@@ -58,7 +58,7 @@ export default function HeroIntro() {
       <m.div variants={item} className="mt-8 flex flex-wrap gap-4">
         <Button href="/contact">
           Book a Strategy Call
-          <ArrowRight size={16} />
+          <IconArrowRight size={16} />
         </Button>
         <Button href="/services" variant="ghost">
           View Our Services

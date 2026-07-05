@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { IconCheck } from "@/components/ui/icons";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -66,7 +66,7 @@ export default function WhoWeHelp() {
                 <ul className="mt-5 space-y-2.5">
                   {group.points.map((point) => (
                     <li key={point} className="flex items-center gap-2.5 text-sm text-muted">
-                      <Check size={15} className="shrink-0 text-accent-fg" />
+                      <IconCheck size={15} className="shrink-0 text-accent-fg" />
                       {point}
                     </li>
                   ))}

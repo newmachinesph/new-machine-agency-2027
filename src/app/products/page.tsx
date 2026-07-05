@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
+import { IconArrowRight } from "@/components/ui/icons";
 import products from "@/content/products.json";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
@@ -84,7 +84,7 @@ export default function ProductsPage() {
           <div className="mt-8">
             <Button href="/contact">
               Talk to us
-              <ArrowRight size={16} />
+              <IconArrowRight size={16} />
             </Button>
           </div>
         </Reveal>

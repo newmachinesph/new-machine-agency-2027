@@ -100,6 +100,7 @@ The form POSTs `FormData` with an `Accept: application/json` header — compatib
 - **Brand patterns** (traced from the reference art, both in `src/components/ui/`):
   - `PatternTrace` — thin-line chamfered-rectangle circuit motif (`{ className?, idPrefix? }`, colored via `text-*`/currentColor). Used in the hero background and behind the footer wordmark.
   - `PatternMosaic` — sage/deep-green triangle-square quilt strip (`{ rows?, className? }`). Used at the hero's bottom edge, above the footer, and on the final CTA band.
+- **Icons:** custom brand set in `src/components/ui/icons.tsx` — 24×24, square caps/miter joins, 45° chamfers and filled mosaic-tile squares matching the pattern motifs. Used everywhere brand-carrying; lucide-react remains only for functional glyphs (menu/close, chevron, sun/moon).
 - **Motion:** Framer Motion (`motion` v12) via `LazyMotion` + `m` components (`MotionProvider` in the layout). `Reveal` powers scroll-ins; the hero staggers via `HeroIntro`. All of it respects `prefers-reduced-motion`.
 - **Accent color:** one variable — edit `--accent` (and optionally `--accent-strong` / `--accent-deep` / `--accent-ink` / per-theme `--accent-fg`) at the top of `src/app/globals.css`. Current palette is the sage/leaf green from the brand pattern.
 

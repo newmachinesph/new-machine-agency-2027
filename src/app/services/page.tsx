@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import {
-  ArrowRight,
-  Building2,
-  Check,
-  Magnet,
-  MonitorSmartphone,
-  Share2,
-  Zap,
-  type LucideIcon,
-} from "lucide-react";
+  IconArrowRight,
+  IconCorporate,
+  IconCheck,
+  IconLeads,
+  IconWebsite,
+  IconSocial,
+  IconLanding,
+  type BrandIcon,
+} from "@/components/ui/icons";
 import services from "@/content/services.json";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/" },
 };
 
-const icons: Record<string, LucideIcon> = {
-  monitor: MonitorSmartphone,
-  zap: Zap,
-  building: Building2,
-  share: Share2,
-  magnet: Magnet,
+const icons: Record<string, BrandIcon> = {
+  monitor: IconWebsite,
+  zap: IconLanding,
+  building: IconCorporate,
+  share: IconSocial,
+  magnet: IconLeads,
 };
 
 const phaseLabels: Record<number, string> = {
@@ -75,7 +75,7 @@ export default function ServicesPage() {
             {services
               .filter((service) => service.phase === phase)
               .map((service, i) => {
-                const Icon = icons[service.icon] ?? MonitorSmartphone;
+                const Icon = icons[service.icon] ?? IconWebsite;
                 const reversed = i % 2 === 1;
                 return (
                   <div
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                               key={item}
                               className="flex items-start gap-2.5 text-sm text-muted"
                             >
-                              <Check size={15} className="mt-0.5 shrink-0 text-accent-fg" />
+                              <IconCheck size={15} className="mt-0.5 shrink-0 text-accent-fg" />
                               {item}
                             </li>
                           ))}
@@ -137,7 +137,7 @@ export default function ServicesPage() {
             <div className="mt-6 flex justify-center">
               <Button href="/contact">
                 Book a Strategy Call
-                <ArrowRight size={16} />
+                <IconArrowRight size={16} />
               </Button>
             </div>
           </div>

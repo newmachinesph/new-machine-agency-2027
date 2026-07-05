@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { IconArrowLeft, IconArrowRight } from "@/components/ui/icons";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         href="/blog/"
         className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-fg"
       >
-        <ArrowLeft size={14} />
+        <IconArrowLeft size={14} />
         All articles
       </Link>
 
@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="mt-5 flex justify-center">
           <Button href="/contact">
             Book a Strategy Call
-            <ArrowRight size={16} />
+            <IconArrowRight size={16} />
           </Button>
         </div>
       </div>

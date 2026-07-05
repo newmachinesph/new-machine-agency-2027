@@ -1,24 +1,24 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import {
-  ArrowRight,
-  Building2,
-  Magnet,
-  MonitorSmartphone,
-  Share2,
-  Zap,
-  type LucideIcon,
-} from "lucide-react";
+  IconArrowRight,
+  IconCorporate,
+  IconLeads,
+  IconWebsite,
+  IconSocial,
+  IconLanding,
+  type BrandIcon,
+} from "@/components/ui/icons";
 import services from "@/content/services.json";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-const icons: Record<string, LucideIcon> = {
-  monitor: MonitorSmartphone,
-  zap: Zap,
-  building: Building2,
-  share: Share2,
-  magnet: Magnet,
+const icons: Record<string, BrandIcon> = {
+  monitor: IconWebsite,
+  zap: IconLanding,
+  building: IconCorporate,
+  share: IconSocial,
+  magnet: IconLeads,
 };
 
 export default function ServicesBento() {
@@ -34,7 +34,7 @@ export default function ServicesBento() {
 
         <div className="mt-12 grid gap-4 md:grid-cols-6">
           {services.map((service, i) => {
-            const Icon = icons[service.icon] ?? MonitorSmartphone;
+            const Icon = icons[service.icon] ?? IconWebsite;
             const span = i === 0 ? "md:col-span-4" : "md:col-span-2";
             return (
               <Reveal key={service.slug} delay={i * 70} className={span}>
@@ -49,7 +49,7 @@ export default function ServicesBento() {
                   <h3 className="mt-5 text-lg font-semibold">{service.name}</h3>
                   <p className="mt-2 text-sm text-muted">{service.outcome}</p>
                   <span className="mt-6 flex items-center gap-1.5 text-sm text-accent-fg opacity-0 transition-opacity group-hover:opacity-100">
-                    Explore <ArrowRight size={14} />
+                    Explore <IconArrowRight size={14} />
                   </span>
                 </Link>
               </Reveal>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUp } from "lucide-react";
+import { IconArrowUp } from "@/components/ui/icons";
 
 const SHOW_AFTER_PX = 600;
 
@@ -37,7 +37,7 @@ export default function BackToTop() {
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-2 opacity-0"
       }`}
     >
-      <ArrowUp size={18} />
+      <IconArrowUp size={18} />
     </button>
   );
 }

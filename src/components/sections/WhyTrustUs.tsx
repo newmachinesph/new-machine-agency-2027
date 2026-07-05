@@ -1,25 +1,25 @@
-import { BadgeCheck, MessagesSquare, TrendingUp, Zap } from "lucide-react";
+import { IconPricing, IconChat, IconGrowth, IconSpeed } from "@/components/ui/icons";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const differentiators = [
   {
-    icon: Zap,
+    icon: IconSpeed,
     title: "Fast delivery",
     text: "Weeks, not quarters — without cutting corners.",
   },
   {
-    icon: BadgeCheck,
+    icon: IconPricing,
     title: "Transparent pricing",
     text: "One fixed quote before we start. It doesn’t move.",
   },
   {
-    icon: MessagesSquare,
+    icon: IconChat,
     title: "Direct communication",
     text: "You talk to the people doing the work, not an account layer.",
   },
   {
-    icon: TrendingUp,
+    icon: IconGrowth,
     title: "Results-focused",
     text: "We report in inquiries and revenue, not impressions.",
   },

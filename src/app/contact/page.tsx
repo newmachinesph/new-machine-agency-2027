@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Check, Mail, MessageCircle } from "lucide-react";
+import { IconCheck, IconMail, IconChat } from "@/components/ui/icons";
 import { site, whatsappHref } from "@/config/site";
 import Reveal from "@/components/ui/Reveal";
 import ContactForm from "./ContactForm";
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="panel flex items-center gap-4 p-5 transition-colors hover:border-accent"
               >
-                <MessageCircle size={20} className="shrink-0 text-accent-fg" />
+                <IconChat size={20} className="shrink-0 text-accent-fg" />
                 <span>
                   <span className="block font-semibold">WhatsApp</span>
                   <span className="block text-sm text-muted">Fastest response</span>
@@ -58,7 +58,7 @@ export default function ContactPage() {
                 href={`mailto:${site.email}`}
                 className="panel flex items-center gap-4 p-5 transition-colors hover:border-accent"
               >
-                <Mail size={20} className="shrink-0 text-accent-fg" />
+                <IconMail size={20} className="shrink-0 text-accent-fg" />
                 <span>
                   <span className="block font-semibold">Email</span>
                   <span className="block text-sm text-muted">{site.email}</span>
@@ -71,7 +71,7 @@ export default function ContactPage() {
             <ul className="mt-8 space-y-2.5">
               {reassurances.map((item) => (
                 <li key={item} className="flex items-center gap-2.5 text-sm text-muted">
-                  <Check size={15} className="shrink-0 text-accent-fg" />
+                  <IconCheck size={15} className="shrink-0 text-accent-fg" />
                   {item}
                 </li>
               ))}

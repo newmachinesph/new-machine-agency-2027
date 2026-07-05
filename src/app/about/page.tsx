@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { IconArrowRight, IconChat } from "@/components/ui/icons";
 import { site, whatsappHref } from "@/config/site";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
@@ -124,10 +124,10 @@ export default function AboutPage() {
           <div className="mt-24 flex flex-wrap gap-4">
             <Button href="/contact">
               Book a Strategy Call
-              <ArrowRight size={16} />
+              <IconArrowRight size={16} />
             </Button>
             <Button href={whatsappHref} variant="ghost">
-              <MessageCircle size={16} />
+              <IconChat size={16} />
               WhatsApp Us
             </Button>
           </div>

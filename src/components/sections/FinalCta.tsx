@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { IconArrowRight, IconChat } from "@/components/ui/icons";
 import { whatsappHref } from "@/config/site";
 import PatternMosaic from "@/components/ui/PatternMosaic";
 import Reveal from "@/components/ui/Reveal";
@@ -25,7 +25,7 @@ export default function FinalCta() {
                   className="chamfer inline-flex items-center justify-center gap-2 bg-bg px-6 py-3 text-sm font-semibold text-fg transition hover:opacity-90"
                 >
                   Book a Strategy Call
-                  <ArrowRight size={16} />
+                  <IconArrowRight size={16} />
                 </Link>
                 <a
                   href={whatsappHref}
@@ -33,7 +33,7 @@ export default function FinalCta() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 border border-accent-ink px-6 py-3 text-sm font-semibold transition hover:bg-accent-strong"
                 >
-                  <MessageCircle size={16} />
+                  <IconChat size={16} />
                   WhatsApp Us
                 </a>
               </div>
