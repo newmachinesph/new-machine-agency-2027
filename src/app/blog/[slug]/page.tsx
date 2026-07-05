@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         sizes="(min-width: 768px) 48rem, 100vw"
       />
 
-      <div className="prose measure mt-10">
+      <div className="prose measure mx-auto mt-10">
         <MDXRemote source={post.content} />
       </div>
 

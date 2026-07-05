@@ -327,7 +327,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav aria-label="Main navigation" className="hidden items-center gap-7 md:flex">
+          <nav aria-label="Main navigation" className="hidden items-center gap-7 lg:flex">
             <div
               ref={groupRef}
               className="flex items-center gap-7 self-stretch"
@@ -394,7 +394,7 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile controls */}
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-3 lg:hidden">
             <ThemeToggle />
             <button
               type="button"
@@ -412,7 +412,7 @@ export default function Navbar() {
       {/* Mobile menu — outside <header>: its backdrop-blur creates a containing
           block that would trap this fixed overlay and collapse its height. */}
       {open ? (
-        <div className="fixed inset-0 top-16 z-40 flex flex-col gap-8 overflow-y-auto bg-bg px-6 py-10 md:hidden">
+        <div className="fixed inset-0 top-16 z-40 flex flex-col gap-8 overflow-y-auto bg-bg px-6 py-10 lg:hidden">
           {/* Services — grouped by lifecycle stage */}
           <div>
             <Link
