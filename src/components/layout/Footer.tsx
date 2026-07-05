@@ -135,6 +135,18 @@ export default function Footer() {
             </li>
             <li className="text-sm text-muted">We reply within 24 hours.</li>
           </ul>
+
+          <p className="mt-7 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
+            Offices
+          </p>
+          <ul className="mt-4 space-y-2.5">
+            {site.offices.map((office) => (
+              <li key={office.region} className="text-sm text-muted">
+                <span className="block text-fg">{office.region}</span>
+                {office.city}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 

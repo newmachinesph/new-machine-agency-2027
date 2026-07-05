@@ -26,6 +26,13 @@ export const site = {
    *  business number — this sample must be set before launch. */
   whatsapp: "971501234567",
 
+  /** Physical offices. TODO(owner): replace with the real street addresses —
+   *  Dubai / Manila are placeholders. */
+  offices: [
+    { region: "UAE Office", city: "Dubai, United Arab Emirates" },
+    { region: "Philippines Office", city: "Manila, Philippines" },
+  ],
+
   /**
    * Static-friendly form provider endpoint (Formspree, Web3Forms, …).
    * e.g. "https://formspree.io/f/abcdwxyz"

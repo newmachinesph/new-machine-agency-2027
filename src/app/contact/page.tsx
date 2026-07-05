@@ -85,6 +85,19 @@ export default function ContactPage() {
                 ))}
               </ul>
             </Reveal>
+
+            <Reveal delay={400}>
+              <div className="mt-10 grid grid-cols-2 gap-4">
+                {site.offices.map((office) => (
+                  <div key={office.region} className="panel chamfer p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-accent-fg">
+                      {office.region}
+                    </p>
+                    <p className="mt-1.5 text-sm text-muted">{office.city}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </div>
 

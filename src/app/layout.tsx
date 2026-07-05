@@ -87,7 +87,10 @@ export default function RootLayout({
             url: site.url,
             email: site.email,
             sameAs: site.socials.map((social) => social.href),
-            address: { "@type": "PostalAddress", addressCountry: "AE" },
+            address: [
+              { "@type": "PostalAddress", addressLocality: "Dubai", addressCountry: "AE" },
+              { "@type": "PostalAddress", addressLocality: "Manila", addressCountry: "PH" },
+            ],
           }}
         />
         <JsonLd
