@@ -49,7 +49,7 @@ export default function SelectedWork() {
                   </div>
 
                   {/* Bold metric badge, punching over the frame's lower edge */}
-                  <div className="absolute -bottom-6 left-5 chamfer bg-accent px-4 py-3 text-accent-ink shadow-[6px_6px_0_rgba(0,0,0,0.28)]">
+                  <div className="absolute -bottom-6 left-0 chamfer bg-accent px-4 py-3 text-accent-ink shadow-[6px_6px_0_rgba(0,0,0,0.28)]">
                     <p className="font-display text-3xl font-bold leading-none tracking-tight">
                       <CountUp value={project.metric} />
                     </p>
