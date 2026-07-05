@@ -3,6 +3,7 @@ import { IconCheck, IconMail, IconChat } from "@/components/ui/icons";
 import { site, whatsappHref } from "@/config/site";
 import Reveal from "@/components/ui/Reveal";
 import PatternSignal from "@/components/ui/PatternSignal";
+import LandmarkSilhouette from "@/components/ui/LandmarkSilhouette";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
@@ -87,13 +88,39 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={400}>
-              <div className="mt-10 grid grid-cols-2 gap-4">
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
                 {site.offices.map((office) => (
-                  <div key={office.region} className="panel chamfer p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-accent-fg">
-                      {office.region}
-                    </p>
-                    <p className="mt-1.5 text-sm text-muted">{office.city}</p>
+                  <div
+                    key={office.region}
+                    className="panel chamfer relative overflow-hidden p-5"
+                  >
+                    <LandmarkSilhouette
+                      name={office.landmark}
+                      className="pointer-events-none absolute -bottom-3 right-1 h-28 w-auto text-accent-deep opacity-30"
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-accent-deep/30 via-transparent to-transparent"
+                    />
+                    <div className="relative">
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-xl leading-none">{office.flag}</span>
+                        <p className="font-display font-semibold">{office.country}</p>
+                      </div>
+                      <p className="mt-3 text-sm leading-relaxed text-muted">
+                        {office.address.map((line) => (
+                          <span key={line} className="block">
+                            {line}
+                          </span>
+                        ))}
+                      </p>
+                      <a
+                        href={`tel:${office.phone.replace(/[^+\d]/g, "")}`}
+                        className="mt-3 inline-block text-sm text-accent-fg transition-opacity hover:opacity-80"
+                      >
+                        {office.phone}
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>

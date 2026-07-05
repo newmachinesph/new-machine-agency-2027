@@ -26,11 +26,25 @@ export const site = {
    *  business number — this sample must be set before launch. */
   whatsapp: "971501234567",
 
-  /** Physical offices. TODO(owner): replace with the real street addresses —
-   *  Dubai / Manila are placeholders. */
+  /** Physical offices — DUMMY placeholder addresses + phones. TODO(owner):
+   *  replace with the real details before launch. */
   offices: [
-    { region: "UAE Office", city: "Dubai, United Arab Emirates" },
-    { region: "Philippines Office", city: "Manila, Philippines" },
+    {
+      region: "UAE Office",
+      country: "United Arab Emirates",
+      flag: "🇦🇪",
+      landmark: "burj",
+      address: ["Office 1204, Boulevard Plaza Tower 1", "Downtown Dubai, Dubai, UAE"],
+      phone: "+971 4 123 4567",
+    },
+    {
+      region: "Philippines Office",
+      country: "Philippines",
+      flag: "🇵🇭",
+      landmark: "mayon",
+      address: ["Unit 15F, One Ayala East Tower", "Ayala Ave, Makati, Metro Manila 1223, PH"],
+      phone: "+63 2 8123 4567",
+    },
   ],
 
   /**

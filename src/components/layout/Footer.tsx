@@ -142,8 +142,8 @@ export default function Footer() {
           <ul className="mt-4 space-y-2.5">
             {site.offices.map((office) => (
               <li key={office.region} className="text-sm text-muted">
-                <span className="block text-fg">{office.region}</span>
-                {office.city}
+                <span className="block text-fg">{office.flag} {office.region}</span>
+                {office.country}
               </li>
             ))}
           </ul>
