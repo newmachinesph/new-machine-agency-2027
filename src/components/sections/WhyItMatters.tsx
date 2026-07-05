@@ -1,3 +1,4 @@
+import CountUp from "@/components/ui/CountUp";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -24,7 +25,7 @@ export default function WhyItMatters() {
             <Reveal key={fact.value} delay={i * 90}>
               <div className="flex items-baseline gap-6 py-6">
                 <p className="w-32 shrink-0 text-4xl font-extrabold text-accent-fg md:text-5xl">
-                  {fact.value}
+                  <CountUp value={fact.value} />
                 </p>
                 <p className="text-muted">{fact.text}</p>
               </div>

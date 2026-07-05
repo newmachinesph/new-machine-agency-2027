@@ -1,6 +1,7 @@
 import Link from "next/link";
 import work from "@/content/work.json";
 import DuotoneImage from "@/components/ui/DuotoneImage";
+import CountUp from "@/components/ui/CountUp";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { IconArrowRight } from "@/components/ui/icons";
@@ -33,7 +34,7 @@ export default function SelectedWork() {
                   <p className="mt-2 text-sm text-muted">{project.story}</p>
                   <div className="mt-5 border-t border-border pt-4">
                     <p className="font-display text-3xl font-bold text-accent-fg">
-                      {project.metric}
+                      <CountUp value={project.metric} />
                     </p>
                     <p className="mt-1 text-xs text-muted">{project.metricLabel}</p>
                     <p className="mt-3 text-xs uppercase tracking-[0.15em] text-muted">
