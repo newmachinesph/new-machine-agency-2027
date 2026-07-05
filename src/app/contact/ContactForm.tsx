@@ -66,7 +66,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} className="panel space-y-5 p-7">
+    <form onSubmit={onSubmit} className="panel chamfer relative space-y-5 p-8 md:p-10">
       <div>
         <label htmlFor="contact-name" className="mb-1.5 block text-sm font-medium">
           Name

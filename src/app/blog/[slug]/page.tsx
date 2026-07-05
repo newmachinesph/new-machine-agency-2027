@@ -47,6 +47,10 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const morePosts = getAllPosts()
+    .filter((p) => p.slug !== slug)
+    .slice(0, 3);
+
   return (
     <article className="wrap max-w-3xl pt-32 pb-24">
       <Link
@@ -57,13 +61,22 @@ export default async function BlogPostPage({ params }: PageProps) {
         All articles
       </Link>
 
-      <p className="mt-8 text-xs text-muted">
-        {formatDate(post.meta.date)} · {post.meta.readingMinutes} min read
-      </p>
+      <div className="mt-8 flex items-center gap-2.5">
+        <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-fg">
+          {post.meta.tags[0] ?? "Insights"}
+        </span>
+      </div>
 
-      <h1 className="font-display mt-4 text-3xl font-extrabold tracking-tight md:text-5xl">
+      <h1 className="font-display mt-4 text-4xl font-extrabold tracking-tight md:text-6xl">
         {post.meta.title}
       </h1>
+
+      <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-muted">
+        <span>{formatDate(post.meta.date)}</span>
+        <span aria-hidden="true">·</span>
+        <span>{post.meta.readingMinutes} min read</span>
+      </div>
 
       {post.meta.tags.length > 0 ? (
         <div className="mt-5 flex flex-wrap gap-1.5">
@@ -84,7 +97,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         sizes="(min-width: 768px) 48rem, 100vw"
       />
 
-      <div className="prose mt-10">
+      <div className="prose measure mt-10">
         <MDXRemote source={post.content} />
       </div>
 
@@ -103,6 +116,35 @@ export default async function BlogPostPage({ params }: PageProps) {
           </Button>
         </div>
       </div>
+
+      {morePosts.length > 0 ? (
+        <div className="mt-16">
+          <h2 className="font-display text-lg font-bold tracking-tight">
+            More from the blog
+          </h2>
+          <div className="mt-5 grid gap-4 sm:grid-cols-3">
+            {morePosts.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/blog/${p.slug}/`}
+                className="panel group block overflow-hidden"
+              >
+                <DuotoneImage
+                  src={`https://picsum.photos/seed/${p.slug}/600/400`}
+                  className="h-32 w-full"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+                <div className="p-4">
+                  <p className="text-xs text-muted">{formatDate(p.date)}</p>
+                  <h3 className="mt-2 text-sm font-semibold transition-colors group-hover:text-accent-fg">
+                    {p.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ) : null}
 
       <JsonLd
         data={{

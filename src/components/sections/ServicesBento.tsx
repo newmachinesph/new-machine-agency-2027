@@ -81,10 +81,10 @@ export default function ServicesBento() {
                 >
                   {/* Subtle chamfered-mosaic accent, top-right */}
                   <PatternGrid
-                    cols={3}
-                    rows={4}
-                    seed={2}
-                    className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-[0.3] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)]"
+                    cols={5}
+                    rows={5}
+                    seed={i + 1}
+                    className="pointer-events-none absolute right-0 top-0 h-28 w-28 opacity-[0.4] [mask-image:linear-gradient(225deg,#000,transparent_78%)] [-webkit-mask-image:linear-gradient(225deg,#000,transparent_78%)]"
                   />
 
                   <div className="relative flex h-full flex-col">

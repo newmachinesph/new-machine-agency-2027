@@ -46,6 +46,48 @@ const groups = [
       "Digital campaigns",
     ],
   },
+  {
+    chip: "For E-commerce",
+    tint: "#a8d199",
+    title: "E-commerce & retail",
+    line: "Cart abandonment isn't a mystery — it's a checkout with too many steps and a page that loads too slow to survive.",
+    seed: "nomad-ecommerce-retail",
+    points: [
+      "Storefront builds",
+      "Checkout optimization",
+      "Product photography",
+      "Paid acquisition",
+      "Retention flows",
+    ],
+  },
+  {
+    chip: "For SaaS",
+    tint: "#4f9a53",
+    title: "SaaS & startups",
+    line: "Investors and early users judge the product before they've used it — your landing page is doing sales calls you're not in the room for.",
+    seed: "nomad-saas-startup",
+    points: [
+      "Landing pages",
+      "Product positioning",
+      "Onboarding flows",
+      "Growth experiments",
+      "Pitch-ready branding",
+    ],
+  },
+  {
+    chip: "For Hospitality",
+    tint: "#1e4d24",
+    title: "Hospitality & restaurants",
+    line: "Diners decide from their phone before they decide from the menu — a slow site or a missing booking link loses the table.",
+    seed: "nomad-hospitality-dine",
+    points: [
+      "Booking systems",
+      "Menu & photography",
+      "Local SEO",
+      "Social presence",
+      "Review management",
+    ],
+  },
 ];
 
 export default function WhoWeHelp() {

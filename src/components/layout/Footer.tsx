@@ -4,6 +4,7 @@ import { navLinks, site, whatsappHref } from "@/config/site";
 import { stages } from "@/lib/services";
 import PatternMosaic from "@/components/ui/PatternMosaic";
 import PatternTrace from "@/components/ui/PatternTrace";
+import PatternGrid from "@/components/ui/PatternGrid";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -28,15 +29,21 @@ export default function Footer() {
         <p className="footer-word relative text-center">NOMAD</p>
       </div>
 
-      <div className="wrap grid gap-10 py-14 md:grid-cols-[1.7fr_1fr_1fr_1fr]">
+      <div className="wrap relative grid gap-10 py-16 md:grid-cols-[1.7fr_1fr_1fr_1fr] md:py-20">
+        <PatternGrid
+          cols={3}
+          rows={3}
+          seed={3}
+          className="pointer-events-none absolute -left-6 top-0 hidden h-40 w-40 opacity-[0.08] md:block"
+        />
         <div>
-          <p className="font-display text-lg font-bold uppercase tracking-tight">
+          <p className="font-display text-xl font-bold uppercase tracking-tight">
             Nomad<span className="text-accent-fg">*</span>Media
           </p>
-          <p className="mt-3 text-sm text-muted">
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
             Full-lifecycle startup studio — remote-first, building with founders worldwide.
           </p>
-          <div className="mt-5 flex gap-4">
+          <div className="mt-6 flex gap-5">
             {site.socials.map((social) => (
               <a
                 key={social.label}
@@ -52,8 +59,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold">Pages</p>
-          <ul className="mt-4 space-y-2.5">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">
+            Pages
+          </p>
+          <ul className="mt-5 space-y-3">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
@@ -76,8 +85,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold">Services</p>
-          <ul className="mt-4 space-y-2.5">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">
+            Services
+          </p>
+          <ul className="mt-5 space-y-3">
             {stages.map((stage) => (
               <li key={stage}>
                 <Link
@@ -100,8 +111,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold">Get in touch</p>
-          <ul className="mt-4 space-y-2.5">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">
+            Get in touch
+          </p>
+          <ul className="mt-5 space-y-3">
             <li>
               <a
                 href={`mailto:${site.email}`}

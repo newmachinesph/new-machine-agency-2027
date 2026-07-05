@@ -57,7 +57,7 @@ export default function HeroIntro() {
         </m.p>
 
         <m.p variants={item} className="measure mt-4 text-muted">
-          From brand to build to launch to growth to scale — clear pricing,
+          From brand to build to launch to grow to scale — clear pricing,
           fast delivery, no jargon.
         </m.p>
 

@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { IconArrowRight } from "@/components/ui/icons";
+import {
+  IconArrowRight,
+  IconChat,
+  IconSpeed,
+  IconLanding,
+  type BrandIcon,
+} from "@/components/ui/icons";
 import products from "@/content/products.json";
+import { whatsappHref } from "@/config/site";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
+import Logo from "@/components/ui/Logo";
+import PatternGrid from "@/components/ui/PatternGrid";
+import PatternSignal from "@/components/ui/PatternSignal";
 import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
@@ -11,6 +21,12 @@ export const metadata: Metadata = {
   description:
     "Software products we build in-house — born from problems we kept seeing our clients face.",
   alternates: { canonical: "/products/" },
+};
+
+const icons: Record<string, BrandIcon> = {
+  chat: IconChat,
+  speed: IconSpeed,
+  landing: IconLanding,
 };
 
 function badgeClasses(status: string): string {
@@ -23,66 +39,140 @@ export default function ProductsPage() {
   return (
     <div className="pt-32 pb-24">
       <div className="wrap">
-        <Reveal className="flex items-center gap-2.5">
-          <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-            Products
-          </span>
-        </Reveal>
-        <Reveal delay={80}>
-          <h1 className="font-display mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
-            Built by us. Used by businesses like yours.
-          </h1>
-        </Reveal>
-        <Reveal delay={160}>
-          <p className="mt-5 max-w-xl text-muted">
-            The same team that builds client projects also builds products — tools born
-            from problems we kept running into on real engagements.
-          </p>
-        </Reveal>
+        <div className="relative overflow-hidden">
+          <PatternSignal className="pointer-events-none absolute -top-10 right-0 h-72 w-72 opacity-[0.1] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]" />
 
-        <div className="mt-14 grid gap-4 md:grid-cols-3">
-          {products.map((product, i) => (
-            <Reveal key={product.slug} delay={i * 90}>
-              <Link
-                href={`/products/${product.slug}/`}
-                className="panel beam flex h-full flex-col overflow-hidden"
-              >
-                <DuotoneImage
-                  src={`https://picsum.photos/seed/${product.slug}/800/500`}
-                  className="h-40 w-full"
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                />
-                <div className="flex flex-1 flex-col p-7">
-                <span
-                  className={`inline-block self-start border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
-                >
-                  {product.status}
-                </span>
-                <h2 className="mt-4 text-xl font-semibold">{product.name}</h2>
-                <p className="mt-2 flex-1 text-sm text-muted">{product.oneLiner}</p>
-                <span className="mt-5 inline-block text-sm text-accent-fg transition-opacity hover:opacity-80">
-                  View product →
-                </span>
-                </div>
-              </Link>
+          <div className="relative">
+            <Reveal className="flex items-center gap-2.5">
+              <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+                Products
+              </span>
             </Reveal>
-          ))}
+            <Reveal delay={80}>
+              <h1 className="font-display mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
+                Built by us. Used by businesses like yours.
+              </h1>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="measure mt-5 text-muted">
+                The same team that builds client projects also builds products — tools
+                born from problems we kept running into on real engagements. World-class
+                standards, pointed at our own roadmap.
+              </p>
+            </Reveal>
+            <Reveal delay={220}>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button href="/contact">
+                  Talk to us
+                  <IconArrowRight size={16} />
+                </Button>
+                <Button href={whatsappHref} variant="ghost">
+                  <IconChat size={16} />
+                  WhatsApp
+                </Button>
+              </div>
+            </Reveal>
+          </div>
         </div>
 
-        <Reveal delay={300}>
-          <p className="mt-10 text-sm text-muted">
-            All three are in active development. Want early access, or have a problem
-            you think we should build for? We’d love to hear it.
-          </p>
-        </Reveal>
+        <div className="mt-16 grid gap-5 md:grid-cols-3">
+          {products.map((product, i) => {
+            const Icon = icons[product.icon] ?? IconChat;
+            return (
+              <Reveal key={product.slug} delay={i * 90}>
+                <Link
+                  href={`/products/${product.slug}/`}
+                  className="panel beam relative flex h-full flex-col overflow-hidden"
+                >
+                  <PatternGrid
+                    cols={3}
+                    rows={3}
+                    seed={i + 1}
+                    className="pointer-events-none absolute -right-5 -top-5 h-24 w-24 opacity-[0.16] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]"
+                  />
 
-        <Reveal delay={360}>
-          <div className="mt-8">
-            <Button href="/contact">
-              Talk to us
-              <IconArrowRight size={16} />
-            </Button>
+                  {/* Browser device-frame */}
+                  <div
+                    aria-hidden="true"
+                    className="relative flex items-center gap-2 border-b border-border bg-surface px-4 py-2.5"
+                  >
+                    <span className="flex gap-1.5">
+                      <span className="h-2.5 w-2.5 bg-accent/70" />
+                      <span className="h-2.5 w-2.5 bg-muted/40" />
+                      <span className="h-2.5 w-2.5 bg-muted/25" />
+                    </span>
+                    <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
+                      nomadmedia.ae/products/{product.slug}
+                    </span>
+                  </div>
+                  {/* Screenshot with centered solid-white wordmark */}
+                  <div className="relative">
+                    <DuotoneImage
+                      src={`https://picsum.photos/seed/${product.slug}/800/500`}
+                      className="aspect-[16/10] w-full"
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                    />
+                    <span className="pointer-events-none absolute inset-0 grid place-items-center">
+                      <Logo className="h-8 w-auto opacity-90 [&_polygon]:fill-white" />
+                    </span>
+                  </div>
+
+                  <div className="relative flex flex-1 flex-col p-7">
+                    <div className="flex items-center gap-3">
+                      <span
+                        className="grid h-11 w-11 shrink-0 place-items-center chamfer"
+                        style={{ background: product.tint }}
+                      >
+                        <Icon size={18} className="text-accent-ink" />
+                      </span>
+                      <span
+                        className={`inline-block border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
+                      >
+                        {product.status}
+                      </span>
+                    </div>
+                    <h2 className="font-display mt-5 text-xl font-bold tracking-tight">
+                      {product.name}
+                    </h2>
+                    <p className="mt-2 flex-1 text-sm text-muted">{product.oneLiner}</p>
+                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent-fg">
+                      View product
+                      <IconArrowRight size={14} />
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            );
+          })}
+        </div>
+
+        <Reveal delay={340}>
+          <div className="panel relative mt-20 overflow-hidden p-10 text-center md:p-14">
+            <PatternGrid
+              cols={6}
+              rows={3}
+              seed={9}
+              className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
+            />
+            <div className="relative">
+              <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
+                Got a problem worth productizing?
+              </h2>
+              <p className="measure mx-auto mt-3 text-muted">
+                All three are in active development. Want early access, or have a problem
+                you think we should build for? We&apos;d love to hear it.
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <Button href="/contact">
+                  Talk to us
+                  <IconArrowRight size={16} />
+                </Button>
+                <Button href={whatsappHref} variant="ghost">
+                  WhatsApp
+                </Button>
+              </div>
+            </div>
           </div>
         </Reveal>
       </div>
