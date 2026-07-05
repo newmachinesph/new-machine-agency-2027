@@ -138,6 +138,7 @@ export default function AboutPage() {
                 src="https://picsum.photos/seed/nomad-about/1200/750"
                 className="aspect-[16/10] w-full"
                 sizes="(min-width: 768px) 55vw, 100vw"
+                priority
               />
             </div>
           </Reveal>

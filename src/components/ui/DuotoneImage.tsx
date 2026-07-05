@@ -6,6 +6,8 @@ type DuotoneImageProps = {
   /** Sizing/aspect classes for the frame, e.g. "h-40" or "aspect-[4/3]". */
   className?: string;
   sizes?: string;
+  /** Set on the single above-the-fold hero image per page to improve LCP. */
+  priority?: boolean;
 };
 
 /**
@@ -17,10 +19,18 @@ export default function DuotoneImage({
   alt = "",
   className = "",
   sizes = "100vw",
+  priority = false,
 }: DuotoneImageProps) {
   return (
     <div className={`relative overflow-hidden ${className}`}>
-      <Image src={src} alt={alt} fill sizes={sizes} className="object-cover grayscale" />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes={sizes}
+        priority={priority}
+        className="object-cover grayscale"
+      />
       <div className="absolute inset-0 bg-accent-deep mix-blend-multiply" />
       <div className="absolute inset-0 bg-accent-deep/25" />
     </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import work from "@/content/work.json";
+import { site } from "@/config/site";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import CountUp from "@/components/ui/CountUp";
 import Reveal from "@/components/ui/Reveal";
@@ -38,7 +39,7 @@ export default function SelectedWork() {
                         <span className="h-2.5 w-2.5 bg-muted/25" />
                       </span>
                       <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                        nomadmedia.co/work/{project.slug}
+                        {site.domain}/work/{project.slug}
                       </span>
                     </div>
                     <DuotoneImage

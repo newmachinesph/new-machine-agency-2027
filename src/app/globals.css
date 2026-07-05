@@ -15,7 +15,7 @@
   --surface: #101012;
   --card: #141417;
   --fg: #f4f4f5;
-  --muted: #a2a2ab;
+  --muted: #b3b3bd;
   --line: rgba(255, 255, 255, 0.09);
   --glass: rgba(255, 255, 255, 0.05);
   --accent-fg: #a9d896;
@@ -27,7 +27,7 @@
   --surface: #f1f1f3;
   --card: #ffffff;
   --fg: #131316;
-  --muted: #5c5c66;
+  --muted: #52525b;
   --line: rgba(19, 19, 22, 0.1);
   --glass: rgba(255, 255, 255, 0.55);
   --accent-fg: #2f6b34;
@@ -95,11 +95,17 @@ svg {
 .wrap {
   margin-inline: auto;
   width: 100%;
-  max-width: 96rem;
-  padding-inline: 1.5rem;
+  max-width: 100rem;
+  padding-inline: 1.25rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
+  .wrap {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .wrap {
     padding-inline: 2rem;
   }

@@ -22,6 +22,9 @@ export const site = {
     "Nomad Media is a remote-first digital studio partnering with founders worldwide across the full startup lifecycle — brand, websites, apps, launch, growth and AI automation. Built to turn ideas into companies that convert.",
 
   email: "hello@nomadmedia.ae",
+  /** Hero / testimonials explainer video. TODO(owner): replace this
+   *  placeholder YouTube ID with the real brand film before launch. */
+  videoId: "ScMzIvxBSi4",
   /** International format, digits only. TODO(owner): confirm the real
    *  business number — this sample must be set before launch. */
   whatsapp: "971501234567",

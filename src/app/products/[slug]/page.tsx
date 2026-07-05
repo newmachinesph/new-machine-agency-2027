@@ -2,18 +2,13 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  IconArrowLeft,
-  IconArrowRight,
-  IconChat,
-  IconSpeed,
-  IconLanding,
-  type BrandIcon,
-} from "@/components/ui/icons";
+import { IconArrowLeft, IconArrowRight, IconChat } from "@/components/ui/icons";
 import products from "@/content/products.json";
-import { whatsappHref } from "@/config/site";
+import { site, whatsappHref } from "@/config/site";
+import { productIcons, productBadgeClasses } from "@/lib/products";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
+import JsonLd from "@/components/ui/JsonLd";
 import Logo from "@/components/ui/Logo";
 import PatternGrid from "@/components/ui/PatternGrid";
 import PatternSignal from "@/components/ui/PatternSignal";
@@ -23,18 +18,6 @@ import Reveal from "@/components/ui/Reveal";
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
-
-const icons: Record<string, BrandIcon> = {
-  chat: IconChat,
-  speed: IconSpeed,
-  landing: IconLanding,
-};
-
-function badgeClasses(status: string): string {
-  if (status === "Live") return "border-accent bg-accent/10 text-accent-fg";
-  if (status === "Beta") return "border-accent text-accent-fg";
-  return "border-border text-muted";
-}
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -56,7 +39,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const product = products.find((p) => p.slug === slug);
   if (!product) notFound();
 
-  const Icon = icons[product.icon] ?? IconChat;
+  const Icon = productIcons[product.icon] ?? IconChat;
 
   return (
     <div className="pt-32 pb-24">
@@ -86,7 +69,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     <span className="h-2.5 w-2.5 bg-muted/25" />
                   </span>
                   <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                    nomadmedia.ae/products/{product.slug}
+                    {site.domain}/products/{product.slug}
                   </span>
                 </div>
                 <div className="relative">
@@ -94,6 +77,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     src={`https://picsum.photos/seed/${product.slug}/1200/900`}
                     className="aspect-[4/3] w-full"
                     sizes="(min-width: 1024px) 50vw, 100vw"
+                    priority
                   />
                   <span className="pointer-events-none absolute inset-0 grid place-items-center">
                     <Logo className="h-10 w-auto opacity-90 [&_polygon]:fill-white" />
@@ -111,7 +95,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   <Icon size={22} className="text-accent-ink" />
                 </span>
                 <span
-                  className={`inline-block border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
+                  className={`inline-block border px-2.5 py-0.5 text-xs ${productBadgeClasses(product.status)}`}
                 >
                   {product.status}
                 </span>
@@ -246,6 +230,20 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </Reveal>
         </div>
       </div>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: product.name,
+          description: product.oneLiner,
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          url: `${site.url}/products/${product.slug}/`,
+          brand: { "@type": "Organization", name: site.name },
+          publisher: { "@type": "Organization", name: site.name },
+        }}
+      />
     </div>
   );
 }

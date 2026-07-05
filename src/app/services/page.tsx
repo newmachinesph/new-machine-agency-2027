@@ -1,28 +1,8 @@
 import type { Metadata } from "next";
-import {
-  IconArrowRight,
-  IconCorporate,
-  IconCheck,
-  IconLeads,
-  IconWebsite,
-  IconSocial,
-  IconLanding,
-  IconBrandMark,
-  IconCompass,
-  IconSearch,
-  IconAppWindow,
-  IconMobile,
-  IconTarget,
-  IconRank,
-  IconMail,
-  IconAIAgent,
-  IconDashboard,
-  IconSplitTest,
-  IconHelm,
-  type BrandIcon,
-} from "@/components/ui/icons";
+import { IconArrowRight, IconCheck, IconWebsite } from "@/components/ui/icons";
 import services from "@/content/services.json";
 import { site, whatsappHref } from "@/config/site";
+import { serviceIcons } from "@/lib/services";
 import Button from "@/components/ui/Button";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
@@ -36,26 +16,6 @@ export const metadata: Metadata = {
   description:
     "Brand, product, growth and scale services built for the full startup lifecycle — from first identity to fractional leadership, wherever your team is in the world.",
   alternates: { canonical: "/services/" },
-};
-
-const icons: Record<string, BrandIcon> = {
-  monitor: IconWebsite,
-  zap: IconLanding,
-  building: IconCorporate,
-  share: IconSocial,
-  magnet: IconLeads,
-  brandmark: IconBrandMark,
-  compass: IconCompass,
-  search: IconSearch,
-  appwindow: IconAppWindow,
-  mobile: IconMobile,
-  target: IconTarget,
-  rank: IconRank,
-  mail: IconMail,
-  aiagent: IconAIAgent,
-  dashboard: IconDashboard,
-  splittest: IconSplitTest,
-  helm: IconHelm,
 };
 
 const stages = [
@@ -121,7 +81,7 @@ export default function ServicesPage() {
 
           const [featured, ...rest] = stageServices;
           const tint = stageTints[stageIndex % stageTints.length];
-          const FeaturedIcon = icons[featured.icon] ?? IconWebsite;
+          const FeaturedIcon = serviceIcons[featured.icon] ?? IconWebsite;
           const reversed = stageIndex % 2 === 1;
 
           return (
@@ -152,7 +112,7 @@ export default function ServicesPage() {
                             <span className="h-2.5 w-2.5 bg-muted/25" />
                           </span>
                           <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                            nomadmedia.ae/services/{featured.slug}
+                            {site.domain}/services/{featured.slug}
                           </span>
                         </div>
                         <DuotoneImage
@@ -196,7 +156,7 @@ export default function ServicesPage() {
                 {rest.length > 0 && (
                   <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     {rest.map((service, i) => {
-                      const Icon = icons[service.icon] ?? IconWebsite;
+                      const Icon = serviceIcons[service.icon] ?? IconWebsite;
                       return (
                         <Reveal key={service.slug} delay={i * 60}>
                           <div className="panel beam chamfer relative flex h-full flex-col overflow-hidden p-7">

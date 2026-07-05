@@ -5,7 +5,6 @@ import { site } from "@/config/site";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
-import ContentGuard from "@/components/ui/ContentGuard";
 import CustomCursor from "@/components/ui/CustomCursor";
 import JsonLd from "@/components/ui/JsonLd";
 import MotionProvider from "@/components/ui/MotionProvider";
@@ -69,12 +68,17 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <ContentGuard />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-accent-ink"
+        >
+          Skip to content
+        </a>
         <div className="scroll-progress" aria-hidden="true" />
         <CustomCursor />
         <MotionProvider>
           <Navbar />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <Footer />
           <BackToTop />
           <WhatsAppButton />
@@ -84,7 +88,9 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: site.name,
+            description: site.description,
             url: site.url,
+            logo: `${site.url}/opengraph-image.png`,
             email: site.email,
             sameAs: site.socials.map((social) => social.href),
             address: [

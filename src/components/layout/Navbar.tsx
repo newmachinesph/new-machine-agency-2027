@@ -54,7 +54,6 @@ function Caret({ open }: { open: boolean }) {
  *  keyboard handling live on the wrapping group in Navbar. */
 function MegaItem({
   label,
-  href,
   menuKey,
   active,
   isCurrent,
@@ -64,7 +63,6 @@ function MegaItem({
   children,
 }: {
   label: string;
-  href: string;
   menuKey: MegaKey;
   active: boolean;
   isCurrent: boolean;
@@ -279,12 +277,18 @@ export default function Navbar() {
     if (active) setActive(null);
   }
 
-  // Lock page scroll while the mobile menu is open.
+  // Lock page scroll while the mobile menu is open, and close it on Escape
+  // (returning focus to the toggle, which owns the [open] state).
   useEffect(() => {
     if (!open) return;
     document.documentElement.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
     return () => {
       document.documentElement.style.overflow = "";
+      document.removeEventListener("keydown", onKey);
     };
   }, [open]);
 
@@ -352,7 +356,6 @@ export default function Navbar() {
                   <MegaItem
                     key={link.href}
                     label={link.label}
-                    href={link.href}
                     menuKey={menuKey}
                     active={active === menuKey}
                     isCurrent={isActive(link.href)}

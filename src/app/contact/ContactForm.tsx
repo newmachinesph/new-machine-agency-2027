@@ -69,7 +69,7 @@ export default function ContactForm() {
     <form onSubmit={onSubmit} className="panel chamfer relative space-y-5 p-8 md:p-10">
       <div>
         <label htmlFor="contact-name" className="mb-1.5 block text-sm font-medium">
-          Name
+          Name <span className="text-accent-fg" aria-hidden="true">*</span>
         </label>
         <input
           id="contact-name"
@@ -83,7 +83,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="contact-email" className="mb-1.5 block text-sm font-medium">
-          Email
+          Email <span className="text-accent-fg" aria-hidden="true">*</span>
         </label>
         <input
           id="contact-email"
@@ -112,7 +112,10 @@ export default function ContactForm() {
         <label htmlFor="contact-service" className="mb-1.5 block text-sm font-medium">
           What do you need?
         </label>
-        <select id="contact-service" name="service" className={inputClasses}>
+        <select id="contact-service" name="service" defaultValue="" className={inputClasses}>
+          <option value="" disabled>
+            Select a service…
+          </option>
           {services.map((service) => (
             <option key={service.slug} value={service.name}>
               {service.name}
@@ -124,7 +127,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="contact-message" className="mb-1.5 block text-sm font-medium">
-          Message
+          Message <span className="text-accent-fg" aria-hidden="true">*</span>
         </label>
         <textarea
           id="contact-message"

@@ -95,6 +95,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         src={`https://picsum.photos/seed/${post.meta.slug}/1200/600`}
         className="mt-10 aspect-[2/1] w-full"
         sizes="(min-width: 768px) 48rem, 100vw"
+        priority
       />
 
       <div className="prose measure mx-auto mt-10">

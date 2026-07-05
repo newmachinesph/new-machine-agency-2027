@@ -34,6 +34,7 @@ Every owner-editable value lives here. What each field does:
 | `tagline` / `description` | Brand line + default meta description |
 | `email` | Contact email — mailto links, form fallback, legal pages |
 | `whatsapp` | WhatsApp number, international format, digits only (e.g. `971501234567`) |
+| `videoId` | YouTube ID for the hero + testimonials explainer video |
 | `formEndpoint` | Static form provider URL; empty string = mailto fallback (see below) |
 | `socials` | Footer social links (`label` + `href`) |
 | `builtFor` | Hero typewriter industries — add/remove freely |
@@ -81,7 +82,7 @@ Append to `src/content/services.json` with `phase: 2` (or `3`):
 }
 ```
 
-The services page groups by phase automatically: `1` renders under "Available now", `2` under "Coming soon", `3` under "On the roadmap". No code changes needed. Valid `icon` values: `monitor`, `zap`, `building`, `share`, `magnet` (extend the icon map in `src/components/sections/ServicesBento.tsx` and `src/app/services/page.tsx` for new ones).
+The services page groups by phase automatically: `1` renders under "Available now", `2` under "Coming soon", `3` under "On the roadmap". No code changes needed. To add a new `icon` value, extend the single `serviceIcons` map in `src/lib/services.ts` — the nav, services page and bento all read from it.
 
 ## Swap the form provider
 
@@ -121,26 +122,23 @@ Build produces a fully static site in `/out`:
 
 ## Fill-in checklist (before going live)
 
-> **Note:** these fields are currently filled with **dummy sample values** (`hello@nomadmedia.ae`, `971501234567`, `40+`, sample testimonials, `nomadmedia` social handles) so the site renders complete. Replace each one in `src/config/site.ts` with your real data before launch — also set `site.url`.
+> **Note:** these fields are currently filled with **dummy sample values** (`hello@nomadmedia.ae`, `971501234567`, sample stats, sample testimonials, `nomadmedia` social handles) so the site renders complete. Replace each one in `src/config/site.ts` with your real data before launch — also set `site.url`.
 
-| Field (was token) | Where | What to put |
+| Field | Where | What to put |
 |---|---|---|
-| `{{DOMAIN}}` | `site.domain` | Your display domain, e.g. `nomadmedia.ae` |
-| `site.url` | `src/config/site.ts` | Full production URL, e.g. `https://nomadmedia.ae` |
-| `{{EMAIL}}` | `site.email` | Real contact email |
-| `{{WHATSAPP_NUMBER}}` | `site.whatsapp` | Digits only, international format |
-| `{{STAT_PROJECTS}}` | `site.stats[0]` | e.g. `40+` |
-| `{{STAT_RETENTION}}` | `site.stats[1]` | e.g. `95%` |
-| `{{STAT_INDUSTRIES}}` | `site.stats[2]` | e.g. `12` |
-| `{{STAT_SPEED}}` | `site.stats[3]` | e.g. `3×` |
-| `{{TESTIMONIAL_1_QUOTE/NAME/ROLE}}` | `site.testimonials[0]` | Real client quote |
-| `{{TESTIMONIAL_2_QUOTE/NAME/ROLE}}` | `site.testimonials[1]` | Real client quote |
-| `{{INSTAGRAM_HANDLE}}` etc. | `site.socials` | Real social handles |
+| `domain` | `site.domain` | Your display domain, e.g. `nomadmedia.ae` (also fills the browser-frame mockups) |
+| `url` | `src/config/site.ts` | Full production URL, e.g. `https://nomadmedia.ae` |
+| `email` | `site.email` | Real contact email |
+| `whatsapp` | `site.whatsapp` | Digits only, international format |
+| `videoId` | `site.videoId` | Real hero/testimonials YouTube video ID |
+| `stats[0..3]` | `site.stats` | Four hero cards — currently `24h` / `2wk` / `100%` / `0` promises (value + label) |
+| `testimonials[0..1]` | `site.testimonials` | Real, client-consented quotes |
+| `socials` | `site.socials` | Real social handles |
 
 ## Notes
 
-- **Placeholder photos.** Product, service, about and blog images are dummy placeholders from `picsum.photos` (seeded per item, so they're stable) rendered through `DuotoneImage` (`src/components/ui/DuotoneImage.tsx`), which applies the brand green duotone. Replace by swapping the `src` URLs with real assets in `/public` — the treatment applies automatically. The footer uses `/public/nomad-background.jpg` (2.3 MB — compress before launch).
-- **No OG image yet.** Add `/public/og.png` (1200×630) and reference it in `src/app/layout.tsx` under `metadata.openGraph.images` when brand assets are ready.
+- **Placeholder photos.** Product, service, about and blog images are dummy placeholders from `picsum.photos` (seeded per item, so they're stable) rendered through `DuotoneImage` (`src/components/ui/DuotoneImage.tsx`), which applies the brand green duotone. Replace by swapping the `src` URLs with real assets in `/public` — the treatment applies automatically. **These are fetched from a third-party host at runtime; download real assets into `/public` before launch so the site has no external image dependency.** The footer uses `/public/nomad-background.jpg` (~370 KB).
+- **OG image** is generated at build time from `src/app/opengraph-image.tsx` (a flat branded card via `next/og`). Replace with real 1200×630 art when brand assets are ready — either edit that file or drop a static `opengraph-image.png` in `src/app/`.
 - **Motion budget.** Framer Motion ships lean via `LazyMotion`/`m` (domAnimation feature set only — no drag/layout features). Total home-page JS is ~220 KB gzipped: ~151 KB React 19 + Next 16 runtime floor, ~30 KB motion features, ~35 KB app code. All of it is deferred; pages are fully pre-rendered HTML, so LCP is unaffected.
 - **Testimonials** live in their own home section (`src/components/sections/Testimonials.tsx`), fed by `site.testimonials`.
-- Company name is never hardcoded in components — always `site.name` from config.
+- Company name in body copy always comes from `site.name`; the only fixed spellings are the footer wordmark and logo (intentional brand lockups).
