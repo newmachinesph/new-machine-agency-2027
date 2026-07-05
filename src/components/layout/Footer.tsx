@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { navLinks, site, whatsappHref } from "@/config/site";
-import services from "@/content/services.json";
+import { stages } from "@/lib/services";
 import PatternMosaic from "@/components/ui/PatternMosaic";
 import PatternTrace from "@/components/ui/PatternTrace";
 
@@ -34,7 +34,7 @@ export default function Footer() {
             Nomad<span className="text-accent-fg">*</span>Media
           </p>
           <p className="mt-3 text-sm text-muted">
-            Digital growth agency based in the UAE, working with businesses worldwide.
+            Full-lifecycle startup studio — remote-first, building with founders worldwide.
           </p>
           <div className="mt-5 flex gap-4">
             {site.socials.map((social) => (
@@ -78,16 +78,24 @@ export default function Footer() {
         <div>
           <p className="text-sm font-semibold">Services</p>
           <ul className="mt-4 space-y-2.5">
-            {services.map((service) => (
-              <li key={service.slug}>
+            {stages.map((stage) => (
+              <li key={stage}>
                 <Link
                   href="/services/"
                   className="text-sm text-muted transition-colors hover:text-fg"
                 >
-                  {service.name}
+                  {stage}
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/services/"
+                className="text-sm font-semibold text-accent-fg transition-colors hover:text-fg"
+              >
+                All services →
+              </Link>
+            </li>
           </ul>
         </div>
 

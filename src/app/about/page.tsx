@@ -67,9 +67,10 @@ export default function AboutPage() {
                 needle.
               </p>
               <p>
-                That’s why we built {site.name}. The name is deliberate: we’re nomads.
-                Based in the UAE, working with clients everywhere, not tied to one
-                market or one way of doing things — just to results.
+                That’s why we built {site.name}. The name is deliberate: we’re nomads —
+                remote-first, working with founders everywhere, not tied to one market
+                or one service. We handle the full lifecycle: brand, build, launch,
+                grow, scale.
               </p>
             </div>
             <DuotoneImage

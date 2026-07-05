@@ -24,10 +24,10 @@ export default function ProductsTeaser() {
 
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {products.map((product, i) => (
-            <Reveal key={product.name} delay={i * 90}>
-              <div className="panel beam h-full overflow-hidden">
+            <Reveal key={product.slug} delay={i * 90}>
+              <Link href={`/products/${product.slug}/`} className="panel beam block h-full overflow-hidden">
                 <DuotoneImage
-                  src={`https://picsum.photos/seed/${encodeURIComponent(product.name)}/800/500`}
+                  src={`https://picsum.photos/seed/${product.slug}/800/500`}
                   className="h-32 w-full"
                   sizes="(min-width: 768px) 33vw, 100vw"
                 />
@@ -40,7 +40,7 @@ export default function ProductsTeaser() {
                 <h3 className="mt-4 text-lg font-semibold">{product.name}</h3>
                 <p className="mt-2 text-sm text-muted">{product.oneLiner}</p>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           ))}
         </div>

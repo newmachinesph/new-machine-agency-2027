@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { IconArrowRight } from "@/components/ui/icons";
 import products from "@/content/products.json";
 import Button from "@/components/ui/Button";
@@ -42,10 +43,13 @@ export default function ProductsPage() {
 
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {products.map((product, i) => (
-            <Reveal key={product.name} delay={i * 90}>
-              <div className="panel beam flex h-full flex-col overflow-hidden">
+            <Reveal key={product.slug} delay={i * 90}>
+              <Link
+                href={`/products/${product.slug}/`}
+                className="panel beam flex h-full flex-col overflow-hidden"
+              >
                 <DuotoneImage
-                  src={`https://picsum.photos/seed/${encodeURIComponent(product.name)}/800/500`}
+                  src={`https://picsum.photos/seed/${product.slug}/800/500`}
                   className="h-40 w-full"
                   sizes="(min-width: 768px) 33vw, 100vw"
                 />
@@ -57,18 +61,11 @@ export default function ProductsPage() {
                 </span>
                 <h2 className="mt-4 text-xl font-semibold">{product.name}</h2>
                 <p className="mt-2 flex-1 text-sm text-muted">{product.oneLiner}</p>
-                {product.link ? (
-                  <a
-                    href={product.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-block text-sm text-accent-fg transition-opacity hover:opacity-80"
-                  >
-                    Visit →
-                  </a>
-                ) : null}
+                <span className="mt-5 inline-block text-sm text-accent-fg transition-opacity hover:opacity-80">
+                  View product →
+                </span>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           ))}
         </div>

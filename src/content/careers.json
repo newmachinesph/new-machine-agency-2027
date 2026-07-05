@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "full-stack-developer",
+    "title": "Full-Stack Developer",
+    "type": "Full-time",
+    "location": "Remote · Global",
+    "dept": "Engineering",
+    "summary": "Build and ship the products and client sites that carry the Nomad Media name — from a Next.js marketing site to a full SaaS backend, end to end, with no layer of hand-off between you and production.",
+    "responsibilities": [
+      "Ship features across the stack: React/Next.js front ends, Node/Python APIs, and the databases behind them",
+      "Own a project from technical spec through deploy — no separate QA or DevOps team to hand off to",
+      "Review architecture decisions with the founding team before they become expensive to undo",
+      "Keep client and internal products fast, accessible and maintainable, not just \"working\"",
+      "Pair with design and marketing to turn a Figma file or a rough idea into a shipped product"
+    ],
+    "requirements": [
+      "3+ years shipping production web applications, ideally with TypeScript and a modern framework",
+      "Comfortable owning a feature end to end — API, database, UI — without a large team behind you",
+      "Can explain a technical trade-off in plain language to a non-technical founder or client",
+      "Genuinely curious about new tools, but not distracted by them — you finish what you start",
+      "Full overlap availability isn't required; async communication skills are"
+    ]
+  },
+  {
+    "slug": "product-designer",
+    "title": "Product Designer — UI/UX & Brand",
+    "type": "Full-time",
+    "location": "Remote · Global",
+    "dept": "Design",
+    "summary": "Design the interfaces, brand systems and visual identity for every product and client site we touch — the person who decides whether something looks like a template or looks like Nomad Media.",
+    "responsibilities": [
+      "Design end-to-end UI/UX for client websites, landing pages and internal products",
+      "Build and maintain design systems that scale across projects instead of starting from zero each time",
+      "Turn a client brief into a visual direction, then defend it with reasoning, not just taste",
+      "Run lightweight usability passes on shipped work and fold the findings back into the system",
+      "Collaborate directly with engineering on implementation — no redlines thrown over a wall"
+    ],
+    "requirements": [
+      "A portfolio that shows real shipped work, not just concept explorations",
+      "Fluency in a modern design tool (Figma or equivalent) and a working understanding of how the web actually renders your work",
+      "Strong typography, layout and color instincts — you can tell why a design feels generic",
+      "Comfortable presenting and defending design decisions directly to clients",
+      "Bonus: some hands-on CSS/front-end experience so your files ship close to as-designed"
+    ]
+  },
+  {
+    "slug": "performance-marketer",
+    "title": "Performance Marketing Specialist",
+    "type": "Contract",
+    "location": "Remote · Global",
+    "dept": "Growth",
+    "summary": "Run the paid campaigns — for us and for clients — that turn ad spend into qualified leads. You own the numbers: cost per lead, conversion rate, and return on spend, not just impressions.",
+    "responsibilities": [
+      "Plan, launch and optimize paid campaigns across Meta, Google and other relevant platforms",
+      "Build and iterate on audience targeting, creative testing and bidding strategy",
+      "Set up conversion tracking and attribution so every dollar spent is accounted for",
+      "Report in plain numbers — cost per lead, conversion rate, revenue impact — not vanity metrics",
+      "Work directly with the content and design team to brief creative that actually performs"
+    ],
+    "requirements": [
+      "2+ years running paid campaigns with a real budget and real accountability for the results",
+      "Hands-on experience with Meta Ads Manager and Google Ads at a minimum",
+      "Comfortable reading and explaining a campaign's numbers without dressing them up",
+      "Understands funnels beyond the ad click — landing pages, forms, follow-up",
+      "Can work independently against a target with light day-to-day oversight"
+    ]
+  },
+  {
+    "slug": "content-social-lead",
+    "title": "Content & Social Lead",
+    "type": "Full-time",
+    "location": "Remote · Global",
+    "dept": "Growth",
+    "summary": "Own the voice of Nomad Media and our clients across social and content — planning, writing and shipping posts that sound like a person, not a content calendar template.",
+    "responsibilities": [
+      "Plan and run monthly content calendars for Nomad Media and client accounts",
+      "Write captions, scripts and short-form copy that match each brand's actual voice",
+      "Direct and edit short-form video and static content alongside the design team",
+      "Track what performs and adjust the plan — not just post and hope",
+      "Manage community engagement and respond to comments/DMs in the brand's voice"
+    ],
+    "requirements": [
+      "A track record of growing or running social accounts with measurable engagement",
+      "Strong, adaptable writing — able to switch tone between a clinic, a real estate brand and a restaurant",
+      "Basic video editing skills (CapCut, Premiere, or similar) — you don't need to wait on someone else to cut a reel",
+      "Organized enough to run several client calendars at once without anything slipping",
+      "Comfortable giving and taking direct feedback on creative work"
+    ]
+  },
+  {
+    "slug": "open-application",
+    "title": "Open Application",
+    "type": "Full-time / Contract",
+    "location": "Remote · Global",
+    "dept": "General",
+    "summary": "Don't see the exact role, but think you'd be a strong addition to a small, remote-first team building startups end to end? Tell us what you do and where you'd add the most value.",
+    "responsibilities": [
+      "Tell us clearly what you do best and how it fits into the startup lifecycle we run — build, launch, grow",
+      "Show us real work: a project, a repo, a portfolio, a campaign — something we can look at",
+      "Be specific about how you'd want to work with a small, remote founding team",
+      "Suggest where you'd fit even if it doesn't map to a role listed here"
+    ],
+    "requirements": [
+      "Real, demonstrable work in your field — no need for a specific number of years",
+      "Comfortable in a remote-first, small-team environment with direct ownership and few layers",
+      "Honest about what you're good at and what you're not",
+      "Genuinely interested in the founding-team stage, not just any job"
+    ]
+  }
+]

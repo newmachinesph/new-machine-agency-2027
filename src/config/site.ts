@@ -17,9 +17,9 @@ export const site = {
   url: "https://nomadmedia.ae",
   domain: "nomadmedia.ae",
 
-  tagline: "Digital growth that actually converts.",
+  tagline: "From brand to scale — the studio behind growing startups.",
   description:
-    "Nomad Media is a digital growth agency based in the UAE, serving clients globally. Websites, landing pages, social media and lead generation — built to turn visitors into customers.",
+    "Nomad Media is a remote-first digital studio partnering with founders worldwide across the full startup lifecycle — brand, websites, apps, launch, growth and AI automation. Built to turn ideas into companies that convert.",
 
   email: "hello@nomadmedia.ae",
   /** International format, digits only. TODO(owner): confirm the real
@@ -84,5 +84,6 @@ export const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Products", href: "/products" },
   { label: "About", href: "/about" },
+  { label: "Careers", href: "/careers" },
   { label: "Blog", href: "/blog" },
 ] as const;

@@ -1,6 +1,60 @@
 [
   {
-    "phase": 1,
+    "stage": "Brand & Strategy",
+    "slug": "brand-identity",
+    "name": "Brand Identity",
+    "icon": "brandmark",
+    "tint": "#8fc57f",
+    "outcome": "A brand that looks and sounds like it belongs at the top of its category.",
+    "description": "Logo, color, type, voice — designed as one coherent system, not a scattered set of assets. We build brand identities that hold up across a pitch deck, a product UI and a billboard.",
+    "includes": [
+      "Logo & mark design",
+      "Color & type system",
+      "Brand voice & messaging",
+      "Brand guidelines document",
+      "Social & pitch-deck templates",
+      "Asset library handoff"
+    ],
+    "forWho": "Founders launching a new venture or rebranding one that has outgrown its first identity."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "positioning-naming",
+    "name": "Positioning & Naming",
+    "icon": "compass",
+    "tint": "#a9d896",
+    "outcome": "A name and a story that make the choice obvious before the pitch starts.",
+    "description": "Before a single asset gets designed, we answer the harder question: what do you stand for, and why should anyone pick you over the next tab open in their browser. Naming, positioning and messaging built to survive a competitive market.",
+    "includes": [
+      "Category & competitor mapping",
+      "Naming & tagline development",
+      "Positioning statement",
+      "Audience & persona definition",
+      "Core messaging pillars",
+      "Elevator pitch & one-pager"
+    ],
+    "forWho": "Early-stage founders and teams entering a crowded market who need a sharper story."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "market-research",
+    "name": "Market Research",
+    "icon": "search",
+    "tint": "#67ad62",
+    "outcome": "Decisions backed by evidence, not gut feel and internal opinion.",
+    "description": "We validate demand, map the competitive landscape and talk to real customers before you commit budget to a direction. Research built to de-risk the next twelve months, not fill a slide deck.",
+    "includes": [
+      "Market sizing & opportunity analysis",
+      "Competitor & pricing audit",
+      "Customer interviews & surveys",
+      "Demand validation testing",
+      "SWOT & positioning insights",
+      "Actionable findings report"
+    ],
+    "forWho": "Founders and product teams about to invest in a new market, product or audience."
+  },
+  {
+    "stage": "Design & Build",
     "slug": "website-design",
     "name": "Website Design",
     "icon": "monitor",
@@ -18,7 +72,7 @@
     "forWho": "Businesses whose current site looks dated, loads slowly, or simply doesn't bring in customers."
   },
   {
-    "phase": 1,
+    "stage": "Design & Build",
     "slug": "landing-pages",
     "name": "Landing Pages",
     "icon": "zap",
@@ -30,13 +84,13 @@
       "Persuasive copy structure",
       "A/B-test-ready sections",
       "Fast load times",
-      "Form or WhatsApp capture",
+      "Form capture & routing",
       "Campaign tracking setup"
     ],
     "forWho": "Anyone running ads or campaigns who needs clicks to actually become customers."
   },
   {
-    "phase": 1,
+    "stage": "Design & Build",
     "slug": "corporate-websites",
     "name": "Corporate Websites",
     "icon": "building",
@@ -54,7 +108,43 @@
     "forWho": "Established companies whose online presence hasn't caught up with their real-world reputation."
   },
   {
-    "phase": 1,
+    "stage": "Design & Build",
+    "slug": "web-app-mvp",
+    "name": "Web App / MVP Development",
+    "icon": "appwindow",
+    "tint": "#4a934e",
+    "outcome": "A working product in your users' hands, not a deck of promises.",
+    "description": "We design and build the first real version of your product — fast enough to test with actual users, solid enough to keep building on. From idea to a live, usable MVP without the six-month agency runway.",
+    "includes": [
+      "Product scoping & user flows",
+      "UI/UX design",
+      "Full-stack development",
+      "Database & API architecture",
+      "Auth, billing & core integrations",
+      "Launch-ready deployment"
+    ],
+    "forWho": "Founders who need to prove a product idea works before raising or scaling further."
+  },
+  {
+    "stage": "Design & Build",
+    "slug": "mobile-apps",
+    "name": "Mobile Apps",
+    "icon": "mobile",
+    "tint": "#35753a",
+    "outcome": "A native-feeling app your users actually keep on their phone.",
+    "description": "iOS and Android apps designed around real usage, not just a shrunk-down website. Built for speed, offline resilience and the store approval process most teams underestimate.",
+    "includes": [
+      "iOS & Android design",
+      "Cross-platform development",
+      "Push notifications & offline support",
+      "App Store & Play Store submission",
+      "Analytics & crash reporting",
+      "Post-launch update support"
+    ],
+    "forWho": "Businesses whose product lives on a phone, not just a browser tab."
+  },
+  {
+    "stage": "Launch & Grow",
     "slug": "social-media-management",
     "name": "Social Media Management",
     "icon": "share",
@@ -72,7 +162,7 @@
     "forWho": "Businesses that know they should be active on social media but don't have the time or team to do it well."
   },
   {
-    "phase": 1,
+    "stage": "Launch & Grow",
     "slug": "lead-generation",
     "name": "Lead Generation",
     "icon": "magnet",
@@ -88,5 +178,131 @@
       "Transparent reporting"
     ],
     "forWho": "Businesses ready to grow who want a predictable flow of inquiries, not just likes and impressions."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "performance-ads",
+    "name": "Performance Ads",
+    "icon": "target",
+    "tint": "#8fc57f",
+    "outcome": "Ad spend that comes back as revenue, tracked to the dollar.",
+    "description": "Paid campaigns across search and social, built around a single question: does this ad make more money than it costs. We manage targeting, creative and budget so every dollar is accountable.",
+    "includes": [
+      "Channel & audience strategy",
+      "Ad creative & copywriting",
+      "Campaign setup & management",
+      "Conversion tracking & pixels",
+      "Weekly budget optimization",
+      "ROAS reporting dashboard"
+    ],
+    "forWho": "Businesses ready to put real budget behind growth and see exactly what it returns."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "seo",
+    "name": "SEO",
+    "icon": "rank",
+    "tint": "#a9d896",
+    "outcome": "Free, compounding traffic that keeps arriving after the campaign ends.",
+    "description": "Technical fixes, content strategy and link building aimed at one outcome: ranking for the searches your future customers are already typing. Slower than ads, and worth far more over time.",
+    "includes": [
+      "Technical SEO audit",
+      "Keyword & content strategy",
+      "On-page optimization",
+      "Site speed & Core Web Vitals",
+      "Link building & authority",
+      "Monthly rankings report"
+    ],
+    "forWho": "Businesses playing the long game who want organic traffic that doesn't stop when the budget does."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "email-crm-automation",
+    "name": "Email & CRM Automation",
+    "icon": "mail",
+    "tint": "#67ad62",
+    "outcome": "Every lead followed up, every customer nurtured, without manual effort.",
+    "description": "We design the email flows and CRM automations that turn a one-time visitor into a repeat customer — welcome sequences, abandoned-cart recovery, re-engagement, all running in the background.",
+    "includes": [
+      "CRM setup & data hygiene",
+      "Lifecycle email sequences",
+      "Segmentation & personalization",
+      "Abandoned-cart & win-back flows",
+      "Automation workflow build",
+      "Open, click & revenue reporting"
+    ],
+    "forWho": "Businesses generating leads or customers who are currently going cold in a spreadsheet."
+  },
+  {
+    "stage": "Scale · 2027",
+    "slug": "ai-agents-automation",
+    "name": "AI Agents & Automation",
+    "icon": "aiagent",
+    "tint": "#4a934e",
+    "outcome": "Repetitive work handled by software, not another hire.",
+    "description": "Custom AI agents and workflow automations that handle support triage, data entry, reporting and follow-ups around the clock — built into the tools your team already uses.",
+    "includes": [
+      "Workflow & process audit",
+      "Custom AI agent design",
+      "Integration with existing tools",
+      "Human-in-the-loop safeguards",
+      "Automation of repetitive tasks",
+      "Ongoing monitoring & tuning"
+    ],
+    "forWho": "Growing teams drowning in manual work that software could be doing instead."
+  },
+  {
+    "stage": "Scale · 2027",
+    "slug": "analytics-bi",
+    "name": "Analytics & BI Dashboards",
+    "icon": "dashboard",
+    "tint": "#35753a",
+    "outcome": "One source of truth for what's actually working.",
+    "description": "We connect your marketing, sales and product data into dashboards built for decisions, not vanity metrics. See what's driving revenue in real time, without exporting five spreadsheets a week.",
+    "includes": [
+      "Data source integration",
+      "Custom dashboard design",
+      "Revenue & funnel tracking",
+      "Automated reporting",
+      "KPI & goal alignment",
+      "Team training & handoff"
+    ],
+    "forWho": "Leadership teams making decisions on gut feel because the data lives in ten different tools."
+  },
+  {
+    "stage": "Scale · 2027",
+    "slug": "conversion-optimization",
+    "name": "Conversion Optimization",
+    "icon": "splittest",
+    "tint": "#8fc57f",
+    "outcome": "More revenue from the traffic you're already paying for.",
+    "description": "We test and refine the pages, flows and offers between a visitor and a sale — structured A/B testing, not guesswork. Small, compounding wins that add up to a materially better conversion rate.",
+    "includes": [
+      "Funnel & heatmap analysis",
+      "Hypothesis-driven A/B testing",
+      "Checkout & form optimization",
+      "Copy & offer testing",
+      "Statistical significance tracking",
+      "Monthly uplift reporting"
+    ],
+    "forWho": "Businesses with steady traffic who are ready to stop leaking revenue at the last step."
+  },
+  {
+    "stage": "Scale · 2027",
+    "slug": "fractional-leadership",
+    "name": "Fractional CMO / CTO",
+    "icon": "helm",
+    "tint": "#a9d896",
+    "outcome": "Senior leadership steering growth and tech, without a full-time executive salary.",
+    "description": "An experienced CMO or CTO embedded in your business part-time — setting strategy, running the team and owning outcomes. Built for companies that have outgrown DIY but aren't ready for a full executive hire.",
+    "includes": [
+      "Growth or tech strategy ownership",
+      "Team leadership & hiring input",
+      "Roadmap & budget planning",
+      "Vendor & tool evaluation",
+      "Monthly leadership reporting",
+      "Board & stakeholder updates"
+    ],
+    "forWho": "Scaling businesses that need senior judgment on marketing or engineering, on a fractional budget."
   }
 ]

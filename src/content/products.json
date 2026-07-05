@@ -1,20 +1,107 @@
 [
   {
+    "slug": "atlas-crm",
     "name": "Atlas CRM",
     "status": "In Development",
+    "tint": "#67ad62",
+    "icon": "chat",
     "oneLiner": "A lightweight CRM for small teams that live in WhatsApp — every inquiry, one inbox, zero spreadsheets.",
+    "problem": "Inquiries land everywhere — WhatsApp, Instagram DMs, a contact form, a note scribbled at the front desk — and nobody owns the follow-up. Leads go cold because they're scattered, not because they were weak.",
+    "solution": "Atlas pulls every conversation into one inbox, tags each inquiry as it lands, and flags who needs a follow-up and when. No new app to learn — if your team can use WhatsApp, they can run the pipeline.",
+    "features": [
+      {
+        "title": "Unified inbox",
+        "text": "WhatsApp, Instagram and web inquiries land in one place — no more checking four apps to find the message that matters."
+      },
+      {
+        "title": "Pipeline stages, not spreadsheets",
+        "text": "Move a lead from New to Quoted to Won with a click. See exactly where every deal sits without opening a single formula."
+      },
+      {
+        "title": "Follow-up reminders",
+        "text": "Atlas flags inquiries that have gone quiet for 24 hours, so a slow reply never quietly costs you a sale."
+      },
+      {
+        "title": "Built for small teams",
+        "text": "No seat limits designed to upsell you, no enterprise onboarding call. Add your whole team for less than one lost lead."
+      }
+    ],
+    "caseStudy": {
+      "metric": "3.2×",
+      "metricLabel": "faster average first-response time",
+      "story": "A real-estate team was juggling inquiries across WhatsApp, a web form, and a shared notebook. Atlas gave them one inbox and automatic follow-up flags — no missed inquiries, no more sticky notes on a monitor.",
+      "client": "Real-estate team"
+    },
     "link": ""
   },
   {
+    "slug": "bookably",
     "name": "Bookably",
     "status": "Beta",
+    "tint": "#8fc57f",
+    "icon": "speed",
     "oneLiner": "Simple appointment booking for clinics — patients book in seconds, your front desk breathes again.",
+    "problem": "Phone-based booking means a ringing line, a double-booked slot, and a front desk spending half the day playing scheduling Tetris instead of greeting patients.",
+    "solution": "Bookably gives patients a simple, mobile-first booking page that reads real-time availability — no phone tag, no overlaps, and a calendar your staff can finally trust.",
+    "features": [
+      {
+        "title": "Real-time availability",
+        "text": "Patients see actual open slots, not a guess — double-bookings stop being a weekly apology."
+      },
+      {
+        "title": "Automated reminders",
+        "text": "SMS and WhatsApp reminders cut no-shows before they cost you a slot someone else needed."
+      },
+      {
+        "title": "Front-desk dashboard",
+        "text": "One daily view of every booking, reschedule and cancellation — no flipping between a paper diary and three tabs."
+      },
+      {
+        "title": "Multi-provider scheduling",
+        "text": "Each practitioner gets their own calendar and rules, so a clinic with five doctors runs as smoothly as one with one."
+      }
+    ],
+    "caseStudy": {
+      "metric": "-41%",
+      "metricLabel": "reduction in front-desk phone calls",
+      "story": "An SME clinic piloted Bookably to replace phone-tag scheduling at the front desk. Appointments now book themselves against live availability, freeing staff to focus on patients instead of the phone.",
+      "client": "SME clinic"
+    },
     "link": ""
   },
   {
+    "slug": "launchkit",
     "name": "LaunchKit",
     "status": "In Development",
+    "tint": "#a9d896",
+    "icon": "landing",
     "oneLiner": "Conversion-tested landing page blocks that let us ship campaign pages in a day, not a month.",
+    "problem": "Every new campaign shouldn't mean rebuilding a page from scratch. Custom builds are slow, and generic page builders produce pages that look like every other page builder.",
+    "solution": "LaunchKit is our internal library of conversion-tested blocks — hero, offer, proof, capture — that snap together into a page that's live the same day a campaign is approved, without looking off-the-shelf.",
+    "features": [
+      {
+        "title": "Pre-tested block library",
+        "text": "Every hero, offer and capture block has already been split-tested on real traffic — no guessing which layout converts."
+      },
+      {
+        "title": "Same-day assembly",
+        "text": "Approve the copy in the morning, get a live page by the afternoon — campaigns stop waiting on a build queue."
+      },
+      {
+        "title": "On-brand, not off-the-shelf",
+        "text": "Blocks are styled to your brand system, not a generic theme — nobody mistakes it for a template."
+      },
+      {
+        "title": "Built-in tracking",
+        "text": "Every block ships with conversion tracking wired in, so day one of a campaign already has usable data."
+      }
+    ],
+    "caseStudy": {
+      "metric": "5×",
+      "metricLabel": "faster page turnaround during campaign season",
+      "story": "A retail e-commerce brand needed five new campaign pages for a seasonal sale. LaunchKit's blocks meant all five shipped in two days, tested and ready before the sale even opened.",
+      "client": "Retail e-commerce brand"
+    },
     "link": ""
   }
 ]

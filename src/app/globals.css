@@ -707,3 +707,31 @@ a.panel:hover img,
     animation: none;
   }
 }
+
+/* ── Mega menu (desktop dropdown panels) ────────────────────────────── */
+.mega-panel {
+  animation: mega-in 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 24px 60px -22px rgba(0, 0, 0, 0.55);
+}
+
+@keyframes mega-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Panel links carry their own hover state — drop the inherited nav underline. */
+header nav .mega-panel a::after {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mega-panel {
+    animation: none;
+  }
+}

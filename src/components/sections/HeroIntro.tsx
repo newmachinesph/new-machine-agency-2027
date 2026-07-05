@@ -34,7 +34,7 @@ export default function HeroIntro() {
       <m.div variants={item} className="flex items-center gap-2.5">
         <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
         <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-          Digital growth agency · UAE → worldwide
+          Full-lifecycle startup studio · Remote-first, worldwide
         </span>
       </m.div>
 
@@ -51,8 +51,8 @@ export default function HeroIntro() {
       </m.p>
 
       <m.p variants={item} className="mt-4 max-w-xl text-muted">
-        We design websites, landing pages and campaigns that turn visitors into
-        customers — clear pricing, fast delivery, no jargon.
+        From brand to build to launch to growth to scale — clear pricing,
+        fast delivery, no jargon.
       </m.p>
 
       <m.div variants={item} className="mt-8 flex flex-wrap gap-4">
