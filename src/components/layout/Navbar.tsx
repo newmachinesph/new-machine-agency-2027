@@ -4,6 +4,7 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Logo from "@/components/ui/Logo";
 import { navLinks } from "@/config/site";
 import Button from "@/components/ui/Button";
 import ThemeToggle from "@/components/ui/ThemeToggle";
@@ -49,8 +50,8 @@ export default function Navbar() {
       }`}
     >
       <div className="wrap flex h-16 items-center justify-between">
-        <Link href="/" className="font-display text-lg font-bold uppercase tracking-tight">
-          Nomad<span className="text-accent-fg">*</span>Media
+        <Link href="/" className="flex items-center" aria-label="Nomad Media home">
+          <Logo className="h-5 w-auto" />
         </Link>
 
         {/* Desktop nav */}

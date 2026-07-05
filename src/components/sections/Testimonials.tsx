@@ -1,5 +1,5 @@
 import { site } from "@/config/site";
-import PatternMosaic from "@/components/ui/PatternMosaic";
+import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -25,7 +25,7 @@ export default function Testimonials() {
                 >
                   “
                 </span>
-                <PatternMosaic rows={1} className="absolute right-8 top-8 h-4 w-20" />
+                <Logo className="absolute right-8 top-8 h-5 w-auto" />
                 <p className="relative mt-14 text-lg font-medium leading-relaxed md:text-xl">
                   {testimonial.quote}
                 </p>
