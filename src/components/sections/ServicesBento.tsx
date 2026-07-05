@@ -83,7 +83,8 @@ export default function ServicesBento() {
                   <PatternGrid
                     cols={3}
                     rows={4}
-                    className="pointer-events-none absolute -right-8 -top-8 h-44 w-44 opacity-[0.09]"
+                    seed={2}
+                    className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-[0.3] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)]"
                   />
 
                   <div className="relative flex h-full flex-col">

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 type PatternMosaicProps = {
   rows?: number;
+  cols?: number;
   className?: string;
 };
 
@@ -10,65 +11,73 @@ const SAGE = "var(--accent)";
 const DEEP = "var(--accent-deep)";
 
 /**
- * Triangle/square quilt strip traced from the client's reference image.
- * Deterministic 24-cell sequence — mostly sage half-square triangles in
- * alternating orientations (pinwheel read), occasional solid squares, gaps.
- * Codes: S solid sage · D solid deep · . gap ·
- * a/b/c/d sage triangles (◤◥◢◣) · w/x/y/z deep triangles (◤◥◢◣).
+ * Deterministic spatial hash — gives each cell a stable, varied value from its
+ * coordinates. Same result on server and client (no Math.random), so no
+ * hydration mismatch, and the strip never repeats an identical block.
  */
-const ROW = [
-  "a", "c", "S", "b", "d", ".", "w", "a",
-  "c", "D", "b", "d", "a", ".", "y", "S",
-  "b", "d", "a", "D", "c", ".", "x", "b",
-];
-
-function cell(code: string, x: number, y: number, key: string): ReactNode {
-  const x2 = x + CELL;
-  const y2 = y + CELL;
-  const tri = (points: string, fill: string) => <polygon key={key} points={points} fill={fill} />;
-  switch (code) {
-    case "S":
-      return <rect key={key} x={x} y={y} width={CELL} height={CELL} fill={SAGE} />;
-    case "D":
-      return <rect key={key} x={x} y={y} width={CELL} height={CELL} fill={DEEP} />;
-    case "a":
-      return tri(`${x},${y} ${x2},${y} ${x},${y2}`, SAGE);
-    case "b":
-      return tri(`${x},${y} ${x2},${y} ${x2},${y2}`, SAGE);
-    case "c":
-      return tri(`${x2},${y} ${x2},${y2} ${x},${y2}`, SAGE);
-    case "d":
-      return tri(`${x},${y} ${x2},${y2} ${x},${y2}`, SAGE);
-    case "w":
-      return tri(`${x},${y} ${x2},${y} ${x},${y2}`, DEEP);
-    case "x":
-      return tri(`${x},${y} ${x2},${y} ${x2},${y2}`, DEEP);
-    case "y":
-      return tri(`${x2},${y} ${x2},${y2} ${x},${y2}`, DEEP);
-    case "z":
-      return tri(`${x},${y} ${x2},${y2} ${x},${y2}`, DEEP);
-    default:
-      return null;
-  }
+function hash(x: number, y: number): number {
+  let h = (x * 73856093) ^ (y * 19349663);
+  h ^= h >>> 13;
+  return h >>> 0;
 }
 
-export default function PatternMosaic({ rows = 2, className = "" }: PatternMosaicProps) {
-  const rowCodes = Array.from({ length: rows }, (_, r) =>
-    r % 2 === 0 ? ROW : [...ROW].reverse(),
-  );
+function cell(x: number, y: number, cx: number, cy: number): ReactNode {
+  const h = hash(cx, cy);
+  const r = h % 100;
+  const key = `${cx}-${cy}`;
+
+  // Rare, scattered gaps (never clustered — each cell decides independently).
+  if (r < 8) return null;
+
+  const fill = (h >>> 5) % 3 === 0 ? DEEP : SAGE; // ~1/3 deep, ~2/3 sage
+  const x2 = x + CELL;
+  const y2 = y + CELL;
+
+  // Occasional solid squares for weight.
+  if (r >= 92) {
+    return <rect key={key} x={x} y={y} width={CELL} height={CELL} fill={fill} />;
+  }
+
+  // Triangle orientation varies with position → organic pinwheel read.
+  const o = (cx + cy + (h >>> 3)) % 4;
+  const pts =
+    o === 0
+      ? `${x},${y} ${x2},${y} ${x},${y2}` // ◤
+      : o === 1
+        ? `${x},${y} ${x2},${y} ${x2},${y2}` // ◥
+        : o === 2
+          ? `${x2},${y} ${x2},${y2} ${x},${y2}` // ◢
+          : `${x},${y} ${x2},${y2} ${x},${y2}`; // ◣
+  return <polygon key={key} points={pts} fill={fill} />;
+}
+
+/**
+ * Chamfer/triangle quilt strip traced from the client's reference. Cells are
+ * generated from a spatial hash so the run is varied and non-repeating across
+ * the full width — no identical blocks, no obvious seam. Decorative only.
+ */
+export default function PatternMosaic({
+  rows = 2,
+  cols = 40,
+  className = "",
+}: PatternMosaicProps) {
+  const cells: ReactNode[] = [];
+  for (let cy = 0; cy < rows; cy++) {
+    for (let cx = 0; cx < cols; cx++) {
+      cells.push(cell(cx * CELL, cy * CELL, cx, cy));
+    }
+  }
 
   return (
     <svg
       aria-hidden="true"
       className={className}
-      viewBox={`0 0 ${ROW.length * CELL} ${rows * CELL}`}
+      viewBox={`0 0 ${cols * CELL} ${rows * CELL}`}
       preserveAspectRatio="xMidYMid slice"
       shapeRendering="crispEdges"
       width="100%"
     >
-      {rowCodes.map((codes, r) =>
-        codes.map((code, c) => cell(code, c * CELL, r * CELL, `${r}-${c}`)),
-      )}
+      {cells}
     </svg>
   );
 }

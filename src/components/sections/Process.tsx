@@ -35,21 +35,25 @@ export default function Process() {
           lead="No mystery phases, no jargon-filled status reports. Four steps, each with a clear deliverable."
         />
 
-        <div className="mt-14 grid gap-8 md:grid-cols-4">
-          {steps.map((step, i) => (
-            <Reveal key={step.number} delay={i * 90}>
-              <div className="relative pt-8">
-                <span aria-hidden="true" className="absolute top-0 h-px w-full bg-border" />
-                <span
-                  aria-hidden="true"
-                  className="absolute -top-[3px] left-0 h-[7px] w-[7px] bg-accent"
-                />
-                <p className="text-sm font-bold text-accent-fg">{step.number}</p>
-                <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
-                <p className="mt-2 text-sm text-muted">{step.text}</p>
-              </div>
-            </Reveal>
-          ))}
+        <div className="relative mt-16">
+          <span
+            aria-hidden="true"
+            className="absolute inset-x-0 top-7 hidden h-px bg-border md:block"
+          />
+
+          <div className="grid gap-10 md:grid-cols-4 md:gap-6">
+            {steps.map((step, i) => (
+              <Reveal key={step.number} delay={i * 90}>
+                <div className="relative">
+                  <span className="chamfer relative z-10 grid h-14 w-14 place-items-center bg-accent font-display text-lg font-bold text-accent-ink">
+                    {step.number}
+                  </span>
+                  <h3 className="mt-6 font-display text-xl font-bold md:text-2xl">{step.title}</h3>
+                  <p className="mt-3 text-muted">{step.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { IconArrowUp } from "@/components/ui/icons";
 
 type FaqItem = {
   q: string;
@@ -29,11 +29,14 @@ export default function Faq({ items }: FaqProps) {
               onClick={() => setOpenIndex(open ? null : i)}
               className="flex w-full items-center justify-between gap-6 py-5 text-left"
             >
-              <span className="font-medium">{item.q}</span>
-              <ChevronDown
-                size={18}
-                className={`shrink-0 text-muted transition-transform duration-300 ${
-                  open ? "rotate-180" : ""
+              <span className={`flex items-center gap-3 font-medium ${open ? "text-accent-fg" : ""}`}>
+                <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 bg-accent" />
+                {item.q}
+              </span>
+              <IconArrowUp
+                size={16}
+                className={`shrink-0 text-accent-fg transition-transform duration-300 ${
+                  open ? "" : "rotate-180"
                 }`}
               />
             </button>
@@ -44,7 +47,7 @@ export default function Faq({ items }: FaqProps) {
               className="acc-panel"
             >
               <div>
-                <p className="pb-5 text-muted">{item.a}</p>
+                <p className="pb-5 pl-4 text-muted">{item.a}</p>
               </div>
             </div>
           </div>

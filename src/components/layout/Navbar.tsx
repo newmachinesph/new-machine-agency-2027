@@ -147,7 +147,7 @@ function ServicesPanel() {
         className="beam group/promo relative flex min-h-[13rem] flex-col justify-end overflow-hidden chamfer p-5 md:col-span-4 lg:col-span-1"
       >
         <DuotoneImage
-          src="https://picsum.photos/seed/nomad-scale-2027/640/840"
+          src="/nomad-background.jpg"
           className="absolute inset-0"
           sizes="(min-width: 1024px) 16rem, 100vw"
         />
@@ -155,6 +155,9 @@ function ServicesPanel() {
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent"
         />
+        <span className="absolute left-4 top-4 chamfer bg-black/40 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm">
+          Featured
+        </span>
         <div className="relative">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-accent-strong">
             Scale · Beyond
@@ -172,20 +175,56 @@ function ServicesPanel() {
 }
 
 function ProductsPanel() {
+  const featured = products[0];
   return (
-    <div className="ml-auto w-full max-w-xl">
-      <div className="mb-4 flex items-center justify-between">
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-fg">
-          Our products
-        </p>
-        <Link
-          href="/products/"
-          className="inline-flex items-center gap-1 text-xs font-semibold text-muted transition-colors hover:text-fg"
-        >
-          View all products <IconArrowRight size={13} />
-        </Link>
-      </div>
-      <ul className="space-y-2">
+    <div className="grid gap-6 md:grid-cols-[0.9fr_1.4fr]">
+      {/* Featured build — image-led left column mirroring the services promo. */}
+      <Link
+        href={`/products/${featured.slug}/`}
+        className="beam group/feat relative flex min-h-[15rem] flex-col justify-end overflow-hidden chamfer p-5"
+      >
+        <DuotoneImage
+          src="/nomad-background.jpg"
+          className="absolute inset-0"
+          sizes="(min-width: 768px) 22rem, 100vw"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"
+        />
+        <div className="relative">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-accent-strong">
+            Featured build
+          </p>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <span className="font-display text-lg font-semibold leading-tight text-white">
+              {featured.name}
+            </span>
+            <span className="chamfer bg-white/15 px-2 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide text-white">
+              {featured.status}
+            </span>
+          </div>
+          <p className="mt-2 line-clamp-2 text-sm text-white/85">{featured.oneLiner}</p>
+          <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white">
+            Explore {featured.name} <IconArrowRight size={14} />
+          </span>
+        </div>
+      </Link>
+
+      {/* Product list — kept as-is. */}
+      <div>
+        <div className="mb-4 flex items-center justify-between">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-fg">
+            Our products
+          </p>
+          <Link
+            href="/products/"
+            className="inline-flex items-center gap-1 text-xs font-semibold text-muted transition-colors hover:text-fg"
+          >
+            View all products <IconArrowRight size={13} />
+          </Link>
+        </div>
+        <ul className="space-y-2">
         {products.map((product) => (
           <li key={product.slug}>
             <Link
@@ -193,7 +232,7 @@ function ProductsPanel() {
               className="beam group/prod flex items-center gap-4 chamfer border border-border bg-card/60 p-3"
             >
               <DuotoneImage
-                src={`https://picsum.photos/seed/${product.slug}/200/150`}
+                src="/nomad-background.jpg"
                 className="h-14 w-20 shrink-0 chamfer"
                 sizes="80px"
               />
@@ -213,7 +252,8 @@ function ProductsPanel() {
             </Link>
           </li>
         ))}
-      </ul>
+        </ul>
+      </div>
     </div>
   );
 }

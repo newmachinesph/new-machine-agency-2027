@@ -9,6 +9,7 @@ import ServicesBento from "@/components/sections/ServicesBento";
 import WhyItMatters from "@/components/sections/WhyItMatters";
 import WhoWeHelp from "@/components/sections/WhoWeHelp";
 import Process from "@/components/sections/Process";
+import Comparison from "@/components/sections/Comparison";
 import WhyTrustUs from "@/components/sections/WhyTrustUs";
 import Testimonials from "@/components/sections/Testimonials";
 import ProductsTeaser from "@/components/sections/ProductsTeaser";
@@ -30,6 +31,7 @@ export default function Home() {
       <WhyItMatters />
       <WhoWeHelp />
       <Process />
+      <Comparison />
       <WhyTrustUs />
       <Testimonials />
       <ProductsTeaser />

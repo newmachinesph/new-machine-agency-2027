@@ -1,6 +1,6 @@
 import services from "@/content/services.json";
 
-const items = [...services.map((s) => s.name), "UAE → Worldwide", "Est. 2026"];
+const items = [...services.map((s) => s.name), "Remote-first · Worldwide", "Est. 2026"];
 
 function Row({ hidden }: { hidden?: boolean }) {
   return (

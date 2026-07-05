@@ -66,7 +66,7 @@ export default function SelectedWork() {
                   </span>
                   <h3 className="mt-4 font-display text-xl font-semibold">{project.client}</h3>
                   <p className="measure mt-2 text-sm text-muted">{project.story}</p>
-                  <p className="mt-auto pt-5 text-xs uppercase tracking-[0.15em] text-accent-fg">
+                  <p className="mt-6 text-xs uppercase tracking-[0.15em] text-accent-fg">
                     {project.service}
                   </p>
                 </div>

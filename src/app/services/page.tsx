@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import {
   IconArrowRight,
   IconCorporate,
@@ -23,11 +22,14 @@ import {
   type BrandIcon,
 } from "@/components/ui/icons";
 import services from "@/content/services.json";
-import { site } from "@/config/site";
+import { site, whatsappHref } from "@/config/site";
 import Button from "@/components/ui/Button";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import DuotoneImage from "@/components/ui/DuotoneImage";
+import PatternGrid from "@/components/ui/PatternGrid";
+import PatternSignal from "@/components/ui/PatternSignal";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -79,95 +81,200 @@ const stages = [
   },
 ] as const;
 
+/** Green ramp climbing per stage — same order as the homepage stage overview,
+ *  so the progression reads consistently everywhere it appears. */
+const stageTints = ["var(--accent-strong)", "var(--accent)", "#67ad62", "var(--accent-deep)"];
+
 export default function ServicesPage() {
   return (
     <div className="pt-32 pb-24">
       <div className="wrap">
-        <Reveal className="flex items-center gap-2.5">
-          <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-            Services
-          </span>
-        </Reveal>
-        <Reveal delay={80}>
-          <h1 className="font-display mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
-            Every stage of the startup lifecycle. One studio.
-          </h1>
-        </Reveal>
-        <Reveal delay={160}>
-          <p className="mt-5 max-w-xl text-muted">
-            From first brand to fractional leadership, we cover the full lifecycle — brand,
-            build, launch, grow and scale — so you’re never stitching together five vendors
-            to get one outcome.
-          </p>
-        </Reveal>
+        <div className="relative overflow-hidden">
+          <PatternSignal className="pointer-events-none absolute -top-10 right-0 h-72 w-72 opacity-[0.1] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]" />
+
+          <div className="relative">
+            <Reveal className="flex items-center gap-2.5">
+              <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+                Services
+              </span>
+            </Reveal>
+            <Reveal delay={80}>
+              <h1 className="font-display mt-5 max-w-3xl text-4xl font-extrabold tracking-tight md:text-6xl">
+                Brand to scale. Every stage, one world-class studio.
+              </h1>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="measure mt-5 text-muted">
+                {services.length} services across {stages.length} stages of the startup
+                lifecycle — brand, build, launch, grow and scale — run end to end by a
+                remote-first team built to compete with the best agencies anywhere, for
+                founders anywhere. No stitching five vendors together for one outcome.
+              </p>
+            </Reveal>
+          </div>
+        </div>
 
         {stages.map((stage, stageIndex) => {
           const stageServices = services.filter((service) => service.stage === stage.name);
           if (stageServices.length === 0) return null;
 
-          return (
-            <div key={stage.name} className={stageIndex === 0 ? "mt-20" : "mt-24"}>
-              <SectionHeading number={stage.number} eyebrow="Stage" title={stage.name} lead={stage.lead} />
+          const [featured, ...rest] = stageServices;
+          const tint = stageTints[stageIndex % stageTints.length];
+          const FeaturedIcon = icons[featured.icon] ?? IconWebsite;
+          const reversed = stageIndex % 2 === 1;
 
-              <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {stageServices.map((service, i) => {
-                  const Icon = icons[service.icon] ?? IconWebsite;
-                  return (
-                    <Reveal key={service.slug} delay={i * 60}>
-                      <div className="panel beam chamfer relative flex h-full flex-col p-7">
-                        <span
-                          className="grid h-12 w-12 place-items-center border border-border"
-                          style={{ color: service.tint } as CSSProperties}
+          return (
+            <div key={stage.name} className="relative mt-24 md:mt-32">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 -top-10 h-72 opacity-[0.14]"
+                style={{
+                  background: `radial-gradient(60% 100% at ${reversed ? "80%" : "20%"} 0%, ${tint}, transparent 70%)`,
+                }}
+              />
+
+              <div className="relative">
+                <SectionHeading number={stage.number} eyebrow="Stage" title={stage.name} lead={stage.lead} />
+
+                {/* Featured service — bold lead block with a mockup accent */}
+                <Reveal delay={80} className="mt-12">
+                  <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
+                    <div className={reversed ? "lg:order-2" : ""}>
+                      <div className="chamfer panel beam overflow-hidden">
+                        <div
+                          aria-hidden="true"
+                          className="flex items-center gap-2 border-b border-border bg-surface px-4 py-3"
                         >
-                          <Icon size={22} />
-                        </span>
-                        <h3 className="mt-5 text-xl font-bold">{service.name}</h3>
-                        <p className="mt-1.5 text-sm font-medium text-accent-fg">
-                          {service.outcome}
-                        </p>
-                        <p className="mt-3 text-sm text-muted">{service.description}</p>
-                        <ul className="mt-4 space-y-2">
-                          {service.includes.map((item) => (
-                            <li
-                              key={item}
-                              className="flex items-start gap-2 text-sm text-muted"
-                            >
-                              <IconCheck
-                                size={14}
-                                className="mt-0.5 shrink-0 text-accent-fg"
-                              />
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                        <p className="mt-auto pt-5 text-xs text-muted">
-                          <span className="font-semibold text-fg">Built for </span>
-                          {service.forWho}
-                        </p>
+                          <span className="flex gap-1.5">
+                            <span className="h-2.5 w-2.5 bg-accent/70" />
+                            <span className="h-2.5 w-2.5 bg-muted/40" />
+                            <span className="h-2.5 w-2.5 bg-muted/25" />
+                          </span>
+                          <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
+                            nomadmedia.ae/services/{featured.slug}
+                          </span>
+                        </div>
+                        <DuotoneImage
+                          src={`https://picsum.photos/seed/${featured.slug}/960/640`}
+                          className="aspect-[4/3] w-full"
+                          sizes="(min-width: 1024px) 50vw, 100vw"
+                        />
                       </div>
-                    </Reveal>
-                  );
-                })}
+                    </div>
+
+                    <div className={reversed ? "lg:order-1" : ""}>
+                      <span
+                        className="grid h-14 w-14 place-items-center chamfer"
+                        style={{ background: featured.tint }}
+                      >
+                        <FeaturedIcon size={26} className="text-accent-ink" />
+                      </span>
+                      <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-accent-fg">
+                        {featured.name}
+                      </p>
+                      <h3 className="mt-2 font-display text-2xl font-bold tracking-tight md:text-3xl">
+                        {featured.outcome}
+                      </h3>
+                      <p className="measure mt-4 text-muted">{featured.description}</p>
+                      <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
+                        {featured.includes.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-sm text-fg/85">
+                            <IconCheck size={14} className="mt-0.5 shrink-0 text-accent-fg" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="mt-6 text-xs text-muted">
+                        <span className="font-semibold text-fg">Built for </span>
+                        {featured.forWho}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+
+                {rest.length > 0 && (
+                  <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    {rest.map((service, i) => {
+                      const Icon = icons[service.icon] ?? IconWebsite;
+                      return (
+                        <Reveal key={service.slug} delay={i * 60}>
+                          <div className="panel beam chamfer relative flex h-full flex-col overflow-hidden p-7">
+                            <PatternGrid
+                              cols={3}
+                              rows={3}
+                              seed={stageIndex * 5 + i + 1}
+                              className="pointer-events-none absolute -right-5 -top-5 h-28 w-28 opacity-[0.18] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]"
+                            />
+                            <div className="relative flex h-full flex-col">
+                              <span
+                                className="grid h-12 w-12 place-items-center chamfer"
+                                style={{ background: service.tint }}
+                              >
+                                <Icon size={20} className="text-accent-ink" />
+                              </span>
+                              <p className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                                {service.name}
+                              </p>
+                              <h3 className="mt-1.5 font-display text-lg font-bold leading-snug tracking-tight">
+                                {service.outcome}
+                              </h3>
+                              <p className="measure mt-3 text-sm text-muted">{service.description}</p>
+                              <ul className="mt-4 space-y-2">
+                                {service.includes.map((item) => (
+                                  <li
+                                    key={item}
+                                    className="flex items-start gap-2 text-sm text-muted"
+                                  >
+                                    <IconCheck
+                                      size={14}
+                                      className="mt-0.5 shrink-0 text-accent-fg"
+                                    />
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                              <p className="mt-auto pt-5 text-xs text-muted">
+                                <span className="font-semibold text-fg">Built for </span>
+                                {service.forWho}
+                              </p>
+                            </div>
+                          </div>
+                        </Reveal>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
             </div>
           );
         })}
 
         <Reveal>
-          <div className="panel mt-16 p-10 text-center">
-            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-              Not sure which stage you’re at?
-            </h2>
-            <p className="mx-auto mt-3 max-w-md text-muted">
-              Book a free call — we’ll tell you honestly what will move the needle and
-              what won’t.
-            </p>
-            <div className="mt-6 flex justify-center">
-              <Button href="/contact">
-                Book a Strategy Call
-                <IconArrowRight size={16} />
-              </Button>
+          <div className="panel relative mt-24 overflow-hidden p-10 text-center md:p-14">
+            <PatternGrid
+              cols={6}
+              rows={3}
+              seed={9}
+              className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
+            />
+            <div className="relative">
+              <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
+                Not sure which stage you&rsquo;re at?
+              </h2>
+              <p className="measure mx-auto mt-3 text-muted">
+                Book a free call — we&rsquo;ll tell you honestly what will move the needle and
+                what won&rsquo;t.
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <Button href="/contact">
+                  Book a Strategy Call
+                  <IconArrowRight size={16} />
+                </Button>
+                <Button href={whatsappHref} variant="ghost">
+                  WhatsApp Us
+                </Button>
+              </div>
             </div>
           </div>
         </Reveal>

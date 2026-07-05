@@ -1,6 +1,7 @@
 import { IconPricing, IconChat, IconGrowth, IconSpeed } from "@/components/ui/icons";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PatternGrid from "@/components/ui/PatternGrid";
 
 const differentiators = [
   {
@@ -27,24 +28,34 @@ const differentiators = [
 
 export default function WhyTrustUs() {
   return (
-    <section className="py-24 md:py-32">
-      <div className="wrap">
+    <section className="relative overflow-hidden py-24 md:py-32">
+      <PatternGrid
+        cols={2}
+        rows={3}
+        className="pointer-events-none absolute -right-10 top-0 h-64 w-64 opacity-[0.12] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]"
+      />
+      <div className="wrap relative">
         <SectionHeading
-          number="06"
+          number="07"
           eyebrow="Why trust us"
-          title="Big-agency output. Small-team honesty."
-          lead="Everything you actually want from an agency — none of the overhead."
+          title="The best teams don’t settle for average. Neither do we."
+          lead="No agency theater, no fabricated case studies — just the honest reasons startups choose to build with us."
         />
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {differentiators.map((item, i) => (
-            <Reveal key={item.title} delay={i * 70}>
-              <div className="panel beam h-full p-6">
-                <span className="grid h-10 w-10 place-items-center border border-border">
-                  <item.icon size={20} className="text-accent-fg" />
-                </span>
-                <h3 className="mt-4 font-semibold">{item.title}</h3>
-                <p className="mt-1.5 text-sm text-muted">{item.text}</p>
+            <Reveal key={item.title} delay={i * 90}>
+              <div className="panel beam chamfer relative flex h-full flex-col p-7">
+                <div className="flex items-center justify-between">
+                  <span className="grid h-12 w-12 place-items-center chamfer bg-accent text-accent-ink">
+                    <item.icon size={22} />
+                  </span>
+                  <span className="font-display text-sm font-semibold text-accent-fg">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <h3 className="mt-6 font-display text-xl font-bold tracking-tight">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted">{item.text}</p>
               </div>
             </Reveal>
           ))}

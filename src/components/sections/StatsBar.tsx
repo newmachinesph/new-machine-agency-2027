@@ -12,7 +12,8 @@ export default function StatsBar() {
       <PatternGrid
         rows={2}
         cols={14}
-        className="pointer-events-none absolute inset-x-0 top-0 h-16 w-full opacity-[0.06]"
+        seed={1}
+        className="pointer-events-none absolute inset-x-0 top-0 h-16 w-full opacity-[0.14]"
       />
 
       <div className="wrap relative py-16 md:py-20">
