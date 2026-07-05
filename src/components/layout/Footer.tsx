@@ -1,20 +1,22 @@
 import Link from "next/link";
 import { navLinks, site, whatsappHref } from "@/config/site";
 import services from "@/content/services.json";
+import PatternMosaic from "@/components/ui/PatternMosaic";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-border">
+      <PatternMosaic rows={2} className="h-16 w-full" />
       <div className="overflow-hidden" aria-hidden="true">
         <p className="footer-word text-center">NOMAD</p>
       </div>
 
       <div className="wrap grid gap-10 py-14 md:grid-cols-4">
         <div>
-          <p className="text-lg font-extrabold tracking-tight">
-            nomad<span className="text-accent-fg">media</span>
+          <p className="font-display text-lg font-bold uppercase tracking-tight">
+            Nomad<span className="text-accent-fg">*</span>Media
           </p>
           <p className="mt-3 text-sm text-muted">
             Digital growth agency based in the UAE, working with businesses worldwide.
@@ -104,6 +106,9 @@ export default function Footer() {
         <div className="wrap flex flex-wrap items-center justify-between gap-3 py-6 text-xs text-muted">
           <p>
             © {year} {site.name}. All rights reserved.
+          </p>
+          <p className="uppercase tracking-[0.2em] text-[10px]">
+            Est. 2026 — Built nomadic
           </p>
           <div className="flex gap-5">
             <Link href="/privacy-policy/" className="transition-colors hover:text-fg">

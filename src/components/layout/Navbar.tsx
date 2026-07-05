@@ -49,8 +49,8 @@ export default function Navbar() {
       }`}
     >
       <div className="wrap flex h-16 items-center justify-between">
-        <Link href="/" className="text-lg font-extrabold tracking-tight">
-          nomad<span className="text-accent-fg">media</span>
+        <Link href="/" className="font-display text-lg font-bold uppercase tracking-tight">
+          Nomad<span className="text-accent-fg">*</span>Media
         </Link>
 
         {/* Desktop nav */}
@@ -59,15 +59,15 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`relative text-sm transition-colors ${
-                isActive(link.href) ? "font-medium text-fg" : "text-muted hover:text-fg"
+              className={`relative text-xs uppercase tracking-[0.15em] transition-colors ${
+                isActive(link.href) ? "font-semibold text-fg" : "text-muted hover:text-fg"
               }`}
             >
               {link.label}
               {isActive(link.href) ? (
                 <span
                   aria-hidden="true"
-                  className="absolute -bottom-1.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-accent"
+                  className="absolute -bottom-1.5 left-1/2 h-1 w-1 -translate-x-1/2 bg-accent"
                 />
               ) : null}
             </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-border"
+            className="grid h-10 w-10 place-items-center border border-border"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -100,7 +100,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-3xl font-semibold ${
+              className={`font-display text-3xl font-semibold ${
                 isActive(link.href) ? "text-accent-fg" : "text-fg"
               }`}
             >

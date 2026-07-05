@@ -43,7 +43,7 @@ export default function ServicesBento() {
                   className="bento-cell group block h-full p-7"
                   style={{ "--tint": service.tint } as CSSProperties}
                 >
-                  <span className="grid h-11 w-11 place-items-center rounded-xl border border-border">
+                  <span className="grid h-11 w-11 place-items-center border border-border">
                     <Icon size={20} />
                   </span>
                   <h3 className="mt-5 text-lg font-semibold">{service.name}</h3>

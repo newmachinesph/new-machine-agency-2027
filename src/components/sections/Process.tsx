@@ -42,7 +42,7 @@ export default function Process() {
                 <span aria-hidden="true" className="absolute top-0 h-px w-full bg-border" />
                 <span
                   aria-hidden="true"
-                  className="absolute -top-[3px] left-0 h-[7px] w-[7px] rounded-full bg-accent"
+                  className="absolute -top-[3px] left-0 h-[7px] w-[7px] bg-accent"
                 />
                 <p className="text-sm font-bold text-accent-fg">{step.number}</p>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>

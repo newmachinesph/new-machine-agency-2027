@@ -8,7 +8,7 @@ import Button from "@/components/ui/Button";
 type Status = "idle" | "sending" | "sent" | "error" | "mailto";
 
 const inputClasses =
-  "w-full rounded-xl border border-border bg-card px-4 py-3 text-sm placeholder:text-muted focus:border-accent outline-none";
+  "w-full border border-border bg-card px-4 py-3 text-sm placeholder:text-muted focus:border-accent outline-none";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");

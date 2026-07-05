@@ -28,7 +28,7 @@ export default function ProductsPage() {
           </span>
         </Reveal>
         <Reveal delay={80}>
-          <h1 className="mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
+          <h1 className="font-display mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
             Built by us. Used by businesses like yours.
           </h1>
         </Reveal>
@@ -44,7 +44,7 @@ export default function ProductsPage() {
             <Reveal key={product.name} delay={i * 90}>
               <div className="panel flex h-full flex-col p-7">
                 <span
-                  className={`inline-block self-start rounded-full border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
+                  className={`inline-block self-start border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
                 >
                   {product.status}
                 </span>

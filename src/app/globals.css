@@ -6,9 +6,10 @@
    Change --accent below to rebrand the entire site (pending final brand
    confirmation — emerald is the working default). */
 :root {
-  --accent: #22c55e;
-  --accent-strong: #4ade80;
-  --accent-ink: #04250f;
+  --accent: #8fc57f;
+  --accent-strong: #a9d896;
+  --accent-deep: #35753a;
+  --accent-ink: #0a0a0a;
 
   --bg: #0a0a0a;
   --surface: #101012;
@@ -17,8 +18,8 @@
   --muted: #a2a2ab;
   --line: rgba(255, 255, 255, 0.09);
   --glass: rgba(255, 255, 255, 0.05);
-  --accent-fg: var(--accent-strong);
-  --blob-opacity: 0.45;
+  --accent-fg: #a9d896;
+  --blob-opacity: 0.35;
 }
 
 :root[data-theme="light"] {
@@ -29,7 +30,7 @@
   --muted: #5c5c66;
   --line: rgba(19, 19, 22, 0.1);
   --glass: rgba(255, 255, 255, 0.55);
-  --accent-fg: #15803d;
+  --accent-fg: #2f6b34;
   --blob-opacity: 0.28;
 }
 
@@ -42,9 +43,11 @@
   --color-border: var(--line);
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
+  --color-accent-deep: var(--accent-deep);
   --color-accent-ink: var(--accent-ink);
   --color-accent-fg: var(--accent-fg);
-  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-schibsted), sans-serif;
 }
 
 /* ── Base ───────────────────────────────────────────────────────────── */
@@ -83,7 +86,6 @@ svg {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 4px;
 }
 
 /* Smooth theme switch — class applied briefly by the toggle. */
@@ -114,7 +116,6 @@ svg {
 .panel {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 1.25rem;
 }
 
 .glass {
@@ -122,22 +123,34 @@ svg {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
-  border-radius: 1.25rem;
 }
 
-/* ── Scroll reveals (animate only when JS is present) ───────────────── */
-html.js .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--rd, 0ms);
+/* ── Chamfer signature (echoes the pattern motif; no rounded corners) ─ */
+.chamfer {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
 }
 
-html.js .reveal.in-view {
-  opacity: 1;
-  transform: none;
+/* ── Outlined display word (hero) ───────────────────────────────────── */
+.text-outline {
+  -webkit-text-stroke: 1.5px var(--accent-fg);
+  color: transparent;
+}
+
+@supports not (-webkit-text-stroke: 1px black) {
+  .text-outline {
+    color: var(--accent-fg);
+  }
+}
+
+/* ── Marquee strip ──────────────────────────────────────────────────── */
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* ── Hero ambience (home hero only) ─────────────────────────────────── */
@@ -195,16 +208,26 @@ html.js .reveal.in-view {
   }
 }
 
-.hero-grid {
+.hero-trace {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 2.5rem;
+  right: 0;
+  width: min(44rem, 46vw);
   pointer-events: none;
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: radial-gradient(ellipse 90% 65% at 50% 35%, black 15%, transparent 78%);
-  -webkit-mask-image: radial-gradient(ellipse 90% 65% at 50% 35%, black 15%, transparent 78%);
+  display: none;
+  mask-image: linear-gradient(to left, black 40%, transparent 97%);
+  -webkit-mask-image: linear-gradient(to left, black 40%, transparent 97%);
+}
+
+@media (min-width: 768px) {
+  .hero-trace {
+    display: block;
+  }
+}
+
+:root[data-theme="light"] .hero-trace {
+  opacity: 0.65;
 }
 
 .noise {
@@ -262,7 +285,6 @@ html.js .reveal.in-view {
     ),
     var(--card);
   border: 1px solid var(--line);
-  border-radius: 1.25rem;
   transition:
     border-color 0.25s ease,
     transform 0.25s ease;
@@ -380,12 +402,13 @@ html.js .reveal.in-view {
 
 /* ── Footer wordmark ────────────────────────────────────────────────── */
 .footer-word {
+  font-family: var(--font-display);
   font-size: clamp(4rem, 15vw, 13rem);
   line-height: 0.9;
   font-weight: 800;
   letter-spacing: -0.04em;
-  color: transparent;
-  -webkit-text-stroke: 1px color-mix(in srgb, var(--fg) 16%, transparent);
+  color: color-mix(in srgb, var(--fg) 6%, transparent);
+  -webkit-text-stroke: 2px color-mix(in srgb, var(--fg) 32%, transparent);
   pointer-events: none;
 }
 
@@ -467,7 +490,6 @@ html.js .reveal.in-view {
 .prose code {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 6px;
   padding: 0.15em 0.4em;
   font-size: 0.9em;
 }
@@ -478,17 +500,15 @@ html.js .reveal.in-view {
     scroll-behavior: auto;
   }
 
-  html.js .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
   .hero-blob--a,
   .hero-blob--b,
   .tw-caret,
   .scroll-hint {
     animation: none;
+  }
+
+  .marquee-track {
+    animation-play-state: paused;
   }
 
   .theme-anim,

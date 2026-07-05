@@ -50,7 +50,7 @@ export default function ServicesPage() {
           </span>
         </Reveal>
         <Reveal delay={80}>
-          <h1 className="mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
+          <h1 className="font-display mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
             Services that pay for themselves.
           </h1>
         </Reveal>
@@ -83,7 +83,7 @@ export default function ServicesPage() {
                   >
                     <Reveal className={reversed ? "md:order-2" : ""}>
                       <span
-                        className="grid h-12 w-12 place-items-center rounded-xl border border-border"
+                        className="grid h-12 w-12 place-items-center border border-border"
                         style={{ color: service.tint } as CSSProperties}
                       >
                         <Icon size={22} />

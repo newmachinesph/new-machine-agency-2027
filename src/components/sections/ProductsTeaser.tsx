@@ -15,7 +15,7 @@ export default function ProductsTeaser() {
     <section className="bg-surface py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="06"
+          number="07"
           eyebrow="Products"
           title="We build our own products, too."
           lead="The same team, the same standards — pointed at problems we kept seeing our clients face."
@@ -26,7 +26,7 @@ export default function ProductsTeaser() {
             <Reveal key={product.name} delay={i * 90}>
               <div className="panel h-full p-6">
                 <span
-                  className={`inline-block rounded-full border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
+                  className={`inline-block border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
                 >
                   {product.status}
                 </span>

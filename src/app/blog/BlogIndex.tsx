@@ -56,7 +56,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-border px-2 py-0.5 text-xs text-muted"
+                    className="border border-border px-2 py-0.5 text-xs text-muted"
                   >
                     {tag}
                   </span>

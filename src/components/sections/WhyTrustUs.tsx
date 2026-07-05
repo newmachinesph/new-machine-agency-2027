@@ -1,5 +1,4 @@
-import { BadgeCheck, MessagesSquare, Quote, TrendingUp, Zap } from "lucide-react";
-import { site } from "@/config/site";
+import { BadgeCheck, MessagesSquare, TrendingUp, Zap } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -34,30 +33,18 @@ export default function WhyTrustUs() {
           number="05"
           eyebrow="Why trust us"
           title="Big-agency output. Small-team honesty."
-          lead="Everything you actually want from an agency — and none of the overhead you don’t."
+          lead="Everything you actually want from an agency — none of the overhead."
         />
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
           {differentiators.map((item, i) => (
             <Reveal key={item.title} delay={i * 70}>
               <div className="panel h-full p-6">
-                <item.icon size={22} className="text-accent-fg" />
+                <span className="grid h-10 w-10 place-items-center border border-border">
+                  <item.icon size={20} className="text-accent-fg" />
+                </span>
                 <h3 className="mt-4 font-semibold">{item.title}</h3>
                 <p className="mt-1.5 text-sm text-muted">{item.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {site.testimonials.map((testimonial, i) => (
-            <Reveal key={testimonial.name} delay={i * 90}>
-              <div className="panel h-full p-7">
-                <Quote size={22} className="text-accent-fg" />
-                <p className="mt-4 font-medium text-fg">{testimonial.quote}</p>
-                <p className="mt-4 text-sm text-muted">
-                  {testimonial.name} · {testimonial.role}
-                </p>
               </div>
             </Reveal>
           ))}

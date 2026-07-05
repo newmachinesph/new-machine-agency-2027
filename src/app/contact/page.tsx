@@ -29,7 +29,7 @@ export default function ContactPage() {
             </span>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="mt-5 text-4xl font-extrabold tracking-tight md:text-5xl">
+            <h1 className="font-display mt-5 text-4xl font-extrabold tracking-tight md:text-5xl">
               Let’s talk about your growth.
             </h1>
           </Reveal>

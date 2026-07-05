@@ -23,7 +23,7 @@ export default function BlogPage() {
           </span>
         </Reveal>
         <Reveal delay={80}>
-          <h1 className="mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
+          <h1 className="font-display mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
             Ideas that grow businesses.
           </h1>
         </Reveal>

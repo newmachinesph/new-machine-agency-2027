@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Bricolage_Grotesque, Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import { site } from "@/config/site";
 import Navbar from "@/components/layout/Navbar";
@@ -8,11 +8,18 @@ import BackToTop from "@/components/ui/BackToTop";
 import ContentGuard from "@/components/ui/ContentGuard";
 import CustomCursor from "@/components/ui/CustomCursor";
 import JsonLd from "@/components/ui/JsonLd";
+import MotionProvider from "@/components/ui/MotionProvider";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
-const jakarta = Plus_Jakarta_Sans({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-bricolage",
+  display: "swap",
+});
+
+const schibsted = Schibsted_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-schibsted",
   display: "swap",
 });
 
@@ -56,7 +63,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       data-theme="dark"
-      className={jakarta.variable}
+      className={`${bricolage.variable} ${schibsted.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
@@ -64,11 +71,13 @@ export default function RootLayout({
       <body>
         <ContentGuard />
         <CustomCursor />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <BackToTop />
-        <WhatsAppButton />
+        <MotionProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <BackToTop />
+          <WhatsAppButton />
+        </MotionProvider>
         <JsonLd
           data={{
             "@context": "https://schema.org",

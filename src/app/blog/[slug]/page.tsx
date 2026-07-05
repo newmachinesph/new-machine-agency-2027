@@ -60,7 +60,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         {formatDate(post.meta.date)} · {post.meta.readingMinutes} min read
       </p>
 
-      <h1 className="mt-4 text-3xl font-extrabold tracking-tight md:text-5xl">
+      <h1 className="font-display mt-4 text-3xl font-extrabold tracking-tight md:text-5xl">
         {post.meta.title}
       </h1>
 
@@ -69,7 +69,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           {post.meta.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted"
+              className="border border-border px-2.5 py-0.5 text-xs text-muted"
             >
               {tag}
             </span>

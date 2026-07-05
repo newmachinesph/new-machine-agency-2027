@@ -1,39 +1,24 @@
 "use client";
 
-import {
-  useEffect,
-  useRef,
-  type CSSProperties,
-  type ElementType,
-  type ReactNode,
-} from "react";
+import { useEffect, useRef, type ReactNode } from "react";
+import * as m from "motion/react-m";
+import { useReducedMotion } from "motion/react";
 
 type RevealProps = {
   children: ReactNode;
   className?: string;
-  /** Stagger delay in ms, applied via the --rd CSS variable. */
+  /** Stagger delay in ms. */
   delay?: number;
-  as?: ElementType;
 };
 
-export default function Reveal({
-  children,
-  className = "",
-  delay = 0,
-  as: Tag = "div",
-}: RevealProps) {
-  const ref = useRef<HTMLElement | null>(null);
+export default function Reveal({ children, className = "", delay = 0 }: RevealProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
 
+  // "Near" observer: flags elements approaching the viewport (asset-preload hook).
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.classList.add("in-view");
-      return;
-    }
-
-    // "Near" observer: flags elements approaching the viewport (asset-preload hook).
     const near = new IntersectionObserver(
       (entries) => {
         if (entries.some((entry) => entry.isIntersecting)) {
@@ -43,34 +28,20 @@ export default function Reveal({
       },
       { rootMargin: "200% 0px" },
     );
-
-    // "Show" observer: triggers the entrance animation.
-    const show = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          el.classList.add("in-view");
-          show.disconnect();
-        }
-      },
-      { rootMargin: "0px 0px -10% 0px" },
-    );
-
     near.observe(el);
-    show.observe(el);
-
-    return () => {
-      near.disconnect();
-      show.disconnect();
-    };
+    return () => near.disconnect();
   }, []);
 
   return (
-    <Tag
+    <m.div
       ref={ref}
-      className={`reveal ${className}`.trim()}
-      style={{ "--rd": `${delay}ms` } as CSSProperties}
+      className={className || undefined}
+      initial={reduced ? false : { opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: delay / 1000 }}
     >
       {children}
-    </Tag>
+    </m.div>
   );
 }

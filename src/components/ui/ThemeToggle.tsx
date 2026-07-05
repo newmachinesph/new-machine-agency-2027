@@ -21,7 +21,7 @@ export default function ThemeToggle() {
       type="button"
       aria-label="Toggle theme"
       onClick={toggle}
-      className="grid h-10 w-10 place-items-center rounded-full border border-border transition hover:border-accent"
+      className="grid h-10 w-10 place-items-center border border-border transition hover:border-accent"
     >
       <Sun className="hidden dark:block" size={18} />
       <Moon className="dark:hidden" size={18} />

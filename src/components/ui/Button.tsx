@@ -13,9 +13,9 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-ink transition hover:bg-accent-strong",
+    "inline-flex items-center justify-center gap-2 chamfer bg-accent px-6 py-3 text-sm font-semibold text-accent-ink transition hover:bg-accent-strong",
   ghost:
-    "inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-fg transition hover:border-accent hover:text-accent-fg",
+    "inline-flex items-center justify-center gap-2 border border-border px-6 py-3 text-sm font-semibold text-fg transition hover:border-accent hover:text-accent-fg",
 } as const;
 
 export default function Button({

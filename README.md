@@ -93,9 +93,15 @@ Set `formEndpoint` in `src/config/site.ts`:
 
 The form POSTs `FormData` with an `Accept: application/json` header — compatible with all static-friendly form providers. A honeypot field (`website`) silently drops bot submissions.
 
-## Change the accent color
+## Design system
 
-One variable: edit `--accent` (and optionally `--accent-strong` / `--accent-ink` / light-mode `--accent-fg`) at the top of `src/app/globals.css`. Every button, link, glow and highlight follows it.
+- **Fonts:** [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) for display/headlines (`font-display` utility) + [Schibsted Grotesk](https://fonts.google.com/specimen/Schibsted+Grotesk) for body/UI. Change them in `src/app/layout.tsx` (next/font) and the `--font-*` mappings in `globals.css`.
+- **No rounded corners.** Everything is sharp; the signature is the `.chamfer` clip-path (45° cut corner) on primary buttons and key surfaces. The only circles are the custom cursor.
+- **Brand patterns** (traced from the reference art, both in `src/components/ui/`):
+  - `PatternTrace` — thin-line chamfered-rectangle circuit motif (`{ className?, idPrefix? }`, colored via `text-*`/currentColor). Used in the hero background and behind the footer wordmark.
+  - `PatternMosaic` — sage/deep-green triangle-square quilt strip (`{ rows?, className? }`). Used at the hero's bottom edge, above the footer, and on the final CTA band.
+- **Motion:** Framer Motion (`motion` v12) via `LazyMotion` + `m` components (`MotionProvider` in the layout). `Reveal` powers scroll-ins; the hero staggers via `HeroIntro`. All of it respects `prefers-reduced-motion`.
+- **Accent color:** one variable — edit `--accent` (and optionally `--accent-strong` / `--accent-deep` / `--accent-ink` / per-theme `--accent-fg`) at the top of `src/app/globals.css`. Current palette is the sage/leaf green from the brand pattern.
 
 ## Theming
 
@@ -133,6 +139,6 @@ Build produces a fully static site in `/out`:
 ## Notes
 
 - **No OG image yet.** Add `/public/og.png` (1200×630) and reference it in `src/app/layout.tsx` under `metadata.openGraph.images` when brand assets are ready.
-- **framer-motion intentionally omitted.** All motion (reveals, typewriter, blobs, cursor, accordion) is CSS + small vanilla hooks — app-level JS on the home page is ~25 KB gzipped.
-- **JS budget caveat.** Total home-page JS is ~189 KB gzipped, of which ~151 KB is the React 19 + Next 16 App Router runtime itself — the framework floor alone exceeds the 150 KB target, so that budget is not reachable on `next@latest` App Router. All framework JS is deferred; the page is fully server-rendered HTML, so LCP/interactivity targets are unaffected.
+- **Motion budget.** Framer Motion ships lean via `LazyMotion`/`m` (domAnimation feature set only — no drag/layout features). Total home-page JS is ~220 KB gzipped: ~151 KB React 19 + Next 16 runtime floor, ~30 KB motion features, ~35 KB app code. All of it is deferred; pages are fully pre-rendered HTML, so LCP is unaffected.
+- **Testimonials** live in their own home section (`src/components/sections/Testimonials.tsx`), fed by `site.testimonials`.
 - Company name is never hardcoded in components — always `site.name` from config.
