@@ -67,7 +67,7 @@ export const site = {
       quote:
         "Clear from day one — no jargon, no account managers, just straight answers and a site that finally looks like the business we want to be.",
       name: "Sarah Mitchell",
-      role: "Clinic Director, Dubai",
+      role: "Clinic Director",
     },
     {
       quote:

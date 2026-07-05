@@ -7,7 +7,7 @@ import BlogIndex from "./BlogIndex";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Plain-language articles on websites, landing pages and digital growth — written for business owners, not marketers.",
+    "Plain-language articles on brand, product, websites and growth — written for founders, not marketers.",
   alternates: { canonical: "/blog/" },
 };
 

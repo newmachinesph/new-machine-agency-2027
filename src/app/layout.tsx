@@ -26,7 +26,7 @@ const schibsted = Schibsted_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Digital Growth Agency in the UAE`,
+    default: `${site.name} — Full-Lifecycle Startup Studio`,
     template: `%s — ${site.name}`,
   },
   description: site.description,

@@ -143,7 +143,7 @@ export default function WhoWeHelp() {
 
         <Reveal delay={300}>
           <p className="mt-10 text-center text-sm text-muted">
-            Based in the UAE · serving businesses globally — full-lifecycle digital growth
+            Remote-first · serving founders worldwide — full-lifecycle studio work
             without the traditional agency price tag.
           </p>
         </Reveal>

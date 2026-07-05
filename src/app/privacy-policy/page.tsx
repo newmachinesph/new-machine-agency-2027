@@ -16,8 +16,8 @@ export default function PrivacyPolicyPage() {
       <div className="prose mt-10">
         <h2>Who we are</h2>
         <p>
-          {site.legalName} (“we”, “us”, “our”) is a digital growth agency based in the
-          United Arab Emirates, serving clients globally. This policy explains what
+          {site.legalName} (“we”, “us”, “our”) is a remote-first digital studio serving
+          founders worldwide. This policy explains what
           information we collect when you use our website, why we collect it, and the
           choices you have. By using this website, you agree to the practices described
           here.
