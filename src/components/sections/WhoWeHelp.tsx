@@ -5,7 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 const groups = [
   {
     chip: "For SMEs",
-    tint: "#22c55e",
+    tint: "#8fc57f",
     title: "Small & medium businesses",
     points: [
       "Professional websites",
@@ -17,7 +17,7 @@ const groups = [
   },
   {
     chip: "For Clinics",
-    tint: "#38bdf8",
+    tint: "#67ad62",
     title: "Clinics & healthcare",
     points: [
       "Patient acquisition",
@@ -29,7 +29,7 @@ const groups = [
   },
   {
     chip: "For Real Estate",
-    tint: "#a78bfa",
+    tint: "#35753a",
     title: "Real estate & developers",
     points: [
       "Project landing pages",
