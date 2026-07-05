@@ -407,8 +407,9 @@ svg {
   line-height: 0.9;
   font-weight: 800;
   letter-spacing: -0.04em;
-  color: color-mix(in srgb, var(--fg) 6%, transparent);
-  -webkit-text-stroke: 2px color-mix(in srgb, var(--fg) 32%, transparent);
+  color: rgba(255, 255, 255, 0.92);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  mix-blend-mode: overlay;
   pointer-events: none;
 }
 

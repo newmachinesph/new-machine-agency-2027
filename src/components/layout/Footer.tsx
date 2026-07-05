@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navLinks, site, whatsappHref } from "@/config/site";
 import services from "@/content/services.json";
 import PatternMosaic from "@/components/ui/PatternMosaic";
+import PatternTrace from "@/components/ui/PatternTrace";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,8 +11,21 @@ export default function Footer() {
   return (
     <footer className="border-t border-border">
       <PatternMosaic rows={2} className="h-16 w-full" />
-      <div className="overflow-hidden" aria-hidden="true">
-        <p className="footer-word text-center">NOMAD</p>
+      <div className="relative overflow-hidden" aria-hidden="true">
+        <Image
+          src="/nomad-background.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale"
+        />
+        <div className="absolute inset-0 bg-accent-deep mix-blend-multiply" />
+        <div className="absolute inset-0 bg-accent-deep/30" />
+        <PatternTrace
+          idPrefix="pt-footer"
+          className="absolute inset-0 text-accent opacity-45"
+        />
+        <p className="footer-word relative text-center">NOMAD</p>
       </div>
 
       <div className="wrap grid gap-10 py-14 md:grid-cols-4">
