@@ -43,7 +43,7 @@ export default function ProductsPage() {
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {products.map((product, i) => (
             <Reveal key={product.name} delay={i * 90}>
-              <div className="panel flex h-full flex-col overflow-hidden">
+              <div className="panel beam flex h-full flex-col overflow-hidden">
                 <DuotoneImage
                   src={`https://picsum.photos/seed/${encodeURIComponent(product.name)}/800/500`}
                   className="h-40 w-full"

@@ -25,7 +25,7 @@ export default function ProductsTeaser() {
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {products.map((product, i) => (
             <Reveal key={product.name} delay={i * 90}>
-              <div className="panel h-full overflow-hidden">
+              <div className="panel beam h-full overflow-hidden">
                 <DuotoneImage
                   src={`https://picsum.photos/seed/${encodeURIComponent(product.name)}/800/500`}
                   className="h-32 w-full"

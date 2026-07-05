@@ -39,7 +39,7 @@ export default function WhyTrustUs() {
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
           {differentiators.map((item, i) => (
             <Reveal key={item.title} delay={i * 70}>
-              <div className="panel h-full p-6">
+              <div className="panel beam h-full p-6">
                 <span className="grid h-10 w-10 place-items-center border border-border">
                   <item.icon size={20} className="text-accent-fg" />
                 </span>

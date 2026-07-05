@@ -18,7 +18,7 @@ export default function Testimonials() {
             /* ponytail: md:mt-12 instead of translate-y — motion sets inline
                transform on Reveal, which would override a translate utility. */
             <Reveal key={testimonial.name} delay={i * 120} className={i === 1 ? "md:mt-12" : ""}>
-              <div className="panel chamfer relative h-full p-8">
+              <div className="panel beam chamfer relative h-full p-8">
                 <span
                   aria-hidden="true"
                   className="absolute left-6 top-1 font-display text-7xl text-accent-fg opacity-40"

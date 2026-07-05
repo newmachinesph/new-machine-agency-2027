@@ -70,6 +70,7 @@ export default function RootLayout({
       </head>
       <body>
         <ContentGuard />
+        <div className="scroll-progress" aria-hidden="true" />
         <CustomCursor />
         <MotionProvider>
           <Navbar />

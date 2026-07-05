@@ -6,5 +6,5 @@ type GlassCardProps = {
 };
 
 export default function GlassCard({ className = "", children }: GlassCardProps) {
-  return <div className={`glass p-5 ${className}`.trim()}>{children}</div>;
+  return <div className={`glass beam p-5 ${className}`.trim()}>{children}</div>;
 }
