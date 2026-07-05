@@ -3,6 +3,7 @@ import faq from "@/content/faq.json";
 import JsonLd from "@/components/ui/JsonLd";
 import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
+import StatsBar from "@/components/sections/StatsBar";
 import ServicesBento from "@/components/sections/ServicesBento";
 import WhyItMatters from "@/components/sections/WhyItMatters";
 import WhoWeHelp from "@/components/sections/WhoWeHelp";
@@ -22,6 +23,7 @@ export default function Home() {
     <>
       <Hero />
       <Marquee />
+      <StatsBar />
       <ServicesBento />
       <WhyItMatters />
       <WhoWeHelp />

@@ -5,7 +5,6 @@ import { useReducedMotion, type Variants } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
-import GlassCard from "@/components/ui/GlassCard";
 import TypeWriter from "@/components/ui/TypeWriter";
 
 const container: Variants = {
@@ -64,17 +63,6 @@ export default function HeroIntro() {
         <Button href="/services" variant="ghost">
           View Our Services
         </Button>
-      </m.div>
-
-      <m.div variants={item} className="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        {site.stats.map((stat) => (
-          <GlassCard key={stat.label} className="h-full">
-            <p className="font-display text-2xl font-bold text-accent-fg md:text-3xl">
-              {stat.value}
-            </p>
-            <p className="mt-1 text-xs text-muted">{stat.label}</p>
-          </GlassCard>
-        ))}
       </m.div>
     </m.div>
   );
