@@ -615,6 +615,12 @@ footer .wrap a:hover::after {
   overflow: hidden;
 }
 
+/* Floating buttons keep their fixed placement (utilities are layered,
+   so the sheen rule above would otherwise override them). */
+.chamfer.bg-accent.fixed {
+  position: fixed;
+}
+
 .chamfer.bg-accent::before {
   content: "";
   position: absolute;
