@@ -157,7 +157,7 @@ function ServicesPanel() {
         />
         <div className="relative">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-accent-strong">
-            Scale · 2027
+            Scale · Beyond
           </p>
           <p className="mt-2 font-display text-lg font-semibold leading-tight text-white">
             AI agents that run growth for you.
@@ -229,6 +229,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const groupRef = useRef<HTMLDivElement>(null);
   const triggerRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Close menus on navigation (state adjustment during render).
   const [lastPathname, setLastPathname] = useState(pathname);
@@ -250,7 +251,26 @@ export default function Navbar() {
   const isActive = (href: string) => pathname.startsWith(href);
   const megaLinks = navLinks.filter((link) => MEGA_MENUS[link.href]);
   const plainLinks = navLinks.filter((link) => !MEGA_MENUS[link.href]);
-  const closeMega = () => setActive(null);
+  const cancelClose = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  };
+  const openMega = (key: MegaKey) => {
+    cancelClose();
+    setActive(key);
+  };
+  const closeMega = () => {
+    cancelClose();
+    setActive(null);
+  };
+  // Delay the close so crossing the header→panel seam doesn't drop the panel
+  // before the cursor reaches it; re-entering the group cancels the timer.
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer.current = setTimeout(() => setActive(null), 150);
+  };
 
   return (
     <>
@@ -271,8 +291,9 @@ export default function Navbar() {
             <div
               ref={groupRef}
               className="flex items-center gap-7 self-stretch"
+              onMouseEnter={cancelClose}
               onMouseLeave={() => {
-                if (!groupRef.current?.contains(document.activeElement)) closeMega();
+                if (!groupRef.current?.contains(document.activeElement)) scheduleClose();
               }}
               onBlur={(e) => {
                 if (!groupRef.current?.contains(e.relatedTarget as Node)) closeMega();
@@ -298,7 +319,7 @@ export default function Navbar() {
                     registerTrigger={(el) => {
                       triggerRefs.current[menuKey] = el;
                     }}
-                    onOpen={() => setActive(menuKey)}
+                    onOpen={() => openMega(menuKey)}
                     onToggle={() =>
                       setActive((cur) => (cur === menuKey ? null : menuKey))
                     }

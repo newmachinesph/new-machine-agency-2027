@@ -27,7 +27,7 @@ const stageMeta: Record<string, { icon: BrandIcon; summary: string }> = {
     icon: IconTarget,
     summary: "Content, ads, SEO and automation that turn a launch into real momentum.",
   },
-  "Scale · 2027": {
+  "Scale · Beyond": {
     icon: IconAIAgent,
     summary: "AI agents, analytics and fractional leadership for whatever growth comes next.",
   },
@@ -41,7 +41,7 @@ export default function ServicesBento() {
           number="01"
           eyebrow="What we do"
           title="Everything a startup needs, one studio."
-          lead="Seventeen services across four stages of the journey — from first brand to full scale. Take one stage or run the whole lifecycle with us."
+          lead="Nineteen services across four stages of the journey — from first brand to full scale. Take one stage or run the whole lifecycle with us."
         />
 
         <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">

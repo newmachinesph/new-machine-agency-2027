@@ -73,7 +73,7 @@ const stages = [
     lead: "Get in front of the right audience and turn attention into revenue.",
   },
   {
-    name: "Scale · 2027",
+    name: "Scale · Beyond",
     number: "04",
     lead: "The systems, data and leadership that carry growth past the founder-led stage.",
   },

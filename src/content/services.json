@@ -234,7 +234,7 @@
     "forWho": "Businesses generating leads or customers who are currently going cold in a spreadsheet."
   },
   {
-    "stage": "Scale · 2027",
+    "stage": "Scale · Beyond",
     "slug": "ai-agents-automation",
     "name": "AI Agents & Automation",
     "icon": "aiagent",
@@ -252,7 +252,7 @@
     "forWho": "Growing teams drowning in manual work that software could be doing instead."
   },
   {
-    "stage": "Scale · 2027",
+    "stage": "Scale · Beyond",
     "slug": "analytics-bi",
     "name": "Analytics & BI Dashboards",
     "icon": "dashboard",
@@ -270,7 +270,7 @@
     "forWho": "Leadership teams making decisions on gut feel because the data lives in ten different tools."
   },
   {
-    "stage": "Scale · 2027",
+    "stage": "Scale · Beyond",
     "slug": "conversion-optimization",
     "name": "Conversion Optimization",
     "icon": "splittest",
@@ -288,7 +288,7 @@
     "forWho": "Businesses with steady traffic who are ready to stop leaking revenue at the last step."
   },
   {
-    "stage": "Scale · 2027",
+    "stage": "Scale · Beyond",
     "slug": "fractional-leadership",
     "name": "Fractional CMO / CTO",
     "icon": "helm",
@@ -304,5 +304,41 @@
       "Board & stakeholder updates"
     ],
     "forWho": "Scaling businesses that need senior judgment on marketing or engineering, on a fractional budget."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "ai-visibility-audit",
+    "name": "AI Visibility Audit",
+    "icon": "search",
+    "tint": "#67ad62",
+    "outcome": "Know exactly how AI search and assistants describe you — before your customers ask them.",
+    "description": "Buyers now ask ChatGPT, Gemini and Google's AI Overviews instead of scrolling ten blue links. We audit how those systems see, cite and rank your brand — then hand you a fix list to become the answer they give.",
+    "includes": [
+      "AI & LLM visibility scan",
+      "Prompt & citation testing",
+      "Share-of-answer vs. competitors",
+      "Structured data & entity gaps",
+      "Content & authority recommendations",
+      "Prioritized fix roadmap"
+    ],
+    "forWho": "Brands that want to show up when their next customer asks an AI instead of a search bar."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "seo-ai-campaigns",
+    "name": "SEO & AI Campaigns",
+    "icon": "rank",
+    "tint": "#8fc57f",
+    "outcome": "Traffic and answers that compound across Google and every AI assistant at once.",
+    "description": "One campaign built for both worlds: classic SEO that ranks in search, plus generative-engine optimization that gets you cited inside AI answers. Content, structure and authority aimed wherever your buyers are actually looking.",
+    "includes": [
+      "Search + generative-engine strategy",
+      "AI-assisted content production",
+      "On-page & structured-data optimization",
+      "Authority & citation building",
+      "Answer-engine (GEO/AEO) tuning",
+      "Monthly visibility & ranking report"
+    ],
+    "forWho": "Businesses that want to win both Google rankings and the AI answers replacing them."
   }
 ]

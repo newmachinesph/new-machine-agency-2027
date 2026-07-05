@@ -710,6 +710,8 @@ a.panel:hover img,
 
 /* ── Mega menu (desktop dropdown panels) ────────────────────────────── */
 .mega-panel {
+  /* Near-solid so content stays readable; keeps a hint of blur for depth. */
+  background: color-mix(in srgb, var(--card) 96%, transparent);
   animation: mega-in 0.22s cubic-bezier(0.22, 1, 0.36, 1);
   box-shadow: 0 24px 60px -22px rgba(0, 0, 0, 0.55);
 }
