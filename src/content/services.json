@@ -15,7 +15,37 @@
       "Social & pitch-deck templates",
       "Asset library handoff"
     ],
-    "forWho": "Founders launching a new venture or rebranding one that has outgrown its first identity."
+    "forWho": "Founders launching a new venture or rebranding one that has outgrown its first identity.",
+    "problem": "Your brand is a pile of mismatched assets. The logo came from one place, the deck from another, the website from a third, and none of them look like the same company. Every time you need something new, you're guessing at the color, the font, the tone, and it shows.",
+    "approach": [
+      {
+        "title": "Strategy first",
+        "text": "We start with who you are and where you're headed, so the identity is built on a clear point of view instead of taste alone. No design happens until we agree on what the brand needs to say."
+      },
+      {
+        "title": "Build the system",
+        "text": "We design the logo, color, type and voice as one connected system, then pressure-test it across a pitch deck, a product screen and a big print format. If it breaks anywhere, we fix it before handoff."
+      },
+      {
+        "title": "Package and hand off",
+        "text": "You get a guidelines document, ready-to-use templates and a full asset library. Everything is organized so your team or your next agency can run with it on day one."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I actually own the final files and can I edit them myself?",
+        "a": "Yes. You own everything, including editable source files. There's no license, no lock-in, and no need to come back to us to change a color or add a slide."
+      },
+      {
+        "q": "We already have a logo we like. Can you build around it?",
+        "a": "Yes. If the mark still works, we keep it and build the rest of the system, voice and templates around it. If it's holding you back, we'll tell you honestly and show you why."
+      },
+      {
+        "q": "How is this different from hiring a freelancer on a marketplace?",
+        "a": "A freelancer usually delivers a logo and disappears. We design the full system, document how to use it, and hand off a complete library, so the brand stays consistent long after we're done. Pricing is fixed and agreed up front."
+      }
+    ],
+    "metaDescription": "Nomad Media builds brand identity as one coherent system of logo, color, type and voice that holds up everywhere your company shows up."
   },
   {
     "stage": "Brand & Strategy",
@@ -33,7 +63,37 @@
       "Core messaging pillars",
       "Elevator pitch & one-pager"
     ],
-    "forWho": "Early-stage founders and teams entering a crowded market who need a sharper story."
+    "forWho": "Early-stage founders and teams entering a crowded market who need a sharper story.",
+    "problem": "You know your product is good, but explaining why it's different takes five minutes and a whiteboard. Prospects compare you to the other tab open in their browser and can't tell you apart. The name, the pitch and the messaging all shift depending on who's talking.",
+    "approach": [
+      {
+        "title": "Map the field",
+        "text": "We study your category, your competitors and the language they use, so we can find the space that's actually open. You can't stand out until you know what everyone else already sounds like."
+      },
+      {
+        "title": "Sharpen the story",
+        "text": "We build your positioning, core messaging and audience definition into one clear argument for why someone should pick you. Every claim is written to survive a skeptical buyer, not just a friendly one."
+      },
+      {
+        "title": "Name and pitch",
+        "text": "We develop naming and a tagline that fit the positioning, then package it into an elevator pitch and one-pager your whole team can repeat. Everyone ends up telling the same story."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How does naming work if the domain or trademark is already taken?",
+        "a": "We factor availability into the process and steer toward names with a realistic path to a domain and a mark. We're not lawyers, so we'll flag when it's time to get a trademark search, but we won't hand you a name that's obviously blocked."
+      },
+      {
+        "q": "What do you need from us to get started?",
+        "a": "Time with the people who know the business and the customer, plus any research or sales calls you can share. The sharper your input on who you're for, the sharper the positioning comes out."
+      },
+      {
+        "q": "Can you do positioning without a full rename?",
+        "a": "Yes. Naming and positioning are often bought together, but plenty of teams keep their name and just need a clearer story. We scope to what you actually need and price it up front."
+      }
+    ],
+    "metaDescription": "Nomad Media delivers positioning and naming that make the choice obvious, so buyers pick you before the pitch even starts."
   },
   {
     "stage": "Brand & Strategy",
@@ -51,7 +111,37 @@
       "SWOT & positioning insights",
       "Actionable findings report"
     ],
-    "forWho": "Founders and product teams about to invest in a new market, product or audience."
+    "forWho": "Founders and product teams about to invest in a new market, product or audience.",
+    "problem": "You're about to bet real budget and months of work on a direction, and the case for it is mostly internal opinion and a gut feeling. Nobody in the room has actually talked to the customer you're counting on. If the assumption is wrong, you won't find out until the money's already spent.",
+    "approach": [
+      {
+        "title": "Frame the questions",
+        "text": "We start by naming the decisions this research needs to inform and the assumptions you're betting on. That keeps the work focused on what changes your mind, not on filling slides."
+      },
+      {
+        "title": "Gather the evidence",
+        "text": "We size the market, audit competitors and pricing, and talk to real customers through interviews, surveys and demand tests. You hear what buyers actually say, not what you hoped they'd say."
+      },
+      {
+        "title": "Turn it into a call",
+        "text": "We hand back a clear findings report with a recommendation you can act on, not a data dump. It tells you what we learned, what it means, and what we'd do next."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What if the research says our idea won't work?",
+        "a": "Then we tell you, plainly, and show you the evidence. Finding that out now is the whole point, and it's a lot cheaper than finding out after launch."
+      },
+      {
+        "q": "How many customers do you actually talk to?",
+        "a": "Enough to see clear patterns, scoped to your market and question. We won't promise a fixed headcount up front, because the right number depends on how varied your audience is and how quickly the signal becomes consistent."
+      },
+      {
+        "q": "How is this different from a report I could buy off the shelf?",
+        "a": "A market report tells you about the market in general. We answer your specific decision, including primary interviews with the customers you're targeting, and hand back findings tied to what you should do next. You own the full report and the raw inputs."
+      }
+    ],
+    "metaDescription": "Nomad Media runs market research that validates demand and maps competitors, so you can commit budget on evidence instead of gut feel."
   },
   {
     "stage": "Design & Build",
@@ -69,7 +159,37 @@
       "Speed & SEO foundations",
       "Analytics setup"
     ],
-    "forWho": "Businesses whose current site looks dated, loads slowly, or simply doesn't bring in customers."
+    "forWho": "Businesses whose current site looks dated, loads slowly, or simply doesn't bring in customers.",
+    "problem": "Your website looks like it was built five years ago, and you can feel prospects judging it. It loads slowly, it's hard to use on a phone, and the people who do land on it leave without ever getting in touch. You know it's costing you business, but you're not sure where to start.",
+    "approach": [
+      {
+        "title": "Understand the goal",
+        "text": "We start by getting clear on who you're trying to reach and what a good visitor action looks like. Every design decision after that serves getting more of those inquiries."
+      },
+      {
+        "title": "Design and build",
+        "text": "We custom-design each page around your content and build it mobile-first, so it looks sharp and loads fast on every device. No templates, no layouts you've seen a hundred times before."
+      },
+      {
+        "title": "Launch and hand over",
+        "text": "We set up analytics, wire up your contact and inquiry flows, and get the site live. You own the code and accounts outright, so nothing is locked to us."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from buying a template?",
+        "a": "A template forces your business into someone else's layout, and your visitors have seen it before. We design around your actual content and the inquiries you want, so the site fits your business instead of the other way around."
+      },
+      {
+        "q": "How long does a website take?",
+        "a": "Most sites are done in weeks, not months. The exact timeline depends on how many pages you need and how ready your content is, and we agree on it upfront with fixed pricing."
+      },
+      {
+        "q": "Do I own the site when it's finished?",
+        "a": "Yes. You own the code, the content, and all the accounts. Nothing is tied to us, so you can host it, update it, or move it whenever you want."
+      }
+    ],
+    "metaDescription": "Custom website design from Nomad Media: fast, mobile-first sites built to turn visitors into real inquiries, not templates everyone has seen."
   },
   {
     "stage": "Design & Build",
@@ -87,7 +207,37 @@
       "Form capture & routing",
       "Campaign tracking setup"
     ],
-    "forWho": "Anyone running ads or campaigns who needs clicks to actually become customers."
+    "forWho": "Anyone running ads or campaigns who needs clicks to actually become customers.",
+    "problem": "You're paying for clicks, but the traffic hits your page and bounces. Your homepage has too much going on, so visitors get distracted and never take the one action you actually paid to get. Every wasted click is money gone.",
+    "approach": [
+      {
+        "title": "Define the action",
+        "text": "We pin down the single action the page exists to drive, whether that's a booking, a sign-up, or a sale. Everything else gets stripped out."
+      },
+      {
+        "title": "Design to convert",
+        "text": "We build a focused layout with a persuasive copy structure and fast load times, so nothing distracts from that one action. Sections are built ready for A/B testing so you can keep improving."
+      },
+      {
+        "title": "Wire up tracking",
+        "text": "We connect form capture, routing, and campaign tracking so every lead lands where it should and you can see what your ad spend is doing. Then we launch."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is a landing page different from a regular web page?",
+        "a": "A landing page has one job and removes everything that doesn't serve it. There's no navigation to wander off into and no competing messages, just a clear path to a single action."
+      },
+      {
+        "q": "Can I run A/B tests on it later?",
+        "a": "Yes. We build the sections to be test-ready so you can swap headlines, copy, or layouts and measure what converts better without rebuilding the page."
+      },
+      {
+        "q": "What do you need from me to start?",
+        "a": "The offer you're promoting, where the traffic is coming from, and the one action you want visitors to take. We handle the copy structure, design, and tracking from there."
+      }
+    ],
+    "metaDescription": "Nomad Media builds focused landing pages that remove distractions and turn ad and campaign clicks into one clear action, from booking to sale."
   },
   {
     "stage": "Design & Build",
@@ -105,7 +255,37 @@
       "Brand-consistent design system",
       "Easy content updates"
     ],
-    "forWho": "Established companies whose online presence hasn't caught up with their real-world reputation."
+    "forWho": "Established companies whose online presence hasn't caught up with their real-world reputation.",
+    "problem": "Your company has earned a strong reputation, but your website makes you look smaller and less established than you are. Prospects check you out before a meeting and come away unsure, so you spend the first call rebuilding credibility you should already have. The gap between your real standing and your online presence is costing you trust.",
+    "approach": [
+      {
+        "title": "Map the structure",
+        "text": "We plan the full multi-page architecture around what prospects, hires, and partners need to see, from services and projects to team and news. The structure is built to scale as you grow."
+      },
+      {
+        "title": "Build the design system",
+        "text": "We design a brand-consistent system that communicates the scale and professionalism you actually operate at. It stays coherent across every page and section."
+      },
+      {
+        "title": "Set up for the long run",
+        "text": "We build in easy content updates, a multilingual-ready structure, and careers and news modules, then hand it over. You own everything and can keep it current without calling us."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can our team update the site without a developer?",
+        "a": "Yes. We build in easy content updates so your team can add news, roles, and project pages on their own. You own the accounts and content outright."
+      },
+      {
+        "q": "Can it support more than one language?",
+        "a": "We build the structure to be multilingual-ready, so adding languages later doesn't mean rebuilding the site. We can scope the initial languages you need upfront."
+      },
+      {
+        "q": "How is this different from a small-business website?",
+        "a": "A corporate site has to carry more weight: multiple audiences, deeper architecture, and a design system that signals scale. We build for credibility and growth, not just a few pages."
+      }
+    ],
+    "metaDescription": "Nomad Media builds corporate websites that signal scale and credibility, so prospects arrive at the meeting already trusting your company."
   },
   {
     "stage": "Design & Build",
@@ -123,7 +303,37 @@
       "Auth, billing & core integrations",
       "Launch-ready deployment"
     ],
-    "forWho": "Founders who need to prove a product idea works before raising or scaling further."
+    "forWho": "Founders who need to prove a product idea works before raising or scaling further.",
+    "problem": "You have a product idea and you need to know if it actually works before you raise money or pour in more of your own. But most agencies want a six-month runway and a big budget just to get to a first version. You need something real in users' hands now, not a slide deck and an invoice.",
+    "approach": [
+      {
+        "title": "Scope the product",
+        "text": "We work out the core user flows and the smallest version that proves your idea. Anything that isn't essential to the test gets cut so we can move fast."
+      },
+      {
+        "title": "Design and build",
+        "text": "We handle UI/UX design and full-stack development together, including the database, APIs, and the auth, billing, and integrations your product needs to actually run."
+      },
+      {
+        "title": "Launch to real users",
+        "text": "We deploy a live, usable MVP you can put in front of actual users. It's solid enough to keep building on, and you own the code from day one."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much of my product will the MVP include?",
+        "a": "Just enough to prove the idea with real users. We focus on the core flows that answer your biggest question and leave the nice-to-haves for after you've learned what works."
+      },
+      {
+        "q": "Do I own the code and accounts?",
+        "a": "Yes, completely. You own the code, the database, and all the accounts, so you can keep building with us, your own team, or anyone else."
+      },
+      {
+        "q": "Why not just use a no-code tool or template?",
+        "a": "No-code is fine for a quick test, but it often can't handle real auth, billing, or custom logic, and you hit a wall when you scale. We build a real full-stack product you can keep growing from."
+      }
+    ],
+    "metaDescription": "Nomad Media designs and builds web app MVPs fast: a live, usable product in your users' hands to prove the idea before you raise or scale."
   },
   {
     "stage": "Design & Build",
@@ -141,7 +351,37 @@
       "Analytics & crash reporting",
       "Post-launch update support"
     ],
-    "forWho": "Businesses whose product lives on a phone, not just a browser tab."
+    "forWho": "Businesses whose product lives on a phone, not just a browser tab.",
+    "problem": "Your product really lives on a phone, but a mobile website just doesn't feel right to your users, so they don't keep coming back. Real apps also mean push notifications, offline use, and getting through App Store and Play Store review, which is harder than most teams expect. You need an app that feels native and actually makes it into the stores.",
+    "approach": [
+      {
+        "title": "Design for real use",
+        "text": "We design iOS and Android experiences around how people actually use your product on a phone, not a shrunk-down website. That means it feels native, not like a page squeezed onto a small screen."
+      },
+      {
+        "title": "Build for the phone",
+        "text": "We handle cross-platform development with push notifications and offline support, so the app stays fast and useful even when the connection drops."
+      },
+      {
+        "title": "Ship and support",
+        "text": "We manage App Store and Play Store submission, set up analytics and crash reporting, and support updates after launch. You own the app and the store accounts."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do you build for both iOS and Android?",
+        "a": "Yes. We design for both platforms and build cross-platform, so you get an app on iOS and Android without maintaining two entirely separate codebases."
+      },
+      {
+        "q": "Will you handle getting it into the app stores?",
+        "a": "Yes. We manage App Store and Play Store submission, which trips up a lot of teams, and set up analytics and crash reporting so you can see how the app performs after launch."
+      },
+      {
+        "q": "Why not just make our website mobile-friendly?",
+        "a": "A mobile site can't match a native app for speed, offline use, or push notifications, and it doesn't earn a spot on the home screen. We build for how people actually use their phones so users keep the app."
+      }
+    ],
+    "metaDescription": "Nomad Media builds native-feeling iOS and Android apps with offline support, push, and store submission handled, so users keep them installed."
   },
   {
     "stage": "Launch & Grow",
@@ -159,7 +399,37 @@
       "Community engagement",
       "Monthly performance report"
     ],
-    "forWho": "Businesses that know they should be active on social media but don't have the time or team to do it well."
+    "forWho": "Businesses that know they should be active on social media but don't have the time or team to do it well.",
+    "problem": "You know your business should show up on social every day, but the posts keep slipping because you are busy running everything else. When you do post, it feels rushed and off-brand. Weeks go quiet, and your audience forgets you exist.",
+    "approach": [
+      {
+        "title": "Plan in advance",
+        "text": "We build a monthly content calendar so nothing is posted at the last minute. You approve the plan before anything goes live."
+      },
+      {
+        "title": "Sound like you",
+        "text": "We write captions and design posts in your actual voice, not generic filler. Your feed looks professional and stays recognizably yours."
+      },
+      {
+        "title": "Publish and engage",
+        "text": "We schedule everything and reply to comments and messages so the account stays active. You get a monthly report on what people responded to."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How many posts do I get each month?",
+        "a": "It depends on the plan we agree on and the platforms you want to be on. We set the volume up front so the scope and pricing are clear before we start."
+      },
+      {
+        "q": "How long before I see results?",
+        "a": "Social builds slowly. Reach and engagement grow as we post consistently over months, not from a single viral post. We report the trend every month so you can see it moving."
+      },
+      {
+        "q": "Who owns the accounts and content?",
+        "a": "You do. Every profile, post, and asset stays yours, and you keep full access the whole time we work together and after."
+      }
+    ],
+    "metaDescription": "Social media management that keeps your brand consistent, on-brand, and in front of your audience without adding work to your plate."
   },
   {
     "stage": "Launch & Grow",
@@ -177,7 +447,37 @@
       "Weekly optimization",
       "Transparent reporting"
     ],
-    "forWho": "Businesses ready to grow who want a predictable flow of inquiries, not just likes and impressions."
+    "forWho": "Businesses ready to grow who want a predictable flow of inquiries, not just likes and impressions.",
+    "problem": "You are getting clicks and traffic, but almost none of it turns into a real conversation. The inquiries that do come in are the wrong fit or never had money to spend. You need people ready to buy, not another spike in impressions.",
+    "approach": [
+      {
+        "title": "Offer first",
+        "text": "We start with who you want and the offer that makes them act, because targeting is worthless without a reason to respond. That strategy drives every campaign."
+      },
+      {
+        "title": "Focused landing pages",
+        "text": "We build dedicated pages tied to each campaign so visitors do one thing: inquire. No distractions, no sending paid traffic to a busy homepage."
+      },
+      {
+        "title": "Capture and route",
+        "text": "Leads are captured and sent straight to you or your CRM so nothing sits waiting. We optimize weekly and report transparently on cost and quality."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is ad spend included in your fee?",
+        "a": "No. Your ad budget is paid to the platforms and is separate from our management fee. We agree on both up front so there are no surprises."
+      },
+      {
+        "q": "How is this different from just running ads?",
+        "a": "Ads bring traffic; lead generation is built end to end around turning that traffic into qualified inquiries, with the offer, landing page, and follow-up routing all handled together."
+      },
+      {
+        "q": "When will leads start coming in?",
+        "a": "Campaigns can produce inquiries fairly quickly once live, but the first weeks are about testing and optimizing. We report weekly so you see cost and quality as it improves, and we keep the accounts and data in your name."
+      }
+    ],
+    "metaDescription": "Lead generation that fills your pipeline with qualified inquiries from people ready to buy, not just clicks and impressions."
   },
   {
     "stage": "Launch & Grow",
@@ -195,7 +495,37 @@
       "Weekly budget optimization",
       "ROAS reporting dashboard"
     ],
-    "forWho": "Businesses ready to put real budget behind growth and see exactly what it returns."
+    "forWho": "Businesses ready to put real budget behind growth and see exactly what it returns.",
+    "problem": "You have real budget to spend but no clear picture of what it earns back. Money goes into ads and you are left guessing whether it made anything. Without accountable tracking, every dollar feels like a gamble.",
+    "approach": [
+      {
+        "title": "Track everything",
+        "text": "We set up conversion tracking and pixels first so every dollar is tied to a result. If we cannot measure it, we do not run it."
+      },
+      {
+        "title": "Test the creative",
+        "text": "We write and design ads across search and social, then test them against each other. Budget follows whatever is actually converting."
+      },
+      {
+        "title": "Optimize weekly",
+        "text": "We adjust targeting and spend every week toward return, not vanity metrics. You get a ROAS dashboard showing exactly what the spend returned."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does your fee include the ad budget?",
+        "a": "No. What you spend on the platforms is separate from our management fee. We define both clearly before launch so you know your total commitment."
+      },
+      {
+        "q": "How soon will I see a return?",
+        "a": "Paid ads can move fast, but the first weeks go into testing creative and audiences to find what converts. Returns become clearer and steadier as we optimize, and we report ROAS honestly the whole way."
+      },
+      {
+        "q": "Do I keep access to the ad accounts and data?",
+        "a": "Yes. The ad accounts, pixels, and performance data are yours. You own them during our work together and keep them if we ever part ways."
+      }
+    ],
+    "metaDescription": "Performance ads across search and social, managed so every dollar of spend is tracked to the revenue it returns."
   },
   {
     "stage": "Launch & Grow",
@@ -213,7 +543,37 @@
       "Link building & authority",
       "Monthly rankings report"
     ],
-    "forWho": "Businesses playing the long game who want organic traffic that doesn't stop when the budget does."
+    "forWho": "Businesses playing the long game who want organic traffic that doesn't stop when the budget does.",
+    "problem": "You are paying for every visitor through ads, and the moment you stop paying, the traffic stops too. Meanwhile your customers are searching for what you sell and finding competitors instead. You want traffic that keeps arriving without a meter running.",
+    "approach": [
+      {
+        "title": "Fix the foundation",
+        "text": "We start with a technical audit and site speed so search engines can actually read and rank your pages. Nothing else works if the foundation is broken."
+      },
+      {
+        "title": "Target real searches",
+        "text": "We build a keyword and content strategy around the exact terms your future customers type. Then we optimize your pages to rank for them."
+      },
+      {
+        "title": "Build authority",
+        "text": "We earn links and strengthen your site's authority so rankings hold over time. You get a monthly rankings report to track the climb."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How long until SEO works?",
+        "a": "Slower than ads, honestly. SEO compounds over months as pages gain authority and rankings, but that traffic keeps arriving long after the work is done. We report rankings monthly so you can watch it build."
+      },
+      {
+        "q": "How is this different from running ads?",
+        "a": "Ads stop the moment you stop paying. SEO earns organic traffic that keeps coming for free once you rank, which is slower to arrive but far more valuable over time."
+      },
+      {
+        "q": "Who owns the content and site changes?",
+        "a": "You do. Every page, optimization, and asset lives on your site and stays yours. We work transparently and hand over full access to everything we touch."
+      }
+    ],
+    "metaDescription": "SEO that earns free, compounding organic traffic by ranking your site for the searches your future customers are already typing."
   },
   {
     "stage": "Launch & Grow",
@@ -231,7 +591,37 @@
       "Automation workflow build",
       "Open, click & revenue reporting"
     ],
-    "forWho": "Businesses generating leads or customers who are currently going cold in a spreadsheet."
+    "forWho": "Businesses generating leads or customers who are currently going cold in a spreadsheet.",
+    "problem": "Leads come in and then just sit there, going cold in a spreadsheet or inbox. Customers buy once and you never hear from them again because no one has time to follow up by hand. Every missed follow-up is money quietly leaking out.",
+    "approach": [
+      {
+        "title": "Clean the data",
+        "text": "We set up your CRM and tidy the data first so automations fire on accurate information. Good flows fail on messy lists."
+      },
+      {
+        "title": "Build the flows",
+        "text": "We create the lifecycle sequences that do the follow-up for you: welcome, abandoned-cart recovery, and win-back. They run in the background around the clock."
+      },
+      {
+        "title": "Segment and refine",
+        "text": "We segment and personalize so people get messages that fit where they are. You get reporting on opens, clicks, and revenue so we can improve what works."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does the setup cover?",
+        "a": "It covers CRM setup, data cleanup, the automation workflows, and the email sequences themselves. We agree on the exact scope up front so pricing is clear before any build starts."
+      },
+      {
+        "q": "How soon will automation pay off?",
+        "a": "Once flows are live they work immediately on every new lead, but the compounding value shows over the following months as more contacts move through them. We report opens, clicks, and revenue so you see it."
+      },
+      {
+        "q": "Do I own the CRM, list, and automations?",
+        "a": "Yes. The CRM, your contact data, and every workflow are yours. You keep full access and ownership during our work and after."
+      }
+    ],
+    "metaDescription": "Email and CRM automation that follows up every lead and nurtures every customer automatically, with no manual effort."
   },
   {
     "stage": "Scale · Beyond",
@@ -249,7 +639,37 @@
       "Automation of repetitive tasks",
       "Ongoing monitoring & tuning"
     ],
-    "forWho": "Growing teams drowning in manual work that software could be doing instead."
+    "forWho": "Growing teams drowning in manual work that software could be doing instead.",
+    "problem": "Your team spends hours every day on work software could handle: copying data between tools, triaging the same support tickets, chasing follow-ups. The obvious fix is another hire, but headcount is slow and expensive. Meanwhile the busywork keeps growing and your best people are stuck doing it.",
+    "approach": [
+      {
+        "title": "Audit first",
+        "text": "We map your actual workflows before building anything, so we automate the tasks that waste the most time. No agent gets built for work that doesn't need doing."
+      },
+      {
+        "title": "Built into your stack",
+        "text": "Agents live inside the tools your team already uses, not some new dashboard nobody opens. The work gets done where it already happens."
+      },
+      {
+        "title": "Human-in-the-loop",
+        "text": "You decide which actions run automatically and which pause for a person to approve. Nothing consequential happens without a checkpoint you control."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What access do you need to build the agents?",
+        "a": "We need access to the tools and workflows we're automating, granted at the permission level the work requires. We scope this with you up front, and you can revoke or narrow it at any time."
+      },
+      {
+        "q": "How do the safeguards actually work?",
+        "a": "Every automation has human-in-the-loop checkpoints where a person reviews or approves before an action runs. You set which steps are fully automatic and which require sign-off, so nothing risky happens unsupervised."
+      },
+      {
+        "q": "Do we own the agents once they're built?",
+        "a": "Yes. You own the systems, the automations and the data they run on. If we stop working together, everything stays with you and keeps running."
+      }
+    ],
+    "metaDescription": "AI Agents & Automation from Nomad Media handles support triage, data entry and follow-ups around the clock, inside the tools you already use."
   },
   {
     "stage": "Scale · Beyond",
@@ -267,7 +687,37 @@
       "KPI & goal alignment",
       "Team training & handoff"
     ],
-    "forWho": "Leadership teams making decisions on gut feel because the data lives in ten different tools."
+    "forWho": "Leadership teams making decisions on gut feel because the data lives in ten different tools.",
+    "problem": "Your numbers live in ten different tools and none of them agree. Every decision means exporting spreadsheets, stitching them together and hoping you got it right. By the time the picture is clear, the moment to act has passed.",
+    "approach": [
+      {
+        "title": "Connect the sources",
+        "text": "We pull your marketing, sales and product data into one place so the numbers finally reconcile. No more exporting and merging by hand."
+      },
+      {
+        "title": "Built for decisions",
+        "text": "Dashboards track revenue and funnel movement, not vanity metrics that look good and mean nothing. Every view answers a question you actually ask."
+      },
+      {
+        "title": "Handed off clean",
+        "text": "We train your team to read and trust the dashboards before we step back. You run on them daily without needing us in the room."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What data sources can you connect?",
+        "a": "We integrate the marketing, sales and product tools you already run on. Tell us your stack and we'll confirm what connects and how before any work starts."
+      },
+      {
+        "q": "Who owns the dashboards and the data?",
+        "a": "You do. The dashboards, the data pipelines and the underlying data are yours. We build them in your environment and hand them off with training."
+      },
+      {
+        "q": "How is this different from the reporting built into our tools?",
+        "a": "Native reports only see one tool's data. We combine every source into one source of truth, so you're comparing the whole funnel instead of guessing across disconnected views."
+      }
+    ],
+    "metaDescription": "Analytics & BI dashboards from Nomad Media unify your marketing, sales and product data into one source of truth built for real decisions."
   },
   {
     "stage": "Scale · Beyond",
@@ -285,7 +735,37 @@
       "Statistical significance tracking",
       "Monthly uplift reporting"
     ],
-    "forWho": "Businesses with steady traffic who are ready to stop leaking revenue at the last step."
+    "forWho": "Businesses with steady traffic who are ready to stop leaking revenue at the last step.",
+    "problem": "You're paying for traffic that shows up, looks around and leaves without buying. Every visitor who drops off at checkout or a form is money you already spent to acquire. Guessing at fixes and redesigning on a hunch usually makes it worse, not better.",
+    "approach": [
+      {
+        "title": "Evidence, not opinion",
+        "text": "We study funnels and heatmaps to find where visitors actually drop off. Changes come from what the data shows, not what anyone thinks looks nicer."
+      },
+      {
+        "title": "Structured testing",
+        "text": "Every change runs as a hypothesis-driven A/B test and holds until it reaches statistical significance. We keep what wins and drop what doesn't."
+      },
+      {
+        "title": "Compounding wins",
+        "text": "We stack small, proven improvements across pages, forms and offers. Each one is modest on its own, but they add up to a materially better conversion rate."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much traffic do we need for this to work?",
+        "a": "You need steady, consistent traffic so tests can reach statistical significance in a reasonable time. If volume is low, we'll tell you honestly and focus on the changes most likely to move the needle."
+      },
+      {
+        "q": "What access to our site and tools do you need?",
+        "a": "We need access to your analytics, your testing setup and the pages we're optimizing. We scope this with you up front, and the accounts and data stay yours throughout."
+      },
+      {
+        "q": "How is this different from a redesign?",
+        "a": "A redesign changes everything at once and hopes it helps. We test one change at a time against your real visitors, so you only keep what's proven to lift conversion."
+      }
+    ],
+    "metaDescription": "Conversion Optimization from Nomad Media uses structured A/B testing to turn the traffic you already pay for into more revenue."
   },
   {
     "stage": "Scale · Beyond",
@@ -303,7 +783,37 @@
       "Monthly leadership reporting",
       "Board & stakeholder updates"
     ],
-    "forWho": "Scaling businesses that need senior judgment on marketing or engineering, on a fractional budget."
+    "forWho": "Scaling businesses that need senior judgment on marketing or engineering, on a fractional budget.",
+    "problem": "You've outgrown running marketing or engineering yourself, but a full-time CMO or CTO is a salary you can't justify yet. So strategy drifts, the team lacks direction and big decisions get made without senior judgment. You need experience steering the ship, not another expensive full-time bet.",
+    "approach": [
+      {
+        "title": "Embedded, not advisory",
+        "text": "Your fractional leader runs the function part-time and owns outcomes, not just hands you a slide deck. They're in the work, leading the team and accountable for results."
+      },
+      {
+        "title": "Strategy plus execution",
+        "text": "They set the roadmap, plan the budget and make the calls on vendors and tools. Direction and delivery come from the same person."
+      },
+      {
+        "title": "Clear reporting",
+        "text": "You get monthly leadership reporting and stakeholder or board updates you can stand behind. Senior visibility without a full-time seat to fill."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How does a fractional engagement actually work?",
+        "a": "Your leader works part-time on a set scope and cadence agreed with you, embedded in your team and reporting on outcomes. You get senior judgment and ownership without a full-time salary or a long hiring process."
+      },
+      {
+        "q": "How is this different from a full-time executive hire?",
+        "a": "You get the same seniority and accountability at a fraction of the cost and commitment. It's built for companies that have outgrown DIY but aren't ready to commit to a full executive salary."
+      },
+      {
+        "q": "Will they lead our team and vendors directly?",
+        "a": "Yes. They own the function, give input on hiring, lead the existing team and evaluate vendors and tools. They act as your CMO or CTO, just on a fractional basis."
+      }
+    ],
+    "metaDescription": "Fractional CMO / CTO from Nomad Media puts senior marketing or tech leadership in your business part-time, without a full-time executive salary."
   },
   {
     "stage": "Scale · Beyond",
@@ -321,7 +831,37 @@
       "Content & authority recommendations",
       "Prioritized fix roadmap"
     ],
-    "forWho": "Brands that want to show up when their next customer asks an AI instead of a search bar."
+    "forWho": "Brands that want to show up when their next customer asks an AI instead of a search bar.",
+    "problem": "Your customers are asking ChatGPT, Gemini and Google's AI Overviews about your category instead of scrolling search results. You have no idea what those systems say about you, whether they cite you, or if they hand the answer to a competitor. Right now you're invisible in the exact place buyers are making up their minds.",
+    "approach": [
+      {
+        "title": "Test the assistants",
+        "text": "We run real prompts through the AI systems your buyers use and record how they describe, cite and rank you. You see exactly what customers see, not a guess."
+      },
+      {
+        "title": "Share of answer",
+        "text": "We measure how often you show up versus your competitors when buyers ask. You learn where you're winning the answer and where you're missing entirely."
+      },
+      {
+        "title": "Prioritized fix list",
+        "text": "You get a roadmap of the entity, structured-data and authority gaps to close, ranked by impact. Clear next steps, not a vague report."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What do you need from us to run the audit?",
+        "a": "Mostly just your brand details, competitors and the topics your buyers ask about. The audit tests public AI systems from the outside, so we need very little access to your own tools."
+      },
+      {
+        "q": "Do I get something I can actually act on?",
+        "a": "Yes. You get a prioritized fix roadmap covering content, structured data and authority gaps, ordered by impact. It's built to hand to your team or ours to execute."
+      },
+      {
+        "q": "How is this different from a normal SEO audit?",
+        "a": "A standard SEO audit checks how you rank in traditional search. This checks how AI assistants see, cite and describe you, which is a different system with different signals your buyers now rely on."
+      }
+    ],
+    "metaDescription": "An AI Visibility Audit from Nomad Media shows exactly how ChatGPT, Gemini and AI Overviews describe and cite your brand, with a prioritized fix list."
   },
   {
     "stage": "Scale · Beyond",
@@ -339,6 +879,36 @@
       "Answer-engine (GEO/AEO) tuning",
       "Monthly visibility & ranking report"
     ],
-    "forWho": "Businesses that want to win both Google rankings and the AI answers replacing them."
+    "forWho": "Businesses that want to win both Google rankings and the AI answers replacing them.",
+    "problem": "Buyers now split their time between Google and AI assistants, and most campaigns only aim at one. You can rank on page one and still be missing from the AI answer that replaces the click. Running two separate efforts to cover both is slow, expensive and rarely joins up.",
+    "approach": [
+      {
+        "title": "One campaign, both worlds",
+        "text": "We build a single strategy that ranks in classic search and gets you cited inside AI answers. Content, structure and authority all point the same direction."
+      },
+      {
+        "title": "Structured to be cited",
+        "text": "On-page work and structured data make your content easy for both search engines and answer engines to read and quote. You're built to be the source they pick."
+      },
+      {
+        "title": "Authority that carries",
+        "text": "We build citations and authority signals that lift you in Google rankings and AI answers at once. The same groundwork works wherever buyers are looking."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What's the difference between SEO and generative-engine optimization here?",
+        "a": "SEO gets you ranking in traditional search results. Generative-engine optimization gets you cited inside AI answers from tools like ChatGPT and AI Overviews. This campaign does both in one effort instead of two disconnected ones."
+      },
+      {
+        "q": "Do we own the content and results?",
+        "a": "Yes. The content we produce and the authority you build are yours. Rankings and citations stay with your brand whether or not we keep working together."
+      },
+      {
+        "q": "How do you use AI in the content without hurting quality?",
+        "a": "We use AI to speed up production, but people direct the strategy and review everything before it ships. You get the pace of AI with human judgment on accuracy and voice."
+      }
+    ],
+    "metaDescription": "SEO & AI Campaigns from Nomad Media win Google rankings and AI assistant citations in one campaign, so you show up wherever buyers look."
   }
 ]

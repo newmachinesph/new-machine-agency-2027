@@ -123,7 +123,7 @@ function ServicesPanel() {
               return (
                 <li key={service.slug}>
                   <Link
-                    href="/services/"
+                    href={`/services/${service.slug}/`}
                     className="group/svc flex items-center gap-2.5 py-1 text-sm text-muted transition-colors hover:text-fg"
                   >
                     <Icon
