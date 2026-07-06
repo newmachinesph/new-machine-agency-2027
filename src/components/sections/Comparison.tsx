@@ -8,32 +8,32 @@ const rows = [
   {
     label: "Speed",
     traditional: "Months of scoping before anything ships.",
-    nomad: "Live in weeks, not months.",
+    us: "Live in weeks, not months.",
   },
   {
     label: "Pricing",
     traditional: "Opaque retainers, scope creep, surprise invoices.",
-    nomad: "Transparent, fixed-scope pricing from the first call.",
+    us: "Transparent, fixed-scope pricing from the first call.",
   },
   {
     label: "Access",
     traditional: "Account managers standing between you and the work.",
-    nomad: "Direct line to the people actually building your product.",
+    us: "Direct line to the people actually building your product.",
   },
   {
     label: "Scope",
     traditional: "One service, then a new vendor for the next.",
-    nomad: "Brand, product, growth and AI — one team, full lifecycle.",
+    us: "Brand, product, growth and AI — one team, full lifecycle.",
   },
   {
     label: "AI-native",
     traditional: "Bolted on after the fact, if at all.",
-    nomad: "Built into research, build and growth from day one.",
+    us: "Built into research, build and growth from day one.",
   },
   {
     label: "Ownership",
     traditional: "Locked into their stack, their platform, their terms.",
-    nomad: "You own the code, the content and every account.",
+    us: "You own the code, the content and every account.",
   },
 ];
 
@@ -43,9 +43,9 @@ export default function Comparison() {
       <div className="wrap">
         <SectionHeading
           number="06"
-          eyebrow="Why Nomad"
+          eyebrow="Why New Machine"
           title="Same ambition. A completely different way of working."
-          lead="We built Nomad Media as the studio we always wanted to hire — here's exactly how that plays out, honestly."
+          lead="We built New Machine as the studio we always wanted to hire — here's exactly how that plays out, honestly."
         />
 
         <Reveal delay={120}>
@@ -92,7 +92,7 @@ export default function Comparison() {
                   </p>
                   <div className="mt-1.5 flex items-start gap-2.5 md:mt-0">
                     <IconCheck size={16} className="mt-0.5 shrink-0 text-accent-fg" />
-                    <p className="text-sm font-medium text-fg">{row.nomad}</p>
+                    <p className="text-sm font-medium text-fg">{row.us}</p>
                   </div>
                 </div>
               </div>

@@ -127,10 +127,11 @@ export default function AboutPage() {
                 needle.
               </p>
               <p>
-                That’s why we built {site.name}. The name is deliberate: we’re nomads —
-                remote-first, working with founders everywhere, not tied to one market
-                or one service. We handle the full lifecycle: brand, build, launch,
-                grow, scale.
+                That’s why we built {site.name}. The name is deliberate: a company that
+                scales is really a machine — a system of brand, product and growth that
+                keeps running without the founder in the loop. We build that machine,
+                remote-first, with founders everywhere. We handle the full lifecycle:
+                brand, build, launch, grow, scale.
               </p>
             </div>
             <div className="chamfer beam mt-8 overflow-hidden">

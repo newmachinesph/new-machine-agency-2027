@@ -87,7 +87,7 @@ export default function HeroIntro() {
           className="pointer-events-none absolute -bottom-6 -right-6 h-40 w-40 opacity-25 sm:h-52 sm:w-52"
         />
         <div className="beam chamfer relative border border-border bg-surface p-2">
-          <VideoEmbed id={site.videoId} title="Nomad Media — how we build" priority />
+          <VideoEmbed id={site.videoId} title="New Machine — how we build" priority />
         </div>
       </m.div>
     </m.div>

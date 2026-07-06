@@ -19,7 +19,7 @@ import PatternSignal from "@/components/ui/PatternSignal";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join Nomad Media's remote-first founding team — real ownership, honest work, and startups built end to end.",
+    "Join New Machine's remote-first founding team — real ownership, honest work, and startups built end to end.",
   alternates: { canonical: "/careers/" },
 };
 

@@ -94,7 +94,7 @@ export default function RootLayout({
             email: site.email,
             sameAs: site.socials.map((social) => social.href),
             address: [
-              { "@type": "PostalAddress", addressLocality: "Dubai", addressCountry: "AE" },
+              { "@type": "PostalAddress", addressLocality: "New York", addressCountry: "US" },
               { "@type": "PostalAddress", addressLocality: "Manila", addressCountry: "PH" },
             ],
           }}

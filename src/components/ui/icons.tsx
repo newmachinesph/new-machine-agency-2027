@@ -8,7 +8,7 @@ export type IconProps = {
 export type BrandIcon = (props: IconProps) => JSX.Element;
 
 /**
- * Nomad Media icon set — drawn to the site's design language:
+ * New Machine icon set — drawn to the site's design language:
  * square caps + miter joins (no rounding anywhere), 45° chamfers echoing
  * the PatternTrace motif, and small filled squares echoing the mosaic tiles.
  * Drop-in API-compatible with the lucide usage it replaced ({ size, className }).

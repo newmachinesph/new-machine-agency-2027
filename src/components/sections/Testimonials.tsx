@@ -64,7 +64,7 @@ export default function Testimonials() {
           <div className="panel beam chamfer relative overflow-hidden md:flex md:items-stretch">
             <VideoEmbed
               id={videoIds[2]}
-              title="Inside Nomad Media — representative studio walkthrough"
+              title="Inside New Machine — representative studio walkthrough"
               className="md:w-1/2"
             />
             <div className="flex flex-col justify-center p-8 md:w-1/2">

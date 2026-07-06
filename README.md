@@ -1,6 +1,6 @@
-# Nomad Media — Marketing Website
+# New Machine — Marketing Website
 
-Production static marketing website for **Nomad Media**, a digital growth agency based in the UAE serving clients globally.
+Production static marketing website for **New Machine**, a digital growth agency with hubs in the US and the Philippines serving clients globally.
 
 ## Stack
 
@@ -33,7 +33,7 @@ Every owner-editable value lives here. What each field does:
 | `domain` | Display domain (`{{DOMAIN}}` token) |
 | `tagline` / `description` | Brand line + default meta description |
 | `email` | Contact email — mailto links, form fallback, legal pages |
-| `whatsapp` | WhatsApp number, international format, digits only (e.g. `971501234567`) |
+| `whatsapp` | WhatsApp number, international format, digits only (e.g. `12125550100`) |
 | `videoId` | YouTube ID for the hero + testimonials explainer video |
 | `formEndpoint` | Static form provider URL; empty string = mailto fallback (see below) |
 | `socials` | Footer social links (`label` + `href`) |
@@ -122,12 +122,12 @@ Build produces a fully static site in `/out`:
 
 ## Fill-in checklist (before going live)
 
-> **Note:** these fields are currently filled with **dummy sample values** (`hello@nomadmedia.ae`, `971501234567`, sample stats, sample testimonials, `nomadmedia` social handles) so the site renders complete. Replace each one in `src/config/site.ts` with your real data before launch — also set `site.url`.
+> **Note:** these fields are currently filled with **dummy sample values** (`hello@newmachine.io`, `12125550100`, sample stats, sample testimonials, `newmachine` social handles) so the site renders complete. Replace each one in `src/config/site.ts` with your real data before launch — also set `site.url`.
 
 | Field | Where | What to put |
 |---|---|---|
-| `domain` | `site.domain` | Your display domain, e.g. `nomadmedia.ae` (also fills the browser-frame mockups) |
-| `url` | `src/config/site.ts` | Full production URL, e.g. `https://nomadmedia.ae` |
+| `domain` | `site.domain` | Your display domain, e.g. `newmachine.io` (also fills the browser-frame mockups) |
+| `url` | `src/config/site.ts` | Full production URL, e.g. `https://newmachine.io` |
 | `email` | `site.email` | Real contact email |
 | `whatsapp` | `site.whatsapp` | Digits only, international format |
 | `videoId` | `site.videoId` | Real hero/testimonials YouTube video ID |
