@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/config/site";
 import { getAllPosts } from "@/lib/blog";
 import products from "@/content/products.json";
+import services from "@/content/services.json";
 
 export const dynamic = "force-static";
 
@@ -23,6 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.7,
   }));
 
+  const serviceEntries = services.map((service) => ({
+    url: `${site.url}/services/${service.slug}/`,
+    priority: 0.7,
+  }));
+
   const productEntries = products.map((product) => ({
     url: `${site.url}/products/${product.slug}/`,
     priority: 0.7,
@@ -34,5 +40,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...productEntries, ...postEntries];
+  return [...staticEntries, ...serviceEntries, ...productEntries, ...postEntries];
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { IconArrowRight, IconCheck, IconWebsite } from "@/components/ui/icons";
 import services from "@/content/services.json";
 import { site, whatsappHref } from "@/config/site";
@@ -149,6 +150,13 @@ export default function ServicesPage() {
                         <span className="font-semibold text-fg">Built for </span>
                         {featured.forWho}
                       </p>
+                      <Link
+                        href={`/services/${featured.slug}/`}
+                        className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-accent-fg transition-opacity hover:opacity-80"
+                      >
+                        Explore {featured.name}
+                        <IconArrowRight size={14} />
+                      </Link>
                     </div>
                   </div>
                 </Reveal>
@@ -159,7 +167,10 @@ export default function ServicesPage() {
                       const Icon = serviceIcons[service.icon] ?? IconWebsite;
                       return (
                         <Reveal key={service.slug} delay={i * 60}>
-                          <div className="panel beam chamfer relative flex h-full flex-col overflow-hidden p-7">
+                          <Link
+                            href={`/services/${service.slug}/`}
+                            className="panel beam chamfer relative flex h-full flex-col overflow-hidden p-7"
+                          >
                             <PatternGrid
                               cols={3}
                               rows={3}
@@ -199,7 +210,7 @@ export default function ServicesPage() {
                                 {service.forWho}
                               </p>
                             </div>
-                          </div>
+                          </Link>
                         </Reveal>
                       );
                     })}
