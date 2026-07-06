@@ -26,7 +26,7 @@ export default function Footer() {
           idPrefix="pt-footer"
           className="absolute inset-0 text-accent opacity-45"
         />
-        <p className="footer-word relative text-center">NOMAD</p>
+        <p className="footer-word relative text-center">MACHINE</p>
       </div>
 
       <div className="wrap relative grid gap-10 py-16 md:grid-cols-[1.7fr_1fr_1fr_1fr] md:py-20">
@@ -38,7 +38,7 @@ export default function Footer() {
         />
         <div>
           <p className="font-display text-xl font-bold uppercase tracking-tight">
-            Nomad<span className="text-accent-fg">*</span>Media
+            New<span className="text-accent-fg">*</span>Machine
           </p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
             Full-lifecycle startup studio — remote-first, building with founders worldwide.
@@ -168,7 +168,7 @@ export default function Footer() {
             © {year} {site.name}. All rights reserved.
           </p>
           <p className="uppercase tracking-[0.2em] text-[10px]">
-            Est. 2026 — Built nomadic
+            Est. 2026 — Built to run
           </p>
           <div className="flex gap-5">
             <Link href="/privacy-policy/" className="transition-colors hover:text-fg">

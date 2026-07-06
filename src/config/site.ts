@@ -10,35 +10,35 @@
  */
 
 export const site = {
-  name: "Nomad Media",
-  legalName: "Nomad Media",
+  name: "New Machine",
+  legalName: "New Machine",
 
   /** Production URL — used for canonical links, sitemap, OG tags. */
-  url: "https://nomadmedia.ae",
-  domain: "nomadmedia.ae",
+  url: "https://newmachine.io",
+  domain: "newmachine.io",
 
   tagline: "From brand to scale — the studio behind growing startups.",
   description:
-    "Nomad Media is a remote-first digital studio partnering with founders worldwide across the full startup lifecycle — brand, websites, apps, launch, growth and AI automation. Built to turn ideas into companies that convert.",
+    "New Machine is a remote-first digital studio partnering with founders worldwide across the full startup lifecycle — brand, websites, apps, launch, growth and AI automation. Built to turn ideas into companies that convert.",
 
-  email: "hello@nomadmedia.ae",
+  email: "hello@newmachine.io",
   /** Hero / testimonials explainer video. TODO(owner): replace this
    *  placeholder YouTube ID with the real brand film before launch. */
   videoId: "ScMzIvxBSi4",
   /** International format, digits only. TODO(owner): confirm the real
    *  business number — this sample must be set before launch. */
-  whatsapp: "971501234567",
+  whatsapp: "12125550100",
 
   /** Physical offices — DUMMY placeholder addresses + phones. TODO(owner):
    *  replace with the real details before launch. */
   offices: [
     {
-      region: "UAE Office",
-      country: "United Arab Emirates",
-      flag: "🇦🇪",
-      landmark: "burj",
-      address: ["Office 1204, Boulevard Plaza Tower 1", "Downtown Dubai, Dubai, UAE"],
-      phone: "+971 4 123 4567",
+      region: "US Office",
+      country: "United States",
+      flag: "🇺🇸",
+      landmark: "washington",
+      address: ["Suite 1200, 500 7th Avenue", "New York, NY 10018, US"],
+      phone: "+1 212 555 0100",
     },
     {
       region: "Philippines Office",
@@ -58,9 +58,9 @@ export const site = {
   formEndpoint: "",
 
   socials: [
-    { label: "Instagram", href: "https://instagram.com/nomadmedia" },
-    { label: "LinkedIn", href: "https://linkedin.com/company/nomadmedia" },
-    { label: "X", href: "https://x.com/nomadmedia" },
+    { label: "Instagram", href: "https://instagram.com/newmachine" },
+    { label: "LinkedIn", href: "https://linkedin.com/company/newmachine" },
+    { label: "X", href: "https://x.com/newmachine" },
   ],
 
   /** Hero typewriter — add/remove industries freely. */

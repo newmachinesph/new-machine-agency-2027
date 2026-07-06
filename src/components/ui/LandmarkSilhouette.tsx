@@ -8,8 +8,8 @@ type LandmarkSilhouetteProps = {
  * Decorative only; parent sets size, color (currentColor) and opacity.
  */
 const PATHS: Record<string, string> = {
-  // Burj Khalifa — stepped, tapering tower into a spire (UAE).
-  burj: "M50 6 L52 30 L57 30 L60 66 L67 66 L70 112 L79 112 L82 200 L18 200 L21 112 L30 112 L33 66 L40 66 L43 30 L48 30 Z",
+  // Washington Monument — tall tapering obelisk with a pyramidion (United States).
+  washington: "M50 12 L56 44 L60 200 L40 200 L44 44 Z",
   // Mayon Volcano — symmetric cone with a small crater (Philippines).
   mayon: "M44 40 Q50 31 56 40 L96 200 L4 200 Z",
 };
