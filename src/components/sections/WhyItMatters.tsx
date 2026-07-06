@@ -17,7 +17,6 @@ export default function WhyItMatters() {
 
       <div className="wrap relative grid gap-14 md:grid-cols-[1fr_1.2fr]">
         <SectionHeading
-          number="03"
           eyebrow="Why it matters"
           title="Your website is your hardest-working employee."
           lead="It never sleeps, never takes leave — and most businesses still treat it as an afterthought. The numbers say otherwise."

@@ -29,7 +29,6 @@ export default function Process() {
     <section className="bg-surface py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="05"
           eyebrow="How we work"
           title="A process you can actually follow."
           lead="No mystery phases, no jargon-filled status reports. Four steps, each with a clear deliverable."

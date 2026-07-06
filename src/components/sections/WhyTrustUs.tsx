@@ -36,7 +36,6 @@ export default function WhyTrustUs() {
       />
       <div className="wrap relative">
         <SectionHeading
-          number="07"
           eyebrow="Why trust us"
           title="The best teams don’t settle for average. Neither do we."
           lead="No agency theater, no fabricated case studies — just the honest reasons startups choose to build with us."

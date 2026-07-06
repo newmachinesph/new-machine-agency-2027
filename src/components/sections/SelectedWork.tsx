@@ -1,6 +1,6 @@
 import Link from "next/link";
 import work from "@/content/work.json";
-import { site } from "@/config/site";
+import BrowserFrame from "@/components/ui/BrowserFrame";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import CountUp from "@/components/ui/CountUp";
 import Reveal from "@/components/ui/Reveal";
@@ -15,7 +15,6 @@ export default function SelectedWork() {
     <section className="py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="02"
           eyebrow="Selected work"
           title="Work that competes with anyone, anywhere."
           lead="Remote-first, full-lifecycle projects for founders across every timezone — a few representative builds, measured by what changed after launch, not the size of the deliverable."
@@ -28,20 +27,7 @@ export default function SelectedWork() {
                 {/* Device-frame mockup + overlapping metric badge */}
                 <div className="relative">
                   <div className="chamfer panel beam overflow-hidden">
-                    {/* Browser chrome */}
-                    <div
-                      aria-hidden="true"
-                      className="flex items-center gap-2 border-b border-border bg-surface px-4 py-3"
-                    >
-                      <span className="flex gap-1.5">
-                        <span className="h-2.5 w-2.5 bg-accent/70" />
-                        <span className="h-2.5 w-2.5 bg-muted/40" />
-                        <span className="h-2.5 w-2.5 bg-muted/25" />
-                      </span>
-                      <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                        {site.domain}/work/{project.slug}
-                      </span>
-                    </div>
+                    <BrowserFrame path={`/work/${project.slug}`} />
                     <DuotoneImage
                       src={`https://picsum.photos/seed/${project.slug}/960/600`}
                       className="aspect-[16/10] w-full"

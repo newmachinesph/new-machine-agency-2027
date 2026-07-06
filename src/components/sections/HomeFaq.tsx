@@ -11,7 +11,6 @@ export default function HomeFaq() {
       <div className="wrap grid gap-12 md:grid-cols-[1fr_1.6fr]">
         <div>
           <SectionHeading
-            number="10"
             eyebrow="FAQ"
             title="Questions, answered plainly."
             lead="No hedging, no fine print — straight answers from the team that’ll actually do the work."

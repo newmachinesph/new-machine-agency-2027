@@ -42,7 +42,6 @@ export default function Comparison() {
     <section className="py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="06"
           eyebrow="Why New Machine"
           title="Same ambition. A completely different way of working."
           lead="We built New Machine as the studio we always wanted to hire — here's exactly how that plays out, honestly."

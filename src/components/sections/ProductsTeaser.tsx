@@ -1,6 +1,6 @@
 import Link from "next/link";
 import products from "@/content/products.json";
-import { site } from "@/config/site";
+import BrowserFrame from "@/components/ui/BrowserFrame";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
@@ -18,7 +18,6 @@ export default function ProductsTeaser() {
     <section className="bg-surface py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="09"
           eyebrow="Products"
           title="We build our own products, too."
           lead="The same team, the same standards — pointed at problems we kept seeing our clients face."
@@ -28,20 +27,7 @@ export default function ProductsTeaser() {
           {products.map((product, i) => (
             <Reveal key={product.slug} delay={i * 90}>
               <Link href={`/products/${product.slug}/`} className="panel beam block h-full overflow-hidden">
-                {/* Browser device-frame */}
-                <div
-                  aria-hidden="true"
-                  className="flex items-center gap-2 border-b border-border bg-surface px-4 py-2.5"
-                >
-                  <span className="flex gap-1.5">
-                    <span className="h-2.5 w-2.5 bg-accent/70" />
-                    <span className="h-2.5 w-2.5 bg-muted/40" />
-                    <span className="h-2.5 w-2.5 bg-muted/25" />
-                  </span>
-                  <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                    {site.domain}/products/{product.slug}
-                  </span>
-                </div>
+                <BrowserFrame path={`/products/${product.slug}`} />
                 {/* Screenshot placeholder with centered solid-white wordmark */}
                 <div className="relative">
                   <DuotoneImage

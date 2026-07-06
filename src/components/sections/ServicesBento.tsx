@@ -55,7 +55,6 @@ export default function ServicesBento() {
     <section className="py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="01"
           eyebrow="What we do"
           title="Everything a startup needs, one studio."
           lead={`${total} services across four stages of the journey — from first brand to full scale. Take a single stage, or run the whole lifecycle with one remote-first team that ships work built to compete anywhere.`}

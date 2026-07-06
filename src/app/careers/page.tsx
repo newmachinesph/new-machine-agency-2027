@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import {
   IconArrowRight,
   IconChat,
@@ -9,12 +8,14 @@ import {
   IconSpeed,
 } from "@/components/ui/icons";
 import careers from "@/content/careers.json";
-import { site, whatsappHref } from "@/config/site";
+import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import PatternGrid from "@/components/ui/PatternGrid";
 import PatternSignal from "@/components/ui/PatternSignal";
+import FeatureCard from "@/components/ui/FeatureCard";
+import CtaPanel from "@/components/ui/CtaPanel";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -102,33 +103,14 @@ export default function CareersPage() {
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value, i) => (
               <Reveal key={value.title} delay={i * 80}>
-                <div
-                  className="bento-cell relative h-full overflow-hidden p-7"
-                  style={
-                    {
-                      "--tint": value.tint,
-                      background:
-                        "linear-gradient(160deg, color-mix(in srgb, var(--tint) 30%, var(--card)) 0%, var(--card) 62%)",
-                    } as CSSProperties
-                  }
-                >
-                  <PatternGrid
-                    cols={3}
-                    rows={3}
-                    seed={i + 1}
-                    className="pointer-events-none absolute -right-5 -top-5 h-28 w-28 opacity-[0.22] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)]"
-                  />
-                  <div className="relative">
-                    <span
-                      className="grid h-12 w-12 place-items-center chamfer"
-                      style={{ background: value.tint }}
-                    >
-                      <value.icon size={20} className={value.onTint} />
-                    </span>
-                    <h3 className="mt-5 font-semibold">{value.title}</h3>
-                    <p className="mt-1.5 text-sm text-muted">{value.text}</p>
-                  </div>
-                </div>
+                <FeatureCard
+                  icon={value.icon}
+                  title={value.title}
+                  text={value.text}
+                  tint={value.tint}
+                  onTint={value.onTint}
+                  seed={i + 1}
+                />
               </Reveal>
             ))}
           </div>
@@ -221,35 +203,12 @@ export default function CareersPage() {
           </div>
         </div>
 
-        <Reveal>
-          <div className="panel relative mt-24 overflow-hidden p-10 text-center md:p-14">
-            <PatternGrid
-              cols={6}
-              rows={3}
-              seed={9}
-              className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
-            />
-            <div className="relative">
-              <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
-                Don&rsquo;t see the right role?
-              </h2>
-              <p className="measure mx-auto mt-3 text-muted">
-                We&rsquo;re always open to hearing from people who&rsquo;d add real value
-                to a small, remote-first team. Send us an open application.
-              </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-4">
-                <Button href={mailtoHref("Open Application")}>
-                  Send an Open Application
-                  <IconArrowRight size={16} />
-                </Button>
-                <Button href={whatsappHref} variant="ghost">
-                  <IconChat size={16} />
-                  WhatsApp Us
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Reveal>
+        <CtaPanel
+          title="Don’t see the right role?"
+          lead="We’re always open to hearing from people who’d add real value to a small, remote-first team. Send us an open application."
+          primaryHref={mailtoHref("Open Application")}
+          primaryLabel="Send an Open Application"
+        />
       </div>
     </div>
   );

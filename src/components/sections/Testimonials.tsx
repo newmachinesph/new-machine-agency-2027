@@ -15,7 +15,6 @@ export default function Testimonials() {
     <section className="bg-surface py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          number="08"
           eyebrow="Client words"
           title="Don’t take our word for it."
           lead="Representative sample conversations, on and off camera — real quotes, real process, standing in until client-consented case studies replace them."

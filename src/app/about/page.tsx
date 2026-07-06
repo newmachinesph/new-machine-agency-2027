@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import {
-  IconArrowRight,
   IconChat,
   IconCheck,
   IconGrowth,
   IconSpeed,
   type BrandIcon,
 } from "@/components/ui/icons";
-import { site, whatsappHref } from "@/config/site";
-import Button from "@/components/ui/Button";
+import { site } from "@/config/site";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
-import PatternGrid from "@/components/ui/PatternGrid";
 import PatternSignal from "@/components/ui/PatternSignal";
 import CountUp from "@/components/ui/CountUp";
+import FeatureCard from "@/components/ui/FeatureCard";
+import CtaPanel from "@/components/ui/CtaPanel";
 
 export const metadata: Metadata = {
   title: "About",
@@ -150,33 +148,14 @@ export default function AboutPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {values.map((value, i) => (
               <Reveal key={value.title} delay={i * 90}>
-                <div
-                  className="bento-cell relative h-full overflow-hidden p-7"
-                  style={
-                    {
-                      "--tint": value.tint,
-                      background:
-                        "linear-gradient(160deg, color-mix(in srgb, var(--tint) 30%, var(--card)) 0%, var(--card) 62%)",
-                    } as CSSProperties
-                  }
-                >
-                  <PatternGrid
-                    cols={3}
-                    rows={3}
-                    seed={i + 1}
-                    className="pointer-events-none absolute -right-5 -top-5 h-28 w-28 opacity-[0.22] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)]"
-                  />
-                  <div className="relative">
-                    <span
-                      className="grid h-12 w-12 place-items-center chamfer"
-                      style={{ background: value.tint }}
-                    >
-                      <value.icon size={20} className={value.onTint} />
-                    </span>
-                    <h3 className="mt-5 text-lg font-semibold">{value.title}</h3>
-                    <p className="mt-2.5 text-sm text-muted">{value.text}</p>
-                  </div>
-                </div>
+                <FeatureCard
+                  icon={value.icon}
+                  title={value.title}
+                  text={value.text}
+                  tint={value.tint}
+                  onTint={value.onTint}
+                  seed={i + 1}
+                />
               </Reveal>
             ))}
           </div>
@@ -276,35 +255,12 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <Reveal>
-          <div className="panel relative mt-24 overflow-hidden p-10 text-center md:p-14">
-            <PatternGrid
-              cols={6}
-              rows={3}
-              seed={9}
-              className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
-            />
-            <div className="relative">
-              <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
-                Ready to work with a team that ships?
-              </h2>
-              <p className="measure mx-auto mt-3 text-muted">
-                Book a free call — we’ll tell you honestly what will move the needle and
-                what won’t.
-              </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-4">
-                <Button href="/contact">
-                  Book a Strategy Call
-                  <IconArrowRight size={16} />
-                </Button>
-                <Button href={whatsappHref} variant="ghost">
-                  <IconChat size={16} />
-                  WhatsApp Us
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Reveal>
+        <CtaPanel
+          title="Ready to work with a team that ships?"
+          lead="Book a free call — we’ll tell you honestly what will move the needle and what won’t."
+          primaryHref="/contact"
+          primaryLabel="Book a Strategy Call"
+        />
       </div>
     </div>
   );
