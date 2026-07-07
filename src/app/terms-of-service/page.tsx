@@ -122,9 +122,9 @@ export default function TermsOfServicePage() {
         <h2>Governing law</h2>
         <p>
           These Terms are governed by and construed in accordance with the laws of the
-          State of New York, United States. Any dispute arising out of or in connection
+          Republic of the Philippines. Any dispute arising out of or in connection
           with these Terms or our services shall be subject to the exclusive jurisdiction
-          of the courts of the State of New York.
+          of the courts of Makati City, Philippines.
         </p>
 
         <h2>Changes to these terms</h2>

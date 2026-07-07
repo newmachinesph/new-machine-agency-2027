@@ -127,8 +127,9 @@ export default function AboutPage() {
               <p>
                 That’s why we built {site.name}. The name is deliberate: a company that
                 scales is really a machine — a system of brand, product and growth that
-                keeps running without the founder in the loop. We build that machine,
-                remote-first, with founders everywhere. We handle the full lifecycle:
+                keeps running without the founder in the loop. We build that machine
+                from our hubs in San Francisco and Makati, with founders across the US,
+                the Philippines, and everywhere else. We handle the full lifecycle:
                 brand, build, launch, grow, scale.
               </p>
             </div>

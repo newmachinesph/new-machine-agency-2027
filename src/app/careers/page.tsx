@@ -28,7 +28,7 @@ const values = [
   {
     icon: IconSpeed,
     title: "Remote-first, always",
-    text: "No office to perform in. We hire globally and work async by default.",
+    text: "We hire globally and work async by default — our San Francisco and Makati hubs are there when you want them, not a place to perform.",
     tint: "var(--accent-strong)",
     onTint: "text-accent-ink",
   },
@@ -90,7 +90,8 @@ export default function CareersPage() {
             <Reveal delay={160}>
               <p className="measure mt-5 text-muted">
                 {site.name} is a small, remote-first team running the full startup
-                lifecycle — build, launch, grow — for clients everywhere. We&rsquo;re not
+                lifecycle — build, launch, grow — for clients across the US, the
+                Philippines, and beyond. We&rsquo;re not
                 hiring for headcount. We&rsquo;re hiring people who want direct ownership
                 of real work, not a seat in a bigger machine.
               </p>

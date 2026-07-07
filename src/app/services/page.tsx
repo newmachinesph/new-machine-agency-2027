@@ -69,8 +69,9 @@ export default function ServicesPage() {
               <p className="measure mt-5 text-muted">
                 {services.length} services across {stages.length} stages of the startup
                 lifecycle — brand, build, launch, grow and scale — run end to end by a
-                remote-first team built to compete with the best agencies anywhere, for
-                founders anywhere. No stitching five vendors together for one outcome.
+                remote-first team built to compete with the best agencies anywhere — for
+                founders in the US, the Philippines, and everywhere else. No stitching
+                five vendors together for one outcome.
               </p>
             </Reveal>
           </div>
@@ -263,7 +264,7 @@ export default function ServicesPage() {
               name: service.name,
               description: service.description,
               provider: { "@type": "Organization", name: site.name },
-              areaServed: "Worldwide",
+              areaServed: ["United States", "Philippines", "Worldwide"],
             },
           })),
         }}
