@@ -1,6 +1,6 @@
 # New Machine — Marketing Website
 
-Production static marketing website for **New Machine**, a digital growth agency with hubs in the US and the Philippines serving clients globally.
+Production static marketing website for **New Machine** ([newmachine.com.ph](https://newmachine.com.ph)), a digital growth agency with coworking hubs in San Francisco (WeWork, 535 Mission St) and Makati (KMC, V Corporate Centre, Salcedo Village) serving the US and Philippine markets — and clients worldwide.
 
 ## Stack
 
@@ -133,14 +133,15 @@ Build produces a fully static site in `/out`:
 
 ## Fill-in checklist (before going live)
 
-> **Note:** these fields are currently filled with **dummy sample values** (`hello@newmachine.io`, `12125550100`, sample stats, sample testimonials, `newmachine` social handles) so the site renders complete. Replace each one in `src/config/site.ts` with your real data before launch — also set `site.url`.
+> **Note:** `domain`, `url`, `email` and the office addresses are now set to the real values (`newmachine.com.ph`, coworking hubs in San Francisco and Makati). The remaining fields below still carry **dummy sample values** (`12125550100`, office phone numbers, sample stats, sample testimonials, `newmachine` social handles) so the site renders complete. Replace each one in `src/config/site.ts` with your real data before launch.
 
 | Field | Where | What to put |
 |---|---|---|
-| `domain` | `site.domain` | Your display domain, e.g. `newmachine.io` (also fills the browser-frame mockups) |
-| `url` | `src/config/site.ts` | Full production URL, e.g. `https://newmachine.io` |
-| `email` | `site.email` | Real contact email |
+| `domain` | `site.domain` | Display domain — set to `newmachine.com.ph` (also fills the browser-frame mockups) |
+| `url` | `src/config/site.ts` | Full production URL — set to `https://newmachine.com.ph` |
+| `email` | `site.email` | Contact email — set to `hello@newmachine.com.ph` |
 | `whatsapp` | `site.whatsapp` | Digits only, international format |
+| `offices[].phone` | `site.offices` | Real office lines — the SF/Makati addresses are set, phones are placeholders |
 | `videoId` | `site.videoId` | Real hero/testimonials YouTube video ID |
 | `stats[0..3]` | `site.stats` | Four hero cards — currently `24h` / `2wk` / `100%` / `0` promises (value + label) |
 | `testimonials[0..1]` | `site.testimonials` | Real, client-consented quotes |

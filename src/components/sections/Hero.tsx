@@ -15,7 +15,7 @@ export default function Hero() {
       <HeroIntro />
 
       <p className="absolute bottom-14 left-6 hidden text-[10px] uppercase tracking-[0.2em] text-muted sm:block">
-        Remote-first · Building for founders worldwide
+        San Francisco · Makati · Building for founders worldwide
       </p>
 
       <div className="absolute bottom-14 left-1/2 -translate-x-1/2">

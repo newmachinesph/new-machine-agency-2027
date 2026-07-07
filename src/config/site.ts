@@ -14,14 +14,14 @@ export const site = {
   legalName: "New Machine",
 
   /** Production URL — used for canonical links, sitemap, OG tags. */
-  url: "https://newmachine.io",
-  domain: "newmachine.io",
+  url: "https://newmachine.com.ph",
+  domain: "newmachine.com.ph",
 
   tagline: "From brand to scale — the studio behind growing startups.",
   description:
-    "New Machine is a remote-first digital studio partnering with founders worldwide across the full startup lifecycle — brand, websites, apps, launch, growth and AI automation. Built to turn ideas into companies that convert.",
+    "New Machine is a digital studio with hubs in San Francisco and Makati, partnering with founders across the US, the Philippines and worldwide — brand, websites, apps, launch, growth and AI automation across the full startup lifecycle. Built to turn ideas into companies that convert.",
 
-  email: "hello@newmachine.io",
+  email: "hello@newmachine.com.ph",
   /** Hero / testimonials explainer video. TODO(owner): replace this
    *  placeholder YouTube ID with the real brand film before launch. */
   videoId: "ScMzIvxBSi4",
@@ -29,23 +29,29 @@ export const site = {
    *  business number — this sample must be set before launch. */
   whatsapp: "12125550100",
 
-  /** Physical offices — DUMMY placeholder addresses + phones. TODO(owner):
-   *  replace with the real details before launch. */
+  /** Physical offices — real coworking hubs (WeWork SoMa in San Francisco;
+   *  KMC at V Corporate Centre, one block off Valero St in Salcedo Village,
+   *  Makati). Phones are still DUMMY placeholders. TODO(owner): replace the
+   *  phone numbers with the real lines before launch. */
   offices: [
     {
       region: "US Office",
       country: "United States",
       flag: "🇺🇸",
-      landmark: "washington",
-      address: ["Suite 1200, 500 7th Avenue", "New York, NY 10018, US"],
-      phone: "+1 212 555 0100",
+      landmark: "goldengate",
+      address: ["WeWork, 535 Mission St, 14th Floor", "San Francisco, CA 94105, US"],
+      phone: "+1 415 555 0100",
     },
     {
       region: "Philippines Office",
       country: "Philippines",
       flag: "🇵🇭",
       landmark: "mayon",
-      address: ["Unit 15F, One Ayala East Tower", "Ayala Ave, Makati, Metro Manila 1223, PH"],
+      address: [
+        "KMC, 5F V Corporate Centre",
+        "125 L.P. Leviste St, Salcedo Village",
+        "Makati City 1227, PH",
+      ],
       phone: "+63 2 8123 4567",
     },
   ],
@@ -96,7 +102,7 @@ export const site = {
     {
       quote:
         "Fast, honest, and straight to the point. They told us what would actually move the needle and skipped everything that wouldn't.",
-      name: "Omar Haddad",
+      name: "Miguel Santos",
       role: "Marketing Lead, Real Estate",
     },
   ],

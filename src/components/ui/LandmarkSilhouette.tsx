@@ -8,8 +8,9 @@ type LandmarkSilhouetteProps = {
  * Decorative only; parent sets size, color (currentColor) and opacity.
  */
 const PATHS: Record<string, string> = {
-  // Washington Monument — tall tapering obelisk with a pyramidion (United States).
-  washington: "M50 12 L56 44 L60 200 L40 200 L44 44 Z",
+  // Golden Gate Bridge tower — twin columns with two cross-braces (United States).
+  goldengate:
+    "M32 16 H42 V200 H32 Z M58 16 H68 V200 H58 Z M32 46 H68 V58 H32 Z M32 106 H68 V118 H32 Z",
   // Mayon Volcano — symmetric cone with a small crater (Philippines).
   mayon: "M44 40 Q50 31 56 40 L96 200 L4 200 Z",
 };

@@ -142,8 +142,8 @@ export default function WhoWeHelp() {
 
         <Reveal delay={300}>
           <p className="mt-10 text-center text-sm text-muted">
-            Remote-first · serving founders worldwide — full-lifecycle studio work
-            without the traditional agency price tag.
+            US &amp; Philippines hubs · serving founders worldwide — full-lifecycle
+            studio work without the traditional agency price tag.
           </p>
         </Reveal>
       </div>

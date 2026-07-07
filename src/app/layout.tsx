@@ -94,8 +94,22 @@ export default function RootLayout({
             email: site.email,
             sameAs: site.socials.map((social) => social.href),
             address: [
-              { "@type": "PostalAddress", addressLocality: "New York", addressCountry: "US" },
-              { "@type": "PostalAddress", addressLocality: "Manila", addressCountry: "PH" },
+              {
+                "@type": "PostalAddress",
+                streetAddress: "535 Mission St, 14th Floor",
+                addressLocality: "San Francisco",
+                addressRegion: "CA",
+                postalCode: "94105",
+                addressCountry: "US",
+              },
+              {
+                "@type": "PostalAddress",
+                streetAddress: "5F V Corporate Centre, 125 L.P. Leviste St, Salcedo Village",
+                addressLocality: "Makati",
+                addressRegion: "Metro Manila",
+                postalCode: "1227",
+                addressCountry: "PH",
+              },
             ],
           }}
         />
