@@ -65,9 +65,6 @@ export const site = {
 
   socials: [
     { label: "Facebook", href: "https://www.facebook.com/newmachineph" },
-    { label: "Instagram", href: "https://instagram.com/newmachine" },
-    { label: "LinkedIn", href: "https://linkedin.com/company/newmachine" },
-    { label: "X", href: "https://x.com/newmachine" },
   ],
 
   /** Hero typewriter — add/remove industries freely. */
