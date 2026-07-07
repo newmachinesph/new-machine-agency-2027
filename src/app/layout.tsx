@@ -22,6 +22,13 @@ const schibsted = Schibsted_Grotesk({
   display: "swap",
 });
 
+const OG_IMAGE = {
+  url: "/og-image.png",
+  width: 1200,
+  height: 630,
+  alt: `${site.name} — ${site.tagline}`,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -29,14 +36,38 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description: site.description,
+  keywords: [
+    "digital studio",
+    "startup studio",
+    "web design",
+    "web development",
+    "app development",
+    "branding",
+    "growth marketing",
+    "AI automation",
+    "landing pages",
+    "San Francisco",
+    "Makati",
+    "Philippines",
+  ],
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
   robots: "index, follow, noarchive",
   openGraph: {
     type: "website",
     siteName: site.name,
     locale: "en_US",
+    url: site.url,
+    title: `${site.name} — Full-Lifecycle Startup Studio`,
+    description: site.description,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
+    title: `${site.name} — Full-Lifecycle Startup Studio`,
+    description: site.description,
+    images: [OG_IMAGE.url],
   },
   alternates: {
     canonical: "/",
@@ -90,7 +121,7 @@ export default function RootLayout({
             name: site.name,
             description: site.description,
             url: site.url,
-            logo: `${site.url}/opengraph-image.png`,
+            logo: `${site.url}/og-image.png`,
             email: site.email,
             sameAs: site.socials.map((social) => social.href),
             address: [
