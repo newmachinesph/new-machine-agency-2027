@@ -3,12 +3,15 @@ import { site } from "@/config/site";
 import { getAllPosts } from "@/lib/blog";
 import products from "@/content/products.json";
 import services from "@/content/services.json";
+import work from "@/content/work.json";
 
 export const dynamic = "force-static";
 
 const STATIC_ROUTES = [
   "",
   "/services/",
+  "/work/",
+  "/pricing/",
   "/products/",
   "/about/",
   "/careers/",
@@ -34,11 +37,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const workEntries = work.map((cs) => ({
+    url: `${site.url}/work/${cs.slug}/`,
+    priority: 0.8,
+  }));
+
   const postEntries = getAllPosts().map((post) => ({
     url: `${site.url}/blog/${post.slug}/`,
     lastModified: new Date(post.date),
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...serviceEntries, ...productEntries, ...postEntries];
+  return [...staticEntries, ...serviceEntries, ...workEntries, ...productEntries, ...postEntries];
 }

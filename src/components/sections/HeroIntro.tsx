@@ -48,8 +48,8 @@ export default function HeroIntro() {
           variants={item}
           className="mt-6 font-display text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-6xl lg:text-7xl 2xl:text-8xl"
         >
-          Digital <span className="text-outline">growth</span> that{" "}
-          <span className="text-accent-fg">actually converts.</span>
+          We build the <span className="text-outline">machine</span> your growth{" "}
+          <span className="text-accent-fg">runs on.</span>
         </m.h1>
 
         <m.p variants={item} className="mt-6 text-lg font-medium text-fg/80 md:text-2xl">
@@ -61,8 +61,8 @@ export default function HeroIntro() {
             Book a Strategy Call
             <IconArrowRight size={16} />
           </Button>
-          <Button href="/services" variant="ghost">
-            View Our Services
+          <Button href="/work" variant="ghost">
+            See the Numbers
           </Button>
         </m.div>
 

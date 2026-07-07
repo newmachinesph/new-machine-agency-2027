@@ -1,29 +1,266 @@
 [
   {
     "slug": "crescent-dental",
-    "client": "Dental clinic",
-    "industry": "Healthcare · Global",
+    "client": "Crescent Dental Studio",
+    "industry": "Healthcare · US",
     "service": "Website Design + Local SEO",
+    "services": ["Website Design", "Local SEO"],
+    "year": "2026",
+    "timeline": "5 weeks to launch",
     "story": "A booking-first website replaced a five-year-old brochure site that patients couldn't even find on Google.",
     "metric": "+214%",
-    "metricLabel": "online booking inquiries within 90 days"
+    "metricLabel": "online booking inquiries within 90 days",
+    "summary": "A three-chair clinic with a five-year-old brochure site was invisible on Google and losing patients to competitors two blocks away. We rebuilt the site around one job — getting a booking — and rebuilt the local search presence around the neighborhoods it serves.",
+    "challenge": "The old site loaded in six seconds, buried the phone number three taps deep, and didn't mention a single neighborhood or treatment by name. Patients who searched for the clinic found a directory listing with someone else's hours. Front desk staff spent hours a week on phone tag that an online booking flow should have absorbed.",
+    "approach": [
+      {
+        "title": "Booking as the spine",
+        "text": "Every page was designed backwards from the booking action — one persistent, obvious path to an appointment, with the phone number one tap away for patients who prefer to call."
+      },
+      {
+        "title": "Local SEO groundwork",
+        "text": "Treatment and neighborhood pages built on real search language, a cleaned-up Google Business Profile, and consistent listings across every directory that matters locally."
+      },
+      {
+        "title": "Speed as a feature",
+        "text": "Static pages, optimized images and no tag bloat took the largest contentful paint from 6.2s to 1.6s — patients on mobile networks stopped bouncing before the page drew."
+      }
+    ],
+    "outcome": "Ninety days after launch, online booking inquiries were running at 3.1× the pre-launch baseline, and the growth held: by month six the clinic was fielding 54 online booking inquiries a month against a baseline of 14. Google Business Profile views quadrupled, and the front desk phone finally quieted down.",
+    "deliverables": [
+      "Booking-first website (11 pages)",
+      "Treatment & neighborhood landing pages",
+      "Google Business Profile overhaul",
+      "Local directory listings cleanup",
+      "On-page SEO & schema markup",
+      "Analytics with booking-goal tracking"
+    ],
+    "quote": {
+      "text": "Clear from day one — no jargon, no account managers, just straight answers and a site that finally looks like the business we want to be.",
+      "name": "Sarah Mitchell",
+      "role": "Clinic Director, Crescent Dental Studio"
+    },
+    "series": {
+      "label": "Online booking inquiries per month",
+      "unit": "inquiries",
+      "goodDirection": "up",
+      "launchIndex": 6,
+      "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "values": [13, 14, 15, 14, 15, 13, 22, 31, 44, 47, 51, 54]
+    },
+    "kpis": [
+      {
+        "label": "Booking inquiries / month",
+        "before": 14,
+        "after": 44,
+        "beforeLabel": "14",
+        "afterLabel": "44",
+        "delta": "+214%",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Google Business Profile views / month",
+        "before": 320,
+        "after": 1270,
+        "beforeLabel": "320",
+        "afterLabel": "1,270",
+        "delta": "4.0×",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Mobile conversion rate",
+        "before": 0.9,
+        "after": 3.1,
+        "beforeLabel": "0.9%",
+        "afterLabel": "3.1%",
+        "delta": "+2.2 pts",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Largest Contentful Paint",
+        "before": 6.2,
+        "after": 1.6,
+        "beforeLabel": "6.2s",
+        "afterLabel": "1.6s",
+        "delta": "−74%",
+        "goodDirection": "down"
+      }
+    ]
   },
   {
     "slug": "marina-heights",
-    "client": "Real-estate developer",
-    "industry": "Real Estate · Abu Dhabi",
+    "client": "Marina Heights",
+    "industry": "Real Estate · UAE",
     "service": "Landing Pages + Lead Generation",
+    "services": ["Landing Pages", "Lead Generation"],
+    "year": "2026",
+    "timeline": "3 weeks to first page live",
     "story": "A dedicated landing page for every ad set, with WhatsApp capture instead of long forms.",
     "metric": "3.1×",
-    "metricLabel": "more qualified leads at the same ad spend"
+    "metricLabel": "more qualified leads at the same ad spend",
+    "summary": "A developer was pouring a fixed monthly ad budget into campaigns that all landed on the same generic homepage. We gave every ad set its own landing page, swapped long forms for WhatsApp capture, and let the same budget do three times the work.",
+    "challenge": "Six ad sets, one homepage. Buyers clicking an ad for a two-bedroom marina apartment landed on a corporate page about the developer's history, and a nine-field inquiry form finished the job of losing them. Cost per qualified lead had crept to $84 and the sales team blamed the ads — the ads were fine; the landing experience wasn't.",
+    "approach": [
+      {
+        "title": "One page per ad set",
+        "text": "Each campaign got a dedicated page that continued the ad's exact promise — same unit, same price point, same imagery — so the click never had to reorient."
+      },
+      {
+        "title": "WhatsApp over forms",
+        "text": "In this market buyers live on WhatsApp. We replaced the nine-field form with a one-tap WhatsApp handoff pre-filled with the unit of interest, and response time fell from hours to minutes."
+      },
+      {
+        "title": "Measure per campaign",
+        "text": "Per-page analytics tied every dirham of spend to qualified conversations, so budget shifted weekly toward what was actually converting — decisions made on numbers, not opinions."
+      }
+    ],
+    "outcome": "With the ad budget held flat at $2,600 a month, qualified leads went from 31 a month to 96 by month four after launch — 3.1× the volume at the same spend. Cost per qualified lead fell from $84 to $27, and landing-page conversion more than tripled from 1.2% to 3.8%.",
+    "deliverables": [
+      "6 campaign landing pages",
+      "WhatsApp lead-capture flow",
+      "Per-campaign analytics & attribution",
+      "Ad-copy alignment with sales team",
+      "Weekly budget reallocation cadence",
+      "CRM handoff integration"
+    ],
+    "quote": {
+      "text": "Fast, honest, and straight to the point. They told us what would actually move the needle and skipped everything that wouldn't.",
+      "name": "Omar Haddad",
+      "role": "Marketing Lead, Marina Heights"
+    },
+    "series": {
+      "label": "Qualified leads per month, ad spend held flat",
+      "unit": "leads",
+      "goodDirection": "up",
+      "launchIndex": 6,
+      "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "values": [31, 28, 34, 30, 29, 34, 52, 71, 88, 96, 99, 101]
+    },
+    "kpis": [
+      {
+        "label": "Qualified leads / month",
+        "before": 31,
+        "after": 96,
+        "beforeLabel": "31",
+        "afterLabel": "96",
+        "delta": "3.1×",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Cost per qualified lead",
+        "before": 84,
+        "after": 27,
+        "beforeLabel": "$84",
+        "afterLabel": "$27",
+        "delta": "−68%",
+        "goodDirection": "down"
+      },
+      {
+        "label": "Landing-page conversion",
+        "before": 1.2,
+        "after": 3.8,
+        "beforeLabel": "1.2%",
+        "afterLabel": "3.8%",
+        "delta": "+2.6 pts",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Time to first response",
+        "before": 312,
+        "after": 4,
+        "beforeLabel": "5.2h",
+        "afterLabel": "4min",
+        "delta": "−99%",
+        "goodDirection": "down"
+      }
+    ]
   },
   {
     "slug": "souq-oasis",
-    "client": "E-commerce brand",
+    "client": "Souq Oasis",
     "industry": "E-commerce · Global",
     "service": "Corporate Website + Social Media",
+    "services": ["Corporate Website", "Social Media"],
+    "year": "2026",
+    "timeline": "6 weeks to relaunch",
     "story": "A credibility rebuild ahead of wholesale expansion talks — fast, bilingual-ready, and unmistakably premium.",
     "metric": "−58%",
-    "metricLabel": "bounce rate after relaunch"
+    "metricLabel": "bounce rate after relaunch",
+    "summary": "An e-commerce brand heading into wholesale expansion talks had a site that read like a dropshipping storefront. We rebuilt it as the premium brand it actually is — and buyers who used to bounce in seconds started staying, reading, and booking meetings.",
+    "challenge": "Seven in ten visitors left without a second pageview. The catalog was strong and the margins were real, but the site — stock templates, slow pages, thin brand story — undercut every wholesale pitch before the first meeting. Buyers doing due diligence found a storefront, not a company.",
+    "approach": [
+      {
+        "title": "Brand story first",
+        "text": "We led with provenance — sourcing, makers, and the numbers behind the catalog — so a wholesale buyer's five-minute skim answered the questions they'd otherwise ask in a first call."
+      },
+      {
+        "title": "Rebuilt for speed and trust",
+        "text": "A ground-up rebuild, bilingual-ready from day one, with product photography guidelines and a design system that made every page look like the same premium company."
+      },
+      {
+        "title": "Social as proof",
+        "text": "A steady content cadence turned the brand's social profiles into a second storefront — the place buyers checked after the site, telling the same story instead of contradicting it."
+      }
+    ],
+    "outcome": "Bounce rate fell from a 71% baseline to a steady 30% within six months of relaunch — a 58% drop. Average session time went from 47 seconds to nearly two and a half minutes, organic traffic to product and story pages roughly doubled, and wholesale inquiries went from two a quarter to fourteen.",
+    "deliverables": [
+      "Corporate website rebuild (bilingual-ready)",
+      "Brand story & wholesale pages",
+      "Product photography guidelines",
+      "Social media templates & cadence",
+      "Performance optimization pass",
+      "Analytics with engagement goals"
+    ],
+    "quote": {
+      "text": "The rebuild paid for itself before the wholesale meetings even started — buyers kept telling us the site was the reason they took the call.",
+      "name": "Amira Chen",
+      "role": "Founder, Souq Oasis"
+    },
+    "series": {
+      "label": "Bounce rate per month, %",
+      "unit": "%",
+      "goodDirection": "down",
+      "launchIndex": 6,
+      "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "values": [72, 70, 73, 71, 69, 71, 48, 39, 33, 31, 30, 30]
+    },
+    "kpis": [
+      {
+        "label": "Bounce rate",
+        "before": 71,
+        "after": 30,
+        "beforeLabel": "71%",
+        "afterLabel": "30%",
+        "delta": "−58%",
+        "goodDirection": "down"
+      },
+      {
+        "label": "Average session duration",
+        "before": 47,
+        "after": 146,
+        "beforeLabel": "0:47",
+        "afterLabel": "2:26",
+        "delta": "3.1×",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Organic sessions / month",
+        "before": 3800,
+        "after": 9600,
+        "beforeLabel": "3.8k",
+        "afterLabel": "9.6k",
+        "delta": "2.5×",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Wholesale inquiries / quarter",
+        "before": 2,
+        "after": 14,
+        "beforeLabel": "2",
+        "afterLabel": "14",
+        "delta": "7×",
+        "goodDirection": "up"
+      }
+    ]
   }
 ]

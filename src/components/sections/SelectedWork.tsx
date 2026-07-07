@@ -1,10 +1,11 @@
 import Link from "next/link";
-import work from "@/content/work.json";
+import { caseStudies } from "@/lib/work";
 import BrowserFrame from "@/components/ui/BrowserFrame";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import CountUp from "@/components/ui/CountUp";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import Sparkline from "@/components/charts/Sparkline";
 import { IconArrowRight } from "@/components/ui/icons";
 
 /** Vertical offset per column — staggered editorial rhythm on the wide canvas. */
@@ -16,14 +17,17 @@ export default function SelectedWork() {
       <div className="wrap">
         <SectionHeading
           eyebrow="Selected work"
-          title="Work that competes with anyone, anywhere."
-          lead="Remote-first, full-lifecycle projects for founders across every timezone — a few representative builds, measured by what changed after launch, not the size of the deliverable."
+          title="Results first. Here's the proof."
+          lead="Three representative engagements, each measured by what changed after launch. Every card opens into the full case study — the numbers charted month by month, before and after."
         />
 
         <div className="mt-16 grid gap-x-8 gap-y-20 md:grid-cols-3">
-          {work.map((project, i) => (
+          {caseStudies.map((project, i) => (
             <Reveal key={project.slug} delay={i * 110} className={OFFSET[i] ?? ""}>
-              <article className="group relative flex h-full flex-col">
+              <Link
+                href={`/work/${project.slug}/`}
+                className="group relative flex h-full flex-col"
+              >
                 {/* Device-frame mockup + overlapping metric badge */}
                 <div className="relative">
                   <div className="chamfer panel beam overflow-hidden">
@@ -44,6 +48,13 @@ export default function SelectedWork() {
                       {project.metricLabel}
                     </p>
                   </div>
+
+                  {/* Sparkline of the case's headline series, tucked bottom-right */}
+                  <Sparkline
+                    values={project.series.values}
+                    launchIndex={project.series.launchIndex}
+                    className="absolute bottom-3 right-3 h-8 w-24 opacity-90"
+                  />
                 </div>
 
                 {/* Case detail */}
@@ -51,23 +62,26 @@ export default function SelectedWork() {
                   <span className="inline-flex w-fit border border-border px-2.5 py-0.5 text-[11px] uppercase tracking-[0.12em] text-muted">
                     {project.industry}
                   </span>
-                  <h3 className="mt-4 font-display text-xl font-semibold">{project.client}</h3>
+                  <h3 className="mt-4 font-display text-xl font-semibold transition-colors group-hover:text-accent-fg">
+                    {project.client}
+                  </h3>
                   <p className="measure mt-2 text-sm text-muted">{project.story}</p>
-                  <p className="mt-6 text-xs uppercase tracking-[0.15em] text-accent-fg">
-                    {project.service}
-                  </p>
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.15em] text-accent-fg">
+                    Read the case study
+                    <IconArrowRight size={13} />
+                  </span>
                 </div>
-              </article>
+              </Link>
             </Reveal>
           ))}
         </div>
 
         <Reveal delay={340}>
           <Link
-            href="/contact"
+            href="/work/"
             className="mt-16 inline-flex items-center gap-2 text-sm text-accent-fg transition-opacity hover:opacity-80"
           >
-            Have work worth doing right? Let’s talk
+            See all work, numbers included
             <IconArrowRight size={15} />
           </Link>
         </Reveal>

@@ -20,6 +20,11 @@
   --glass: rgba(255, 255, 255, 0.05);
   --accent-fg: #a9d896;
   --blob-opacity: 0.35;
+
+  /* Chart palette — validated per theme with the dataviz six-checks script
+     (lightness band, chroma, CVD separation, ≥3:1 contrast vs --card). */
+  --chart-data: #5d9e52;
+  --chart-dim: #75757f;
 }
 
 :root[data-theme="light"] {
@@ -32,6 +37,8 @@
   --glass: rgba(255, 255, 255, 0.55);
   --accent-fg: #2f6b34;
   --blob-opacity: 0.28;
+  --chart-data: #35753a;
+  --chart-dim: #82828c;
 }
 
 @theme inline {

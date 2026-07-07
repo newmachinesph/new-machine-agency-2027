@@ -21,7 +21,7 @@ export default function StatsBar() {
           <div className="flex items-center gap-2.5">
             <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-              Proof, not promises
+              Standing commitments
             </span>
           </div>
           <h2

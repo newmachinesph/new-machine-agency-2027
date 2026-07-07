@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { site } from "@/config/site";
-import { IconCheck } from "@/components/ui/icons";
+import { IconArrowRight, IconCheck } from "@/components/ui/icons";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import PatternGrid from "@/components/ui/PatternGrid";
@@ -97,6 +98,19 @@ export default function Comparison() {
               </div>
             ))}
           </div>
+        </Reveal>
+
+        <Reveal delay={200}>
+          <p className="mt-8 text-sm text-muted">
+            Transparent pricing isn&rsquo;t a slogan here —{" "}
+            <Link
+              href="/pricing/"
+              className="inline-flex items-center gap-1.5 font-medium text-accent-fg transition-opacity hover:opacity-80"
+            >
+              our pricing is public
+              <IconArrowRight size={14} />
+            </Link>
+          </p>
         </Reveal>
       </div>
     </section>

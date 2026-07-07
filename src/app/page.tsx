@@ -5,12 +5,12 @@ import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
 import StatsBar from "@/components/sections/StatsBar";
 import SelectedWork from "@/components/sections/SelectedWork";
+import Impact from "@/components/sections/Impact";
 import ServicesBento from "@/components/sections/ServicesBento";
 import WhyItMatters from "@/components/sections/WhyItMatters";
 import WhoWeHelp from "@/components/sections/WhoWeHelp";
 import Process from "@/components/sections/Process";
 import Comparison from "@/components/sections/Comparison";
-import WhyTrustUs from "@/components/sections/WhyTrustUs";
 import Testimonials from "@/components/sections/Testimonials";
 import ProductsTeaser from "@/components/sections/ProductsTeaser";
 import HomeFaq from "@/components/sections/HomeFaq";
@@ -25,14 +25,14 @@ export default function Home() {
     <>
       <Hero />
       <Marquee />
-      <StatsBar />
-      <ServicesBento />
       <SelectedWork />
+      <Impact />
+      <ServicesBento />
       <WhyItMatters />
       <WhoWeHelp />
       <Process />
       <Comparison />
-      <WhyTrustUs />
+      <StatsBar />
       <Testimonials />
       <ProductsTeaser />
       <HomeFaq />

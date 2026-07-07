@@ -106,6 +106,8 @@ export const whatsappHref = `https://wa.me/${site.whatsapp}`;
 
 export const navLinks = [
   { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Products", href: "/products" },
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },

@@ -46,6 +46,17 @@ Every owner-editable value lives here. What each field does:
 - `src/content/services.json` — service catalog (see "Phase 2/3 services" below)
 - `src/content/products.json` — product cards: `{ name, status, oneLiner, link }`. `status` is `"In Development" | "Beta" | "Live"`; a non-empty `link` renders a "Visit" button
 - `src/content/faq.json` — FAQ items: `{ q, a }` — rendered on the home page and emitted as FAQPage JSON-LD
+- `src/content/work.json` — case studies, the data behind `/work`, `/work/<slug>` and the home Impact section. Each entry carries the card fields (`client`, `industry`, `service`, `story`, `metric`, `metricLabel`), the narrative (`summary`, `challenge`, `approach[]`, `outcome`, `deliverables[]`, `quote`), a 12-month metric `series` (`months`, `values`, `launchIndex` = first post-launch month, `unit`, `label`) and `kpis[]` (`before`/`after` numbers drive the dumbbell scale; `beforeLabel`/`afterLabel` carry the units; `delta` is the printed change). Current entries are **representative sample data** — clearly labeled as such in the UI; replace with real, client-consented numbers before running paid traffic. The home Impact section's median tiles are hand-computed from these entries — recompute if you change them.
+
+### Case-study charts
+
+`src/components/charts/` renders all data visualization as dependency-free SVG:
+
+- `TrendChart` — 12-month line chart; pre-launch months in a de-emphasis gray, post-launch in the data hue with an area wash, launch rule, endpoint label, hover crosshair + tooltip, and a visually hidden data table for screen readers
+- `Dumbbell` — before → after KPI rows, every value directly labeled
+- `Sparkline` — decorative mini-trend for work cards
+
+Chart colors are the `--chart-data` / `--chart-dim` tokens in `globals.css`, validated per theme (lightness band, CVD separation, ≥3:1 contrast against the card surface). If you rebrand `--accent`, re-derive these two per theme rather than reusing the accent directly.
 
 ### Blog (MDX)
 
@@ -134,6 +145,8 @@ Build produces a fully static site in `/out`:
 | `stats[0..3]` | `site.stats` | Four hero cards — currently `24h` / `2wk` / `100%` / `0` promises (value + label) |
 | `testimonials[0..1]` | `site.testimonials` | Real, client-consented quotes |
 | `socials` | `site.socials` | Real social handles |
+| case studies | `src/content/work.json` | Real, client-consented results (series + KPIs are sample data) |
+| pricing | `src/app/pricing/page.tsx` | Confirm tiers/prices in the `tiers` array before launch |
 
 ## Notes
 
