@@ -87,6 +87,27 @@ export default function ContactPage() {
               </ul>
             </Reveal>
 
+            <Reveal delay={360}>
+              <div className="mt-9">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+                  Follow us
+                </p>
+                <div className="mt-4 flex flex-wrap gap-5">
+                  {site.socials.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-muted transition-colors hover:text-fg"
+                    >
+                      {social.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+
             <Reveal delay={400}>
               <div className="mt-10 grid gap-4 sm:grid-cols-2">
                 {site.offices.map((office) => (
