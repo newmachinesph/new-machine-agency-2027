@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import { site } from "@/config/site";
+import { ORG_ID, WEBSITE_ID, orgRef } from "@/lib/schema";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
@@ -118,11 +119,23 @@ export default function RootLayout({
           data={{
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": ORG_ID,
             name: site.name,
+            legalName: site.legalName,
             description: site.description,
+            slogan: site.principle,
             url: site.url,
             logo: `${site.url}/og-image.png`,
+            image: `${site.url}/og-image.png`,
             email: site.email,
+            knowsAbout: [
+              "Loop engineering",
+              "Autonomous agent systems",
+              "Answer engine optimization",
+              "Web application development",
+              "Brand identity",
+              "Growth marketing",
+            ],
             sameAs: site.socials.map((social) => social.href),
             address: [
               {
@@ -148,8 +161,12 @@ export default function RootLayout({
           data={{
             "@context": "https://schema.org",
             "@type": "WebSite",
+            "@id": WEBSITE_ID,
             name: site.name,
+            description: site.description,
             url: site.url,
+            inLanguage: "en",
+            publisher: orgRef,
           }}
         />
       </body>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { IconCheck, IconMail, IconChat } from "@/components/ui/icons";
 import { site, whatsappHref } from "@/config/site";
+import { breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
+import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import PatternSignal from "@/components/ui/PatternSignal";
 import LandmarkSilhouette from "@/components/ui/LandmarkSilhouette";
@@ -135,6 +137,45 @@ export default function ContactPage() {
           </div>
         </Reveal>
       </div>
+
+      <JsonLd
+        data={webPageSchema({
+          type: "ContactPage",
+          name: `Contact ${site.name}`,
+          description: `Talk to ${site.name}. Hubs in San Francisco and Makati, working with founders worldwide.`,
+          path: "/contact/",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact/" },
+        ])}
+      />
+      {/* Each office as its own resolvable place, tied back to the parent
+          organization — what an assistant needs to answer "where are they based". */}
+      {site.offices.map((office) => (
+        <JsonLd
+          key={office.region}
+          data={{
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": `${site.url}/#office-${office.country.toLowerCase().replace(/\s+/g, "-")}`,
+            name: `${site.name} — ${office.region}`,
+            parentOrganization: orgRef,
+            url: `${site.url}/contact/`,
+            email: site.email,
+            telephone: office.phone,
+            image: `${site.url}/og-image.png`,
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: office.address[0],
+              addressLocality: office.address[1],
+              addressCountry: office.country,
+            },
+          }}
+        />
+      ))}
     </div>
   );
 }

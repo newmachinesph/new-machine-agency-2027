@@ -7,7 +7,9 @@ import {
   type BrandIcon,
 } from "@/components/ui/icons";
 import { site } from "@/config/site";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import DuotoneImage from "@/components/ui/DuotoneImage";
+import JsonLd from "@/components/ui/JsonLd";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -263,6 +265,21 @@ export default function AboutPage() {
           primaryLabel="Book a Strategy Call"
         />
       </div>
+
+      <JsonLd
+        data={webPageSchema({
+          type: "AboutPage",
+          name: `About ${site.name}`,
+          description: site.description,
+          path: "/about/",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about/" },
+        ])}
+      />
     </div>
   );
 }

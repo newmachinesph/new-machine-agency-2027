@@ -6,6 +6,7 @@ import { IconArrowLeft, IconArrowRight, IconChat } from "@/components/ui/icons";
 import products from "@/content/products.json";
 import { site, whatsappHref } from "@/config/site";
 import { productIcons, productBadgeClasses } from "@/lib/products";
+import { breadcrumbSchema, orgRef } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import JsonLd from "@/components/ui/JsonLd";
@@ -248,9 +249,19 @@ export default async function ProductDetailPage({ params }: PageProps) {
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web",
           url: `${site.url}/products/${product.slug}/`,
-          brand: { "@type": "Organization", name: site.name },
-          publisher: { "@type": "Organization", name: site.name },
+          // Reference the one Organization node instead of minting a new,
+          // unlinked copy of it on every product page.
+          brand: orgRef,
+          publisher: orgRef,
+          provider: orgRef,
         }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products/" },
+          { name: product.name, path: `/products/${product.slug}/` },
+        ])}
       />
     </div>
   );

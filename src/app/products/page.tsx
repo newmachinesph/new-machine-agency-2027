@@ -4,8 +4,10 @@ import { IconArrowRight, IconChat } from "@/components/ui/icons";
 import products from "@/content/products.json";
 import { site, whatsappHref } from "@/config/site";
 import { productIcons, productBadgeClasses } from "@/lib/products";
+import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
+import JsonLd from "@/components/ui/JsonLd";
 import Logo from "@/components/ui/Logo";
 import PatternGrid from "@/components/ui/PatternGrid";
 import PatternSignal from "@/components/ui/PatternSignal";
@@ -161,6 +163,32 @@ export default function ProductsPage() {
           </div>
         </Reveal>
       </div>
+
+      <JsonLd
+        data={webPageSchema({
+          type: "CollectionPage",
+          name: "The Machines",
+          description: `${site.principle} Loop-engineered systems that run a job end to end, verify their own work against a gate, and stop when it is done.`,
+          path: "/products/",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products/" },
+        ])}
+      />
+      <JsonLd
+        data={itemListSchema({
+          name: "The Machines",
+          description: `The ${products.length} Machines built by ${site.name}.`,
+          items: products.map((product) => ({
+            name: product.name,
+            path: `/products/${product.slug}/`,
+            description: product.oneLiner,
+          })),
+        })}
+      />
     </div>
   );
 }

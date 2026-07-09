@@ -6,6 +6,7 @@ import { IconArrowLeft, IconArrowRight, IconCheck, IconChat, IconWebsite } from 
 import services from "@/content/services.json";
 import { site, whatsappHref } from "@/config/site";
 import { serviceIcons, stageGroups } from "@/lib/services";
+import { breadcrumbSchema, orgRef } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import Faq from "@/components/ui/Faq";
@@ -264,7 +265,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           serviceType: service.name,
           description: service.description,
           url: `${site.url}/services/${service.slug}/`,
-          provider: { "@type": "Organization", name: site.name, url: site.url },
+          // Reference the single Organization node rather than minting an
+          // unlinked copy of it on every service page.
+          provider: orgRef,
           areaServed: "Worldwide",
         }}
       />
@@ -278,6 +281,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             acceptedAnswer: { "@type": "Answer", text: faq.a },
           })),
         }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services/" },
+          { name: service.name, path: `/services/${service.slug}/` },
+        ])}
       />
     </div>
   );

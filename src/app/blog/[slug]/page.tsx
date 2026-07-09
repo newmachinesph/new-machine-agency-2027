@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { IconArrowLeft, IconArrowRight } from "@/components/ui/icons";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { site } from "@/config/site";
+import { breadcrumbSchema, orgRef } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import JsonLd from "@/components/ui/JsonLd";
@@ -154,9 +155,22 @@ export default async function BlogPostPage({ params }: PageProps) {
           headline: post.meta.title,
           description: post.meta.description,
           datePublished: post.meta.date,
-          author: { "@type": "Organization", name: site.name },
-          publisher: { "@type": "Organization", name: site.name },
+          dateModified: post.meta.date,
+          mainEntityOfPage: `${site.url}/blog/${slug}/`,
+          url: `${site.url}/blog/${slug}/`,
+          image: `${site.url}/og-image.png`,
+          inLanguage: "en",
+          // Reference the single Organization node, not an anonymous copy.
+          author: orgRef,
+          publisher: orgRef,
         }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog/" },
+          { name: post.meta.title, path: `/blog/${slug}/` },
+        ])}
       />
     </article>
   );
