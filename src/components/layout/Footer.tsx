@@ -40,7 +40,10 @@ export default function Footer() {
           <p className="font-display text-xl font-bold uppercase tracking-tight">
             New<span className="text-accent-fg">*</span>Machine
           </p>
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
+          <p className="mt-4 max-w-xs text-sm font-medium leading-relaxed text-accent-fg">
+            {site.principle}
+          </p>
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
             Full-lifecycle startup studio with hubs in San Francisco and Makati —
             building with founders across the US, the Philippines, and worldwide.
           </p>

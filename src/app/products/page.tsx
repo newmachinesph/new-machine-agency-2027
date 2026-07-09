@@ -13,8 +13,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
   title: "Products",
-  description:
-    "Software products we build in-house — born from problems we kept seeing our clients face.",
+  description: `${site.principle} The Machines — loop-engineered systems that run a job end to end, verify their own work, and stop when it is done.`,
   alternates: { canonical: "/products/" },
 };
 
@@ -29,19 +28,21 @@ export default function ProductsPage() {
             <Reveal className="flex items-center gap-2.5">
               <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-                Products
+                The Machines
               </span>
             </Reveal>
             <Reveal delay={80}>
-              <h1 className="font-display mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
-                Built by us. Used by businesses like yours.
+              <h1 className="font-display mt-5 max-w-3xl text-4xl font-extrabold tracking-tight md:text-6xl">
+                We don&apos;t automate tasks. We build systems that{" "}
+                <span className="text-accent-fg">improve themselves.</span>
               </h1>
             </Reveal>
             <Reveal delay={160}>
               <p className="measure mt-5 text-muted">
-                The same team that builds client projects also builds products — tools
-                born from problems we kept running into on real engagements. World-class
-                standards, pointed at our own roadmap.
+                Anything can generate. A Machine earns the name because something can
+                automatically reject its work and make it try again — a goal it runs
+                toward, a gate it has to pass, and a point at which it stops. Each one
+                below publishes that loop before it asks for your trust.
               </p>
             </Reveal>
             <Reveal delay={220}>
@@ -140,11 +141,12 @@ export default function ProductsPage() {
             />
             <div className="relative">
               <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
-                Got a problem worth productizing?
+                Got a job worth turning into a Machine?
               </h2>
               <p className="measure mx-auto mt-3 text-muted">
-                All three are in active development. Want early access, or have a problem
-                you think we should build for? We&apos;d love to hear it.
+                All {products.length} are in active development. If a job in your business
+                repeats every week and something could tell good output from bad, it can
+                probably be a Machine. Tell us about it.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Button href="/contact">

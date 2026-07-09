@@ -136,14 +136,252 @@
     "link": ""
   },
   {
+    "slug": "ads-machine",
+    "name": "Ads Machine",
+    "status": "In Development",
+    "tint": "#93cf84",
+    "icon": "splittest",
+    "oneLiner": "Generates the creative, tests it under a hard spend cap, and moves budget only when a variant genuinely wins.",
+    "problem": "Ad accounts decay quietly. Creative fatigues, cost per acquisition drifts upward, and by the time a monthly report catches it you have spent a quarter of the budget learning what stopped working three weeks ago.",
+    "solution": "Ads Machine generates creative variants, runs them under hard spend caps, and reallocates budget only when a variant clears a significance threshold. Every rule that protects your money — daily cap, acquisition-cost ceiling, brand-safety check — is enforced by the system rather than remembered by a person.",
+    "features": [
+      {
+        "title": "Creative that keeps coming",
+        "text": "Fresh variants generated against your offer and brand rules, so fatigue is answered with new work instead of a louder bid on a tired asset."
+      },
+      {
+        "title": "Winners proven, not guessed",
+        "text": "Budget shifts only when a variant beats control at a significance threshold you set. One lucky afternoon does not earn a promotion."
+      },
+      {
+        "title": "Spend caps the system enforces",
+        "text": "Daily caps and an acquisition-cost ceiling are hard limits. Cross either and it pauses spend and reports, instead of optimizing deeper into a hole."
+      },
+      {
+        "title": "Brand safety before publish",
+        "text": "Every asset passes a claims and policy check before it is allowed to spend a single peso of your budget."
+      }
+    ],
+    "loop": {
+      "goal": "Cost per acquisition at or under target, at the agreed level of spend.",
+      "verify": "Variant performance tested for statistical significance against control, with the acquisition-cost ceiling and daily cap enforced before any budget moves.",
+      "stop": "Target cost per acquisition holds through the test window, or a spend cap trips — then it pauses and reports rather than optimizing into a hole."
+    },
+    "link": ""
+  },
+  {
+    "slug": "conversion-machine",
+    "name": "Conversion Machine",
+    "status": "In Development",
+    "tint": "#6fb268",
+    "icon": "growth",
+    "oneLiner": "Builds the page, tests the variants, and ships only the ones that beat control at statistical significance.",
+    "problem": "Most conversion work is a person changing a button colour and declaring victory on forty visitors. Real lift needs more tests than anyone has patience for, and more statistical discipline than a dashboard tends to encourage.",
+    "solution": "Conversion Machine builds page variants from your offer, runs them against control, and refuses to call a winner until the result clears a significance threshold and a minimum sample. Losing variants are archived with their numbers. Winners ship.",
+    "features": [
+      {
+        "title": "Variants from the offer, not a theme",
+        "text": "Each variant changes one deliberate thing — headline, proof, capture — so the result teaches you something you can use in the next round."
+      },
+      {
+        "title": "Significance is not optional",
+        "text": "No variant gets promoted on a good afternoon. It clears the threshold and the sample floor, or it stays a candidate and keeps running."
+      },
+      {
+        "title": "Speed budgets enforced",
+        "text": "Every variant must pass performance and accessibility budgets before it is allowed to receive a single visitor of real traffic."
+      },
+      {
+        "title": "Losing tests are evidence",
+        "text": "Failed variants are kept with their numbers and their reasoning, so the next round starts from what you already learned rather than from zero."
+      }
+    ],
+    "loop": {
+      "goal": "A page that beats the current control on the conversion metric that actually matters.",
+      "verify": "A winner is declared only above a preset significance level and minimum sample; every variant must first clear performance and accessibility budgets.",
+      "stop": "A variant wins at significance, or the traffic budget is spent — then it reports the null result honestly instead of picking a favorite."
+    },
+    "link": ""
+  },
+  {
+    "slug": "site-machine",
+    "name": "Site Machine",
+    "status": "In Development",
+    "tint": "#b5dfa4",
+    "icon": "website",
+    "oneLiner": "Ships and maintains a corporate site that stays fast, accessible and correct — and blocks any change that isn't.",
+    "problem": "Corporate sites rot. A page launches fast and accessible, then a year of edits adds a hero video, an unlabelled form and four broken links, and nobody notices until a customer or an accessibility auditor does.",
+    "solution": "Site Machine builds pages and then holds the line. Performance budgets, contrast and accessibility checks, link integrity and structured data are gates on every publish. A change that regresses a budget does not go live, no matter who requested it.",
+    "features": [
+      {
+        "title": "Budgets as gates, not goals",
+        "text": "Performance and accessibility budgets block a publish, rather than turning up red on a monthly report that nobody opens."
+      },
+      {
+        "title": "Accessibility checked every publish",
+        "text": "Contrast, labels, focus order and alt text are verified automatically on every change, not audited once at launch and forgotten."
+      },
+      {
+        "title": "Link and schema integrity",
+        "text": "Broken links and malformed structured data fail the build, so the site stays correct as it grows instead of quietly decaying."
+      },
+      {
+        "title": "On-brand, not off-the-shelf",
+        "text": "Pages assemble from your design system, so nothing reads like a template that three of your competitors also bought."
+      }
+    ],
+    "loop": {
+      "goal": "Every page live and passing its performance, accessibility and structural budgets.",
+      "verify": "Automated performance, contrast, link-integrity and schema validation run on every publish — a regression fails the build outright.",
+      "stop": "All budgets green, or a regression fails the build — then it blocks the publish and reports the offending page."
+    },
+    "link": ""
+  },
+  {
+    "slug": "mvp-machine",
+    "name": "MVP Machine",
+    "status": "In Development",
+    "tint": "#4f8f4b",
+    "icon": "appwindow",
+    "oneLiner": "Turns a written spec into a working, tested product — and never calls it done while a test is red.",
+    "problem": "Most MVPs are demos. They work on the happy path, ship without tests, and the first real customer finds the edge case. The rewrite then costs more than the original build did.",
+    "solution": "MVP Machine works from a written spec: build the slice, run the suite, read every failure, fix the highest-impact one, repeat. Software is where loops began, because a test either passes or it does not. There is nothing to argue with and nothing to talk your way past.",
+    "features": [
+      {
+        "title": "The spec is the contract",
+        "text": "Work is scoped from a written spec with acceptance criteria, so finished is a checklist that can be verified rather than an opinion to be debated."
+      },
+      {
+        "title": "Tests are the gate",
+        "text": "Nothing merges while a test, a type check or the build is red. The machine cannot negotiate its way past a failing suite."
+      },
+      {
+        "title": "Reviewed by a second agent",
+        "text": "The model that wrote the code does not grade it. A separate, stricter reviewer catches what the author quietly talked itself into."
+      },
+      {
+        "title": "You own the code",
+        "text": "Repository, infrastructure and dependencies are yours from the first commit. No lock-in, no rented codebase, no hostage situation later."
+      }
+    ],
+    "loop": {
+      "goal": "Every acceptance criterion in the spec met, with the test suite, type check and production build green.",
+      "verify": "The full suite, type check and production build run on every pass, and a separate reviewer agent must approve the diff before it lands.",
+      "stop": "The suite is green and the spec is satisfied, or the iteration cap is reached — then it stops and reports exactly what still fails."
+    },
+    "link": ""
+  },
+  {
+    "slug": "lifecycle-machine",
+    "name": "Lifecycle Machine",
+    "status": "In Development",
+    "tint": "#86c477",
+    "icon": "mail",
+    "oneLiner": "Runs the email and CRM lifecycle — and will not send to anyone who never agreed to hear from you.",
+    "problem": "Lifecycle email is where good intentions meet compliance. Someone exports a list, forgets a suppression, and a year of sender reputation leaves with it — along with legal exposure that nobody priced into the campaign.",
+    "solution": "Lifecycle Machine builds and runs the sequences: onboarding, nurture, win-back. Consent, suppression and opt-out are enforced as hard gates before any send, and every subject line and offer is tested on real cohorts rather than chosen on a hunch.",
+    "features": [
+      {
+        "title": "Consent is a hard gate",
+        "text": "No consent record, no send. Suppression lists and opt-outs are enforced by the system, not by whoever happened to run the export that morning."
+      },
+      {
+        "title": "A CRM that stays clean",
+        "text": "Records are deduplicated and enriched on the way in, so your segments run against data you can actually trust when it matters."
+      },
+      {
+        "title": "Sequences that get tested",
+        "text": "Subject lines and offers are tested across cohorts, and a winner is promoted only once it clears significance, not once it looks promising."
+      },
+      {
+        "title": "Deliverability watched continuously",
+        "text": "Bounce and complaint rates are monitored on every send. Cross a threshold and sending halts automatically, before the damage compounds."
+      }
+    ],
+    "loop": {
+      "goal": "Lifecycle sequences live and converting, sending only to contacts who consented.",
+      "verify": "Consent and suppression checked per recipient before every send; bounce and complaint thresholds monitored continuously; variant winners require significance.",
+      "stop": "The sequence hits its conversion target, or a consent or deliverability gate trips — then sending halts immediately and reports."
+    },
+    "link": ""
+  },
+  {
+    "slug": "dashboard-machine",
+    "name": "Dashboard Machine",
+    "status": "In Development",
+    "tint": "#9ed08c",
+    "icon": "dashboard",
+    "oneLiner": "Assembles the reporting layer, and refuses to publish a number that does not reconcile with its source.",
+    "problem": "Dashboards lose trust the first time two of them disagree. Once a leadership team is arguing about whose number is correct, the reporting layer has stopped being an asset and started being a tax on every meeting.",
+    "solution": "Dashboard Machine builds the models and the views, then reconciles every published figure against the source system on a schedule. A metric that drifts from its source is flagged and held back, not quietly displayed to someone about to make a decision on it.",
+    "features": [
+      {
+        "title": "Numbers reconcile or they don't ship",
+        "text": "Every published metric is checked against the source system. A mismatch blocks the refresh and raises an alert instead of rendering a chart."
+      },
+      {
+        "title": "One definition per metric",
+        "text": "Metrics are defined once, in one place, so two dashboards can never quietly disagree about what the word revenue is supposed to mean."
+      },
+      {
+        "title": "Freshness is visible",
+        "text": "Every view states when its data last reconciled, so nobody makes a call on a panel that silently stopped updating two weeks ago."
+      },
+      {
+        "title": "Written insight, not just charts",
+        "text": "Each refresh ships with a short written read of what changed and what it likely means, grounded in the numbers underneath it."
+      }
+    ],
+    "loop": {
+      "goal": "Every dashboard fresh, and every metric reconciled against its source of truth.",
+      "verify": "Scheduled reconciliation of each published figure against the source system; drift beyond tolerance blocks the refresh.",
+      "stop": "All metrics reconcile, or drift is detected — then it holds the refresh and alerts, rather than publishing a number that is wrong."
+    },
+    "link": ""
+  },
+  {
+    "slug": "research-machine",
+    "name": "Research Machine",
+    "status": "In Development",
+    "tint": "#5aa35a",
+    "icon": "compass",
+    "oneLiner": "Produces market and competitor intelligence in which every claim carries a source, or it does not ship.",
+    "problem": "AI research output is fluent and frequently wrong, which is the worst possible combination for a document someone is about to make a decision on. A confident unsourced paragraph is more dangerous than having no research at all.",
+    "solution": "Research Machine gathers, reads and synthesizes — then checks itself. Every factual claim has to resolve to a retrievable source. An unsourced claim blocks the report and is either sourced or cut. That gate is exactly what a research process usually lacks.",
+    "features": [
+      {
+        "title": "Every claim carries a source",
+        "text": "A factual statement without a retrievable citation does not make it into the document. The bibliography is the gate, not the appendix."
+      },
+      {
+        "title": "Adversarial second read",
+        "text": "A separate agent argues against the findings and flags what the first one assumed rather than established. Agreement is not evidence."
+      },
+      {
+        "title": "Competitors read, not guessed",
+        "text": "Positioning, pricing and messaging pulled from current public sources, with the retrieval date recorded against every finding."
+      },
+      {
+        "title": "Says plainly what it does not know",
+        "text": "Gaps and low-confidence areas are stated outright, because a decision made on an invented certainty is the expensive kind of mistake."
+      }
+    ],
+    "loop": {
+      "goal": "A decision-ready brief in which every factual claim resolves to a retrievable source.",
+      "verify": "Each claim checked against its citation, and an adversarial reviewer agent attempts to refute the findings; unsourced claims block the report.",
+      "stop": "Every claim is sourced and survives the adversarial pass, or the open questions are reported as open."
+    },
+    "link": ""
+  },
+  {
     "slug": "hiring-machine",
     "name": "Hiring Machine",
     "status": "In Development",
     "tint": "#5c9e57",
-    "icon": "compass",
-    "oneLiner": "Turns an open role into a vetted Philippine shortlist — sourced, work-sampled, and scored on the same rubric.",
+    "icon": "target",
+    "oneLiner": "Turns an open role into a vetted Philippine shortlist — sourced, work-sampled, and scored on one published rubric.",
     "problem": "US founders know Philippine talent is the best value on the market and still hire badly, because screening a hundred applicants by hand is nobody's full-time job. So the role stays open for a quarter, or the wrong person gets it.",
-    "solution": "Hiring Machine drafts the role, sources candidates, runs a structured work sample, and scores everyone against one published rubric. It never rejects anyone on its own. What it hands you is a defensible shortlist and the evidence behind each rank.",
+    "solution": "Hiring Machine drafts the role, sources candidates, runs a structured work sample, and scores everyone against one published rubric. It never rejects anyone on its own. What it hands you is a defensible shortlist and the evidence behind every rank.",
     "features": [
       {
         "title": "Structured, not vibes",

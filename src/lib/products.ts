@@ -1,9 +1,16 @@
 import {
+  IconAppWindow,
   IconCompass,
+  IconDashboard,
+  IconGrowth,
   IconLeads,
+  IconMail,
   IconRank,
   IconSearch,
   IconSocial,
+  IconSplitTest,
+  IconTarget,
+  IconWebsite,
   type BrandIcon,
 } from "@/components/ui/icons";
 
@@ -13,7 +20,14 @@ export const productIcons: Record<string, BrandIcon> = {
   rank: IconRank,
   search: IconSearch,
   leads: IconLeads,
+  splittest: IconSplitTest,
+  growth: IconGrowth,
+  website: IconWebsite,
+  appwindow: IconAppWindow,
+  mail: IconMail,
+  dashboard: IconDashboard,
   compass: IconCompass,
+  target: IconTarget,
 };
 
 /** Status pill styling, shared across the products index and detail pages. */

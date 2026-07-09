@@ -18,6 +18,11 @@ export const site = {
   domain: "newmachine.com.ph",
 
   tagline: "From brand to scale — the studio behind growing startups.",
+
+  /** Brand line — the thesis behind the Machine product family. Use verbatim
+   *  wherever the principle is stated. Deliberately vendor-neutral: it must
+   *  never name a model, a lab, or a tool. */
+  principle: "We don't automate tasks. We build systems that improve themselves.",
   description:
     "New Machine is a digital studio with hubs in San Francisco and Makati, partnering with founders across the US, the Philippines and worldwide — brand, websites, apps, launch, growth and AI automation across the full startup lifecycle. Built to turn ideas into companies that convert.",
 
