@@ -1,106 +1,171 @@
 [
   {
-    "slug": "atlas-crm",
-    "name": "Atlas CRM",
+    "slug": "content-machine",
+    "name": "Content Machine",
     "status": "In Development",
-    "tint": "#67ad62",
-    "icon": "chat",
-    "oneLiner": "A lightweight CRM for small teams that live in WhatsApp — every inquiry, one inbox, zero spreadsheets.",
-    "problem": "Inquiries land everywhere — WhatsApp, Instagram DMs, a contact form, a note scribbled at the front desk — and nobody owns the follow-up. Leads go cold because they're scattered, not because they were weak.",
-    "solution": "Atlas pulls every conversation into one inbox, tags each inquiry as it lands, and flags who needs a follow-up and when. No new app to learn — if your team can use WhatsApp, they can run the pipeline.",
-    "features": [
-      {
-        "title": "Unified inbox",
-        "text": "WhatsApp, Instagram and web inquiries land in one place — no more checking four apps to find the message that matters."
-      },
-      {
-        "title": "Pipeline stages, not spreadsheets",
-        "text": "Move a lead from New to Quoted to Won with a click. See exactly where every deal sits without opening a single formula."
-      },
-      {
-        "title": "Follow-up reminders",
-        "text": "Atlas flags inquiries that have gone quiet for 24 hours, so a slow reply never quietly costs you a sale."
-      },
-      {
-        "title": "Built for small teams",
-        "text": "No seat limits designed to upsell you, no enterprise onboarding call. Add your whole team for less than one lost lead."
-      }
-    ],
-    "caseStudy": {
-      "metric": "3.2×",
-      "metricLabel": "faster average first-response time",
-      "story": "A real-estate team was juggling inquiries across WhatsApp, a web form, and a shared notebook. Atlas gave them one inbox and automatic follow-up flags — no missed inquiries, no more sticky notes on a monitor.",
-      "client": "Real-estate team"
-    },
-    "link": ""
-  },
-  {
-    "slug": "bookably",
-    "name": "Bookably",
-    "status": "Beta",
     "tint": "#8fc57f",
-    "icon": "speed",
-    "oneLiner": "Simple appointment booking for clinics — patients book in seconds, your front desk breathes again.",
-    "problem": "Phone-based booking means a ringing line, a double-booked slot, and a front desk spending half the day playing scheduling Tetris instead of greeting patients.",
-    "solution": "Bookably gives patients a simple, mobile-first booking page that reads real-time availability — no phone tag, no overlaps, and a calendar your staff can finally trust.",
+    "icon": "social",
+    "oneLiner": "One brief in, a month of platform-native content out — drafted, checked against your brand rules, and queued for a single approval.",
+    "problem": "Content dies on consistency, not creativity. A founder posts for three weeks, gets busy, and the channel goes quiet. Hiring it out usually just moves the bottleneck from your calendar to someone else's writing queue.",
+    "solution": "Content Machine runs the loop: research the angle, draft for each platform, score the draft against your brand rules and a banned-phrase list, rewrite whatever fails, and only then put it in front of you. You approve taste. The machine does the typing.",
     "features": [
       {
-        "title": "Real-time availability",
-        "text": "Patients see actual open slots, not a guess — double-bookings stop being a weekly apology."
+        "title": "Platform-native, not reposted",
+        "text": "One idea becomes an X post, a LinkedIn piece, a caption and a newsletter — each written to its own format, not the same paragraph pasted four times."
       },
       {
-        "title": "Automated reminders",
-        "text": "SMS and WhatsApp reminders cut no-shows before they cost you a slot someone else needed."
+        "title": "Brand rules as a gate",
+        "text": "Your tone, banned phrases and claims policy are a checklist the draft has to pass. Copy that fails gets rewritten before it ever reaches you."
       },
       {
-        "title": "Front-desk dashboard",
-        "text": "One daily view of every booking, reschedule and cancellation — no flipping between a paper diary and three tabs."
+        "title": "Research before drafting",
+        "text": "Every cycle pulls current context on the topic first, so posts reference what is actually happening rather than what a model remembers."
       },
       {
-        "title": "Multi-provider scheduling",
-        "text": "Each practitioner gets their own calendar and rules, so a clinic with five doctors runs as smoothly as one with one."
+        "title": "One approval, not twenty",
+        "text": "The only human step is yes or no. Nothing publishes without you, and nothing reaches you until it has already cleared the gate."
       }
     ],
-    "caseStudy": {
-      "metric": "-41%",
-      "metricLabel": "reduction in front-desk phone calls",
-      "story": "An SME clinic piloted Bookably to replace phone-tag scheduling at the front desk. Appointments now book themselves against live availability, freeing staff to focus on patients instead of the phone.",
-      "client": "SME clinic"
+    "loop": {
+      "goal": "A week of platform-native posts that pass brand, claims and format checks.",
+      "verify": "Brand-rule, banned-phrase and format lint on every draft, plus a second agent scoring tone against your writing samples.",
+      "stop": "Every post clears the gate, or six rewrite passes — then it stops and reports what it could not fix."
     },
     "link": ""
   },
   {
-    "slug": "launchkit",
-    "name": "LaunchKit",
+    "slug": "reputation-machine",
+    "name": "Reputation Machine",
     "status": "In Development",
     "tint": "#a9d896",
-    "icon": "landing",
-    "oneLiner": "Conversion-tested landing page blocks that let us ship campaign pages in a day, not a month.",
-    "problem": "Every new campaign shouldn't mean rebuilding a page from scratch. Custom builds are slow, and generic page builders produce pages that look like every other page builder.",
-    "solution": "LaunchKit is our internal library of conversion-tested blocks — hero, offer, proof, capture — that snap together into a page that's live the same day a campaign is approved, without looking off-the-shelf.",
+    "icon": "rank",
+    "oneLiner": "Turns quiet happy clients into public reviews, and never leaves a review unanswered.",
+    "problem": "Clinics, law firms and restaurants live or die on reviews, and the clients who love you are the least likely to say so in public. Meanwhile a one-star review sits unanswered for eleven days because nobody owns the inbox.",
+    "solution": "Reputation Machine watches your review surfaces, drafts a reply in your voice within minutes of anything landing, and asks for a review at the moment a client is happiest. Anything negative escalates to a person. Nothing angry gets an automated answer.",
     "features": [
       {
-        "title": "Pre-tested block library",
-        "text": "Every hero, offer and capture block has already been split-tested on real traffic — no guessing which layout converts."
+        "title": "Reply drafted before you notice",
+        "text": "A review lands, a reply is drafted in your voice and waiting in your queue. The eleven-day silence stops being a thing that happens."
       },
       {
-        "title": "Same-day assembly",
-        "text": "Approve the copy in the morning, get a live page by the afternoon — campaigns stop waiting on a build queue."
+        "title": "Ask at the right moment",
+        "text": "Review requests fire off the events that mean someone is happy — a completed treatment, a closed matter — instead of a monthly blast to your entire list."
       },
       {
-        "title": "On-brand, not off-the-shelf",
-        "text": "Blocks are styled to your brand system, not a generic theme — nobody mistakes it for a template."
+        "title": "Negative reviews stop at a human",
+        "text": "Anything under your rating threshold is escalated, never auto-published. The machine drafts, a person decides. That line is not configurable."
       },
       {
-        "title": "Built-in tracking",
-        "text": "Every block ships with conversion tracking wired in, so day one of a campaign already has usable data."
+        "title": "Listings that stay consistent",
+        "text": "Hours, address and service data are checked across your listings against one source of truth, so the profile that ranks is the profile that is correct."
       }
     ],
-    "caseStudy": {
-      "metric": "5×",
-      "metricLabel": "faster page turnaround during campaign season",
-      "story": "A retail e-commerce brand needed five new campaign pages for a seasonal sale. LaunchKit's blocks meant all five shipped in two days, tested and ready before the sale even opened.",
-      "client": "Retail e-commerce brand"
+    "loop": {
+      "goal": "Every review answered within the hour, and review volume climbing month over month.",
+      "verify": "Each reply passes a tone-and-policy check; anything below your rating threshold is blocked from auto-publish; listing data is diffed against your source of truth.",
+      "stop": "The queue is clear, or a review needs judgment — then it escalates to a human instead of guessing."
+    },
+    "link": ""
+  },
+  {
+    "slug": "answer-engine-machine",
+    "name": "Answer Engine Machine",
+    "status": "In Development",
+    "tint": "#67ad62",
+    "icon": "search",
+    "oneLiner": "Gets your brand cited inside AI answers, then measures honestly whether it worked.",
+    "problem": "Your customers now ask an assistant instead of clicking a blue link. If the model does not know your brand exists, you are invisible exactly where the decision gets made — and a falling traffic chart will never tell you that is the reason.",
+    "solution": "Answer Engine Machine builds the structured, entity-rich ground truth an assistant needs in order to quote you, then re-asks the real assistants on a schedule to see whether you actually got cited. It reports coverage and citation frequency. It does not sell you a rank, because AI answers do not have one.",
+    "features": [
+      {
+        "title": "Entity and schema coverage",
+        "text": "Fills the structured gaps — schema, entities, verifiable facts — that decide whether a model can quote you with confidence or skips you for a competitor."
+      },
+      {
+        "title": "Citation-shaped content",
+        "text": "Written the way assistants prefer to quote: direct claims, clean definitions and sourced specifics, instead of a warm introductory paragraph."
+      },
+      {
+        "title": "Measured against real assistants",
+        "text": "Runs your priority questions through the actual assistants on a schedule and records whether you were cited — not whether a tool thinks you deserve to be."
+      },
+      {
+        "title": "Reporting that stays honest",
+        "text": "Coverage and citation frequency tracked over time. Nobody can promise you rank one in an AI answer, and we will not pretend the number exists."
+      }
+    ],
+    "loop": {
+      "goal": "Named as a source for your priority questions across the major assistants.",
+      "verify": "Scheduled re-queries against live assistants — a citation either appears in the answer or it does not. There is nothing to argue with.",
+      "stop": "Coverage target reached, or the run budget is spent — then it reports the remaining gap rather than quietly spending more."
+    },
+    "link": ""
+  },
+  {
+    "slug": "lead-machine",
+    "name": "Lead Machine",
+    "status": "In Development",
+    "tint": "#7cbb70",
+    "icon": "leads",
+    "oneLiner": "Finds the accounts that look like your best clients, disqualifies the rest, and books the call.",
+    "problem": "Most outbound fails on relevance, not volume. Buying a bigger list and sending more mail is how a sending domain gets burned and a young brand earns a reputation it cannot undo.",
+    "solution": "Lead Machine works one narrow, named market: build the list, enrich it, disqualify anything off-profile before a word is written, personalize from real evidence, then send from a warmed domain under hard volume caps. Fewer sends, a higher hit rate, and a domain that survives the quarter.",
+    "features": [
+      {
+        "title": "Disqualify before you write",
+        "text": "Every account is scored against your profile first. Bad fits are dropped rather than emailed, which is the cheapest way there is to protect a domain."
+      },
+      {
+        "title": "Personalized from evidence",
+        "text": "Openers cite something real and checkable about the account, not a spun template wrapped around a merge field that everyone recognizes."
+      },
+      {
+        "title": "Deliverability as a hard limit",
+        "text": "Warm-up, volume caps, bounce thresholds, suppression lists and honored opt-outs are enforced by the system — it stops sending before you find out the hard way."
+      },
+      {
+        "title": "Booked calls, not open rates",
+        "text": "The only number that counts is meetings on the calendar. Everything above it in the funnel is diagnostics, not a result."
+      }
+    ],
+    "loop": {
+      "goal": "Qualified meetings booked out of one named target market.",
+      "verify": "Profile-fit score, bounce rate, spam-complaint rate and reply classification — sending halts automatically the moment any threshold trips.",
+      "stop": "The meeting target is met, or a deliverability threshold trips — then it stops sending and reports rather than pushing through."
+    },
+    "link": ""
+  },
+  {
+    "slug": "hiring-machine",
+    "name": "Hiring Machine",
+    "status": "In Development",
+    "tint": "#5c9e57",
+    "icon": "compass",
+    "oneLiner": "Turns an open role into a vetted Philippine shortlist — sourced, work-sampled, and scored on the same rubric.",
+    "problem": "US founders know Philippine talent is the best value on the market and still hire badly, because screening a hundred applicants by hand is nobody's full-time job. So the role stays open for a quarter, or the wrong person gets it.",
+    "solution": "Hiring Machine drafts the role, sources candidates, runs a structured work sample, and scores everyone against one published rubric. It never rejects anyone on its own. What it hands you is a defensible shortlist and the evidence behind each rank.",
+    "features": [
+      {
+        "title": "Structured, not vibes",
+        "text": "Every candidate answers the same work sample and is scored on the same rubric, so a shortlist is comparable instead of a memory of who interviewed well."
+      },
+      {
+        "title": "Evidence over résumé",
+        "text": "Scores come from what a candidate actually produced under the work sample, not from where they went to school or how the CV was formatted."
+      },
+      {
+        "title": "A human makes every reject",
+        "text": "The machine ranks and explains its reasoning. It never sends a rejection or filters a person out by itself — that decision carries legal and human weight."
+      },
+      {
+        "title": "Built on the SF–Makati seam",
+        "text": "Designed around how US startups actually hire Philippine talent, because it is the way New Machine itself is built."
+      }
+    ],
+    "loop": {
+      "goal": "A ranked, evidence-backed shortlist for one open role.",
+      "verify": "Every candidate scored against the same published rubric, with a second reviewer agent re-scoring independently; any unscored candidate blocks the shortlist.",
+      "stop": "The shortlist clears the bar, or the pool runs dry — then it reports what the market actually has rather than padding the list."
     },
     "link": ""
   }

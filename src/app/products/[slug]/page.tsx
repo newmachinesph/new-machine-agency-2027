@@ -12,7 +12,6 @@ import JsonLd from "@/components/ui/JsonLd";
 import Logo from "@/components/ui/Logo";
 import PatternGrid from "@/components/ui/PatternGrid";
 import PatternSignal from "@/components/ui/PatternSignal";
-import CountUp from "@/components/ui/CountUp";
 import Reveal from "@/components/ui/Reveal";
 
 type PageProps = {
@@ -166,7 +165,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Case study preview */}
+        {/* The loop — a machine is only real if something can reject its output */}
         <div className="mt-24">
           <Reveal>
             <div className="panel beam relative overflow-hidden p-8 md:p-12">
@@ -176,22 +175,31 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 seed={3}
                 className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
               />
-              <div className="relative grid gap-8 md:grid-cols-[auto_1fr] md:items-center md:gap-14">
-                <div>
-                  <span className="inline-block border border-border px-2.5 py-0.5 text-xs uppercase tracking-[0.12em] text-muted">
-                    Sample outcome
-                  </span>
-                  <p className="font-display mt-5 text-5xl font-bold text-accent-fg">
-                    <CountUp value={product.caseStudy.metric} />
-                  </p>
-                  <p className="mt-1 text-sm text-muted">{product.caseStudy.metricLabel}</p>
-                </div>
-                <div>
-                  <p className="measure text-muted">{product.caseStudy.story}</p>
-                  <p className="mt-4 text-xs uppercase tracking-[0.15em] text-muted">
-                    {product.caseStudy.client} · representative sample, not a named client
-                  </p>
-                </div>
+              <div className="relative">
+                <span className="inline-block border border-border px-2.5 py-0.5 text-xs uppercase tracking-[0.12em] text-muted">
+                  The loop
+                </span>
+                <p className="measure mt-5 text-muted">
+                  Anything can generate. A machine earns the name when something can
+                  automatically reject its work and make it try again.
+                </p>
+                <dl className="mt-10 grid gap-8 md:grid-cols-3 md:gap-10">
+                  {[
+                    { term: "Goal", def: product.loop.goal },
+                    { term: "Verify", def: product.loop.verify },
+                    { term: "Stop when", def: product.loop.stop },
+                  ].map((row) => (
+                    <div key={row.term} className="border-t border-border pt-5">
+                      <dt className="text-xs uppercase tracking-[0.15em] text-accent-fg">
+                        {row.term}
+                      </dt>
+                      <dd className="mt-3 text-sm leading-relaxed text-muted">{row.def}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="mt-10 text-xs uppercase tracking-[0.15em] text-muted">
+                  {product.status} · no client results published yet
+                </p>
               </div>
             </div>
           </Reveal>

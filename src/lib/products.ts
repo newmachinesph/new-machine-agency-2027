@@ -1,10 +1,19 @@
-import { IconChat, IconSpeed, IconLanding, type BrandIcon } from "@/components/ui/icons";
+import {
+  IconCompass,
+  IconLeads,
+  IconRank,
+  IconSearch,
+  IconSocial,
+  type BrandIcon,
+} from "@/components/ui/icons";
 
 /** Maps each product's `icon` key to its brand icon component. */
 export const productIcons: Record<string, BrandIcon> = {
-  chat: IconChat,
-  speed: IconSpeed,
-  landing: IconLanding,
+  social: IconSocial,
+  rank: IconRank,
+  search: IconSearch,
+  leads: IconLeads,
+  compass: IconCompass,
 };
 
 /** Status pill styling, shared across the products index and detail pages. */
