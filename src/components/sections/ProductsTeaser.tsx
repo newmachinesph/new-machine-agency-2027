@@ -18,13 +18,13 @@ export default function ProductsTeaser() {
     <section className="bg-surface py-24 md:py-32">
       <div className="wrap">
         <SectionHeading
-          eyebrow="Products"
-          title="We build our own products, too."
-          lead="The same team, the same standards — pointed at problems we kept seeing our clients face."
+          eyebrow="The Machines"
+          title="We build systems that improve themselves."
+          lead="Each Machine runs a job end to end, checks its own work against a gate it cannot talk its way past, and stops when the job is done."
         />
 
         <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {products.map((product, i) => (
+          {products.slice(0, 3).map((product, i) => (
             <Reveal key={product.slug} delay={i * 90}>
               <Link href={`/products/${product.slug}/`} className="panel beam block h-full overflow-hidden">
                 <BrowserFrame path={`/products/${product.slug}`} />

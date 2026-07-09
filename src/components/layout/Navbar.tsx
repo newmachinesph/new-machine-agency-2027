@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
   useSyncExternalStore,
+  type MouseEvent as ReactMouseEvent,
   type ReactNode,
 } from "react";
 import Link from "next/link";
@@ -60,6 +61,7 @@ function MegaItem({
   registerTrigger,
   onOpen,
   onToggle,
+  onClose,
   children,
 }: {
   label: string;
@@ -69,9 +71,17 @@ function MegaItem({
   registerTrigger: (el: HTMLButtonElement | null) => void;
   onOpen: () => void;
   onToggle: () => void;
+  onClose: () => void;
   children: ReactNode;
 }) {
   const panelId = `mega-${menuKey}`;
+
+  // Close as soon as a link inside the panel is clicked. Route-change alone is
+  // not enough: a link to the page you are already on never changes `pathname`,
+  // and the wrapper's onFocus/onMouseEnter can re-open the panel mid-navigation.
+  const closeOnLinkClick = (e: ReactMouseEvent<HTMLDivElement>) => {
+    if (e.target instanceof Element && e.target.closest("a")) onClose();
+  };
   return (
     <div className="flex items-center" onMouseEnter={onOpen} onFocus={onOpen}>
       <button
@@ -100,6 +110,7 @@ function MegaItem({
             id={panelId}
             className="mega-panel glass chamfer p-6 md:p-8"
             aria-label={`${label} menu`}
+            onClick={closeOnLinkClick}
           >
             {children}
           </div>
@@ -172,6 +183,13 @@ function ServicesPanel() {
   );
 }
 
+/** Menus preview the catalogue, they don't reproduce it — "View all products"
+ *  carries the rest. Desktop pairs a featured build with the next three, so
+ *  `slice(1)` keeps the featured product from appearing twice. Mobile has no
+ *  featured card, so it simply takes the top three. */
+const MENU_PRODUCTS = products.slice(1, 4);
+const MOBILE_PRODUCTS = products.slice(0, 3);
+
 function ProductsPanel() {
   const featured = products[0];
   return (
@@ -223,7 +241,7 @@ function ProductsPanel() {
           </Link>
         </div>
         <ul className="space-y-2">
-        {products.map((product) => (
+        {MENU_PRODUCTS.map((product) => (
           <li key={product.slug}>
             <Link
               href={`/products/${product.slug}/`}
@@ -366,6 +384,7 @@ export default function Navbar() {
                     onToggle={() =>
                       setActive((cur) => (cur === menuKey ? null : menuKey))
                     }
+                    onClose={() => setActive(null)}
                   >
                     {menuKey === "services" ? <ServicesPanel /> : <ProductsPanel />}
                   </MegaItem>
@@ -457,7 +476,7 @@ export default function Navbar() {
               Products
             </Link>
             <ul className="mt-3 space-y-2">
-              {products.map((product) => (
+              {MOBILE_PRODUCTS.map((product) => (
                 <li key={product.slug}>
                   <Link
                     href={`/products/${product.slug}/`}
