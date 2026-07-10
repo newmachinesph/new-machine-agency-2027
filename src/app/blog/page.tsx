@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
+import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
+import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import PatternSignal from "@/components/ui/PatternSignal";
 import BlogIndex from "./BlogIndex";
@@ -45,6 +47,33 @@ export default function BlogPage() {
           <BlogIndex posts={posts} />
         </div>
       </div>
+
+      <JsonLd
+        data={webPageSchema({
+          type: "CollectionPage",
+          name: "Blog",
+          description:
+            "Plain-language articles on brand, product, websites and growth — written for founders.",
+          path: "/blog/",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog/" },
+        ])}
+      />
+      <JsonLd
+        data={itemListSchema({
+          name: "Articles",
+          description: "Articles from the New Machine blog.",
+          items: posts.map((post) => ({
+            name: post.title,
+            path: `/blog/${post.slug}/`,
+            description: post.description,
+          })),
+        })}
+      />
     </div>
   );
 }

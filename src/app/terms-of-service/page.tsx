@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/config/site";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import JsonLd from "@/components/ui/JsonLd";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -141,6 +143,21 @@ export default function TermsOfServicePage() {
           clarify anything.
         </p>
       </div>
+
+      <JsonLd
+        data={webPageSchema({
+          type: "WebPage",
+          name: "Terms of Service",
+          description: `The terms that govern your use of ${site.legalName}’s website and services.`,
+          path: "/terms-of-service/",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Terms of Service", path: "/terms-of-service/" },
+        ])}
+      />
     </div>
   );
 }

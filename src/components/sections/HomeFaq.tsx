@@ -7,7 +7,7 @@ import { IconArrowRight } from "@/components/ui/icons";
 
 export default function HomeFaq() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-24 lg:py-32">
       <div className="wrap grid gap-12 md:grid-cols-[1fr_1.6fr]">
         <div>
           <SectionHeading

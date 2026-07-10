@@ -37,6 +37,7 @@ function PostCard({ post }: { post: PostMeta }) {
     >
       <DuotoneImage
         src={`https://picsum.photos/seed/${post.slug}/800/450`}
+        alt={post.title}
         className="h-40 w-full"
         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
       />
@@ -92,6 +93,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
       >
         <DuotoneImage
           src={`https://picsum.photos/seed/${featured.slug}/1200/900`}
+          alt={featured.title}
           className="h-64 w-full md:h-full"
           sizes="(min-width: 768px) 50vw, 100vw"
         />

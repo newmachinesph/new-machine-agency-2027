@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { caseStudies } from "@/lib/work";
+import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import BrowserFrame from "@/components/ui/BrowserFrame";
 import CountUp from "@/components/ui/CountUp";
 import CtaPanel from "@/components/ui/CtaPanel";
 import DuotoneImage from "@/components/ui/DuotoneImage";
+import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Sparkline from "@/components/charts/Sparkline";
@@ -41,6 +43,7 @@ export default function WorkPage() {
                   <BrowserFrame path={`/work/${cs.slug}`} />
                   <DuotoneImage
                     src={`https://picsum.photos/seed/${cs.slug}/960/600`}
+                    alt={`${cs.client} — ${cs.metricLabel}`}
                     className="aspect-[16/9] w-full md:aspect-auto md:min-h-[16rem] md:flex-1"
                     sizes="(min-width: 768px) 55vw, 100vw"
                   />
@@ -102,6 +105,33 @@ export default function WorkPage() {
           primaryLabel="Book a Strategy Call"
         />
       </div>
+
+      <JsonLd
+        data={webPageSchema({
+          type: "CollectionPage",
+          name: "Work",
+          description:
+            "Case studies measured in numbers — every engagement charted before and after launch.",
+          path: "/work/",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Work", path: "/work/" },
+        ])}
+      />
+      <JsonLd
+        data={itemListSchema({
+          name: "Case studies",
+          description: "Selected engagements, each charted before and after launch.",
+          items: caseStudies.map((cs) => ({
+            name: `${cs.client} — ${cs.metricLabel}`,
+            path: `/work/${cs.slug}/`,
+            description: cs.summary,
+          })),
+        })}
+      />
     </div>
   );
 }

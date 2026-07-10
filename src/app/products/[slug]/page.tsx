@@ -56,7 +56,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
         <div className="relative mt-8 overflow-hidden">
           <PatternSignal className="pointer-events-none absolute -top-16 right-0 h-80 w-80 opacity-[0.1] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]" />
 
-          <div className="relative grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+          <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
             <Reveal delay={80}>
               <div className="chamfer panel beam overflow-hidden">
                 <div
@@ -68,13 +68,14 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     <span className="h-2.5 w-2.5 bg-muted/40" />
                     <span className="h-2.5 w-2.5 bg-muted/25" />
                   </span>
-                  <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
+                  <span className="ml-2 min-w-0 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
                     {site.domain}/products/{product.slug}
                   </span>
                 </div>
                 <div className="relative">
                   <DuotoneImage
                     src={`https://picsum.photos/seed/${product.slug}/1200/900`}
+                    alt={product.name}
                     className="aspect-[4/3] w-full"
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     priority

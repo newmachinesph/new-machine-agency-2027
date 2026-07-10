@@ -62,7 +62,7 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-5 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3">
           {products.map((product, i) => {
             const Icon = productIcons[product.icon] ?? IconChat;
             return (
@@ -88,7 +88,7 @@ export default function ProductsPage() {
                       <span className="h-2.5 w-2.5 bg-muted/40" />
                       <span className="h-2.5 w-2.5 bg-muted/25" />
                     </span>
-                    <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
+                    <span className="ml-2 min-w-0 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
                       {site.domain}/products/{product.slug}
                     </span>
                   </div>
@@ -96,6 +96,7 @@ export default function ProductsPage() {
                   <div className="relative">
                     <DuotoneImage
                       src={`https://picsum.photos/seed/${product.slug}/800/500`}
+                      alt={product.name}
                       className="aspect-[16/10] w-full"
                       sizes="(min-width: 768px) 33vw, 100vw"
                     />

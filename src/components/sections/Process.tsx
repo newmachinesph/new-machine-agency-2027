@@ -26,7 +26,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="bg-surface py-24 md:py-32">
+    <section className="bg-surface py-16 md:py-24 lg:py-32">
       <div className="wrap">
         <SectionHeading
           eyebrow="How we work"

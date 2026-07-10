@@ -52,7 +52,7 @@ export default function ServicesBento() {
   const total = stageGroups.reduce((n, group) => n + group.services.length, 0);
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-24 lg:py-32">
       <div className="wrap">
         <SectionHeading
           eyebrow="What we do"

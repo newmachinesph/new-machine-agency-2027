@@ -29,7 +29,7 @@ export default function Footer() {
         <p className="footer-word relative text-center">MACHINE</p>
       </div>
 
-      <div className="wrap relative grid gap-10 py-16 md:grid-cols-[1.7fr_1fr_1fr_1fr] md:py-20">
+      <div className="wrap relative grid gap-10 overflow-x-clip py-16 md:grid-cols-[1.7fr_1fr_1fr_1fr] md:py-20">
         <PatternGrid
           cols={3}
           rows={3}
@@ -54,7 +54,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-muted transition-colors hover:text-fg"
+                className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
               >
                 {social.label}
               </a>
@@ -71,7 +71,7 @@ export default function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-muted transition-colors hover:text-fg"
+                  className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
                 >
                   {link.label}
                 </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
             <li>
               <Link
                 href="/contact"
-                className="text-sm text-muted transition-colors hover:text-fg"
+                className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
               >
                 Contact
               </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
               <li key={stage}>
                 <Link
                   href="/services/"
-                  className="text-sm text-muted transition-colors hover:text-fg"
+                  className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
                 >
                   {stage}
                 </Link>
@@ -122,7 +122,7 @@ export default function Footer() {
             <li>
               <a
                 href={`mailto:${site.email}`}
-                className="text-sm text-muted transition-colors hover:text-fg"
+                className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
               >
                 {site.email}
               </a>
@@ -132,7 +132,7 @@ export default function Footer() {
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-muted transition-colors hover:text-fg"
+                className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
               >
                 WhatsApp
               </a>
