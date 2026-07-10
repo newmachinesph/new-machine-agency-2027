@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import faq from "@/content/faq.json";
+import { faqSchema } from "@/lib/schema";
 import JsonLd from "@/components/ui/JsonLd";
 import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
@@ -37,17 +38,7 @@ export default function Home() {
       <ProductsTeaser />
       <HomeFaq />
       <FinalCta />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faq.map((item) => ({
-            "@type": "Question",
-            name: item.q,
-            acceptedAnswer: { "@type": "Answer", text: item.a },
-          })),
-        }}
-      />
+      <JsonLd data={faqSchema(faq)} />
     </>
   );
 }

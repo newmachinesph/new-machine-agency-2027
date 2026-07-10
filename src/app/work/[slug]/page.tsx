@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { site } from "@/config/site";
 import { caseStudies, nextCaseStudy } from "@/lib/work";
+import { breadcrumbSchema, caseStudySchema } from "@/lib/schema";
 import Dumbbell from "@/components/charts/Dumbbell";
 import TrendChart from "@/components/charts/TrendChart";
 import BrowserFrame from "@/components/ui/BrowserFrame";
@@ -84,6 +84,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <BrowserFrame path={`/work/${cs.slug}`} />
                 <DuotoneImage
                   src={`https://picsum.photos/seed/${cs.slug}/1200/750`}
+                  alt={`${cs.client} case study`}
                   className="aspect-[16/10] w-full"
                   sizes="(min-width: 1024px) 48vw, 100vw"
                   priority
@@ -274,20 +275,21 @@ export default async function CaseStudyPage({ params }: PageProps) {
       </div>
 
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-            { "@type": "ListItem", position: 2, name: "Work", item: `${site.url}/work/` },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: cs.client,
-              item: `${site.url}/work/${cs.slug}/`,
-            },
-          ],
-        }}
+        data={caseStudySchema({
+          client: cs.client,
+          summary: cs.summary,
+          slug: cs.slug,
+          industry: cs.industry,
+          service: cs.service,
+          year: cs.year,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Work", path: "/work/" },
+          { name: cs.client, path: `/work/${cs.slug}/` },
+        ])}
       />
     </div>
   );

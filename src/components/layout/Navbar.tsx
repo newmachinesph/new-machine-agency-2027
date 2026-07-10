@@ -423,7 +423,7 @@ export default function Navbar() {
               aria-expanded={open}
               aria-label={open ? "Close menu" : "Open menu"}
               onClick={() => setOpen((v) => !v)}
-              className="grid h-10 w-10 place-items-center border border-border"
+              className="grid h-11 w-11 place-items-center border border-border"
             >
               {open ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -451,10 +451,13 @@ export default function Navbar() {
                   <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-fg">
                     {group.stage}
                   </p>
-                  <ul className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1.5">
+                  <ul className="mt-2 grid grid-cols-2 gap-x-4 gap-y-0.5">
                     {group.services.map((service) => (
                       <li key={service.slug}>
-                        <Link href="/services/" className="text-sm text-muted">
+                        <Link
+                          href={`/services/${service.slug}/`}
+                          className="block py-1.5 text-sm text-muted"
+                        >
                           {service.name}
                         </Link>
                       </li>
@@ -475,12 +478,12 @@ export default function Navbar() {
             >
               Products
             </Link>
-            <ul className="mt-3 space-y-2">
+            <ul className="mt-3 space-y-1">
               {MOBILE_PRODUCTS.map((product) => (
                 <li key={product.slug}>
                   <Link
                     href={`/products/${product.slug}/`}
-                    className="flex items-center gap-2 text-sm text-muted"
+                    className="flex items-center gap-2 py-1.5 text-sm text-muted"
                   >
                     <span className="text-fg">{product.name}</span>
                     <span className="chamfer bg-accent/15 px-1.5 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide text-accent-fg">

@@ -22,7 +22,7 @@ export default function BrowserFrame({ path, className = "" }: BrowserFrameProps
         <span className="h-2.5 w-2.5 bg-muted/40" />
         <span className="h-2.5 w-2.5 bg-muted/25" />
       </span>
-      <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
+      <span className="ml-2 min-w-0 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
         {site.domain}
         {path}
       </span>

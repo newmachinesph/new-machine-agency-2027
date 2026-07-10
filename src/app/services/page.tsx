@@ -4,6 +4,7 @@ import { IconArrowRight, IconCheck, IconWebsite } from "@/components/ui/icons";
 import services from "@/content/services.json";
 import { site, whatsappHref } from "@/config/site";
 import { serviceIcons } from "@/lib/services";
+import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
@@ -101,7 +102,7 @@ export default function ServicesPage() {
 
                 {/* Featured service — bold lead block with a mockup accent */}
                 <Reveal delay={80} className="mt-12">
-                  <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
+                  <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
                     <div className={reversed ? "lg:order-2" : ""}>
                       <div className="chamfer panel beam overflow-hidden">
                         <div
@@ -113,12 +114,13 @@ export default function ServicesPage() {
                             <span className="h-2.5 w-2.5 bg-muted/40" />
                             <span className="h-2.5 w-2.5 bg-muted/25" />
                           </span>
-                          <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
+                          <span className="ml-2 min-w-0 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
                             {site.domain}/services/{featured.slug}
                           </span>
                         </div>
                         <DuotoneImage
                           src={`https://picsum.photos/seed/${featured.slug}/960/640`}
+                          alt={`${featured.name} — ${featured.outcome}`}
                           className="aspect-[4/3] w-full"
                           sizes="(min-width: 1024px) 50vw, 100vw"
                         />
@@ -256,6 +258,8 @@ export default function ServicesPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "ItemList",
+          name: "Services",
+          numberOfItems: services.length,
           itemListElement: services.map((service, i) => ({
             "@type": "ListItem",
             position: i + 1,
@@ -263,11 +267,30 @@ export default function ServicesPage() {
               "@type": "Service",
               name: service.name,
               description: service.description,
-              provider: { "@type": "Organization", name: site.name },
-              areaServed: ["United States", "Philippines", "Worldwide"],
+              url: `${site.url}/services/${service.slug}/`,
+              // Reference the one Organization node and the shared areaServed,
+              // matching every service detail page instead of minting a
+              // duplicate org with different geo.
+              provider: orgRef,
+              areaServed: [...AREA_SERVED],
             },
           })),
         }}
+      />
+      <JsonLd
+        data={webPageSchema({
+          type: "CollectionPage",
+          name: "Services",
+          description:
+            "Brand, product, growth and scale services across the full startup lifecycle.",
+          path: "/services/",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services/" },
+        ])}
       />
     </div>
   );

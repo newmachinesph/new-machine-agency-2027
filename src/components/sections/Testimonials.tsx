@@ -12,7 +12,7 @@ const videoIds = [site.videoId, "aqz-KE-bpKQ", "ysz5S6PUM-U"] as const;
 
 export default function Testimonials() {
   return (
-    <section className="bg-surface py-24 md:py-32">
+    <section className="bg-surface py-16 md:py-24 lg:py-32">
       <div className="wrap">
         <SectionHeading
           eyebrow="Client words"

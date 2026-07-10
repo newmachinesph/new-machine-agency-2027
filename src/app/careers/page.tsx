@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/icons";
 import careers from "@/content/careers.json";
 import { site } from "@/config/site";
+import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
+import JsonLd from "@/components/ui/JsonLd";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -66,6 +68,16 @@ const deptTint: Record<string, string> = {
 
 function mailtoHref(title: string) {
   return `mailto:${site.email}?subject=${encodeURIComponent(`Application: ${title}`)}`;
+}
+
+/** Map the human-readable role type to schema.org employmentType tokens. */
+function employmentTypes(type: string): string[] {
+  const t = type.toLowerCase();
+  const out: string[] = [];
+  if (t.includes("full")) out.push("FULL_TIME");
+  if (t.includes("part")) out.push("PART_TIME");
+  if (t.includes("contract")) out.push("CONTRACTOR");
+  return out.length ? out : ["OTHER"];
 }
 
 export default function CareersPage() {
@@ -211,6 +223,45 @@ export default function CareersPage() {
           primaryLabel="Send an Open Application"
         />
       </div>
+
+      <JsonLd
+        data={webPageSchema({
+          type: "CollectionPage",
+          name: "Careers",
+          description: "Open roles on the New Machine remote-first founding team.",
+          path: "/careers/",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Careers", path: "/careers/" },
+        ])}
+      />
+      {/* One JobPosting per open role. `datePosted`/`validThrough` are omitted
+          deliberately — they aren't in the source data, and inventing them
+          would misreport the posting age. Add real dates to careers.json to
+          make these eligible for Google Jobs rich results. */}
+      {careers.map((role) => (
+        <JsonLd
+          key={role.slug}
+          data={{
+            "@context": "https://schema.org",
+            "@type": "JobPosting",
+            title: role.title,
+            description: [role.summary, ...role.responsibilities].join(" "),
+            employmentType: employmentTypes(role.type),
+            hiringOrganization: orgRef,
+            jobLocationType: "TELECOMMUTE",
+            applicantLocationRequirements: AREA_SERVED.map((name) => ({
+              "@type": "AdministrativeArea",
+              name,
+            })),
+            directApply: false,
+            url: `${site.url}/careers/`,
+          }}
+        />
+      ))}
     </div>
   );
 }

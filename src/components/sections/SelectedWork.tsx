@@ -13,7 +13,7 @@ const OFFSET = ["", "lg:mt-16", "lg:mt-8"];
 
 export default function SelectedWork() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-24 lg:py-32">
       <div className="wrap">
         <SectionHeading
           eyebrow="Selected work"
@@ -21,7 +21,7 @@ export default function SelectedWork() {
           lead="Three representative engagements, each measured by what changed after launch. Every card opens into the full case study — the numbers charted month by month, before and after."
         />
 
-        <div className="mt-16 grid gap-x-8 gap-y-20 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-3">
           {caseStudies.map((project, i) => (
             <Reveal key={project.slug} delay={i * 110} className={OFFSET[i] ?? ""}>
               <Link

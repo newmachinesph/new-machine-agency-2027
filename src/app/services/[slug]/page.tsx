@@ -6,7 +6,7 @@ import { IconArrowLeft, IconArrowRight, IconCheck, IconChat, IconWebsite } from 
 import services from "@/content/services.json";
 import { site, whatsappHref } from "@/config/site";
 import { serviceIcons, stageGroups } from "@/lib/services";
-import { breadcrumbSchema, orgRef } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import Faq from "@/components/ui/Faq";
@@ -62,7 +62,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <div className="relative mt-8 overflow-hidden">
           <PatternSignal className="pointer-events-none absolute -top-16 right-0 h-80 w-80 opacity-[0.1] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]" />
 
-          <div className="relative grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+          <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
             <div>
               <Reveal className="flex items-center gap-3">
                 <span
@@ -109,12 +109,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                     <span className="h-2.5 w-2.5 bg-muted/40" />
                     <span className="h-2.5 w-2.5 bg-muted/25" />
                   </span>
-                  <span className="ml-2 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
+                  <span className="ml-2 min-w-0 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
                     {site.domain}/services/{service.slug}
                   </span>
                 </div>
                 <DuotoneImage
                   src={`https://picsum.photos/seed/${service.slug}/1200/900`}
+                  alt={`${service.name} — ${site.name}`}
                   className="aspect-[4/3] w-full"
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   priority
@@ -258,30 +259,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </div>
 
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Service",
+        data={serviceSchema({
           name: service.name,
-          serviceType: service.name,
           description: service.description,
-          url: `${site.url}/services/${service.slug}/`,
-          // Reference the single Organization node rather than minting an
-          // unlinked copy of it on every service page.
-          provider: orgRef,
-          areaServed: "Worldwide",
-        }}
+          slug: service.slug,
+        })}
       />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: service.faqs.map((faq) => ({
-            "@type": "Question",
-            name: faq.q,
-            acceptedAnswer: { "@type": "Answer", text: faq.a },
-          })),
-        }}
-      />
+      <JsonLd data={faqSchema(service.faqs)} />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },

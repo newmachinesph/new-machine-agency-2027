@@ -14,8 +14,11 @@ export const site = {
   legalName: "New Machine",
 
   /** Production URL — used for canonical links, sitemap, OG tags. */
-  url: "https://newmachine.com.ph",
-  domain: "newmachine.com.ph",
+  url: "https://newmachine.ph",
+  domain: "newmachine.ph",
+
+  /** Google Analytics 4 measurement ID — loaded via @next/third-parties. */
+  analyticsId: "G-4LNSJP47T1",
 
   tagline: "From brand to scale — the studio behind growing startups.",
 
@@ -26,7 +29,7 @@ export const site = {
   description:
     "New Machine is a digital studio with hubs in San Francisco and Makati, partnering with founders across the US, the Philippines and worldwide — brand, websites, apps, launch, growth and AI automation across the full startup lifecycle. Built to turn ideas into companies that convert.",
 
-  email: "hello@newmachine.com.ph",
+  email: "hello@newmachine.ph",
   /** Hero / testimonials explainer video. TODO(owner): replace this
    *  placeholder YouTube ID with the real brand film before launch. */
   videoId: "ScMzIvxBSi4",
@@ -46,6 +49,14 @@ export const site = {
       landmark: "goldengate",
       address: ["WeWork, 535 Mission St, 14th Floor", "San Francisco, CA 94105, US"],
       phone: "+1 415 555 0100",
+      /** Structured address + coordinates for LocalBusiness schema (the real
+       *  WeWork building at 535 Mission St). Display uses `address` above. */
+      streetAddress: "535 Mission St, 14th Floor",
+      city: "San Francisco",
+      region2: "CA",
+      postalCode: "94105",
+      countryCode: "US",
+      geo: { lat: 37.7886, lng: -122.3969 },
     },
     {
       region: "Philippines Office",
@@ -58,6 +69,12 @@ export const site = {
         "Makati City 1227, PH",
       ],
       phone: "+63 2 8123 4567",
+      streetAddress: "5F V Corporate Centre, 125 L.P. Leviste St, Salcedo Village",
+      city: "Makati City",
+      region2: "Metro Manila",
+      postalCode: "1227",
+      countryCode: "PH",
+      geo: { lat: 14.5606, lng: 121.0202 },
     },
   ],
 

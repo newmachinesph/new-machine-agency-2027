@@ -4,8 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { IconArrowLeft, IconArrowRight } from "@/components/ui/icons";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
-import { site } from "@/config/site";
-import { breadcrumbSchema, orgRef } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import JsonLd from "@/components/ui/JsonLd";
@@ -31,6 +30,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.meta.title,
       description: post.meta.description,
       publishedTime: post.meta.date,
+      // A child openGraph object doesn't inherit the parent's images, so
+      // without this every article would share with no card image.
+      images: ["/og-image.png"],
     },
   };
 }
@@ -94,6 +96,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       <DuotoneImage
         src={`https://picsum.photos/seed/${post.meta.slug}/1200/600`}
+        alt={post.meta.title}
         className="mt-10 aspect-[2/1] w-full"
         sizes="(min-width: 768px) 48rem, 100vw"
         priority
@@ -133,6 +136,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               >
                 <DuotoneImage
                   src={`https://picsum.photos/seed/${p.slug}/600/400`}
+                  alt={p.title}
                   className="h-32 w-full"
                   sizes="(min-width: 768px) 33vw, 100vw"
                 />
@@ -149,21 +153,15 @@ export default async function BlogPostPage({ params }: PageProps) {
       ) : null}
 
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          headline: post.meta.title,
+        data={blogPostingSchema({
+          title: post.meta.title,
           description: post.meta.description,
-          datePublished: post.meta.date,
-          dateModified: post.meta.date,
-          mainEntityOfPage: `${site.url}/blog/${slug}/`,
-          url: `${site.url}/blog/${slug}/`,
-          image: `${site.url}/og-image.png`,
-          inLanguage: "en",
-          // Reference the single Organization node, not an anonymous copy.
-          author: orgRef,
-          publisher: orgRef,
-        }}
+          slug,
+          date: post.meta.date,
+          tags: post.meta.tags,
+          wordCount: post.meta.wordCount,
+          readingMinutes: post.meta.readingMinutes,
+        })}
       />
       <JsonLd
         data={breadcrumbSchema([

@@ -12,7 +12,7 @@ const facts = [
 
 export default function WhyItMatters() {
   return (
-    <section className="relative overflow-hidden bg-surface py-24 md:py-32">
+    <section className="relative overflow-hidden bg-surface py-16 md:py-24 lg:py-32">
       <PatternSignal className="pointer-events-none absolute -right-24 top-1/2 hidden w-72 -translate-y-1/2 opacity-[0.06] lg:block" />
 
       <div className="wrap relative grid gap-14 md:grid-cols-[1fr_1.2fr]">

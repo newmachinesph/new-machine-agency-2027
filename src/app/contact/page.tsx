@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IconCheck, IconMail, IconChat } from "@/components/ui/icons";
 import { site, whatsappHref } from "@/config/site";
-import { breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
+import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import PatternSignal from "@/components/ui/PatternSignal";
@@ -24,7 +24,7 @@ const reassurances = [
 export default function ContactPage() {
   return (
     <div className="pt-32 pb-24">
-      <div className="wrap grid gap-14 md:grid-cols-[1fr_1.2fr] md:gap-20">
+      <div className="wrap grid gap-14 overflow-x-clip md:grid-cols-[1fr_1.2fr] md:gap-20">
         <div className="relative">
           <PatternSignal className="pointer-events-none absolute -left-12 -top-10 hidden h-72 w-56 opacity-[0.1] md:block" />
           <div className="relative">
@@ -167,11 +167,20 @@ export default function ContactPage() {
             email: site.email,
             telephone: office.phone,
             image: `${site.url}/og-image.png`,
+            priceRange: "$$",
+            areaServed: [...AREA_SERVED],
             address: {
               "@type": "PostalAddress",
-              streetAddress: office.address[0],
-              addressLocality: office.address[1],
-              addressCountry: office.country,
+              streetAddress: office.streetAddress,
+              addressLocality: office.city,
+              addressRegion: office.region2,
+              postalCode: office.postalCode,
+              addressCountry: office.countryCode,
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: office.geo.lat,
+              longitude: office.geo.lng,
             },
           }}
         />

@@ -15,7 +15,7 @@ function badgeClasses(status: string): string {
 
 export default function ProductsTeaser() {
   return (
-    <section className="bg-surface py-24 md:py-32">
+    <section className="bg-surface py-16 md:py-24 lg:py-32">
       <div className="wrap">
         <SectionHeading
           eyebrow="The Machines"
@@ -23,7 +23,7 @@ export default function ProductsTeaser() {
           lead="Each Machine runs a job end to end, checks its own work against a gate it cannot talk its way past, and stops when the job is done."
         />
 
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
           {products.slice(0, 3).map((product, i) => (
             <Reveal key={product.slug} delay={i * 90}>
               <Link href={`/products/${product.slug}/`} className="panel beam block h-full overflow-hidden">

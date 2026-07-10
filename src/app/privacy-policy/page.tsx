@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/config/site";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import JsonLd from "@/components/ui/JsonLd";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -140,6 +142,21 @@ export default function PrivacyPolicyPage() {
           {site.email} and we’ll be glad to help.
         </p>
       </div>
+
+      <JsonLd
+        data={webPageSchema({
+          type: "WebPage",
+          name: "Privacy Policy",
+          description: `How ${site.legalName} collects, uses and protects your personal information.`,
+          path: "/privacy-policy/",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy-policy/" },
+        ])}
+      />
     </div>
   );
 }

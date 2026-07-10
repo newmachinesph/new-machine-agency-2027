@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Schibsted_Grotesk } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { site } from "@/config/site";
-import { ORG_ID, WEBSITE_ID, orgRef } from "@/lib/schema";
+import { ORG_ID, WEBSITE_ID, orgRef, AREA_SERVED } from "@/lib/schema";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
@@ -128,14 +129,32 @@ export default function RootLayout({
             logo: `${site.url}/og-image.png`,
             image: `${site.url}/og-image.png`,
             email: site.email,
+            areaServed: [...AREA_SERVED],
+            // What buyers actually search for, alongside the studio's niche
+            // loop/agent vocabulary — so assistants associate the entity with
+            // the full range of sellable work, not just the AI positioning.
             knowsAbout: [
+              "Web design",
+              "Web development",
+              "App development",
+              "Brand identity",
+              "Landing pages",
+              "MVP development",
+              "Growth marketing",
               "Loop engineering",
               "Autonomous agent systems",
               "Answer engine optimization",
-              "Web application development",
-              "Brand identity",
-              "Growth marketing",
             ],
+            // Email is the one real, launch-ready channel (office phone numbers
+            // in the config are still placeholders), so the contact point is
+            // scoped to it rather than asserting an unverified line.
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              email: site.email,
+              areaServed: [...AREA_SERVED],
+              availableLanguage: ["en"],
+            },
             sameAs: site.socials.map((social) => social.href),
             address: [
               {
@@ -170,6 +189,7 @@ export default function RootLayout({
           }}
         />
       </body>
+      <GoogleAnalytics gaId={site.analyticsId} />
     </html>
   );
 }

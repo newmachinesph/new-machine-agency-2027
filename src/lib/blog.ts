@@ -11,6 +11,7 @@ export interface PostMeta {
   date: string;
   tags: string[];
   readingMinutes: number;
+  wordCount: number;
 }
 
 export interface Post {
@@ -19,13 +20,15 @@ export interface Post {
 }
 
 function toMeta(slug: string, data: Record<string, unknown>, body: string): PostMeta {
+  const wordCount = body.split(/\s+/).filter(Boolean).length;
   return {
     slug,
     title: String(data.title ?? slug),
     description: String(data.description ?? ""),
     date: String(data.date ?? ""),
     tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
-    readingMinutes: Math.max(1, Math.round(body.split(/\s+/).length / 200)),
+    readingMinutes: Math.max(1, Math.round(wordCount / 200)),
+    wordCount,
   };
 }
 
