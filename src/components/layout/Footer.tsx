@@ -44,8 +44,8 @@ export default function Footer() {
             {site.principle}
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
-            Full-lifecycle startup studio with hubs in San Francisco and Makati —
-            building with founders across the US, the Philippines, and worldwide.
+            Full-lifecycle startup studio based in Makati — building with
+            founders across the US, the Philippines, and worldwide.
           </p>
           <div className="mt-6 flex gap-5">
             {site.socials.map((social) => (

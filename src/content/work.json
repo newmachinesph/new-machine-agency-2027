@@ -1,265 +1,265 @@
 [
   {
-    "slug": "crescent-dental",
-    "client": "Crescent Dental Studio",
-    "industry": "Healthcare · US",
-    "service": "Website Design + Local SEO",
-    "services": ["Website Design", "Local SEO"],
+    "slug": "homeservice-marketplace",
+    "client": "Homeservice Marketplace",
+    "industry": "Marketplace · Philippines",
+    "service": "Product Design + Full-Stack Build",
+    "services": ["Product Design", "Full-Stack Development"],
     "year": "2026",
-    "timeline": "5 weeks to launch",
-    "story": "A booking-first website replaced a five-year-old brochure site that patients couldn't even find on Google.",
-    "metric": "+214%",
-    "metricLabel": "online booking inquiries within 90 days",
-    "summary": "A three-chair clinic with a five-year-old brochure site was invisible on Google and losing patients to competitors two blocks away. We rebuilt the site around one job — getting a booking — and rebuilt the local search presence around the neighborhoods it serves.",
-    "challenge": "The old site loaded in six seconds, buried the phone number three taps deep, and didn't mention a single neighborhood or treatment by name. Patients who searched for the clinic found a directory listing with someone else's hours. Front desk staff spent hours a week on phone tag that an online booking flow should have absorbed.",
+    "timeline": "10 weeks to MVP launch",
+    "story": "A two-sided booking platform replaced the spreadsheets and group chats an operator used to match homeowners with vetted pros.",
+    "metric": "4.0×",
+    "metricLabel": "completed bookings per month within 90 days",
+    "summary": "A home-services operator was matching homeowners to plumbers, electricians and cleaners by hand — Facebook messages, a shared spreadsheet, and a lot of phone tag. We built the two-sided marketplace that automates the match, the schedule and the payment, and the same demand started converting into bookings that actually completed.",
+    "challenge": "Every job was coordinated manually. A homeowner messaged the page, someone checked a spreadsheet for an available pro, and three separate chats tried to agree on a time. Providers no-showed with no accountability, payment happened off-platform, and nobody could tell which requests turned into finished jobs. Growth meant hiring more coordinators, not serving more customers.",
     "approach": [
       {
-        "title": "Booking as the spine",
-        "text": "Every page was designed backwards from the booking action — one persistent, obvious path to an appointment, with the phone number one tap away for patients who prefer to call."
+        "title": "Book, schedule, pay in one flow",
+        "text": "A homeowner picks a service, sees real availability, and books in a single flow — with a vetted provider assigned automatically instead of coordinated across three chat threads."
       },
       {
-        "title": "Local SEO groundwork",
-        "text": "Treatment and neighborhood pages built on real search language, a cleaned-up Google Business Profile, and consistent listings across every directory that matters locally."
+        "title": "Providers people can trust",
+        "text": "An onboarding and verification flow gates who gets listed, and post-job ratings keep the good providers visible — so the marketplace curates quality instead of just listing everyone."
       },
       {
-        "title": "Speed as a feature",
-        "text": "Static pages, optimized images and no tag bloat took the largest contentful paint from 6.2s to 1.6s — patients on mobile networks stopped bouncing before the page drew."
+        "title": "Payments and accountability on-platform",
+        "text": "Payment, confirmations and cancellations all run through the platform, so every request is traceable end to end and a no-show finally leaves a paper trail."
       }
     ],
-    "outcome": "Ninety days after launch, online booking inquiries were running at 3.1× the pre-launch baseline, and the growth held: by month six the clinic was fielding 54 online booking inquiries a month against a baseline of 14. Google Business Profile views quadrupled, and the front desk phone finally quieted down.",
+    "outcome": "Within ninety days of launch, completed bookings were running at 4× the manual baseline — from around 46 a month to 186 — while the coordination team stayed the same size. Booking completion climbed from 61% to 88%, the time from request to a matched provider fell from about a day to minutes, and repeat bookings more than doubled.",
     "deliverables": [
-      "Booking-first website (11 pages)",
-      "Treatment & neighborhood landing pages",
-      "Google Business Profile overhaul",
-      "Local directory listings cleanup",
-      "On-page SEO & schema markup",
-      "Analytics with booking-goal tracking"
+      "Two-sided marketplace web app",
+      "Provider onboarding & verification flow",
+      "In-app booking & scheduling engine",
+      "Online payments integration",
+      "Ratings & reviews system",
+      "Admin operations dashboard"
     ],
     "quote": {
-      "text": "Clear from day one — no jargon, no account managers, just straight answers and a site that finally looks like the business we want to be.",
-      "name": "Sarah Mitchell",
-      "role": "Clinic Director, Crescent Dental Studio"
+      "text": "We were drowning in group chats and a spreadsheet. Now a booking books itself, the right pro shows up, and I can actually see what's happening. It feels like a company instead of a hustle.",
+      "name": "Nadia Reyes",
+      "role": "Founder, Homeservice Marketplace"
     },
     "series": {
-      "label": "Online booking inquiries per month",
-      "unit": "inquiries",
+      "label": "Completed bookings per month",
+      "unit": "bookings",
       "goodDirection": "up",
       "launchIndex": 6,
       "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-      "values": [13, 14, 15, 14, 15, 13, 22, 31, 44, 47, 51, 54]
+      "values": [42, 45, 44, 48, 46, 47, 95, 132, 158, 171, 179, 186]
     },
     "kpis": [
       {
-        "label": "Booking inquiries / month",
-        "before": 14,
-        "after": 44,
-        "beforeLabel": "14",
-        "afterLabel": "44",
-        "delta": "+214%",
-        "goodDirection": "up"
-      },
-      {
-        "label": "Google Business Profile views / month",
-        "before": 320,
-        "after": 1270,
-        "beforeLabel": "320",
-        "afterLabel": "1,270",
+        "label": "Completed bookings / month",
+        "before": 46,
+        "after": 186,
+        "beforeLabel": "46",
+        "afterLabel": "186",
         "delta": "4.0×",
         "goodDirection": "up"
       },
       {
-        "label": "Mobile conversion rate",
-        "before": 0.9,
-        "after": 3.1,
-        "beforeLabel": "0.9%",
-        "afterLabel": "3.1%",
-        "delta": "+2.2 pts",
+        "label": "Booking completion rate",
+        "before": 61,
+        "after": 88,
+        "beforeLabel": "61%",
+        "afterLabel": "88%",
+        "delta": "+27 pts",
         "goodDirection": "up"
       },
       {
-        "label": "Largest Contentful Paint",
-        "before": 6.2,
-        "after": 1.6,
-        "beforeLabel": "6.2s",
-        "afterLabel": "1.6s",
-        "delta": "−74%",
+        "label": "Time to matched provider",
+        "before": 1440,
+        "after": 9,
+        "beforeLabel": "~1 day",
+        "afterLabel": "9 min",
+        "delta": "−99%",
         "goodDirection": "down"
+      },
+      {
+        "label": "Repeat booking rate",
+        "before": 18,
+        "after": 44,
+        "beforeLabel": "18%",
+        "afterLabel": "44%",
+        "delta": "+26 pts",
+        "goodDirection": "up"
       }
     ]
   },
   {
-    "slug": "marina-heights",
-    "client": "Marina Heights",
-    "industry": "Real Estate · Philippines",
-    "service": "Landing Pages + Lead Generation",
-    "services": ["Landing Pages", "Lead Generation"],
+    "slug": "reddit-brand-intelligence",
+    "client": "AI-Powered Reddit Brand Intelligence",
+    "industry": "AI SaaS · Global",
+    "service": "AI Engineering + Data Pipeline",
+    "services": ["AI Engineering", "Data Pipeline"],
     "year": "2026",
-    "timeline": "3 weeks to first page live",
-    "story": "A dedicated landing page for every ad set, with WhatsApp capture instead of long forms.",
-    "metric": "3.1×",
-    "metricLabel": "more qualified leads at the same ad spend",
-    "summary": "A developer was pouring a fixed monthly ad budget into campaigns that all landed on the same generic homepage. We gave every ad set its own landing page, swapped long forms for WhatsApp capture, and let the same budget do three times the work.",
-    "challenge": "Six ad sets, one homepage. Buyers clicking an ad for a two-bedroom marina apartment landed on a corporate page about the developer's history, and a nine-field inquiry form finished the job of losing them. Cost per qualified lead had crept to $84 and the sales team blamed the ads — the ads were fine; the landing experience wasn't.",
+    "timeline": "8 weeks to first insights",
+    "story": "An always-on pipeline reads Reddit for a brand, classifies every mention, and surfaces the conversations worth acting on — instead of an analyst skimming threads by hand.",
+    "metric": "10×",
+    "metricLabel": "actionable brand mentions surfaced each week",
+    "summary": "A consumer brand was monitoring Reddit the manual way — one analyst, a handful of subreddits, a lot of missed threads. We built an AI pipeline that ingests the conversation at scale, classifies sentiment and intent, and scores each mention for how much it matters, so the team acts on ten times the signal without ten times the work.",
+    "challenge": "Reddit was where the brand's buyers argued, complained and recommended — and almost none of it was being seen. An analyst could watch five subreddits and still miss the thread that turned into a PR headache two days later. There was no way to separate a buying-intent question from noise, no sentiment trend to brief on, and no alert when something started to spread.",
     "approach": [
       {
-        "title": "One page per ad set",
-        "text": "Each campaign got a dedicated page that continued the ad's exact promise — same unit, same price point, same imagery — so the click never had to reorient."
+        "title": "Ingest the whole conversation",
+        "text": "A streaming pipeline pulls posts and comments across every relevant subreddit continuously, so coverage stops depending on which tabs someone remembered to open."
       },
       {
-        "title": "WhatsApp over forms",
-        "text": "In this market buyers live on WhatsApp. We replaced the nine-field form with a one-tap WhatsApp handoff pre-filled with the unit of interest, and response time fell from hours to minutes."
+        "title": "Classify with an LLM, score for priority",
+        "text": "Each mention is tagged for sentiment and intent, then scored on reach and urgency — so a spreading complaint or a buying-intent question rises to the top instead of drowning in the feed."
       },
       {
-        "title": "Measure per campaign",
-        "text": "Per-page analytics tied every peso of spend to qualified conversations, so budget shifted weekly toward what was actually converting — decisions made on numbers, not opinions."
+        "title": "Alerts and a living dashboard",
+        "text": "High-priority mentions fire a Slack alert within minutes, and a topic-and-sentiment dashboard turns the week's chatter into a trend the team can actually brief on."
       }
     ],
-    "outcome": "With the ad budget held flat at $2,600 a month, qualified leads went from 31 a month to 96 by month four after launch — 3.1× the volume at the same spend. Cost per qualified lead fell from $84 to $27, and landing-page conversion more than tripled from 1.2% to 3.8%.",
+    "outcome": "Coverage went from five subreddits to more than two hundred, and actionable mentions surfaced each week rose roughly tenfold — from about 13 to 130 — with far less analyst time. The time to flag an emerging brand risk collapsed from a day or two to about fifteen minutes, and weekly reporting that used to eat a morning now assembles itself.",
     "deliverables": [
-      "6 campaign landing pages",
-      "WhatsApp lead-capture flow",
-      "Per-campaign analytics & attribution",
-      "Ad-copy alignment with sales team",
-      "Weekly budget reallocation cadence",
-      "CRM handoff integration"
+      "Reddit ingestion & streaming pipeline",
+      "LLM sentiment & intent classification",
+      "Relevance & priority scoring model",
+      "Slack + email alerting",
+      "Topic & sentiment trend dashboard",
+      "Automated weekly intelligence report"
     ],
     "quote": {
-      "text": "Fast, honest, and straight to the point. They told us what would actually move the needle and skipped everything that wouldn't.",
-      "name": "Miguel Santos",
-      "role": "Marketing Lead, Marina Heights"
+      "text": "We used to find out about the bad threads after they'd already spread. Now they hit our Slack within minutes, ranked by how much they matter. It turned brand monitoring from guesswork into something we can actually staff.",
+      "name": "Daniel Cruz",
+      "role": "Head of Brand"
     },
     "series": {
-      "label": "Qualified leads per month, ad spend held flat",
-      "unit": "leads",
+      "label": "Actionable mentions surfaced per week",
+      "unit": "mentions",
       "goodDirection": "up",
       "launchIndex": 6,
       "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-      "values": [31, 28, 34, 30, 29, 34, 52, 71, 88, 96, 99, 101]
+      "values": [12, 14, 11, 13, 15, 12, 74, 98, 116, 124, 129, 132]
     },
     "kpis": [
       {
-        "label": "Qualified leads / month",
-        "before": 31,
-        "after": 96,
-        "beforeLabel": "31",
-        "afterLabel": "96",
-        "delta": "3.1×",
+        "label": "Actionable mentions / week",
+        "before": 13,
+        "after": 130,
+        "beforeLabel": "13",
+        "afterLabel": "130",
+        "delta": "10×",
         "goodDirection": "up"
       },
       {
-        "label": "Cost per qualified lead",
-        "before": 84,
-        "after": 27,
-        "beforeLabel": "$84",
-        "afterLabel": "$27",
-        "delta": "−68%",
+        "label": "Subreddits monitored",
+        "before": 5,
+        "after": 220,
+        "beforeLabel": "5",
+        "afterLabel": "220",
+        "delta": "44×",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Time to flag a brand risk",
+        "before": 2880,
+        "after": 15,
+        "beforeLabel": "~2 days",
+        "afterLabel": "15 min",
+        "delta": "−99%",
         "goodDirection": "down"
       },
       {
-        "label": "Landing-page conversion",
-        "before": 1.2,
-        "after": 3.8,
-        "beforeLabel": "1.2%",
-        "afterLabel": "3.8%",
-        "delta": "+2.6 pts",
-        "goodDirection": "up"
-      },
-      {
-        "label": "Time to first response",
-        "before": 312,
-        "after": 4,
-        "beforeLabel": "5.2h",
-        "afterLabel": "4min",
-        "delta": "−99%",
+        "label": "Analyst hours / week",
+        "before": 20,
+        "after": 3,
+        "beforeLabel": "20h",
+        "afterLabel": "3h",
+        "delta": "−85%",
         "goodDirection": "down"
       }
     ]
   },
   {
-    "slug": "souq-oasis",
-    "client": "Souq Oasis",
-    "industry": "E-commerce · Global",
-    "service": "Corporate Website + Social Media",
-    "services": ["Corporate Website", "Social Media"],
+    "slug": "hardware-store-ims",
+    "client": "Hardware Store IMS",
+    "industry": "Retail · Philippines",
+    "service": "Custom Software + Inventory Automation",
+    "services": ["Custom Software", "Inventory Automation"],
     "year": "2026",
-    "timeline": "6 weeks to relaunch",
-    "story": "A credibility rebuild ahead of wholesale expansion talks — fast, bilingual-ready, and unmistakably premium.",
-    "metric": "−58%",
-    "metricLabel": "bounce rate after relaunch",
-    "summary": "An e-commerce brand heading into wholesale expansion talks had a site that read like a dropshipping storefront. We rebuilt it as the premium brand it actually is — and buyers who used to bounce in seconds started staying, reading, and booking meetings.",
-    "challenge": "Seven in ten visitors left without a second pageview. The catalog was strong and the margins were real, but the site — stock templates, slow pages, thin brand story — undercut every wholesale pitch before the first meeting. Buyers doing due diligence found a storefront, not a company.",
+    "timeline": "7 weeks to rollout",
+    "story": "A barcode-driven inventory system replaced the paper stock cards and end-of-day guesswork a hardware store ran on.",
+    "metric": "−81%",
+    "metricLabel": "stockouts per month after rollout",
+    "summary": "A hardware store was losing sales it never saw — fast-moving items ran out while dead stock tied up the shelf and the cash. Counts were done on paper, reorders on instinct. We built an inventory management system that tracks every item in real time and reorders before the shelf goes empty, and the stockouts that were quietly costing sales fell off a cliff.",
+    "challenge": "Stock levels lived on paper cards and in the owner's head. Bestsellers ran out between manual counts, so customers walked; meanwhile capital sat frozen in items that hadn't moved in a year. A full count took a day and was wrong by the time it finished, and there was no signal to reorder until a shelf was already bare.",
     "approach": [
       {
-        "title": "Brand story first",
-        "text": "We led with provenance — sourcing, makers, and the numbers behind the catalog — so a wholesale buyer's five-minute skim answered the questions they'd otherwise ask in a first call."
+        "title": "Every item, tracked in real time",
+        "text": "Barcode intake and point-of-sale updates keep a live count of every SKU, so the number on the screen matches the number on the shelf instead of a week-old paper card."
       },
       {
-        "title": "Rebuilt for speed and trust",
-        "text": "A ground-up rebuild, bilingual-ready from day one, with product photography guidelines and a design system that made every page look like the same premium company."
+        "title": "Reorder before the shelf empties",
+        "text": "Per-item thresholds trigger low-stock alerts and draft purchase orders, so fast movers get reordered on time and buying stops running on gut feel."
       },
       {
-        "title": "Social as proof",
-        "text": "A steady content cadence turned the brand's social profiles into a second storefront — the place buyers checked after the site, telling the same story instead of contradicting it."
+        "title": "See what's stuck, free the cash",
+        "text": "Aging and sales-velocity reports surface dead stock and slow movers, turning frozen capital back into shelf space that actually sells."
       }
     ],
-    "outcome": "Bounce rate fell from a 71% baseline to a steady 30% within six months of relaunch — a 58% drop. Average session time went from 47 seconds to nearly two and a half minutes, organic traffic to product and story pages roughly doubled, and wholesale inquiries went from two a quarter to fourteen.",
+    "outcome": "Two months after rollout, stockouts had fallen 81% — from around 58 a month to 11 — while inventory accuracy climbed from 72% to 98%. A full stock count went from a full day to under an hour, and roughly two-thirds of the capital that had been frozen in dead stock was freed back into product that moves.",
     "deliverables": [
-      "Corporate website rebuild (bilingual-ready)",
-      "Brand story & wholesale pages",
-      "Product photography guidelines",
-      "Social media templates & cadence",
-      "Performance optimization pass",
-      "Analytics with engagement goals"
+      "Barcode-based stock intake",
+      "Real-time inventory tracking",
+      "Low-stock alerts & reorder points",
+      "Supplier & purchase-order management",
+      "Point-of-sale integration",
+      "Sales & inventory reporting dashboard"
     ],
     "quote": {
-      "text": "The rebuild paid for itself before the wholesale meetings even started — buyers kept telling us the site was the reason they took the call.",
-      "name": "Amira Chen",
-      "role": "Founder, Souq Oasis"
+      "text": "I used to reorder by walking the aisles and hoping. Now the system tells me what's running low before it's gone and what's just sitting there eating cash. We stopped running out of the things people actually come in for.",
+      "name": "Marco Villanueva",
+      "role": "Owner, Hardware Store IMS"
     },
     "series": {
-      "label": "Bounce rate per month, %",
-      "unit": "%",
+      "label": "Stockouts per month",
+      "unit": "stockouts",
       "goodDirection": "down",
       "launchIndex": 6,
       "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-      "values": [72, 70, 73, 71, 69, 71, 48, 39, 33, 31, 30, 30]
+      "values": [58, 62, 55, 60, 57, 59, 41, 28, 19, 14, 12, 11]
     },
     "kpis": [
       {
-        "label": "Bounce rate",
-        "before": 71,
-        "after": 30,
-        "beforeLabel": "71%",
-        "afterLabel": "30%",
-        "delta": "−58%",
+        "label": "Stockouts / month",
+        "before": 58,
+        "after": 11,
+        "beforeLabel": "58",
+        "afterLabel": "11",
+        "delta": "−81%",
         "goodDirection": "down"
       },
       {
-        "label": "Average session duration",
-        "before": 47,
-        "after": 146,
-        "beforeLabel": "0:47",
-        "afterLabel": "2:26",
-        "delta": "3.1×",
+        "label": "Inventory accuracy",
+        "before": 72,
+        "after": 98,
+        "beforeLabel": "72%",
+        "afterLabel": "98%",
+        "delta": "+26 pts",
         "goodDirection": "up"
       },
       {
-        "label": "Organic sessions / month",
-        "before": 3800,
-        "after": 9600,
-        "beforeLabel": "3.8k",
-        "afterLabel": "9.6k",
-        "delta": "2.5×",
-        "goodDirection": "up"
+        "label": "Full stock count time",
+        "before": 480,
+        "after": 45,
+        "beforeLabel": "8h",
+        "afterLabel": "45 min",
+        "delta": "−91%",
+        "goodDirection": "down"
       },
       {
-        "label": "Wholesale inquiries / quarter",
-        "before": 2,
-        "after": 14,
-        "beforeLabel": "2",
-        "afterLabel": "14",
-        "delta": "7×",
-        "goodDirection": "up"
+        "label": "Capital in dead stock",
+        "before": 1200000,
+        "after": 380000,
+        "beforeLabel": "₱1.2M",
+        "afterLabel": "₱380k",
+        "delta": "−68%",
+        "goodDirection": "down"
       }
     ]
   }

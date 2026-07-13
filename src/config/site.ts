@@ -1,10 +1,9 @@
 /**
  * ── SINGLE SOURCE OF TRUTH ─────────────────────────────────────────────
  * Every owner-editable value lives in this file. Contact + copy below are
- * committed brand content. Two items still need the owner's real inputs
+ * committed brand content. One item still needs the owner's real inputs
  * before a PUBLIC / paid launch:
- *   1. `whatsapp` — set the real business number.
- *   2. `testimonials` (+ work.json) — representative sample proof. Replace
+ *   1. `testimonials` (+ work.json) — representative sample proof. Replace
  *      with real, client-consented quotes/results. Never run paid ads
  *      against fabricated metrics.
  */
@@ -27,54 +26,34 @@ export const site = {
    *  never name a model, a lab, or a tool. */
   principle: "We don't automate tasks. We build systems that improve themselves.",
   description:
-    "New Machine is a digital studio with hubs in San Francisco and Makati, partnering with founders across the US, the Philippines and worldwide — brand, websites, apps, launch, growth and AI automation across the full startup lifecycle. Built to turn ideas into companies that convert.",
+    "New Machine is a digital studio based in Makati, partnering with founders across the US, the Philippines and worldwide — brand, websites, apps, launch, growth and AI automation across the full startup lifecycle. Built to turn ideas into companies that convert.",
 
   email: "hello@newmachine.ph",
   /** Hero / testimonials explainer video. TODO(owner): replace this
    *  placeholder YouTube ID with the real brand film before launch. */
   videoId: "ScMzIvxBSi4",
-  /** International format, digits only. TODO(owner): confirm the real
-   *  business number — this sample must be set before launch. */
-  whatsapp: "12125550100",
+  /** International format, digits only — the business WhatsApp line. */
+  whatsapp: "639477902977",
 
-  /** Physical offices — real coworking hubs (WeWork SoMa in San Francisco;
-   *  KMC at V Corporate Centre, one block off Valero St in Salcedo Village,
-   *  Makati). Phones are still DUMMY placeholders. TODO(owner): replace the
-   *  phone numbers with the real lines before launch. */
+  /** Physical office — our hub at PBCom Tower on Ayala Avenue, Makati. The
+   *  team is remote-first; this is the base of operations. */
   offices: [
-    {
-      region: "US Office",
-      country: "United States",
-      flag: "🇺🇸",
-      landmark: "goldengate",
-      address: ["WeWork, 535 Mission St, 14th Floor", "San Francisco, CA 94105, US"],
-      phone: "+1 415 555 0100",
-      /** Structured address + coordinates for LocalBusiness schema (the real
-       *  WeWork building at 535 Mission St). Display uses `address` above. */
-      streetAddress: "535 Mission St, 14th Floor",
-      city: "San Francisco",
-      region2: "CA",
-      postalCode: "94105",
-      countryCode: "US",
-      geo: { lat: 37.7886, lng: -122.3969 },
-    },
     {
       region: "Philippines Office",
       country: "Philippines",
       flag: "🇵🇭",
       landmark: "mayon",
       address: [
-        "KMC, 5F V Corporate Centre",
-        "125 L.P. Leviste St, Salcedo Village",
-        "Makati City 1227, PH",
+        "PBCom Tower, 6795 Ayala Avenue",
+        "cor. V.A. Rufino St, Makati City 1226, PH",
       ],
-      phone: "+63 2 8123 4567",
-      streetAddress: "5F V Corporate Centre, 125 L.P. Leviste St, Salcedo Village",
+      phone: "+63 947 790 2977",
+      streetAddress: "PBCom Tower, 6795 Ayala Ave cor. V.A. Rufino St",
       city: "Makati City",
       region2: "Metro Manila",
-      postalCode: "1227",
+      postalCode: "1226",
       countryCode: "PH",
-      geo: { lat: 14.5606, lng: 121.0202 },
+      geo: { lat: 14.5569, lng: 121.0212 },
     },
   ],
 

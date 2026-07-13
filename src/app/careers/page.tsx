@@ -30,7 +30,7 @@ const values = [
   {
     icon: IconSpeed,
     title: "Remote-first, always",
-    text: "We hire globally and work async by default — our San Francisco and Makati hubs are there when you want them, not a place to perform.",
+    text: "We hire globally and work async by default — our Makati hub is there when you want it, not a place to perform.",
     tint: "var(--accent-strong)",
     onTint: "text-accent-ink",
   },

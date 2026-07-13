@@ -48,7 +48,6 @@ export const metadata: Metadata = {
     "growth marketing",
     "AI automation",
     "landing pages",
-    "San Francisco",
     "Makati",
     "Philippines",
   ],
@@ -129,6 +128,7 @@ export default function RootLayout({
             logo: `${site.url}/og-image.png`,
             image: `${site.url}/og-image.png`,
             email: site.email,
+            telephone: site.offices[0].phone,
             areaServed: [...AREA_SERVED],
             // What buyers actually search for, alongside the studio's niche
             // loop/agent vocabulary — so assistants associate the entity with
@@ -145,35 +145,25 @@ export default function RootLayout({
               "Autonomous agent systems",
               "Answer engine optimization",
             ],
-            // Email is the one real, launch-ready channel (office phone numbers
-            // in the config are still placeholders), so the contact point is
-            // scoped to it rather than asserting an unverified line.
+            // Email and the business WhatsApp line are both real, launch-ready
+            // channels, so the contact point carries the verified phone too.
             contactPoint: {
               "@type": "ContactPoint",
               contactType: "customer support",
               email: site.email,
+              telephone: site.offices[0].phone,
               areaServed: [...AREA_SERVED],
               availableLanguage: ["en"],
             },
             sameAs: site.socials.map((social) => social.href),
-            address: [
-              {
-                "@type": "PostalAddress",
-                streetAddress: "535 Mission St, 14th Floor",
-                addressLocality: "San Francisco",
-                addressRegion: "CA",
-                postalCode: "94105",
-                addressCountry: "US",
-              },
-              {
-                "@type": "PostalAddress",
-                streetAddress: "5F V Corporate Centre, 125 L.P. Leviste St, Salcedo Village",
-                addressLocality: "Makati",
-                addressRegion: "Metro Manila",
-                postalCode: "1227",
-                addressCountry: "PH",
-              },
-            ],
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "PBCom Tower, 6795 Ayala Ave cor. V.A. Rufino St",
+              addressLocality: "Makati",
+              addressRegion: "Metro Manila",
+              postalCode: "1226",
+              addressCountry: "PH",
+            },
           }}
         />
         <JsonLd

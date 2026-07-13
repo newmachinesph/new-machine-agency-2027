@@ -142,7 +142,7 @@ export default function ContactPage() {
         data={webPageSchema({
           type: "ContactPage",
           name: `Contact ${site.name}`,
-          description: `Talk to ${site.name}. Hubs in San Francisco and Makati, working with founders worldwide.`,
+          description: `Talk to ${site.name}. Based in Makati, working with founders worldwide.`,
           path: "/contact/",
         })}
       />

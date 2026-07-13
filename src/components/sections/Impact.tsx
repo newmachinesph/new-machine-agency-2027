@@ -8,8 +8,8 @@ import { IconArrowRight } from "@/components/ui/icons";
 
 /** Medians across the sample engagements in work.json — recompute if those change. */
 const tiles = [
-  { value: "3.1×", label: "Median lift in the metric each engagement was hired to move" },
-  { value: "5wk", label: "Median time from kickoff to launch" },
+  { value: "5.3×", label: "Median lift in the metric each engagement was hired to move" },
+  { value: "8wk", label: "Median time from kickoff to launch" },
   { value: "100%", label: "Engagements on a fixed quote — zero hourly billing" },
 ];
 
