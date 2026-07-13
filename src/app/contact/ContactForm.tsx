@@ -5,7 +5,7 @@ import services from "@/content/services.json";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
 
-type Status = "idle" | "sending" | "sent" | "error" | "mailto";
+type Status = "idle" | "sending" | "sent" | "error";
 
 const inputClasses =
   "w-full border border-border bg-card px-4 py-3 text-sm placeholder:text-muted focus:border-accent outline-none";
@@ -21,48 +21,32 @@ export default function ContactForm() {
     // Honeypot: bots fill the hidden field, silently pretend success.
     if (String(data.get("website") ?? "").length > 0) {
       setStatus("sent");
+      form.reset();
       return;
     }
 
-    const name = String(data.get("name") ?? "");
-    const email = String(data.get("email") ?? "");
-    const company = String(data.get("company") ?? "");
-    const service = String(data.get("service") ?? "");
-    const message = String(data.get("message") ?? "");
+    const payload = {
+      name: String(data.get("name") ?? ""),
+      email: String(data.get("email") ?? ""),
+      company: String(data.get("company") ?? ""),
+      service: String(data.get("service") ?? ""),
+      message: String(data.get("message") ?? ""),
+      website: String(data.get("website") ?? ""),
+    };
 
-    const endpoint: string = site.formEndpoint;
-    if (endpoint) {
-      setStatus("sending");
-      try {
-        const res = await fetch(endpoint, {
-          method: "POST",
-          body: data,
-          headers: { Accept: "application/json" },
-        });
-        if (!res.ok) throw new Error(`Form endpoint responded ${res.status}`);
-        setStatus("sent");
-        form.reset();
-      } catch {
-        setStatus("error");
-      }
-      return;
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error(`Contact endpoint responded ${res.status}`);
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
     }
-
-    // No form provider configured, fall back to the visitor's email app.
-    const details = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      company ? `Company: ${company}` : "",
-      service ? `Service: ${service}` : "",
-      "",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
-    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(
-      `Inquiry from ${name}`,
-    )}&body=${encodeURIComponent(details)}`;
-    setStatus("mailto");
   };
 
   return (
@@ -154,12 +138,8 @@ export default function ContactForm() {
         ) : null}
         {status === "error" ? (
           <p className="text-muted">
-            Something went wrong. Please try WhatsApp or email instead.
-          </p>
-        ) : null}
-        {status === "mailto" ? (
-          <p className="text-muted">
-            Your email app should open. If not, write to us directly at {site.email}.
+            Something went wrong sending your message. Please try WhatsApp, or
+            email us directly at {site.email}.
           </p>
         ) : null}
       </div>
