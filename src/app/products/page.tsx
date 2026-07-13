@@ -15,7 +15,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
   title: "Products",
-  description: `${site.principle} The Machines — loop-engineered systems that run a job end to end, verify their own work, and stop when it is done.`,
+  description: `${site.principle} The Machines: loop-engineered systems that run a job end to end, verify their own work, and stop when it is done.`,
   alternates: { canonical: "/products/" },
 };
 
@@ -42,7 +42,7 @@ export default function ProductsPage() {
             <Reveal delay={160}>
               <p className="measure mt-5 text-muted">
                 Anything can generate. A Machine earns the name because something can
-                automatically reject its work and make it try again — a goal it runs
+                automatically reject its work and make it try again: a goal it runs
                 toward, a gate it has to pass, and a point at which it stops. Each one
                 below publishes that loop before it asks for your trust.
               </p>

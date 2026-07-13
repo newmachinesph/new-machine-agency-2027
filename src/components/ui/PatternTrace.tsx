@@ -1,16 +1,16 @@
 type PatternTraceProps = {
   className?: string;
-  /** Unique per page usage — SVG pattern ids must not collide. */
+  /** Unique per page usage: SVG pattern ids must not collide. */
   idPrefix?: string;
 };
 
 /**
  * Chamfered-rectangle linework traced from the client's pattern reference.
- * Two staggered rows of closed outlines per tile (brick layout) — every
+ * Two staggered rows of closed outlines per tile (brick layout): every
  * path is closed, so the repeat can never produce dangling segments.
  * The row-B path crosses the tile edge and is drawn twice (once shifted
  * by -340) so the horizontal seam overlaps exactly.
- * Decorative only — parent sets color via `text-…` (currentColor) and opacity.
+ * Decorative only: parent sets color via `text-…` (currentColor) and opacity.
  */
 export default function PatternTrace({ className = "", idPrefix = "pt" }: PatternTraceProps) {
   const id = `${idPrefix}-trace`;

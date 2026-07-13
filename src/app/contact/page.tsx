@@ -11,13 +11,13 @@ import ContactForm from "./ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a free strategy call or send us a message — we reply within 24 hours, usually much faster.",
+    "Book a free strategy call or send us a message. We reply within 24 hours, usually much faster.",
   alternates: { canonical: "/contact/" },
 };
 
 const reassurances = [
   "Free 30-minute strategy call",
-  "One fixed quote — no surprises",
+  "One fixed quote: no surprises",
   "No pressure, no obligation",
 ];
 
@@ -42,7 +42,7 @@ export default function ContactPage() {
             <Reveal delay={160}>
               <p className="measure mt-6 text-lg text-muted">
                 Wherever you’re building from, we work like your team is already the
-                best in the world — clear plans, honest advice, and a studio that
+                best in the world: clear plans, honest advice, and a studio that
                 treats your deadline as its own.
               </p>
             </Reveal>
@@ -77,7 +77,7 @@ export default function ContactPage() {
             <Reveal delay={320}>
               <div className="mt-8 flex items-center gap-2.5 text-sm font-semibold text-accent-fg">
                 <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
-                Replies within 24 hours — usually much faster.
+                Replies within 24 hours, usually much faster.
               </div>
               <ul className="mt-5 space-y-2.5">
                 {reassurances.map((item) => (
@@ -153,7 +153,7 @@ export default function ContactPage() {
         ])}
       />
       {/* Each office as its own resolvable place, tied back to the parent
-          organization — what an assistant needs to answer "where are they based". */}
+          organization: what an assistant needs to answer "where are they based". */}
       {site.offices.map((office) => (
         <JsonLd
           key={office.region}
@@ -161,7 +161,7 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "@id": `${site.url}/#office-${office.country.toLowerCase().replace(/\s+/g, "-")}`,
-            name: `${site.name} — ${office.region}`,
+            name: `${site.name} | ${office.region}`,
             parentOrganization: orgRef,
             url: `${site.url}/contact/`,
             email: site.email,

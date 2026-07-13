@@ -13,7 +13,7 @@ import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import PatternGrid from "@/components/ui/PatternGrid";
 
-/** Editorial blurb, icon, and a green-ramp tint per lifecycle stage — the tint
+/** Editorial blurb, icon, and a green-ramp tint per lifecycle stage. The tint
  *  climbs light→deep across the row so the block reads as a progression from
  *  first brand to full scale. Keyed by the exact `stage` strings in services.json. */
 const stageMeta: Record<
@@ -22,7 +22,7 @@ const stageMeta: Record<
 > = {
   "Brand & Strategy": {
     icon: IconBrandMark,
-    summary: "Name it, position it, prove the demand — the foundation everything else stands on.",
+    summary: "Name it, position it, prove the demand: the foundation everything else stands on.",
     tint: "var(--accent-strong)",
     onTint: "text-accent-ink",
   },
@@ -57,7 +57,7 @@ export default function ServicesBento() {
         <SectionHeading
           eyebrow="What we do"
           title="Everything a startup needs, one studio."
-          lead={`${total} services across four stages of the journey — from first brand to full scale. Take a single stage, or run the whole lifecycle with one remote-first team that ships work built to compete anywhere.`}
+          lead={`${total} services across four stages of the journey: from first brand to full scale. Take a single stage, or run the whole lifecycle with one remote-first team that ships work built to compete anywhere.`}
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

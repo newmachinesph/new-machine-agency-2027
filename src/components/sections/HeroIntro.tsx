@@ -35,7 +35,7 @@ export default function HeroIntro() {
       initial={reduced ? false : "hidden"}
       animate="show"
     >
-      {/* LEFT — copy */}
+      {/* LEFT: copy */}
       <div>
         <m.div variants={item} className="flex items-center gap-2.5">
           <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
@@ -79,7 +79,7 @@ export default function HeroIntro() {
         </m.ul>
       </div>
 
-      {/* RIGHT — framed hero visual (PatternGrid peeks behind for depth) */}
+      {/* RIGHT: framed hero visual (PatternGrid peeks behind for depth) */}
       <m.div variants={item} className="relative">
         <PatternGrid
           cols={4}
@@ -87,7 +87,7 @@ export default function HeroIntro() {
           className="pointer-events-none absolute -bottom-6 -right-6 h-40 w-40 opacity-25 sm:h-52 sm:w-52"
         />
         <div className="beam chamfer relative border border-border bg-surface p-2">
-          <VideoEmbed id={site.videoId} title="New Machine — how we build" priority />
+          <VideoEmbed id={site.videoId} title="New Machine: how we build" priority />
         </div>
       </m.div>
     </m.div>

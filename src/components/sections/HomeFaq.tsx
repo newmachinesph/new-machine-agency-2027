@@ -13,7 +13,7 @@ export default function HomeFaq() {
           <SectionHeading
             eyebrow="FAQ"
             title="Questions, answered plainly."
-            lead="No hedging, no fine print — straight answers from the team that’ll actually do the work."
+            lead="No hedging, no fine print: straight answers from the team that’ll actually do the work."
           />
           <Reveal delay={240} className="mt-6">
             <p className="text-sm text-muted">Something else on your mind?</p>

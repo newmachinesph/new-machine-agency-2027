@@ -6,14 +6,14 @@ type VideoEmbedProps = {
   id: string;
   title: string;
   className?: string;
-  /** Eager-load the thumbnail — set on above-the-fold embeds (e.g. the hero). */
+  /** Eager-load the thumbnail: set on above-the-fold embeds (e.g. the hero). */
   priority?: boolean;
 };
 
 /**
  * Performance-friendly YouTube facade. Until the viewer activates it, we show
  * only the thumbnail under the brand green-duotone (grayscale + accent-deep
- * multiply — same recipe as DuotoneImage / the footer band); no iframe, no
+ * multiply, same recipe as DuotoneImage / the footer band); no iframe, no
  * YouTube JS ships. On activate we mount the nocookie embed with autoplay.
  * A real <button> gives Enter/Space activation + focus-visible for free.
  */
@@ -52,7 +52,7 @@ export default function VideoEmbed({ id, title, className = "", priority = false
             onError={() => setThumbnail(`https://img.youtube.com/vi/${id}/hqdefault.jpg`)}
             className="absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
           />
-          {/* green duotone — matches DuotoneImage / Footer band */}
+          {/* green duotone: matches DuotoneImage / Footer band */}
           <span aria-hidden="true" className="absolute inset-0 bg-accent-deep mix-blend-multiply" />
           <span
             aria-hidden="true"

@@ -6,7 +6,7 @@
     "icon": "brandmark",
     "tint": "#8fc57f",
     "outcome": "A brand that looks and sounds like it belongs at the top of its category.",
-    "description": "Logo, color, type, voice — designed as one coherent system, not a scattered set of assets. We build brand identities that hold up across a pitch deck, a product UI and a billboard.",
+    "description": "Logo, color, type, voice: designed as one coherent system, not a scattered set of assets. We build brand identities that hold up across a pitch deck, a product UI and a billboard.",
     "includes": [
       "Logo & mark design",
       "Color & type system",
@@ -150,7 +150,7 @@
     "icon": "monitor",
     "tint": "#8fc57f",
     "outcome": "Websites that turn visitors into inquiries.",
-    "description": "A custom-designed website built around one job: convincing your visitors to get in touch. Fast, mobile-first and designed to look like the business you want to be — not a template everyone has seen before.",
+    "description": "A custom-designed website built around one job: convincing your visitors to get in touch. Fast, mobile-first and designed to look like the business you want to be, not a template everyone has seen before.",
     "includes": [
       "Custom design (no templates)",
       "Mobile-first build",
@@ -246,7 +246,7 @@
     "icon": "building",
     "tint": "#35753a",
     "outcome": "A credible home for your company that wins trust before the first call.",
-    "description": "For established companies, your website is your handshake. We build corporate sites that communicate scale, credibility and professionalism — so prospects arrive at the meeting already convinced.",
+    "description": "For established companies, your website is your handshake. We build corporate sites that communicate scale, credibility and professionalism, so prospects arrive at the meeting already convinced.",
     "includes": [
       "Multi-page architecture",
       "Team, services & project sections",
@@ -294,7 +294,7 @@
     "icon": "appwindow",
     "tint": "#4a934e",
     "outcome": "A working product in your users' hands, not a deck of promises.",
-    "description": "We design and build the first real version of your product — fast enough to test with actual users, solid enough to keep building on. From idea to a live, usable MVP without the six-month agency runway.",
+    "description": "We design and build the first real version of your product, fast enough to test with actual users, solid enough to keep building on. From idea to a live, usable MVP without the six-month agency runway.",
     "includes": [
       "Product scoping & user flows",
       "UI/UX design",
@@ -438,7 +438,7 @@
     "icon": "magnet",
     "tint": "#a9d896",
     "outcome": "Campaigns that fill your pipeline with people ready to buy.",
-    "description": "Traffic is easy — qualified leads are the hard part. We combine targeted campaigns, focused landing pages and clear offers to bring you inquiries from people who actually want what you sell.",
+    "description": "Traffic is easy. Qualified leads are the hard part. We combine targeted campaigns, focused landing pages and clear offers to bring you inquiries from people who actually want what you sell.",
     "includes": [
       "Audience & offer strategy",
       "Campaign setup & management",
@@ -582,7 +582,7 @@
     "icon": "mail",
     "tint": "#67ad62",
     "outcome": "Every lead followed up, every customer nurtured, without manual effort.",
-    "description": "We design the email flows and CRM automations that turn a one-time visitor into a repeat customer — welcome sequences, abandoned-cart recovery, re-engagement, all running in the background.",
+    "description": "We design the email flows and CRM automations that turn a one-time visitor into a repeat customer: welcome sequences, abandoned-cart recovery, re-engagement, all running in the background.",
     "includes": [
       "CRM setup & data hygiene",
       "Lifecycle email sequences",
@@ -630,7 +630,7 @@
     "icon": "aiagent",
     "tint": "#4a934e",
     "outcome": "Repetitive work handled by software, not another hire.",
-    "description": "Custom AI agents and workflow automations that handle support triage, data entry, reporting and follow-ups around the clock — built into the tools your team already uses.",
+    "description": "Custom AI agents and workflow automations that handle support triage, data entry, reporting and follow-ups around the clock, built into the tools your team already uses.",
     "includes": [
       "Workflow & process audit",
       "Custom AI agent design",
@@ -726,7 +726,7 @@
     "icon": "splittest",
     "tint": "#8fc57f",
     "outcome": "More revenue from the traffic you're already paying for.",
-    "description": "We test and refine the pages, flows and offers between a visitor and a sale — structured A/B testing, not guesswork. Small, compounding wins that add up to a materially better conversion rate.",
+    "description": "We test and refine the pages, flows and offers between a visitor and a sale, structured A/B testing, not guesswork. Small, compounding wins that add up to a materially better conversion rate.",
     "includes": [
       "Funnel & heatmap analysis",
       "Hypothesis-driven A/B testing",
@@ -774,7 +774,7 @@
     "icon": "helm",
     "tint": "#a9d896",
     "outcome": "Senior leadership steering growth and tech, without a full-time executive salary.",
-    "description": "An experienced CMO or CTO embedded in your business part-time — setting strategy, running the team and owning outcomes. Built for companies that have outgrown DIY but aren't ready for a full executive hire.",
+    "description": "An experienced CMO or CTO embedded in your business part-time, setting strategy, running the team and owning outcomes. Built for companies that have outgrown DIY but aren't ready for a full executive hire.",
     "includes": [
       "Growth or tech strategy ownership",
       "Team leadership & hiring input",
@@ -821,8 +821,8 @@
     "name": "AI Visibility Audit",
     "icon": "search",
     "tint": "#67ad62",
-    "outcome": "Know exactly how AI search and assistants describe you — before your customers ask them.",
-    "description": "Buyers now ask ChatGPT, Gemini and Google's AI Overviews instead of scrolling ten blue links. We audit how those systems see, cite and rank your brand — then hand you a fix list to become the answer they give.",
+    "outcome": "Know exactly how AI search and assistants describe you, before your customers ask them.",
+    "description": "Buyers now ask ChatGPT, Gemini and Google's AI Overviews instead of scrolling ten blue links. We audit how those systems see, cite and rank your brand, then hand you a fix list to become the answer they give.",
     "includes": [
       "AI & LLM visibility scan",
       "Prompt & citation testing",

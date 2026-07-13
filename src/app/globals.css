@@ -4,7 +4,7 @@
 
 /* ── Theme tokens ─────────────────────────────────────────────────────
    Change --accent below to rebrand the entire site (pending final brand
-   confirmation — emerald is the working default). */
+   confirmation; emerald is the working default). */
 :root {
   --accent: #8fc57f;
   --accent-strong: #a9d896;
@@ -21,7 +21,7 @@
   --accent-fg: #a9d896;
   --blob-opacity: 0.35;
 
-  /* Chart palette — validated per theme with the dataviz six-checks script
+  /* Chart palette: validated per theme with the dataviz six-checks script
      (lightness band, chroma, CVD separation, ≥3:1 contrast vs --card). */
   --chart-data: #5d9e52;
   --chart-dim: #75757f;
@@ -87,7 +87,7 @@ svg {
   outline-offset: 3px;
 }
 
-/* Smooth theme switch — class applied briefly by the toggle. */
+/* Smooth theme switch: class applied briefly by the toggle. */
 .theme-anim,
 .theme-anim *,
 .theme-anim *::before,
@@ -677,7 +677,7 @@ a.panel:hover img,
   animation-play-state: paused;
 }
 
-/* Scroll progress — CSS scroll-driven animation, no JS */
+/* Scroll progress: CSS scroll-driven animation, no JS */
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -753,7 +753,7 @@ a.panel:hover img,
   }
 }
 
-/* Panel links carry their own hover state — drop the inherited nav underline. */
+/* Panel links carry their own hover state. Drop the inherited nav underline. */
 header nav .mega-panel a::after {
   display: none;
 }

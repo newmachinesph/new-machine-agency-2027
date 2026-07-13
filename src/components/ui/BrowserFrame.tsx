@@ -7,7 +7,7 @@ type BrowserFrameProps = {
 };
 
 /**
- * Decorative browser chrome — three chamfered traffic-light squares and a
+ * Decorative browser chrome: three chamfered traffic-light squares and a
  * truncating address bar. Sits above the screenshot in the work and product
  * device-frame mockups.
  */

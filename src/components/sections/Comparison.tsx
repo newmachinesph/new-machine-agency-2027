@@ -24,7 +24,7 @@ const rows = [
   {
     label: "Scope",
     traditional: "One service, then a new vendor for the next.",
-    us: "Brand, product, growth and AI — one team, full lifecycle.",
+    us: "Brand, product, growth and AI: one team, full lifecycle.",
   },
   {
     label: "AI-native",
@@ -45,7 +45,7 @@ export default function Comparison() {
         <SectionHeading
           eyebrow="Why New Machine"
           title="Same ambition. A completely different way of working."
-          lead="We built New Machine as the studio we always wanted to hire — here's exactly how that plays out, honestly."
+          lead="We built New Machine as the studio we always wanted to hire. Here's exactly how that plays out, honestly."
         />
 
         <Reveal delay={120}>
@@ -102,7 +102,7 @@ export default function Comparison() {
 
         <Reveal delay={200}>
           <p className="mt-8 text-sm text-muted">
-            Transparent pricing isn&rsquo;t a slogan here —{" "}
+            Transparent pricing isn&rsquo;t a slogan here:{" "}
             <Link
               href="/pricing/"
               className="inline-flex items-center gap-1.5 font-medium text-accent-fg transition-opacity hover:opacity-80"

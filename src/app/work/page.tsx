@@ -15,7 +15,7 @@ import { IconArrowRight } from "@/components/ui/icons";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Case studies measured in numbers, not adjectives — every engagement charted month by month, before and after launch.",
+    "Case studies measured in numbers, not adjectives: every engagement charted month by month, before and after launch.",
   alternates: { canonical: "/work/" },
 };
 
@@ -26,7 +26,7 @@ export default function WorkPage() {
         <SectionHeading
           eyebrow="Work"
           title="Every project ships with its numbers."
-          lead="We publish what changed after launch — charted month by month, before and after. Representative sample engagements shown until client-consented case studies replace them; the measurement is exactly what every client gets."
+          lead="We publish what changed after launch, charted month by month, before and after. Representative sample engagements shown until client-consented case studies replace them; the measurement is exactly what every client gets."
         />
 
         <div className="mt-16 flex flex-col gap-8">
@@ -36,14 +36,14 @@ export default function WorkPage() {
                 href={`/work/${cs.slug}/`}
                 className="panel beam chamfer group grid overflow-hidden md:grid-cols-[1.1fr_1fr]"
               >
-                {/* Mockup — flex column so the image fills whatever height the
+                {/* Mockup: flex column so the image fills whatever height the
                     text column gives the row (aspect-ratio + h-full would fight
                     the grid's row sizing and clip the card). */}
                 <div className="relative border-b border-border md:border-b-0 md:border-r md:flex md:flex-col">
                   <BrowserFrame path={`/work/${cs.slug}`} />
                   <DuotoneImage
                     src={`https://picsum.photos/seed/${cs.slug}/960/600`}
-                    alt={`${cs.client} — ${cs.metricLabel}`}
+                    alt={`${cs.client}: ${cs.metricLabel}`}
                     className="aspect-[16/9] w-full md:aspect-auto md:min-h-[16rem] md:flex-1"
                     sizes="(min-width: 768px) 55vw, 100vw"
                   />
@@ -100,7 +100,7 @@ export default function WorkPage() {
 
         <CtaPanel
           title="Your project, measured the same way."
-          lead="Every engagement starts with a measurement plan and ends with numbers like these. Book a free strategy call — we'll tell you what's realistic before you spend anything."
+          lead="Every engagement starts with a measurement plan and ends with numbers like these. Book a free strategy call. We'll tell you what's realistic before you spend anything."
           primaryHref="/contact"
           primaryLabel="Book a Strategy Call"
         />
@@ -111,7 +111,7 @@ export default function WorkPage() {
           type: "CollectionPage",
           name: "Work",
           description:
-            "Case studies measured in numbers — every engagement charted before and after launch.",
+            "Case studies measured in numbers: every engagement charted before and after launch.",
           path: "/work/",
         })}
       />
@@ -126,7 +126,7 @@ export default function WorkPage() {
           name: "Case studies",
           description: "Selected engagements, each charted before and after launch.",
           items: caseStudies.map((cs) => ({
-            name: `${cs.client} — ${cs.metricLabel}`,
+            name: `${cs.client}: ${cs.metricLabel}`,
             path: `/work/${cs.slug}/`,
             description: cs.summary,
           })),

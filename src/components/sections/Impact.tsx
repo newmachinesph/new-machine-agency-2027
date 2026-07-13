@@ -6,11 +6,11 @@ import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { IconArrowRight } from "@/components/ui/icons";
 
-/** Medians across the sample engagements in work.json — recompute if those change. */
+/** Medians across the sample engagements in work.json. Recompute if those change. */
 const tiles = [
   { value: "5.3×", label: "Median lift in the metric each engagement was hired to move" },
   { value: "8wk", label: "Median time from kickoff to launch" },
-  { value: "100%", label: "Engagements on a fixed quote — zero hourly billing" },
+  { value: "100%", label: "Engagements on a fixed quote: zero hourly billing" },
 ];
 
 export default function Impact() {
@@ -23,7 +23,7 @@ export default function Impact() {
           <SectionHeading
             eyebrow="Measured outcomes"
             title="Growth you can audit, not just admire."
-            lead="Every engagement starts with a measurement plan and ships with a live results dashboard. This is the reporting standard — charted, honest, and yours to keep."
+            lead="Every engagement starts with a measurement plan and ships with a live results dashboard. This is the reporting standard: charted, honest, and yours to keep."
           />
 
           <div className="mt-10">
@@ -54,7 +54,7 @@ export default function Impact() {
           <div className="panel chamfer flex h-full flex-col justify-between p-6 md:p-8">
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
               <h3 className="text-sm font-semibold text-fg">
-                {flagship.client} — {flagship.series.label.toLowerCase()}
+                {flagship.client}: {flagship.series.label.toLowerCase()}
               </h3>
               <span className="bg-accent/12 px-2 py-0.5 text-xs font-semibold text-accent-fg">
                 {flagship.metric} in 90 days

@@ -9,7 +9,7 @@ import BlogIndex from "./BlogIndex";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Plain-language articles on brand, product, websites and growth — written for founders, not marketers.",
+    "Plain-language articles on brand, product, websites and growth, written for founders, not marketers.",
   alternates: { canonical: "/blog/" },
 };
 
@@ -36,7 +36,7 @@ export default function BlogPage() {
             </Reveal>
             <Reveal delay={160}>
               <p className="measure mt-5 text-muted">
-                No fluff, no jargon — practical answers to the questions business owners
+                No fluff, no jargon: practical answers to the questions business owners
                 actually ask us, from a team that has shipped the work.
               </p>
             </Reveal>
@@ -53,7 +53,7 @@ export default function BlogPage() {
           type: "CollectionPage",
           name: "Blog",
           description:
-            "Plain-language articles on brand, product, websites and growth — written for founders.",
+            "Plain-language articles on brand, product, websites and growth, written for founders.",
           path: "/blog/",
         })}
       />

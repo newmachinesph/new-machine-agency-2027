@@ -22,7 +22,7 @@ import CtaPanel from "@/components/ui/CtaPanel";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join New Machine's remote-first founding team — real ownership, honest work, and startups built end to end.",
+    "Join New Machine's remote-first founding team: real ownership, honest work, and startups built end to end.",
   alternates: { canonical: "/careers/" },
 };
 
@@ -30,7 +30,7 @@ const values = [
   {
     icon: IconSpeed,
     title: "Remote-first, always",
-    text: "We hire globally and work async by default — our Makati hub is there when you want it, not a place to perform.",
+    text: "We hire globally and work async by default. Our Makati hub is there when you want it, not a place to perform.",
     tint: "var(--accent-strong)",
     onTint: "text-accent-ink",
   },
@@ -44,7 +44,7 @@ const values = [
   {
     icon: IconGrowth,
     title: "Real impact, fast",
-    text: "Small team, no bureaucracy — what you ship this week is live next week.",
+    text: "Small team, no bureaucracy: what you ship this week is live next week.",
     tint: "#67ad62",
     onTint: "text-accent-ink",
   },
@@ -102,7 +102,7 @@ export default function CareersPage() {
             <Reveal delay={160}>
               <p className="measure mt-5 text-muted">
                 {site.name} is a small, remote-first team running the full startup
-                lifecycle — build, launch, grow — for clients across the US, the
+                lifecycle, build, launch, grow, for clients across the US, the
                 Philippines, and beyond. We&rsquo;re not
                 hiring for headcount. We&rsquo;re hiring people who want direct ownership
                 of real work, not a seat in a bigger machine.
@@ -133,7 +133,7 @@ export default function CareersPage() {
           <SectionHeading
             eyebrow="Open roles"
             title="Where we need help right now."
-            lead="Every role below reports directly to the founding team — no account layer in between."
+            lead="Every role below reports directly to the founding team, no account layer in between."
           />
 
           <div className="mt-10 space-y-5">
@@ -239,7 +239,7 @@ export default function CareersPage() {
         ])}
       />
       {/* One JobPosting per open role. `datePosted`/`validThrough` are omitted
-          deliberately — they aren't in the source data, and inventing them
+          deliberately. They aren't in the source data, and inventing them
           would misreport the posting age. Add real dates to careers.json to
           make these eligible for Google Jobs rich results. */}
       {careers.map((role) => (

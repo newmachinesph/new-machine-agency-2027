@@ -8,7 +8,7 @@ const groups = [
     chip: "For SMEs",
     tint: "#8fc57f",
     title: "Small & medium businesses",
-    line: "Most small-business sites are built once and abandoned — yours should compound every month it stays live.",
+    line: "Most small-business sites are built once and abandoned. Yours should compound every month it stays live.",
     seed: "nomad-sme-studio",
     points: [
       "Professional websites",
@@ -36,7 +36,7 @@ const groups = [
     chip: "For Real Estate",
     tint: "#35753a",
     title: "Real estate & developers",
-    line: "Developments sell on renderings and urgency — your funnel has to move as fast as the market does.",
+    line: "Developments sell on renderings and urgency. Your funnel has to move as fast as the market does.",
     seed: "nomad-realestate-dev",
     points: [
       "Project landing pages",
@@ -50,7 +50,7 @@ const groups = [
     chip: "For E-commerce",
     tint: "#a8d199",
     title: "E-commerce & retail",
-    line: "Cart abandonment isn't a mystery — it's a checkout with too many steps and a page that loads too slow to survive.",
+    line: "Cart abandonment isn't a mystery. It's a checkout with too many steps and a page that loads too slow to survive.",
     seed: "nomad-ecommerce-retail",
     points: [
       "Storefront builds",
@@ -64,7 +64,7 @@ const groups = [
     chip: "For SaaS",
     tint: "#4f9a53",
     title: "SaaS & startups",
-    line: "Investors and early users judge the product before they've used it — your landing page is doing sales calls you're not in the room for.",
+    line: "Investors and early users judge the product before they've used it. Your landing page is doing sales calls you're not in the room for.",
     seed: "nomad-saas-startup",
     points: [
       "Landing pages",
@@ -78,7 +78,7 @@ const groups = [
     chip: "For Hospitality",
     tint: "#1e4d24",
     title: "Hospitality & restaurants",
-    line: "Diners decide from their phone before they decide from the menu — a slow site or a missing booking link loses the table.",
+    line: "Diners decide from their phone before they decide from the menu. A slow site or a missing booking link loses the table.",
     seed: "nomad-hospitality-dine",
     points: [
       "Booking systems",
@@ -97,7 +97,7 @@ export default function WhoWeHelp() {
         <SectionHeading
           eyebrow="Who we help"
           title="Built for how each industry actually wins."
-          lead="Different industries win customers in different ways. We shape every engagement around how yours actually works — not a generic checklist."
+          lead="Different industries win customers in different ways. We shape every engagement around how yours actually works, not a generic checklist."
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
@@ -142,7 +142,7 @@ export default function WhoWeHelp() {
 
         <Reveal delay={300}>
           <p className="mt-10 text-center text-sm text-muted">
-            US &amp; Philippines hubs · serving founders worldwide — full-lifecycle
+            US &amp; Philippines hubs · serving founders worldwide: full-lifecycle
             studio work without the traditional agency price tag.
           </p>
         </Reveal>

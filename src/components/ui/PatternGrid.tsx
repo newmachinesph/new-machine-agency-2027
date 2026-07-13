@@ -9,7 +9,7 @@ type PatternGridProps = {
 };
 
 const CELL = 56;
-const CH = 14; // chamfer — echoes the .chamfer signature
+const CH = 14; // chamfer: echoes the .chamfer signature
 const NOTCH = 16;
 
 // Field tones + a brighter highlight that pops off the field so the block
@@ -18,7 +18,7 @@ const FIELD = ["var(--accent)", "var(--accent-deep)"];
 const HIGHLIGHT = "var(--accent-strong)";
 
 /**
- * Deterministic spatial hash — stable on server + client (no Math.random),
+ * Deterministic spatial hash: stable on server + client (no Math.random),
  * so no hydration mismatch and the field never repeats a block. Same trick
  * as PatternMosaic; `seed` offsets it so each placement looks distinct.
  */
@@ -42,7 +42,7 @@ function body(o: number, x: number, y: number, x2: number, y2: number): string {
   }
 }
 
-/** Dark notch triangle at corner o — reads as a cut in both themes. */
+/** Dark notch triangle at corner o: reads as a cut in both themes. */
 function notch(o: number, x: number, y: number, x2: number, y2: number): string {
   switch (o) {
     case 0:
@@ -57,7 +57,7 @@ function notch(o: number, x: number, y: number, x2: number, y2: number): string 
 }
 
 /**
- * Abstract chamfered-tile field in a green ramp — traced from the client's
+ * Abstract chamfered-tile field in a green ramp, traced from the client's
  * mosaic key-art. Each cell's fill, chamfer corner, and presence come from a
  * spatial hash, so the block reads as an irregular quilt (not a repeating
  * wallpaper) and two placements with different `seed` never match. Pure SVG,

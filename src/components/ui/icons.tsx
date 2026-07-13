@@ -8,7 +8,7 @@ export type IconProps = {
 export type BrandIcon = (props: IconProps) => JSX.Element;
 
 /**
- * New Machine icon set — drawn to the site's design language:
+ * New Machine icon set, drawn to the site's design language:
  * square caps + miter joins (no rounding anywhere), 45° chamfers echoing
  * the PatternTrace motif, and small filled squares echoing the mosaic tiles.
  * Drop-in API-compatible with the lucide usage it replaced ({ size, className }).
@@ -32,7 +32,7 @@ function Icon({ size = 24, className, children }: IconProps & { children: ReactN
   );
 }
 
-/** Website Design — chamfered browser frame, mosaic-tile content block. */
+/** Website Design: chamfered browser frame, mosaic-tile content block. */
 export function IconWebsite(props: IconProps) {
   return (
     <Icon {...props}>
@@ -44,7 +44,7 @@ export function IconWebsite(props: IconProps) {
   );
 }
 
-/** Landing Pages — one page, one action: arrow driving into the CTA tile. */
+/** Landing Pages: one page, one action: arrow driving into the CTA tile. */
 export function IconLanding(props: IconProps) {
   return (
     <Icon {...props}>
@@ -56,7 +56,7 @@ export function IconLanding(props: IconProps) {
   );
 }
 
-/** Corporate Websites — chamfered tower, mosaic windows. */
+/** Corporate Websites: chamfered tower, mosaic windows. */
 export function IconCorporate(props: IconProps) {
   return (
     <Icon {...props}>
@@ -71,7 +71,7 @@ export function IconCorporate(props: IconProps) {
   );
 }
 
-/** Social Media — mosaic tiles chained on the 45° trace diagonal. */
+/** Social Media: mosaic tiles chained on the 45° trace diagonal. */
 export function IconSocial(props: IconProps) {
   return (
     <Icon {...props}>
@@ -84,7 +84,7 @@ export function IconSocial(props: IconProps) {
   );
 }
 
-/** Lead Generation — 45° funnel, qualified lead drops out as a solid tile. */
+/** Lead Generation: 45° funnel, qualified lead drops out as a solid tile. */
 export function IconLeads(props: IconProps) {
   return (
     <Icon {...props}>
@@ -94,7 +94,7 @@ export function IconLeads(props: IconProps) {
   );
 }
 
-/** Brand Identity — chamfered mark tile with a solid mosaic core. */
+/** Brand Identity: chamfered mark tile with a solid mosaic core. */
 export function IconBrandMark(props: IconProps) {
   return (
     <Icon {...props}>
@@ -104,7 +104,7 @@ export function IconBrandMark(props: IconProps) {
   );
 }
 
-/** Positioning & Naming — compass body, diamond needle finding true north. */
+/** Positioning & Naming: compass body, diamond needle finding true north. */
 export function IconCompass(props: IconProps) {
   return (
     <Icon {...props}>
@@ -115,7 +115,7 @@ export function IconCompass(props: IconProps) {
   );
 }
 
-/** Market Research — chamfered lens closing in on a data tile. */
+/** Market Research: chamfered lens closing in on a data tile. */
 export function IconSearch(props: IconProps) {
   return (
     <Icon {...props}>
@@ -126,7 +126,7 @@ export function IconSearch(props: IconProps) {
   );
 }
 
-/** Web App / MVP — browser frame around code brackets. */
+/** Web App / MVP: browser frame around code brackets. */
 export function IconAppWindow(props: IconProps) {
   return (
     <Icon {...props}>
@@ -137,7 +137,7 @@ export function IconAppWindow(props: IconProps) {
   );
 }
 
-/** Mobile Apps — chamfered phone body, tile home indicator. */
+/** Mobile Apps: chamfered phone body, tile home indicator. */
 export function IconMobile(props: IconProps) {
   return (
     <Icon {...props}>
@@ -148,7 +148,7 @@ export function IconMobile(props: IconProps) {
   );
 }
 
-/** Performance Ads — concentric targeting squares. */
+/** Performance Ads: concentric targeting squares. */
 export function IconTarget(props: IconProps) {
   return (
     <Icon {...props}>
@@ -159,7 +159,7 @@ export function IconTarget(props: IconProps) {
   );
 }
 
-/** SEO — ascending rank bars, top bar solid with a claimed flag. */
+/** SEO: ascending rank bars, top bar solid with a claimed flag. */
 export function IconRank(props: IconProps) {
   return (
     <Icon {...props}>
@@ -171,7 +171,7 @@ export function IconRank(props: IconProps) {
   );
 }
 
-/** AI Agents & Automation — automated core routed to every corner. */
+/** AI Agents & Automation: automated core routed to every corner. */
 export function IconAIAgent(props: IconProps) {
   return (
     <Icon {...props}>
@@ -185,7 +185,7 @@ export function IconAIAgent(props: IconProps) {
   );
 }
 
-/** Analytics & BI — dashboard frame with a highlighted peak. */
+/** Analytics & BI: dashboard frame with a highlighted peak. */
 export function IconDashboard(props: IconProps) {
   return (
     <Icon {...props}>
@@ -196,7 +196,7 @@ export function IconDashboard(props: IconProps) {
   );
 }
 
-/** Conversion Optimization — split test, variant B winning. */
+/** Conversion Optimization: split test, variant B winning. */
 export function IconSplitTest(props: IconProps) {
   return (
     <Icon {...props}>
@@ -208,7 +208,7 @@ export function IconSplitTest(props: IconProps) {
   );
 }
 
-/** Fractional CMO / CTO — helm steering from the center. */
+/** Fractional CMO / CTO: helm steering from the center. */
 export function IconHelm(props: IconProps) {
   return (
     <Icon {...props}>
@@ -219,7 +219,7 @@ export function IconHelm(props: IconProps) {
   );
 }
 
-/** Fast delivery — angular bolt, straight segments only. */
+/** Fast delivery: angular bolt, straight segments only. */
 export function IconSpeed(props: IconProps) {
   return (
     <Icon {...props}>
@@ -228,7 +228,7 @@ export function IconSpeed(props: IconProps) {
   );
 }
 
-/** Transparent pricing — price tag built entirely from 45° edges. */
+/** Transparent pricing: price tag built entirely from 45° edges. */
 export function IconPricing(props: IconProps) {
   return (
     <Icon {...props}>
@@ -238,7 +238,7 @@ export function IconPricing(props: IconProps) {
   );
 }
 
-/** Direct communication — chamfered speech tile, square tail, tile dots. */
+/** Direct communication: chamfered speech tile, square tail, tile dots. */
 export function IconChat(props: IconProps) {
   return (
     <Icon {...props}>
@@ -249,7 +249,7 @@ export function IconChat(props: IconProps) {
   );
 }
 
-/** Results — mosaic tiles stepping up the 45° diagonal into an arrow. */
+/** Results: mosaic tiles stepping up the 45° diagonal into an arrow. */
 export function IconGrowth(props: IconProps) {
   return (
     <Icon {...props}>
@@ -261,7 +261,7 @@ export function IconGrowth(props: IconProps) {
   );
 }
 
-/** Mail — envelope with chamfered corner. */
+/** Mail: envelope with chamfered corner. */
 export function IconMail(props: IconProps) {
   return (
     <Icon {...props}>

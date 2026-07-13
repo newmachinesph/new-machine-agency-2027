@@ -18,7 +18,7 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Honeypot: bots fill the hidden field — silently pretend success.
+    // Honeypot: bots fill the hidden field, silently pretend success.
     if (String(data.get("website") ?? "").length > 0) {
       setStatus("sent");
       return;
@@ -48,7 +48,7 @@ export default function ContactForm() {
       return;
     }
 
-    // No form provider configured — fall back to the visitor's email app.
+    // No form provider configured, fall back to the visitor's email app.
     const details = [
       `Name: ${name}`,
       `Email: ${email}`,
@@ -139,7 +139,7 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Honeypot — hidden from real users. */}
+      {/* Honeypot: hidden from real users. */}
       <div aria-hidden="true" className="hidden">
         <input name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
@@ -150,7 +150,7 @@ export default function ContactForm() {
 
       <div aria-live="polite" className="text-sm">
         {status === "sent" ? (
-          <p className="text-accent-fg">Thanks — we’ll get back to you within 24 hours.</p>
+          <p className="text-accent-fg">Thanks, we’ll get back to you within 24 hours.</p>
         ) : null}
         {status === "error" ? (
           <p className="text-muted">
@@ -159,7 +159,7 @@ export default function ContactForm() {
         ) : null}
         {status === "mailto" ? (
           <p className="text-muted">
-            Your email app should open — if not, write to us directly at {site.email}.
+            Your email app should open. If not, write to us directly at {site.email}.
           </p>
         ) : null}
       </div>

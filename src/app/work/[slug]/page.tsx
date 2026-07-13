@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const cs = caseStudies.find((c) => c.slug === slug);
   if (!cs) return {};
   return {
-    title: `${cs.client} — ${cs.metric} ${cs.metricLabel}`,
+    title: `${cs.client}: ${cs.metric} ${cs.metricLabel}`,
     description: cs.summary,
     alternates: { canonical: `/work/${slug}/` },
   };
@@ -107,7 +107,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           <SectionHeading
             eyebrow="The numbers"
             title="What changed, charted."
-            lead="Twelve months of the metric this engagement was hired to move — six before launch, six after — plus every headline KPI, before and after."
+            lead="Twelve months of the metric this engagement was hired to move, six before launch, six after, plus every headline KPI, before and after."
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
             <Reveal className="h-full">
@@ -127,7 +127,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   className="mt-5"
                 />
                 <p className="mt-4 text-xs text-muted">
-                  Representative sample data — the same live measurement dashboard ships with
+                  Representative sample data: the same live measurement dashboard ships with
                   every engagement.
                 </p>
               </div>
@@ -216,7 +216,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               {cs.quote.text}
             </blockquote>
             <figcaption className="mt-5 text-sm text-muted">
-              <span className="font-semibold text-fg">{cs.quote.name}</span> — {cs.quote.role}
+              <span className="font-semibold text-fg">{cs.quote.name}</span>, {cs.quote.role}
             </figcaption>
           </figure>
         </Reveal>
@@ -268,7 +268,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
         <CtaPanel
           title="Want a chart like this with your name on it?"
-          lead="Book a free strategy call. We'll tell you which metric to move first, what's realistic, and exactly what it costs — before you commit to anything."
+          lead="Book a free strategy call. We'll tell you which metric to move first, what's realistic, and exactly what it costs, before you commit to anything."
           primaryHref="/contact"
           primaryLabel="Book a Strategy Call"
         />

@@ -5,13 +5,13 @@
     "status": "In Development",
     "tint": "#8fc57f",
     "icon": "social",
-    "oneLiner": "One brief in, a month of platform-native content out — drafted, checked against your brand rules, and queued for a single approval.",
+    "oneLiner": "One brief in, a month of platform-native content out: drafted, checked against your brand rules, and queued for a single approval.",
     "problem": "Content dies on consistency, not creativity. A founder posts for three weeks, gets busy, and the channel goes quiet. Hiring it out usually just moves the bottleneck from your calendar to someone else's writing queue.",
     "solution": "Content Machine runs the loop: research the angle, draft for each platform, score the draft against your brand rules and a banned-phrase list, rewrite whatever fails, and only then put it in front of you. You approve taste. The machine does the typing.",
     "features": [
       {
         "title": "Platform-native, not reposted",
-        "text": "One idea becomes an X post, a LinkedIn piece, a caption and a newsletter — each written to its own format, not the same paragraph pasted four times."
+        "text": "One idea becomes an X post, a LinkedIn piece, a caption and a newsletter, each written to its own format, not the same paragraph pasted four times."
       },
       {
         "title": "Brand rules as a gate",
@@ -29,7 +29,7 @@
     "loop": {
       "goal": "A week of platform-native posts that pass brand, claims and format checks.",
       "verify": "Brand-rule, banned-phrase and format lint on every draft, plus a second agent scoring tone against your writing samples.",
-      "stop": "Every post clears the gate, or six rewrite passes — then it stops and reports what it could not fix."
+      "stop": "Every post clears the gate, or six rewrite passes, then it stops and reports what it could not fix."
     },
     "link": ""
   },
@@ -49,7 +49,7 @@
       },
       {
         "title": "Ask at the right moment",
-        "text": "Review requests fire off the events that mean someone is happy — a completed treatment, a closed matter — instead of a monthly blast to your entire list."
+        "text": "Review requests fire off the events that mean someone is happy, a completed treatment, a closed matter, instead of a monthly blast to your entire list."
       },
       {
         "title": "Negative reviews stop at a human",
@@ -63,7 +63,7 @@
     "loop": {
       "goal": "Every review answered within the hour, and review volume climbing month over month.",
       "verify": "Each reply passes a tone-and-policy check; anything below your rating threshold is blocked from auto-publish; listing data is diffed against your source of truth.",
-      "stop": "The queue is clear, or a review needs judgment — then it escalates to a human instead of guessing."
+      "stop": "The queue is clear, or a review needs judgment, then it escalates to a human instead of guessing."
     },
     "link": ""
   },
@@ -74,12 +74,12 @@
     "tint": "#67ad62",
     "icon": "search",
     "oneLiner": "Gets your brand cited inside AI answers, then measures honestly whether it worked.",
-    "problem": "Your customers now ask an assistant instead of clicking a blue link. If the model does not know your brand exists, you are invisible exactly where the decision gets made — and a falling traffic chart will never tell you that is the reason.",
+    "problem": "Your customers now ask an assistant instead of clicking a blue link. If the model does not know your brand exists, you are invisible exactly where the decision gets made, and a falling traffic chart will never tell you that is the reason.",
     "solution": "Answer Engine Machine builds the structured, entity-rich ground truth an assistant needs in order to quote you, then re-asks the real assistants on a schedule to see whether you actually got cited. It reports coverage and citation frequency. It does not sell you a rank, because AI answers do not have one.",
     "features": [
       {
         "title": "Entity and schema coverage",
-        "text": "Fills the structured gaps — schema, entities, verifiable facts — that decide whether a model can quote you with confidence or skips you for a competitor."
+        "text": "Fills the structured gaps, schema, entities, verifiable facts, that decide whether a model can quote you with confidence or skips you for a competitor."
       },
       {
         "title": "Citation-shaped content",
@@ -87,7 +87,7 @@
       },
       {
         "title": "Measured against real assistants",
-        "text": "Runs your priority questions through the actual assistants on a schedule and records whether you were cited — not whether a tool thinks you deserve to be."
+        "text": "Runs your priority questions through the actual assistants on a schedule and records whether you were cited, not whether a tool thinks you deserve to be."
       },
       {
         "title": "Reporting that stays honest",
@@ -96,8 +96,8 @@
     ],
     "loop": {
       "goal": "Named as a source for your priority questions across the major assistants.",
-      "verify": "Scheduled re-queries against live assistants — a citation either appears in the answer or it does not. There is nothing to argue with.",
-      "stop": "Coverage target reached, or the run budget is spent — then it reports the remaining gap rather than quietly spending more."
+      "verify": "Scheduled re-queries against live assistants: a citation either appears in the answer or it does not. There is nothing to argue with.",
+      "stop": "Coverage target reached, or the run budget is spent, then it reports the remaining gap rather than quietly spending more."
     },
     "link": ""
   },
@@ -121,7 +121,7 @@
       },
       {
         "title": "Deliverability as a hard limit",
-        "text": "Warm-up, volume caps, bounce thresholds, suppression lists and honored opt-outs are enforced by the system — it stops sending before you find out the hard way."
+        "text": "Warm-up, volume caps, bounce thresholds, suppression lists and honored opt-outs are enforced by the system. It stops sending before you find out the hard way."
       },
       {
         "title": "Booked calls, not open rates",
@@ -130,8 +130,8 @@
     ],
     "loop": {
       "goal": "Qualified meetings booked out of one named target market.",
-      "verify": "Profile-fit score, bounce rate, spam-complaint rate and reply classification — sending halts automatically the moment any threshold trips.",
-      "stop": "The meeting target is met, or a deliverability threshold trips — then it stops sending and reports rather than pushing through."
+      "verify": "Profile-fit score, bounce rate, spam-complaint rate and reply classification: sending halts automatically the moment any threshold trips.",
+      "stop": "The meeting target is met, or a deliverability threshold trips, then it stops sending and reports rather than pushing through."
     },
     "link": ""
   },
@@ -143,7 +143,7 @@
     "icon": "splittest",
     "oneLiner": "Generates the creative, tests it under a hard spend cap, and moves budget only when a variant genuinely wins.",
     "problem": "Ad accounts decay quietly. Creative fatigues, cost per acquisition drifts upward, and by the time a monthly report catches it you have spent a quarter of the budget learning what stopped working three weeks ago.",
-    "solution": "Ads Machine generates creative variants, runs them under hard spend caps, and reallocates budget only when a variant clears a significance threshold. Every rule that protects your money — daily cap, acquisition-cost ceiling, brand-safety check — is enforced by the system rather than remembered by a person.",
+    "solution": "Ads Machine generates creative variants, runs them under hard spend caps, and reallocates budget only when a variant clears a significance threshold. Every rule that protects your money, daily cap, acquisition-cost ceiling, brand-safety check, is enforced by the system rather than remembered by a person.",
     "features": [
       {
         "title": "Creative that keeps coming",
@@ -165,7 +165,7 @@
     "loop": {
       "goal": "Cost per acquisition at or under target, at the agreed level of spend.",
       "verify": "Variant performance tested for statistical significance against control, with the acquisition-cost ceiling and daily cap enforced before any budget moves.",
-      "stop": "Target cost per acquisition holds through the test window, or a spend cap trips — then it pauses and reports rather than optimizing into a hole."
+      "stop": "Target cost per acquisition holds through the test window, or a spend cap trips, then it pauses and reports rather than optimizing into a hole."
     },
     "link": ""
   },
@@ -181,7 +181,7 @@
     "features": [
       {
         "title": "Variants from the offer, not a theme",
-        "text": "Each variant changes one deliberate thing — headline, proof, capture — so the result teaches you something you can use in the next round."
+        "text": "Each variant changes one deliberate thing, headline, proof, capture, so the result teaches you something you can use in the next round."
       },
       {
         "title": "Significance is not optional",
@@ -199,7 +199,7 @@
     "loop": {
       "goal": "A page that beats the current control on the conversion metric that actually matters.",
       "verify": "A winner is declared only above a preset significance level and minimum sample; every variant must first clear performance and accessibility budgets.",
-      "stop": "A variant wins at significance, or the traffic budget is spent — then it reports the null result honestly instead of picking a favorite."
+      "stop": "A variant wins at significance, or the traffic budget is spent, then it reports the null result honestly instead of picking a favorite."
     },
     "link": ""
   },
@@ -209,7 +209,7 @@
     "status": "In Development",
     "tint": "#b5dfa4",
     "icon": "website",
-    "oneLiner": "Ships and maintains a corporate site that stays fast, accessible and correct — and blocks any change that isn't.",
+    "oneLiner": "Ships and maintains a corporate site that stays fast, accessible and correct, and blocks any change that isn't.",
     "problem": "Corporate sites rot. A page launches fast and accessible, then a year of edits adds a hero video, an unlabelled form and four broken links, and nobody notices until a customer or an accessibility auditor does.",
     "solution": "Site Machine builds pages and then holds the line. Performance budgets, contrast and accessibility checks, link integrity and structured data are gates on every publish. A change that regresses a budget does not go live, no matter who requested it.",
     "features": [
@@ -232,8 +232,8 @@
     ],
     "loop": {
       "goal": "Every page live and passing its performance, accessibility and structural budgets.",
-      "verify": "Automated performance, contrast, link-integrity and schema validation run on every publish — a regression fails the build outright.",
-      "stop": "All budgets green, or a regression fails the build — then it blocks the publish and reports the offending page."
+      "verify": "Automated performance, contrast, link-integrity and schema validation run on every publish. A regression fails the build outright.",
+      "stop": "All budgets green, or a regression fails the build, then it blocks the publish and reports the offending page."
     },
     "link": ""
   },
@@ -243,7 +243,7 @@
     "status": "In Development",
     "tint": "#4f8f4b",
     "icon": "appwindow",
-    "oneLiner": "Turns a written spec into a working, tested product — and never calls it done while a test is red.",
+    "oneLiner": "Turns a written spec into a working, tested product, and never calls it done while a test is red.",
     "problem": "Most MVPs are demos. They work on the happy path, ship without tests, and the first real customer finds the edge case. The rewrite then costs more than the original build did.",
     "solution": "MVP Machine works from a written spec: build the slice, run the suite, read every failure, fix the highest-impact one, repeat. Software is where loops began, because a test either passes or it does not. There is nothing to argue with and nothing to talk your way past.",
     "features": [
@@ -267,7 +267,7 @@
     "loop": {
       "goal": "Every acceptance criterion in the spec met, with the test suite, type check and production build green.",
       "verify": "The full suite, type check and production build run on every pass, and a separate reviewer agent must approve the diff before it lands.",
-      "stop": "The suite is green and the spec is satisfied, or the iteration cap is reached — then it stops and reports exactly what still fails."
+      "stop": "The suite is green and the spec is satisfied, or the iteration cap is reached, then it stops and reports exactly what still fails."
     },
     "link": ""
   },
@@ -277,8 +277,8 @@
     "status": "In Development",
     "tint": "#86c477",
     "icon": "mail",
-    "oneLiner": "Runs the email and CRM lifecycle — and will not send to anyone who never agreed to hear from you.",
-    "problem": "Lifecycle email is where good intentions meet compliance. Someone exports a list, forgets a suppression, and a year of sender reputation leaves with it — along with legal exposure that nobody priced into the campaign.",
+    "oneLiner": "Runs the email and CRM lifecycle, and will not send to anyone who never agreed to hear from you.",
+    "problem": "Lifecycle email is where good intentions meet compliance. Someone exports a list, forgets a suppression, and a year of sender reputation leaves with it, along with legal exposure that nobody priced into the campaign.",
     "solution": "Lifecycle Machine builds and runs the sequences: onboarding, nurture, win-back. Consent, suppression and opt-out are enforced as hard gates before any send, and every subject line and offer is tested on real cohorts rather than chosen on a hunch.",
     "features": [
       {
@@ -301,7 +301,7 @@
     "loop": {
       "goal": "Lifecycle sequences live and converting, sending only to contacts who consented.",
       "verify": "Consent and suppression checked per recipient before every send; bounce and complaint thresholds monitored continuously; variant winners require significance.",
-      "stop": "The sequence hits its conversion target, or a consent or deliverability gate trips — then sending halts immediately and reports."
+      "stop": "The sequence hits its conversion target, or a consent or deliverability gate trips, then sending halts immediately and reports."
     },
     "link": ""
   },
@@ -335,7 +335,7 @@
     "loop": {
       "goal": "Every dashboard fresh, and every metric reconciled against its source of truth.",
       "verify": "Scheduled reconciliation of each published figure against the source system; drift beyond tolerance blocks the refresh.",
-      "stop": "All metrics reconcile, or drift is detected — then it holds the refresh and alerts, rather than publishing a number that is wrong."
+      "stop": "All metrics reconcile, or drift is detected, then it holds the refresh and alerts, rather than publishing a number that is wrong."
     },
     "link": ""
   },
@@ -347,7 +347,7 @@
     "icon": "compass",
     "oneLiner": "Produces market and competitor intelligence in which every claim carries a source, or it does not ship.",
     "problem": "AI research output is fluent and frequently wrong, which is the worst possible combination for a document someone is about to make a decision on. A confident unsourced paragraph is more dangerous than having no research at all.",
-    "solution": "Research Machine gathers, reads and synthesizes — then checks itself. Every factual claim has to resolve to a retrievable source. An unsourced claim blocks the report and is either sourced or cut. That gate is exactly what a research process usually lacks.",
+    "solution": "Research Machine gathers, reads and synthesizes, then checks itself. Every factual claim has to resolve to a retrievable source. An unsourced claim blocks the report and is either sourced or cut. That gate is exactly what a research process usually lacks.",
     "features": [
       {
         "title": "Every claim carries a source",
@@ -379,7 +379,7 @@
     "status": "In Development",
     "tint": "#5c9e57",
     "icon": "target",
-    "oneLiner": "Turns an open role into a vetted Philippine shortlist — sourced, work-sampled, and scored on one published rubric.",
+    "oneLiner": "Turns an open role into a vetted Philippine shortlist: sourced, work-sampled, and scored on one published rubric.",
     "problem": "US founders know Philippine talent is the best value on the market and still hire badly, because screening a hundred applicants by hand is nobody's full-time job. So the role stays open for a quarter, or the wrong person gets it.",
     "solution": "Hiring Machine drafts the role, sources candidates, runs a structured work sample, and scores everyone against one published rubric. It never rejects anyone on its own. What it hands you is a defensible shortlist and the evidence behind every rank.",
     "features": [
@@ -393,7 +393,7 @@
       },
       {
         "title": "A human makes every reject",
-        "text": "The machine ranks and explains its reasoning. It never sends a rejection or filters a person out by itself — that decision carries legal and human weight."
+        "text": "The machine ranks and explains its reasoning. It never sends a rejection or filters a person out by itself. That decision carries legal and human weight."
       },
       {
         "title": "Built on the US–Philippines seam",
@@ -403,7 +403,7 @@
     "loop": {
       "goal": "A ranked, evidence-backed shortlist for one open role.",
       "verify": "Every candidate scored against the same published rubric, with a second reviewer agent re-scoring independently; any unscored candidate blocks the shortlist.",
-      "stop": "The shortlist clears the bar, or the pool runs dry — then it reports what the market actually has rather than padding the list."
+      "stop": "The shortlist clears the bar, or the pool runs dry, then it reports what the market actually has rather than padding the list."
     },
     "link": ""
   }

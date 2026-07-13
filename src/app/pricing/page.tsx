@@ -13,7 +13,7 @@ import { IconArrowRight, IconCheck } from "@/components/ui/icons";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Public pricing, fixed quotes, zero surprises. Three engagement models — from a conversion-first landing page to a full growth partnership.",
+    "Public pricing, fixed quotes, zero surprises. Three engagement models: from a conversion-first landing page to a full growth partnership.",
   alternates: { canonical: "/pricing/" },
 };
 
@@ -39,7 +39,7 @@ const tiers = [
     name: "Build",
     price: "$12,500",
     terms: "Fixed quote · 4–7 weeks",
-    line: "The full presence — brand plus website or MVP, built as one system and measured from day one.",
+    line: "The full presence: brand plus website or MVP, built as one system and measured from day one.",
     tint: "var(--accent)",
     featured: true,
     cta: "Start with Build",
@@ -56,14 +56,14 @@ const tiers = [
     name: "Growth Partner",
     price: "$6,000/mo",
     terms: "3-month minimum · cancel anytime after",
-    line: "The team that keeps the machine running — experiments, content, campaigns and automation, reported in revenue terms.",
+    line: "The team that keeps the machine running: experiments, content, campaigns and automation, reported in revenue terms.",
     tint: "var(--accent-deep)",
     featured: false,
     cta: "Talk about Growth",
     includes: [
       "Monthly experiment roadmap",
       "Landing pages, content & campaigns",
-      "Ad management — spend billed at cost, no % markup",
+      "Ad management: spend billed at cost, no % markup",
       "AI automation & agents",
       "Monthly report in inquiries & revenue",
       "Weekly working session",
@@ -72,7 +72,7 @@ const tiers = [
 ];
 
 const guarantees = [
-  "Fixed quote before we start — it doesn't move mid-project",
+  "Fixed quote before we start: it doesn't move mid-project",
   "You own the code, the content and every account",
   "Direct line to the people doing the work",
   "Weekly demos, so progress is visible, not narrated",
@@ -81,19 +81,19 @@ const guarantees = [
 const pricingFaq = [
   {
     q: "Why publish prices when every project is different?",
-    a: "Because \"it depends\" is how agencies keep the upper hand. These are our real starting points — after one scoping call you get a fixed quote in writing, before you commit to anything. If a price ever needs to move, that conversation happens before kickoff, never mid-project.",
+    a: "Because \"it depends\" is how agencies keep the upper hand. These are our real starting points. After one scoping call you get a fixed quote in writing, before you commit to anything. If a price ever needs to move, that conversation happens before kickoff, never mid-project.",
   },
   {
     q: "What if my project doesn't fit a tier?",
-    a: "The tiers are starting points, not boxes. Most engagements mix stages — a brand refresh plus a landing page, an MVP plus a launch campaign. We'll scope it in one call and give you a single fixed number for the whole thing.",
+    a: "The tiers are starting points, not boxes. Most engagements mix stages: a brand refresh plus a landing page, an MVP plus a launch campaign. We'll scope it in one call and give you a single fixed number for the whole thing.",
   },
   {
     q: "How do payments work?",
-    a: "Fixed projects are 50% at kickoff and 50% at launch. Growth Partner is billed monthly in advance. No deposits held hostage, no surprise line items — the invoice matches the quote.",
+    a: "Fixed projects are 50% at kickoff and 50% at launch. Growth Partner is billed monthly in advance. No deposits held hostage, no surprise line items. The invoice matches the quote.",
   },
   {
     q: "Do you charge a percentage of ad spend?",
-    a: "No. Ad spend goes through your own accounts at cost, and management is a flat fee. Agencies that take a percentage of spend are incentivized to spend more — we'd rather be incentivized to convert more.",
+    a: "No. Ad spend goes through your own accounts at cost, and management is a flat fee. Agencies that take a percentage of spend are incentivized to spend more. We'd rather be incentivized to convert more.",
   },
   {
     q: "What happens if the project runs late?",
@@ -108,7 +108,7 @@ export default function PricingPage() {
         <SectionHeading
           eyebrow="Pricing"
           title="Public pricing. Fixed quotes. Zero surprises."
-          lead="Most agencies make you sit through a discovery call just to hear a number. Here's ours up front — in USD, quoted fixed after one scoping call, and the quote doesn't move."
+          lead="Most agencies make you sit through a discovery call just to hear a number. Here's ours up front: in USD, quoted fixed after one scoping call, and the quote doesn't move."
         />
 
         {/* Tiers */}
@@ -168,7 +168,7 @@ export default function PricingPage() {
 
         <Reveal delay={120}>
           <p className="mt-6 text-xs text-muted">
-            Starting prices in USD. Your exact quote is fixed in writing after one scoping call —
+            Starting prices in USD. Your exact quote is fixed in writing after one scoping call,
             before you commit to anything.
           </p>
         </Reveal>
@@ -201,7 +201,7 @@ export default function PricingPage() {
           <SectionHeading
             eyebrow="Pricing FAQ"
             title="The money questions, answered plainly."
-            lead="If yours isn't here, ask us directly — you'll get a straight answer, not a pitch."
+            lead="If yours isn't here, ask us directly. You'll get a straight answer, not a pitch."
           />
           <Reveal delay={80}>
             <Faq items={pricingFaq} />
@@ -231,7 +231,7 @@ export default function PricingPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "OfferCatalog",
-          name: `${site.name} — Engagement pricing`,
+          name: `${site.name} | Engagement pricing`,
           url: `${site.url}/pricing/`,
           itemListElement: tiers.map((tier) => ({
             "@type": "Offer",

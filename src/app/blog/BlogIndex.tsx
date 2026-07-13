@@ -86,7 +86,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
 
   return (
     <div>
-      {/* Featured — latest post, editorial split hero */}
+      {/* Featured: latest post, editorial split hero */}
       <Link
         href={`/blog/${featured.slug}/`}
         className="panel group grid overflow-hidden md:grid-cols-2"
