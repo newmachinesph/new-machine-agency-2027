@@ -57,13 +57,6 @@ export const site = {
     },
   ],
 
-  /**
-   * Static-friendly form provider endpoint (Formspree, Web3Forms, …).
-   * e.g. "https://formspree.io/f/abcdwxyz"
-   * Leave empty ("") to fall back to a mailto: link.
-   */
-  formEndpoint: "",
-
   socials: [
     { label: "Facebook", href: "https://www.facebook.com/newmachineph" },
   ],
