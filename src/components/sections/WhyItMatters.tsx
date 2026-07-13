@@ -19,7 +19,7 @@ export default function WhyItMatters() {
         <SectionHeading
           eyebrow="Why it matters"
           title="Your website is your hardest-working employee."
-          lead="It never sleeps, never takes leave — and most businesses still treat it as an afterthought. The numbers say otherwise."
+          lead="It never sleeps, never takes leave, and most businesses still treat it as an afterthought. The numbers say otherwise."
         />
 
         <div className="grid gap-4 sm:grid-cols-2">

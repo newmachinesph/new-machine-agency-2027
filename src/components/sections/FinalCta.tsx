@@ -23,11 +23,11 @@ export default function FinalCta() {
                 We build like we’re already the best in the world.
               </h2>
               <p className="mx-auto mt-4 max-w-lg opacity-80">
-                Tell us where you want your business to be — we’ll map the way there.
+                Tell us where you want your business to be. We’ll map the way there.
                 Free 30-minute call, honest advice, zero pressure.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                {/* ponytail: raw links, not <Button> — its variants assume a
+                {/* ponytail: raw links, not <Button>. Its variants assume a
                     neutral surface; this band's bg-accent needs the inverted
                     dark/outline treatment below for contrast. */}
                 <Link

@@ -167,7 +167,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* The loop — a machine is only real if something can reject its output */}
+        {/* The loop: a machine is only real if something can reject its output */}
         <div className="mt-24">
           <Reveal>
             <div className="panel beam relative overflow-hidden p-8 md:p-12">
@@ -222,7 +222,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   Want {product.name} for your business?
                 </h2>
                 <p className="measure mx-auto mt-3 text-muted">
-                  We&apos;re building it in the open — tell us what you need and we&apos;ll
+                  We&apos;re building it in the open. Tell us what you need and we&apos;ll
                   factor it into the roadmap.
                 </p>
                 <div className="mt-6 flex flex-wrap justify-center gap-3">

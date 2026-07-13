@@ -15,7 +15,7 @@ export const WEBSITE_ID = `${site.url}/#website`;
 /** Reference to the Organization node defined once in the root layout. */
 export const orgRef = { "@id": ORG_ID };
 
-/** Where the studio takes on work — kept identical everywhere a node declares
+/** Where the studio takes on work: kept identical everywhere a node declares
  *  `areaServed` so an assistant reads one consistent answer, not three. */
 export const AREA_SERVED = ["United States", "Philippines", "Worldwide"] as const;
 
@@ -24,8 +24,8 @@ export function absoluteUrl(path: string): string {
 }
 
 /** FAQ pairs an assistant can quote verbatim. Emitted on any page that answers
- *  real questions (home, pricing, each service). Centralised so the shape —
- *  and future additions like `inLanguage` — stay identical across the site. */
+ *  real questions (home, pricing, each service). Centralised so the shape,
+ *  and future additions like `inLanguage`, stay identical across the site. */
 export function faqSchema(items: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",
@@ -54,7 +54,7 @@ export function serviceSchema(input: { name: string; description: string; slug: 
   };
 }
 
-/** A blog article as a citable entity. Real, derivable fields only — no
+/** A blog article as a citable entity. Real, derivable fields only: no
  *  invented author or modified date. `keywords`/`articleSection` come from the
  *  post's own tags; `timeRequired` from its computed reading time. */
 export function blogPostingSchema(input: {
@@ -106,7 +106,7 @@ export function caseStudySchema(input: {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${input.client} — case study`,
+    headline: `${input.client}: case study`,
     description: input.summary,
     url,
     mainEntityOfPage: url,

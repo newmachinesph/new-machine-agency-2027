@@ -1,6 +1,6 @@
 type SparklineProps = {
   values: readonly number[];
-  /** Index of the first post-launch point — pre reads dim, post reads accent. */
+  /** Index of the first post-launch point: pre reads dim, post reads accent. */
   launchIndex: number;
   className?: string;
 };
@@ -8,7 +8,7 @@ type SparklineProps = {
 /**
  * Decorative 12-point sparkline for work cards: pre-launch months in the
  * de-emphasis hue, post-launch in the data hue, with a hairline launch tick.
- * Purely decorative (aria-hidden) — the linked case study carries the numbers.
+ * Purely decorative (aria-hidden): the linked case study carries the numbers.
  */
 export default function Sparkline({ values, launchIndex, className = "" }: SparklineProps) {
   const W = 120;

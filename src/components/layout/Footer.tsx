@@ -44,7 +44,7 @@ export default function Footer() {
             {site.principle}
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
-            Full-lifecycle startup studio based in Makati — building with
+            Full-lifecycle startup studio based in Makati, building with
             founders across the US, the Philippines, and worldwide.
           </p>
           <div className="mt-6 flex gap-5">
@@ -172,7 +172,7 @@ export default function Footer() {
             © {year} {site.name}. All rights reserved.
           </p>
           <p className="uppercase tracking-[0.2em] text-[10px]">
-            Est. 2026 — Built to run
+            Est. 2026, Built to run
           </p>
           <div className="flex gap-5">
             <Link href="/privacy-policy/" className="transition-colors hover:text-fg">

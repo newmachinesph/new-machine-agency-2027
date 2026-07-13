@@ -11,7 +11,7 @@ const SAGE = "var(--accent)";
 const DEEP = "var(--accent-deep)";
 
 /**
- * Deterministic spatial hash — gives each cell a stable, varied value from its
+ * Deterministic spatial hash: gives each cell a stable, varied value from its
  * coordinates. Same result on server and client (no Math.random), so no
  * hydration mismatch, and the strip never repeats an identical block.
  */
@@ -26,7 +26,7 @@ function cell(x: number, y: number, cx: number, cy: number): ReactNode {
   const r = h % 100;
   const key = `${cx}-${cy}`;
 
-  // Rare, scattered gaps (never clustered — each cell decides independently).
+  // Rare, scattered gaps (never clustered, each cell decides independently).
   if (r < 8) return null;
 
   const fill = (h >>> 5) % 3 === 0 ? DEEP : SAGE; // ~1/3 deep, ~2/3 sage
@@ -54,7 +54,7 @@ function cell(x: number, y: number, cx: number, cy: number): ReactNode {
 /**
  * Chamfer/triangle quilt strip traced from the client's reference. Cells are
  * generated from a spatial hash so the run is varied and non-repeating across
- * the full width — no identical blocks, no obvious seam. Decorative only.
+ * the full width: no identical blocks, no obvious seam. Decorative only.
  */
 export default function PatternMosaic({
   rows = 2,

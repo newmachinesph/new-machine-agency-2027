@@ -16,7 +16,7 @@ type FeatureCardProps = {
 };
 
 /**
- * Tinted bento cell — chamfered icon square, title, blurb, and a chamfered-tile
+ * Tinted bento cell: chamfered icon square, title, blurb, and a chamfered-tile
  * corner motif over a green-ramp gradient wash. The shared "value / feature"
  * card used on the about and careers pages so both read as one system.
  */

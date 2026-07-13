@@ -126,7 +126,7 @@ export default function CustomCursor() {
     };
   }, [active]);
 
-  // Route change completed — stop the loading spinner.
+  // Route change completed. Stop the loading spinner.
   useEffect(() => {
     rootRef.current?.classList.remove("is-loading");
   }, [pathname]);

@@ -10,23 +10,23 @@
     "story": "A two-sided booking platform replaced the spreadsheets and group chats an operator used to match homeowners with vetted pros.",
     "metric": "4.0×",
     "metricLabel": "completed bookings per month within 90 days",
-    "summary": "A home-services operator was matching homeowners to plumbers, electricians and cleaners by hand — Facebook messages, a shared spreadsheet, and a lot of phone tag. We built the two-sided marketplace that automates the match, the schedule and the payment, and the same demand started converting into bookings that actually completed.",
+    "summary": "A home-services operator was matching homeowners to plumbers, electricians and cleaners by hand: Facebook messages, a shared spreadsheet, and a lot of phone tag. We built the two-sided marketplace that automates the match, the schedule and the payment, and the same demand started converting into bookings that actually completed.",
     "challenge": "Every job was coordinated manually. A homeowner messaged the page, someone checked a spreadsheet for an available pro, and three separate chats tried to agree on a time. Providers no-showed with no accountability, payment happened off-platform, and nobody could tell which requests turned into finished jobs. Growth meant hiring more coordinators, not serving more customers.",
     "approach": [
       {
         "title": "Book, schedule, pay in one flow",
-        "text": "A homeowner picks a service, sees real availability, and books in a single flow — with a vetted provider assigned automatically instead of coordinated across three chat threads."
+        "text": "A homeowner picks a service, sees real availability, and books in a single flow, with a vetted provider assigned automatically instead of coordinated across three chat threads."
       },
       {
         "title": "Providers people can trust",
-        "text": "An onboarding and verification flow gates who gets listed, and post-job ratings keep the good providers visible — so the marketplace curates quality instead of just listing everyone."
+        "text": "An onboarding and verification flow gates who gets listed, and post-job ratings keep the good providers visible, so the marketplace curates quality instead of just listing everyone."
       },
       {
         "title": "Payments and accountability on-platform",
         "text": "Payment, confirmations and cancellations all run through the platform, so every request is traceable end to end and a no-show finally leaves a paper trail."
       }
     ],
-    "outcome": "Within ninety days of launch, completed bookings were running at 4× the manual baseline — from around 46 a month to 186 — while the coordination team stayed the same size. Booking completion climbed from 61% to 88%, the time from request to a matched provider fell from about a day to minutes, and repeat bookings more than doubled.",
+    "outcome": "Within ninety days of launch, completed bookings were running at 4× the manual baseline, from around 46 a month to 186, while the coordination team stayed the same size. Booking completion climbed from 61% to 88%, the time from request to a matched provider fell from about a day to minutes, and repeat bookings more than doubled.",
     "deliverables": [
       "Two-sided marketplace web app",
       "Provider onboarding & verification flow",
@@ -95,11 +95,11 @@
     "services": ["AI Engineering", "Data Pipeline"],
     "year": "2026",
     "timeline": "8 weeks to first insights",
-    "story": "An always-on pipeline reads Reddit for a brand, classifies every mention, and surfaces the conversations worth acting on — instead of an analyst skimming threads by hand.",
+    "story": "An always-on pipeline reads Reddit for a brand, classifies every mention, and surfaces the conversations worth acting on, instead of an analyst skimming threads by hand.",
     "metric": "10×",
     "metricLabel": "actionable brand mentions surfaced each week",
-    "summary": "A consumer brand was monitoring Reddit the manual way — one analyst, a handful of subreddits, a lot of missed threads. We built an AI pipeline that ingests the conversation at scale, classifies sentiment and intent, and scores each mention for how much it matters, so the team acts on ten times the signal without ten times the work.",
-    "challenge": "Reddit was where the brand's buyers argued, complained and recommended — and almost none of it was being seen. An analyst could watch five subreddits and still miss the thread that turned into a PR headache two days later. There was no way to separate a buying-intent question from noise, no sentiment trend to brief on, and no alert when something started to spread.",
+    "summary": "A consumer brand was monitoring Reddit the manual way: one analyst, a handful of subreddits, a lot of missed threads. We built an AI pipeline that ingests the conversation at scale, classifies sentiment and intent, and scores each mention for how much it matters, so the team acts on ten times the signal without ten times the work.",
+    "challenge": "Reddit was where the brand's buyers argued, complained and recommended, and almost none of it was being seen. An analyst could watch five subreddits and still miss the thread that turned into a PR headache two days later. There was no way to separate a buying-intent question from noise, no sentiment trend to brief on, and no alert when something started to spread.",
     "approach": [
       {
         "title": "Ingest the whole conversation",
@@ -107,14 +107,14 @@
       },
       {
         "title": "Classify with an LLM, score for priority",
-        "text": "Each mention is tagged for sentiment and intent, then scored on reach and urgency — so a spreading complaint or a buying-intent question rises to the top instead of drowning in the feed."
+        "text": "Each mention is tagged for sentiment and intent, then scored on reach and urgency, so a spreading complaint or a buying-intent question rises to the top instead of drowning in the feed."
       },
       {
         "title": "Alerts and a living dashboard",
         "text": "High-priority mentions fire a Slack alert within minutes, and a topic-and-sentiment dashboard turns the week's chatter into a trend the team can actually brief on."
       }
     ],
-    "outcome": "Coverage went from five subreddits to more than two hundred, and actionable mentions surfaced each week rose roughly tenfold — from about 13 to 130 — with far less analyst time. The time to flag an emerging brand risk collapsed from a day or two to about fifteen minutes, and weekly reporting that used to eat a morning now assembles itself.",
+    "outcome": "Coverage went from five subreddits to more than two hundred, and actionable mentions surfaced each week rose roughly tenfold, from about 13 to 130, with far less analyst time. The time to flag an emerging brand risk collapsed from a day or two to about fifteen minutes, and weekly reporting that used to eat a morning now assembles itself.",
     "deliverables": [
       "Reddit ingestion & streaming pipeline",
       "LLM sentiment & intent classification",
@@ -186,7 +186,7 @@
     "story": "A barcode-driven inventory system replaced the paper stock cards and end-of-day guesswork a hardware store ran on.",
     "metric": "−81%",
     "metricLabel": "stockouts per month after rollout",
-    "summary": "A hardware store was losing sales it never saw — fast-moving items ran out while dead stock tied up the shelf and the cash. Counts were done on paper, reorders on instinct. We built an inventory management system that tracks every item in real time and reorders before the shelf goes empty, and the stockouts that were quietly costing sales fell off a cliff.",
+    "summary": "A hardware store was losing sales it never saw. Fast-moving items ran out while dead stock tied up the shelf and the cash. Counts were done on paper, reorders on instinct. We built an inventory management system that tracks every item in real time and reorders before the shelf goes empty, and the stockouts that were quietly costing sales fell off a cliff.",
     "challenge": "Stock levels lived on paper cards and in the owner's head. Bestsellers ran out between manual counts, so customers walked; meanwhile capital sat frozen in items that hadn't moved in a year. A full count took a day and was wrong by the time it finished, and there was no signal to reorder until a shelf was already bare.",
     "approach": [
       {
@@ -202,7 +202,7 @@
         "text": "Aging and sales-velocity reports surface dead stock and slow movers, turning frozen capital back into shelf space that actually sells."
       }
     ],
-    "outcome": "Two months after rollout, stockouts had fallen 81% — from around 58 a month to 11 — while inventory accuracy climbed from 72% to 98%. A full stock count went from a full day to under an hour, and roughly two-thirds of the capital that had been frozen in dead stock was freed back into product that moves.",
+    "outcome": "Two months after rollout, stockouts had fallen 81%, from around 58 a month to 11, while inventory accuracy climbed from 72% to 98%. A full stock count went from a full day to under an hour, and roughly two-thirds of the capital that had been frozen in dead stock was freed back into product that moves.",
     "deliverables": [
       "Barcode-based stock intake",
       "Real-time inventory tracking",

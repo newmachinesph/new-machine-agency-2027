@@ -115,7 +115,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 </div>
                 <DuotoneImage
                   src={`https://picsum.photos/seed/${service.slug}/1200/900`}
-                  alt={`${service.name} — ${site.name}`}
+                  alt={`${service.name} | ${site.name}`}
                   className="aspect-[4/3] w-full"
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   priority
@@ -241,7 +241,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 Ready to start with {service.name}?
               </h2>
               <p className="measure mx-auto mt-3 text-muted">
-                Book a free call — we&rsquo;ll tell you honestly what will move the needle and
+                Book a free call. We&rsquo;ll tell you honestly what will move the needle and
                 what won&rsquo;t.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">

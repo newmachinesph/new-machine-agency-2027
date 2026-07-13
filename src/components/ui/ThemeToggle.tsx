@@ -12,7 +12,7 @@ export default function ThemeToggle() {
     try {
       localStorage.setItem("theme", next);
     } catch {
-      // Storage unavailable (private mode) — theme still applies for the session.
+      // Storage unavailable (private mode): theme still applies for the session.
     }
   };
 

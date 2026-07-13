@@ -3,7 +3,7 @@
  * Every owner-editable value lives in this file. Contact + copy below are
  * committed brand content. One item still needs the owner's real inputs
  * before a PUBLIC / paid launch:
- *   1. `testimonials` (+ work.json) — representative sample proof. Replace
+ *   1. `testimonials` (+ work.json): representative sample proof. Replace
  *      with real, client-consented quotes/results. Never run paid ads
  *      against fabricated metrics.
  */
@@ -12,30 +12,30 @@ export const site = {
   name: "New Machine",
   legalName: "New Machine",
 
-  /** Production URL — used for canonical links, sitemap, OG tags. */
+  /** Production URL: used for canonical links, sitemap, OG tags. */
   url: "https://newmachine.ph",
   domain: "newmachine.ph",
 
-  /** Google Analytics 4 measurement ID — loaded via @next/third-parties. */
+  /** Google Analytics 4 measurement ID: loaded via @next/third-parties. */
   analyticsId: "G-4LNSJP47T1",
 
-  tagline: "From brand to scale — the studio behind growing startups.",
+  tagline: "From brand to scale, the studio behind growing startups.",
 
-  /** Brand line — the thesis behind the Machine product family. Use verbatim
+  /** Brand line: the thesis behind the Machine product family. Use verbatim
    *  wherever the principle is stated. Deliberately vendor-neutral: it must
    *  never name a model, a lab, or a tool. */
   principle: "We don't automate tasks. We build systems that improve themselves.",
   description:
-    "New Machine is a digital studio based in Makati, partnering with founders across the US, the Philippines and worldwide — brand, websites, apps, launch, growth and AI automation across the full startup lifecycle. Built to turn ideas into companies that convert.",
+    "New Machine is a digital studio based in Makati, partnering with founders across the US, the Philippines and worldwide: brand, websites, apps, launch, growth and AI automation across the full startup lifecycle. Built to turn ideas into companies that convert.",
 
   email: "hello@newmachine.ph",
   /** Hero / testimonials explainer video. TODO(owner): replace this
    *  placeholder YouTube ID with the real brand film before launch. */
   videoId: "ScMzIvxBSi4",
-  /** International format, digits only — the business WhatsApp line. */
+  /** International format, digits only: the business WhatsApp line. */
   whatsapp: "639477902977",
 
-  /** Physical office — our hub at PBCom Tower on Ayala Avenue, Makati. The
+  /** Physical office: our hub at PBCom Tower on Ayala Avenue, Makati. The
    *  team is remote-first; this is the base of operations. */
   offices: [
     {
@@ -68,7 +68,7 @@ export const site = {
     { label: "Facebook", href: "https://www.facebook.com/newmachineph" },
   ],
 
-  /** Hero typewriter — add/remove industries freely. */
+  /** Hero typewriter: add/remove industries freely. */
   builtFor: [
     "Clinics",
     "Real Estate",
@@ -79,7 +79,7 @@ export const site = {
     "Law Firms",
   ],
 
-  /** Hero glass cards — promises we keep from day one, not a claimed track
+  /** Hero glass cards: promises we keep from day one, not a claimed track
    *  record. All four are true by policy (see FAQ / About / Footer). */
   stats: [
     { value: "24h", label: "Typical reply time" },
@@ -88,13 +88,13 @@ export const site = {
     { value: "0", label: "Hidden fees or hourly billing" },
   ],
 
-  /** Representative sample quotes — replace with real, client-consented
+  /** Representative sample quotes: replace with real, client-consented
    *  testimonials before public launch. Deliberately free of fabricated
    *  metrics; they speak to process, which we can stand behind. */
   testimonials: [
     {
       quote:
-        "Clear from day one — no jargon, no account managers, just straight answers and a site that finally looks like the business we want to be.",
+        "Clear from day one: no jargon, no account managers, just straight answers and a site that finally looks like the business we want to be.",
       name: "Sarah Mitchell",
       role: "Clinic Director",
     },

@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
         <ul>
           <li>
             <strong>Contact form data.</strong> When you send us a message, we receive
-            the details you choose to share — typically your name, email address,
+            the details you choose to share: typically your name, email address,
             company name, the service you’re interested in, and your message.
           </li>
           <li>
@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
           </li>
           <li>
             <strong>Cookies and similar technologies.</strong> We may use a small number
-            of cookies or local-storage entries — for example, to remember your theme
+            of cookies or local-storage entries, for example, to remember your theme
             preference. See the Cookies section below.
           </li>
         </ul>
@@ -67,14 +67,14 @@ export default function PrivacyPolicyPage() {
           We process your information because it is necessary to respond to your
           request (for example, replying to a contact form submission), because we have
           a legitimate interest in operating and improving our business, or because you
-          have given consent — which you may withdraw at any time by contacting us.
+          have given consent, which you may withdraw at any time by contacting us.
         </p>
 
         <h2>Sharing your information</h2>
         <p>
           We do not sell, rent or trade your personal information. We share it only
-          with service providers who help us operate — such as email providers, form
-          processing services and website hosting — and only to the extent needed for
+          with service providers who help us operate, such as email providers, form
+          processing services and website hosting, and only to the extent needed for
           them to perform their work for us. These providers are bound by their own
           privacy and security obligations. We may also disclose information where the
           law requires it.
@@ -107,14 +107,14 @@ export default function PrivacyPolicyPage() {
         <p>
           This site uses minimal cookies and local storage. We store your theme
           preference (light or dark) locally in your browser so the site remembers it
-          on your next visit — this never leaves your device. If analytics are enabled,
+          on your next visit. This never leaves your device. If analytics are enabled,
           the analytics provider may set its own cookies; you can block or delete
           cookies at any time through your browser settings without breaking the site.
         </p>
 
         <h2>Third-party links</h2>
         <p>
-          Our website contains links to external sites — such as WhatsApp and social
+          Our website contains links to external sites, such as WhatsApp and social
           media platforms. We are not responsible for the privacy practices of those
           sites, and we encourage you to read their privacy policies before sharing
           information with them.
@@ -132,8 +132,8 @@ export default function PrivacyPolicyPage() {
         <p>
           We may update this policy from time to time as our services or legal
           obligations change. The “Last updated” date at the top of this page shows
-          when it was last revised. Meaningful changes will be reflected on this page —
-          we encourage you to review it periodically.
+          when it was last revised. Meaningful changes will be reflected on this page.
+          We encourage you to review it periodically.
         </p>
 
         <h2>Contact</h2>

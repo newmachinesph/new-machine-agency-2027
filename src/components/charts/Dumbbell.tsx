@@ -2,7 +2,7 @@ export type DumbbellItem = {
   label: string;
   before: number;
   after: number;
-  /** Display strings — units live here ("$84", "0:47"), numbers drive the scale. */
+  /** Display strings: units live here ("$84", "0:47"), numbers drive the scale. */
   beforeLabel: string;
   afterLabel: string;
   /** Signed improvement, e.g. "+214%" or "−68%". */
@@ -13,8 +13,8 @@ export type DumbbellItem = {
 const pos = (v: number, max: number) => `clamp(1.25rem, ${(v / max) * 100}%, calc(100% - 1.25rem))`;
 
 /**
- * Before → after dumbbell rows: one hue in two shades — "before" in the
- * de-emphasis gray, "after" in the data hue — joined by a 2px connector.
+ * Before → after dumbbell rows: one hue in two shades, "before" in the
+ * de-emphasis gray, "after" in the data hue, joined by a 2px connector.
  * Every value is directly labeled (before under, after above, so labels can
  * never collide), and the delta rides the row's right edge as a chip.
  * Each row carries its own unit, so each scales independently to its own max.

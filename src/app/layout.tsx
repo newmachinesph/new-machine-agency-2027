@@ -28,14 +28,14 @@ const OG_IMAGE = {
   url: "/og-image.png",
   width: 1200,
   height: 630,
-  alt: `${site.name} — ${site.tagline}`,
+  alt: `${site.name} | ${site.tagline}`,
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Full-Lifecycle Startup Studio`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} | Full-Lifecycle Startup Studio`,
+    template: `%s | ${site.name}`,
   },
   description: site.description,
   keywords: [
@@ -60,13 +60,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "en_US",
     url: site.url,
-    title: `${site.name} — Full-Lifecycle Startup Studio`,
+    title: `${site.name} | Full-Lifecycle Startup Studio`,
     description: site.description,
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Full-Lifecycle Startup Studio`,
+    title: `${site.name} | Full-Lifecycle Startup Studio`,
     description: site.description,
     images: [OG_IMAGE.url],
   },
@@ -131,7 +131,7 @@ export default function RootLayout({
             telephone: site.offices[0].phone,
             areaServed: [...AREA_SERVED],
             // What buyers actually search for, alongside the studio's niche
-            // loop/agent vocabulary — so assistants associate the entity with
+            // loop/agent vocabulary, so assistants associate the entity with
             // the full range of sellable work, not just the AI positioning.
             knowsAbout: [
               "Web design",

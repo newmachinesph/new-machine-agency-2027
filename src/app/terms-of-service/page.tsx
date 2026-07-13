@@ -32,7 +32,7 @@ export default function TermsOfServicePage() {
         <p>
           We provide digital growth services including website design, landing pages,
           corporate websites, social media management and lead generation, as described
-          on this website. Service descriptions are indicative — the precise scope of
+          on this website. Service descriptions are indicative. The precise scope of
           any engagement is defined in the proposal or agreement we issue to you before
           work begins. We may update, expand or discontinue services at any time.
         </p>
@@ -47,7 +47,7 @@ export default function TermsOfServicePage() {
             Quotes are valid for 30 days from the date of issue unless stated otherwise.
           </li>
           <li>
-            Payment terms — including any deposit, milestones and final payment — are
+            Payment terms, including any deposit, milestones and final payment, are
             set out in the quote or agreement. Work begins once the agreed deposit is
             received.
           </li>
@@ -76,8 +76,8 @@ export default function TermsOfServicePage() {
 
         <h2>Intellectual property</h2>
         <p>
-          Upon receipt of full payment, ownership of the final deliverables — including
-          the design, code and content we created for you — transfers to you. Until
+          Upon receipt of full payment, ownership of the final deliverables, including
+          the design, code and content we created for you, transfers to you. Until
           full payment is received, all deliverables remain our property. We retain
           ownership of our pre-existing tools, frameworks and know-how used to produce
           the deliverables. We may showcase completed work in our portfolio and
@@ -97,16 +97,16 @@ export default function TermsOfServicePage() {
         <p>
           We perform our services with reasonable skill and care. However, the website
           and its content are provided “as is” without warranties of any kind, whether
-          express or implied. We do not guarantee specific business outcomes — such as
-          rankings, traffic volumes, lead counts or revenue — as these depend on
+          express or implied. We do not guarantee specific business outcomes, such as
+          rankings, traffic volumes, lead counts or revenue, as these depend on
           factors beyond our control.
         </p>
 
         <h2>Limitation of liability</h2>
         <p>
           To the maximum extent permitted by law, {site.legalName} shall not be liable
-          for any indirect, incidental, special or consequential damages — including
-          loss of profits, revenue, data or business opportunity — arising out of or
+          for any indirect, incidental, special or consequential damages, including
+          loss of profits, revenue, data or business opportunity, arising out of or
           related to your use of the website or our services. Our total aggregate
           liability for any claim shall not exceed the amount you paid us for the
           specific service giving rise to the claim.

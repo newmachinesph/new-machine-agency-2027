@@ -10,7 +10,7 @@ const CY2 = 280;
 const CH = 40;
 
 /**
- * Bold chamfered-block mark — traced as vectors from the client's green
+ * Bold chamfered-block mark, traced as vectors from the client's green
  * key-art: four blocks framing a negative-space cross, with thin diagonal
  * hairlines. Decorative; parent sets size + opacity. Pure SVG, no client JS.
  */
@@ -30,22 +30,22 @@ export default function PatternSignal({ className = "" }: PatternSignalProps) {
         <path d="M-20 370 L200 590" />
         <path d="M420 370 L200 590" />
       </g>
-      {/* TL — deep */}
+      {/* TL: deep */}
       <polygon
         points={`0,0 ${CX1},0 ${CX1},${CY1 - CH} ${CX1 - CH},${CY1} 0,${CY1}`}
         fill="var(--accent-deep)"
       />
-      {/* TR — bright */}
+      {/* TR: bright */}
       <polygon
         points={`${CX2},0 400,0 400,${CY1} ${CX2 + CH},${CY1} ${CX2},${CY1 - CH}`}
         fill="var(--accent)"
       />
-      {/* BL — strong */}
+      {/* BL: strong */}
       <polygon
         points={`0,${CY2} ${CX1 - CH},${CY2} ${CX1},${CY2 + CH} ${CX1},520 0,520`}
         fill="var(--accent-strong)"
       />
-      {/* BR — deep */}
+      {/* BR: deep */}
       <polygon
         points={`${CX2},${CY2 + CH} ${CX2 + CH},${CY2} 400,${CY2} 400,520 ${CX2},520`}
         fill="var(--accent-deep)"

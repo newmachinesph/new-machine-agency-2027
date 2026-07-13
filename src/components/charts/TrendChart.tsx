@@ -34,7 +34,7 @@ const fmt = (n: number) => n.toLocaleString("en-US");
  * visually hidden table carries the exact numbers for screen readers.
  *
  * The viewBox is resized to the container's real pixel width, so text inside
- * the SVG always renders 1:1 — no shrunken axis labels on mobile.
+ * the SVG always renders 1:1, no shrunken axis labels on mobile.
  */
 export default function TrendChart({
   label,

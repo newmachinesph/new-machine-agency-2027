@@ -36,7 +36,7 @@ export const stageGroups: { stage: string; services: Service[] }[] = (() => {
   return order.map((stage) => ({ stage, services: byStage.get(stage)! }));
 })();
 
-/** Unique lifecycle stages in order — e.g. for footer/nav column headings. */
+/** Unique lifecycle stages in order, e.g. for footer/nav column headings. */
 export const stages: string[] = stageGroups.map((group) => group.stage);
 
 /** Maps each service's `icon` key to its brand icon component. */

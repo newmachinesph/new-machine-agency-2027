@@ -15,7 +15,7 @@ const steps = [
   {
     number: "03",
     title: "Build",
-    text: "Fast, mobile-first and tested on real devices — built to be live in weeks, not months.",
+    text: "Fast, mobile-first and tested on real devices, built to be live in weeks, not months.",
   },
   {
     number: "04",

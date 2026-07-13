@@ -14,7 +14,7 @@ type CtaPanelProps = {
 };
 
 /**
- * Closing call-to-action panel — centered heading, lead, a primary button and
+ * Closing call-to-action panel: centered heading, lead, a primary button and
  * the standing "WhatsApp Us" button over a faint chamfered-tile field. Shared by
  * the about and careers pages; includes its own top margin.
  */

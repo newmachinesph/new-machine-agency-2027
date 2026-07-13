@@ -150,7 +150,7 @@ function ServicesPanel() {
         </div>
       ))}
 
-      {/* Featured 2027 promo — links + image, the "combination" callout. */}
+      {/* Featured 2027 promo: links + image, the "combination" callout. */}
       <Link
         href="/services/"
         className="beam group/promo relative flex min-h-[13rem] flex-col justify-end overflow-hidden chamfer p-5 md:col-span-4 lg:col-span-1"
@@ -183,7 +183,7 @@ function ServicesPanel() {
   );
 }
 
-/** Menus preview the catalogue, they don't reproduce it — "View all products"
+/** Menus preview the catalogue, they don't reproduce it. "View all products"
  *  carries the rest. Desktop pairs a featured build with the next three, so
  *  `slice(1)` keeps the featured product from appearing twice. Mobile has no
  *  featured card, so it simply takes the top three. */
@@ -194,7 +194,7 @@ function ProductsPanel() {
   const featured = products[0];
   return (
     <div className="grid gap-6 md:grid-cols-[0.9fr_1.4fr]">
-      {/* Featured build — image-led left column mirroring the services promo. */}
+      {/* Featured build: image-led left column mirroring the services promo. */}
       <Link
         href={`/products/${featured.slug}/`}
         className="beam group/feat relative flex min-h-[15rem] flex-col justify-end overflow-hidden chamfer p-5"
@@ -227,7 +227,7 @@ function ProductsPanel() {
         </div>
       </Link>
 
-      {/* Product list — kept as-is. */}
+      {/* Product list: kept as-is. */}
       <div>
         <div className="mb-4 flex items-center justify-between">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-fg">
@@ -431,11 +431,11 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile menu — outside <header>: its backdrop-blur creates a containing
+      {/* Mobile menu, outside <header>: its backdrop-blur creates a containing
           block that would trap this fixed overlay and collapse its height. */}
       {open ? (
         <div className="fixed inset-0 top-16 z-40 flex flex-col gap-8 overflow-y-auto bg-bg px-6 py-10 lg:hidden">
-          {/* Services — grouped by lifecycle stage */}
+          {/* Services: grouped by lifecycle stage */}
           <div>
             <Link
               href="/services/"

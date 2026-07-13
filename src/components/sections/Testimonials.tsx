@@ -6,7 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import VideoEmbed from "@/components/ui/VideoEmbed";
 
 /** Representative sample videos, 1:1 with site.testimonials, plus one bonus
- *  reel below — no real client footage exists yet, so every embed is framed
+ *  reel below. No real client footage exists yet, so every embed is framed
  *  as "representative" (same honesty policy as site.ts testimonials). */
 const videoIds = [site.videoId, "aqz-KE-bpKQ", "ysz5S6PUM-U"] as const;
 
@@ -17,18 +17,18 @@ export default function Testimonials() {
         <SectionHeading
           eyebrow="Client words"
           title="Don’t take our word for it."
-          lead="Representative sample conversations, on and off camera — real quotes, real process, standing in until client-consented case studies replace them."
+          lead="Representative sample conversations, on and off camera: real quotes, real process, standing in until client-consented case studies replace them."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {site.testimonials.map((testimonial, i) => (
-            /* ponytail: md:mt-12 instead of translate-y — motion sets inline
+            /* ponytail: md:mt-12 instead of translate-y. Motion sets inline
                transform on Reveal, which would override a translate utility. */
             <Reveal key={testimonial.name} delay={i * 120} className={i === 1 ? "md:mt-12" : ""}>
               <div className="panel beam chamfer relative flex h-full flex-col overflow-hidden">
                 <VideoEmbed
                   id={videoIds[i]}
-                  title={`${testimonial.name} — representative client conversation`}
+                  title={`${testimonial.name}: representative client conversation`}
                 />
                 <div className="relative flex flex-1 flex-col p-8">
                   <span
@@ -58,12 +58,12 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Bonus reel — third representative video, wide-canvas bento treatment */}
+        {/* Bonus reel: third representative video, wide-canvas bento treatment */}
         <Reveal delay={260} className="mt-6">
           <div className="panel beam chamfer relative overflow-hidden md:flex md:items-stretch">
             <VideoEmbed
               id={videoIds[2]}
-              title="Inside New Machine — representative studio walkthrough"
+              title="Inside New Machine: representative studio walkthrough"
               className="md:w-1/2"
             />
             <div className="flex flex-col justify-center p-8 md:w-1/2">
@@ -74,7 +74,7 @@ export default function Testimonials() {
                 More client conversations, on camera.
               </h3>
               <p className="mt-2 text-muted">
-                A taste of how a kickoff call actually feels — we’ll swap this reel
+                A taste of how a kickoff call actually feels. We’ll swap this reel
                 for real client footage as soon as we’ve filmed one together.
               </p>
             </div>

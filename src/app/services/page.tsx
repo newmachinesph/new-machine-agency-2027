@@ -16,7 +16,7 @@ import PatternSignal from "@/components/ui/PatternSignal";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Brand, product, growth and scale services built for the full startup lifecycle — from first identity to fractional leadership, wherever your team is in the world.",
+    "Brand, product, growth and scale services built for the full startup lifecycle: from first identity to fractional leadership, wherever your team is in the world.",
   alternates: { canonical: "/services/" },
 };
 
@@ -43,7 +43,7 @@ const stages = [
   },
 ] as const;
 
-/** Green ramp climbing per stage — same order as the homepage stage overview,
+/** Green ramp climbing per stage: same order as the homepage stage overview,
  *  so the progression reads consistently everywhere it appears. */
 const stageTints = ["var(--accent-strong)", "var(--accent)", "#67ad62", "var(--accent-deep)"];
 
@@ -69,8 +69,8 @@ export default function ServicesPage() {
             <Reveal delay={160}>
               <p className="measure mt-5 text-muted">
                 {services.length} services across {stages.length} stages of the startup
-                lifecycle — brand, build, launch, grow and scale — run end to end by a
-                remote-first team built to compete with the best agencies anywhere — for
+                lifecycle, brand, build, launch, grow and scale, run end to end by a
+                remote-first team built to compete with the best agencies anywhere, for
                 founders in the US, the Philippines, and everywhere else. No stitching
                 five vendors together for one outcome.
               </p>
@@ -100,7 +100,7 @@ export default function ServicesPage() {
               <div className="relative">
                 <SectionHeading number={stage.number} eyebrow="Stage" title={stage.name} lead={stage.lead} />
 
-                {/* Featured service — bold lead block with a mockup accent */}
+                {/* Featured service: bold lead block with a mockup accent */}
                 <Reveal delay={80} className="mt-12">
                   <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
                     <div className={reversed ? "lg:order-2" : ""}>
@@ -120,7 +120,7 @@ export default function ServicesPage() {
                         </div>
                         <DuotoneImage
                           src={`https://picsum.photos/seed/${featured.slug}/960/640`}
-                          alt={`${featured.name} — ${featured.outcome}`}
+                          alt={`${featured.name}: ${featured.outcome}`}
                           className="aspect-[4/3] w-full"
                           sizes="(min-width: 1024px) 50vw, 100vw"
                         />
@@ -237,7 +237,7 @@ export default function ServicesPage() {
                 Not sure which stage you&rsquo;re at?
               </h2>
               <p className="measure mx-auto mt-3 text-muted">
-                Book a free call — we&rsquo;ll tell you honestly what will move the needle and
+                Book a free call. We&rsquo;ll tell you honestly what will move the needle and
                 what won&rsquo;t.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">

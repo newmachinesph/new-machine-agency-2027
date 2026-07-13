@@ -8,7 +8,7 @@ type LandmarkSilhouetteProps = {
  * Decorative only; parent sets size, color (currentColor) and opacity.
  */
 const PATHS: Record<string, string> = {
-  // Mayon Volcano — symmetric cone with a small crater (Philippines).
+  // Mayon Volcano: symmetric cone with a small crater (Philippines).
   mayon: "M44 40 Q50 31 56 40 L96 200 L4 200 Z",
 };
 

@@ -8,7 +8,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Sparkline from "@/components/charts/Sparkline";
 import { IconArrowRight } from "@/components/ui/icons";
 
-/** Vertical offset per column — staggered editorial rhythm on the wide canvas. */
+/** Vertical offset per column: staggered editorial rhythm on the wide canvas. */
 const OFFSET = ["", "lg:mt-16", "lg:mt-8"];
 
 export default function SelectedWork() {
@@ -18,7 +18,7 @@ export default function SelectedWork() {
         <SectionHeading
           eyebrow="Selected work"
           title="Results first. Here's the proof."
-          lead="Three representative engagements, each measured by what changed after launch. Every card opens into the full case study — the numbers charted month by month, before and after."
+          lead="Three representative engagements, each measured by what changed after launch. Every card opens into the full case study: the numbers charted month by month, before and after."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-3">

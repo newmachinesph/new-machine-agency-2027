@@ -21,7 +21,7 @@ import CtaPanel from "@/components/ui/CtaPanel";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Why we started, what we believe, and how we work — the story behind the anti-agency agency.",
+    "Why we started, what we believe, and how we work: the story behind the anti-agency agency.",
   alternates: { canonical: "/about/" },
 };
 
@@ -38,7 +38,7 @@ const values: Value[] = [
   {
     icon: IconSpeed,
     title: "Speed with standards",
-    text: "Fast delivery and high quality aren’t opposites — they’re a process problem.",
+    text: "Fast delivery and high quality aren’t opposites. They’re a process problem.",
     tint: "var(--accent)",
     onTint: "text-accent-ink",
   },
@@ -51,7 +51,7 @@ const values: Value[] = [
   },
 ];
 
-/** Discipline-based placeholders, not fabricated headshots — the honest
+/** Discipline-based placeholders, not fabricated headshots: the honest
  *  version of "meet the team" for a small, remote-first founding team. */
 const disciplines = [
   {
@@ -63,7 +63,7 @@ const disciplines = [
   {
     name: "Engineering",
     blurb:
-      "Ships production code across the stack — the sites, apps and systems behind every launch.",
+      "Ships production code across the stack: the sites, apps and systems behind every launch.",
     seed: "nomad-team-engineering",
   },
   {
@@ -103,7 +103,7 @@ export default function AboutPage() {
               <p className="measure mt-5 text-muted">
                 {site.name} exists because we got tired of watching good businesses pay
                 agency prices for template work. So we built the agency we wished
-                existed — remote-first, full-lifecycle, and built to compete with the
+                existed: remote-first, full-lifecycle, and built to compete with the
                 best studios anywhere in the world.
               </p>
             </Reveal>
@@ -122,13 +122,13 @@ export default function AboutPage() {
               </p>
               <p>
                 We believed professional digital growth shouldn’t require an enterprise
-                budget — it requires a small team that actually cares about the outcome,
+                budget. It requires a small team that actually cares about the outcome,
                 works fast, and tells the truth about what will and won’t move the
                 needle.
               </p>
               <p>
                 That’s why we built {site.name}. The name is deliberate: a company that
-                scales is really a machine — a system of brand, product and growth that
+                scales is really a machine: a system of brand, product and growth that
                 keeps running without the founder in the loop. We build that machine
                 from our hub in Makati, with founders across the US, the Philippines,
                 and everywhere else. We handle the full lifecycle:
@@ -168,7 +168,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Who's behind it"
             title="The team behind every shipped product."
-            lead="A small, remote-first founding team, working from wherever they are — not a fabricated headcount, just the disciplines every launch actually needs."
+            lead="A small, remote-first founding team, working from wherever they are, not a fabricated headcount, just the disciplines every launch actually needs."
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {disciplines.map((discipline, i) => (
@@ -204,7 +204,7 @@ export default function AboutPage() {
                 <IconCheck size={16} className="mt-1 shrink-0 text-accent-fg" />
                 <span className="text-muted">
                   <strong className="font-semibold text-fg">One point of contact.</strong>{" "}
-                  You talk directly to the people doing the work — no account managers
+                  You talk directly to the people doing the work, no account managers
                   relaying messages.
                 </span>
               </li>
@@ -226,7 +226,7 @@ export default function AboutPage() {
                 <IconCheck size={16} className="mt-1 shrink-0 text-accent-fg" />
                 <span className="text-muted">
                   <strong className="font-semibold text-fg">Honest advice.</strong> If
-                  something won’t help your business, we’ll tell you — even when it costs
+                  something won’t help your business, we’ll tell you, even when it costs
                   us the sale.
                 </span>
               </li>
@@ -238,7 +238,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="By the numbers"
             title="Honest commitments, not vanity metrics."
-            lead="Results over vanity is a rule, not a slogan — these are the standards we hold on every single engagement, from the first call."
+            lead="Results over vanity is a rule, not a slogan. These are the standards we hold on every single engagement, from the first call."
           />
           <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
             {site.stats.map((stat, i) => (
@@ -260,7 +260,7 @@ export default function AboutPage() {
 
         <CtaPanel
           title="Ready to work with a team that ships?"
-          lead="Book a free call — we’ll tell you honestly what will move the needle and what won’t."
+          lead="Book a free call. We’ll tell you honestly what will move the needle and what won’t."
           primaryHref="/contact"
           primaryLabel="Book a Strategy Call"
         />
