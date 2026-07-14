@@ -105,7 +105,7 @@ export default function WhoWeHelp() {
             <Reveal key={group.title} delay={i * 90}>
               <div className="beam panel chamfer relative flex h-full flex-col overflow-hidden">
                 <DuotoneImage
-                  src={`https://picsum.photos/seed/${group.seed}/640/480`}
+                  src={`/industries/${group.seed}.webp`}
                   className="h-44"
                   sizes="(min-width: 768px) 33vw, 100vw"
                 />
