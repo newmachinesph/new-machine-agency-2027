@@ -18,6 +18,7 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import { IconArrowRight, IconWebsite } from "@/components/ui/icons";
 import { stageGroups, serviceIcons } from "@/lib/services";
+import { productImage } from "@/lib/media";
 import products from "@/content/products.json";
 
 type MegaKey = "services" | "products";
@@ -156,7 +157,7 @@ function ServicesPanel() {
         className="beam group/promo relative flex min-h-[13rem] flex-col justify-end overflow-hidden chamfer p-5 md:col-span-4 lg:col-span-1"
       >
         <DuotoneImage
-          src="/nomad-background.jpg"
+          src="/products/answer-engine-machine.webp"
           className="absolute inset-0"
           sizes="(min-width: 1024px) 16rem, 100vw"
         />
@@ -200,7 +201,7 @@ function ProductsPanel() {
         className="beam group/feat relative flex min-h-[15rem] flex-col justify-end overflow-hidden chamfer p-5"
       >
         <DuotoneImage
-          src="/nomad-background.jpg"
+          src={productImage(featured.slug)}
           className="absolute inset-0"
           sizes="(min-width: 768px) 22rem, 100vw"
         />
@@ -248,7 +249,7 @@ function ProductsPanel() {
               className="beam group/prod flex items-center gap-4 chamfer border border-border bg-card/60 p-3"
             >
               <DuotoneImage
-                src="/nomad-background.jpg"
+                src={productImage(product.slug)}
                 className="h-14 w-20 shrink-0 chamfer"
                 sizes="80px"
               />
