@@ -9,6 +9,7 @@ import { productIcons, productBadgeClasses } from "@/lib/products";
 import { breadcrumbSchema, orgRef } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
+import { productImage } from "@/lib/media";
 import JsonLd from "@/components/ui/JsonLd";
 import Logo from "@/components/ui/Logo";
 import PatternGrid from "@/components/ui/PatternGrid";
@@ -74,7 +75,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 </div>
                 <div className="relative">
                   <DuotoneImage
-                    src={`https://picsum.photos/seed/${product.slug}/1200/900`}
+                    src={productImage(product.slug)}
                     alt={product.name}
                     className="aspect-[4/3] w-full"
                     sizes="(min-width: 1024px) 50vw, 100vw"

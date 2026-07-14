@@ -83,7 +83,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <div className="chamfer panel beam overflow-hidden">
                 <BrowserFrame path={`/work/${cs.slug}`} />
                 <DuotoneImage
-                  src={`https://picsum.photos/seed/${cs.slug}/1200/750`}
+                  src={`/work/${cs.slug}.webp`}
                   alt={`${cs.client} case study`}
                   className="aspect-[16/10] w-full"
                   sizes="(min-width: 1024px) 48vw, 100vw"
