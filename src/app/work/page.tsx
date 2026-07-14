@@ -42,7 +42,7 @@ export default function WorkPage() {
                 <div className="relative border-b border-border md:border-b-0 md:border-r md:flex md:flex-col">
                   <BrowserFrame path={`/work/${cs.slug}`} />
                   <DuotoneImage
-                    src={`https://picsum.photos/seed/${cs.slug}/960/600`}
+                    src={`/work/${cs.slug}.webp`}
                     alt={`${cs.client}: ${cs.metricLabel}`}
                     className="aspect-[16/9] w-full md:aspect-auto md:min-h-[16rem] md:flex-1"
                     sizes="(min-width: 768px) 55vw, 100vw"

@@ -7,6 +7,7 @@ import { productIcons, productBadgeClasses } from "@/lib/products";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
+import { productImage } from "@/lib/media";
 import JsonLd from "@/components/ui/JsonLd";
 import Logo from "@/components/ui/Logo";
 import PatternGrid from "@/components/ui/PatternGrid";
@@ -95,7 +96,7 @@ export default function ProductsPage() {
                   {/* Screenshot with centered solid-white wordmark */}
                   <div className="relative">
                     <DuotoneImage
-                      src={`https://picsum.photos/seed/${product.slug}/800/500`}
+                      src={productImage(product.slug)}
                       alt={product.name}
                       className="aspect-[16/10] w-full"
                       sizes="(min-width: 768px) 33vw, 100vw"

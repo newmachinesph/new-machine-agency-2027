@@ -3,12 +3,16 @@ import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
-import VideoEmbed from "@/components/ui/VideoEmbed";
+import VideoPlayer from "@/components/ui/VideoPlayer";
 
-/** Representative sample videos, 1:1 with site.testimonials, plus one bonus
- *  reel below. No real client footage exists yet, so every embed is framed
- *  as "representative" (same honesty policy as site.ts testimonials). */
-const videoIds = [site.videoId, "aqz-KE-bpKQ", "ysz5S6PUM-U"] as const;
+/** Representative sample reels. Only two brand films exist so far, so they
+ *  stand in across the three slots (same honesty policy as site.ts
+ *  testimonials). Swap for real, client-consented footage as it's filmed. */
+const videoSrcs = [
+  "/video/founder-on-video-call.mp4",
+  "/video/founder-on-video-call.mp4",
+  "/video/team-in-studio.mp4",
+] as const;
 
 export default function Testimonials() {
   return (
@@ -26,8 +30,8 @@ export default function Testimonials() {
                transform on Reveal, which would override a translate utility. */
             <Reveal key={testimonial.name} delay={i * 120} className={i === 1 ? "md:mt-12" : ""}>
               <div className="panel beam chamfer relative flex h-full flex-col overflow-hidden">
-                <VideoEmbed
-                  id={videoIds[i]}
+                <VideoPlayer
+                  src={videoSrcs[i]}
                   title={`${testimonial.name}: representative client conversation`}
                 />
                 <div className="relative flex flex-1 flex-col p-8">
@@ -61,8 +65,8 @@ export default function Testimonials() {
         {/* Bonus reel: third representative video, wide-canvas bento treatment */}
         <Reveal delay={260} className="mt-6">
           <div className="panel beam chamfer relative overflow-hidden md:flex md:items-stretch">
-            <VideoEmbed
-              id={videoIds[2]}
+            <VideoPlayer
+              src={videoSrcs[2]}
               title="Inside New Machine: representative studio walkthrough"
               className="md:w-1/2"
             />
