@@ -33,7 +33,7 @@ export default function SelectedWork() {
                   <div className="chamfer panel beam overflow-hidden">
                     <BrowserFrame path={`/work/${project.slug}`} />
                     <DuotoneImage
-                      src={`https://picsum.photos/seed/${project.slug}/960/600`}
+                      src={`/work/${project.slug}.webp`}
                       className="aspect-[16/10] w-full"
                       sizes="(min-width: 768px) 33vw, 100vw"
                     />

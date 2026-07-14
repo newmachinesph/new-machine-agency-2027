@@ -31,7 +31,7 @@ export default function ProductsTeaser() {
                 {/* Screenshot placeholder with centered solid-white wordmark */}
                 <div className="relative">
                   <DuotoneImage
-                    src={`https://picsum.photos/seed/${product.slug}/800/500`}
+                    src={`/products/${product.slug}.webp`}
                     className="aspect-[16/10] w-full"
                     sizes="(min-width: 768px) 33vw, 100vw"
                   />
