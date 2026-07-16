@@ -5,7 +5,10 @@ import workJson from "@/content/work.json";
 
 /** CaseStudy shape mirrors the seed JSON, so page field access is unchanged.
  *  Payload adds id/order/image/timestamps on top (harmless extra keys). */
-export type CaseStudy = (typeof workJson)[number] & { id?: string };
+export type CaseStudy = (typeof workJson)[number] & {
+  id?: string;
+  image?: { url?: string | null } | string | null;
+};
 
 export async function getCaseStudies(): Promise<CaseStudy[]> {
   const payload = await getPayload({ config });

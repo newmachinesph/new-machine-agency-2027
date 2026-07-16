@@ -1,8 +1,8 @@
 import Link from "next/link";
-import products from "@/content/products.json";
+import { getProducts } from "@/lib/products.data";
 import BrowserFrame from "@/components/ui/BrowserFrame";
 import DuotoneImage from "@/components/ui/DuotoneImage";
-import { productImage } from "@/lib/media";
+import { productImageUrl } from "@/lib/media";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -14,7 +14,8 @@ function badgeClasses(status: string): string {
   return "border-border text-muted";
 }
 
-export default function ProductsTeaser() {
+export default async function ProductsTeaser() {
+  const products = await getProducts();
   return (
     <section className="bg-surface py-16 md:py-24 lg:py-32">
       <div className="wrap">
@@ -32,7 +33,7 @@ export default function ProductsTeaser() {
                 {/* Screenshot placeholder with centered solid-white wordmark */}
                 <div className="relative">
                   <DuotoneImage
-                    src={productImage(product.slug)}
+                    src={productImageUrl(product.image, product.slug)}
                     className="aspect-[16/10] w-full"
                     sizes="(min-width: 768px) 33vw, 100vw"
                   />

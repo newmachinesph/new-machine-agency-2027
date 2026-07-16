@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCaseStudies, getCaseStudyBySlug, nextCaseStudy } from "@/lib/work.data";
+import { mediaUrl } from "@/lib/media";
 import { breadcrumbSchema, caseStudySchema } from "@/lib/schema";
 import Dumbbell from "@/components/charts/Dumbbell";
 import TrendChart from "@/components/charts/TrendChart";
@@ -84,7 +85,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <div className="chamfer panel beam overflow-hidden">
                 <BrowserFrame path={`/work/${cs.slug}`} />
                 <DuotoneImage
-                  src={`/work/${cs.slug}.webp`}
+                  src={mediaUrl(cs.image, `/work/${cs.slug}.webp`)}
                   alt={`${cs.client} case study`}
                   className="aspect-[16/10] w-full"
                   sizes="(min-width: 1024px) 48vw, 100vw"

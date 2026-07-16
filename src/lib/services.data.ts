@@ -5,7 +5,10 @@ import servicesJson from "@/content/services.json";
 
 /** Service shape mirrors the seed JSON, so page field access is unchanged.
  *  Payload adds id/order/timestamps on top (harmless extra keys). */
-export type Service = (typeof servicesJson)[number] & { id?: string };
+export type Service = (typeof servicesJson)[number] & {
+  id?: string;
+  image?: { url?: string | null } | string | null;
+};
 
 export async function getServices(): Promise<Service[]> {
   const payload = await getPayload({ config });

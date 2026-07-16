@@ -6,6 +6,7 @@ import "./globals.css";
 import { site } from "@/config/site";
 import { ORG_ID, WEBSITE_ID, orgRef, AREA_SERVED } from "@/lib/schema";
 import Navbar from "@/components/layout/Navbar";
+import { getProducts } from "@/lib/products.data";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
 import CustomCursor from "@/components/ui/CustomCursor";
@@ -84,11 +85,12 @@ export const viewport: Viewport = {
 
 const themeScript = `(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}d.dataset.theme=t}catch(e){d.dataset.theme="dark"}})();`;
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const products = await getProducts();
   return (
     <html
       lang="en"
@@ -109,7 +111,7 @@ export default function RootLayout({
         <div className="scroll-progress" aria-hidden="true" />
         <CustomCursor />
         <MotionProvider>
-          <Navbar />
+          <Navbar products={products} />
           <main id="main-content">{children}</main>
           <Footer />
           <BackToTop />

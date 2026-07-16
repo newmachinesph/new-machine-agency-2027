@@ -9,11 +9,15 @@ export function productImage(slug: string): string {
 }
 
 /** Payload `upload` relations come back as the Media doc (depth>=1) with a
- *  `.url`. Prefer that (R2) when present, else fall back to the bundled asset. */
-export function productImageUrl(image: unknown, slug: string): string {
+ *  `.url` (the R2 public URL). Prefer that when present, else the given fallback. */
+export function mediaUrl(image: unknown, fallback: string): string {
   if (image && typeof image === "object" && "url" in image) {
     const url = (image as { url?: unknown }).url;
     if (typeof url === "string" && url) return url;
   }
-  return productImage(slug);
+  return fallback;
+}
+
+export function productImageUrl(image: unknown, slug: string): string {
+  return mediaUrl(image, productImage(slug));
 }

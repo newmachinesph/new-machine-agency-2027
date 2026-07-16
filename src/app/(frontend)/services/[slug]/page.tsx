@@ -6,6 +6,7 @@ import { IconArrowLeft, IconArrowRight, IconCheck, IconWebsite } from "@/compone
 import { site } from "@/config/site";
 import { serviceIcons } from "@/lib/services";
 import { getServices, getServiceBySlug, getServiceStageGroups } from "@/lib/services.data";
+import { mediaUrl } from "@/lib/media";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
@@ -112,7 +113,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   </span>
                 </div>
                 <DuotoneImage
-                  src={`https://picsum.photos/seed/${service.slug}/1200/900`}
+                  src={mediaUrl(service.image, `https://picsum.photos/seed/${service.slug}/1200/900`)}
                   alt={`${service.name} | ${site.name}`}
                   className="aspect-[4/3] w-full"
                   sizes="(min-width: 1024px) 50vw, 100vw"

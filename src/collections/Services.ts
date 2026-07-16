@@ -35,6 +35,7 @@ export const Services: CollectionConfig = {
     { name: "forWho", type: "textarea" },
     { name: "problem", type: "textarea" },
     { name: "metaDescription", type: "textarea" },
+    { name: "image", type: "upload", relationTo: "media" },
     // includes is a plain string[] in the JSON — text hasMany round-trips as-is.
     { name: "includes", type: "text", hasMany: true },
     {

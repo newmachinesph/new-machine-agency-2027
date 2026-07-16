@@ -1,4 +1,5 @@
 import { getTestimonials } from "@/lib/testimonials.data";
+import { mediaUrl } from "@/lib/media";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
@@ -48,7 +49,10 @@ export default async function Testimonials() {
                   </p>
                   <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
                     <DuotoneImage
-                      src={`https://i.pravatar.cc/96?u=${encodeURIComponent(testimonial.name)}`}
+                      src={mediaUrl(
+                        testimonial.avatar,
+                        `https://i.pravatar.cc/96?u=${encodeURIComponent(testimonial.name)}`,
+                      )}
                       className="h-10 w-10 shrink-0"
                       sizes="40px"
                     />

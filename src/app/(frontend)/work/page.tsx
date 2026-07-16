@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getCaseStudies } from "@/lib/work.data";
+import { mediaUrl } from "@/lib/media";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import BrowserFrame from "@/components/ui/BrowserFrame";
 import CountUp from "@/components/ui/CountUp";
@@ -43,7 +44,7 @@ export default async function WorkPage() {
                 <div className="relative border-b border-border md:border-b-0 md:border-r md:flex md:flex-col">
                   <BrowserFrame path={`/work/${cs.slug}`} />
                   <DuotoneImage
-                    src={`/work/${cs.slug}.webp`}
+                    src={mediaUrl(cs.image, `/work/${cs.slug}.webp`)}
                     alt={`${cs.client}: ${cs.metricLabel}`}
                     className="aspect-[16/9] w-full md:aspect-auto md:min-h-[16rem] md:flex-1"
                     sizes="(min-width: 768px) 55vw, 100vw"
