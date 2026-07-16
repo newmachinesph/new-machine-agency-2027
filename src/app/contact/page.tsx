@@ -104,12 +104,6 @@ export default function ContactPage() {
                           </span>
                         ))}
                       </p>
-                      <a
-                        href={`tel:${office.phone.replace(/[^+\d]/g, "")}`}
-                        className="mt-3 inline-block text-sm text-accent-fg transition-opacity hover:opacity-80"
-                      >
-                        {office.phone}
-                      </a>
                     </div>
                   </div>
                 ))}
@@ -153,7 +147,6 @@ export default function ContactPage() {
             parentOrganization: orgRef,
             url: `${site.url}/contact/`,
             email: site.email,
-            telephone: office.phone,
             image: `${site.url}/og-image.png`,
             priceRange: "$$",
             areaServed: [...AREA_SERVED],

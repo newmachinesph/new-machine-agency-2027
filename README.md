@@ -33,7 +33,6 @@ Every owner-editable value lives here. What each field does:
 | `domain` | Display domain (`{{DOMAIN}}` token) |
 | `tagline` / `description` | Brand line + default meta description |
 | `email` | Contact email — mailto links, form fallback, legal pages |
-| `whatsapp` | WhatsApp number, international format, digits only (e.g. `639477902977`) |
 | `videoId` | YouTube ID for the hero + testimonials explainer video |
 | `formEndpoint` | Static form provider URL; empty string = mailto fallback (see below) |
 | `socials` | Footer social links (`label` + `href`) |
@@ -133,15 +132,13 @@ Build produces a fully static site in `/out`:
 
 ## Fill-in checklist (before going live)
 
-> **Note:** `domain`, `url`, `email`, the Makati office address and the business phone/WhatsApp line are now set to the real values (`newmachine.ph`, PBCom Tower, `+63 947 790 2977`). The remaining fields below still carry **dummy sample values** (sample stats, sample testimonials, `newmachine` social handles) so the site renders complete. Replace each one in `src/config/site.ts` with your real data before launch.
+> **Note:** `domain`, `url`, `email` and the Makati office address are now set to the real values (`newmachine.ph`, PBCom Tower). The remaining fields below still carry **dummy sample values** (sample stats, sample testimonials, `newmachine` social handles) so the site renders complete. Replace each one in `src/config/site.ts` with your real data before launch.
 
 | Field | Where | What to put |
 |---|---|---|
 | `domain` | `site.domain` | Display domain — set to `newmachine.ph` (also fills the browser-frame mockups) |
 | `url` | `src/config/site.ts` | Full production URL — set to `https://newmachine.ph` |
 | `email` | `site.email` | Contact email — set to `hello@newmachine.ph` |
-| `whatsapp` | `site.whatsapp` | Digits only, international format — set to `639477902977` |
-| `offices[].phone` | `site.offices` | Makati office line — set to `+63 947 790 2977` |
 | `videoId` | `site.videoId` | Real hero/testimonials YouTube video ID |
 | `stats[0..3]` | `site.stats` | Four hero cards — currently `24h` / `2wk` / `100%` / `0` promises (value + label) |
 | `testimonials[0..1]` | `site.testimonials` | Real, client-consented quotes |

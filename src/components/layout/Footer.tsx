@@ -144,12 +144,6 @@ export default function Footer() {
                     {line}
                   </span>
                 ))}
-                <a
-                  href={`tel:${office.phone.replace(/[^+\d]/g, "")}`}
-                  className="mt-1 inline-block transition-colors hover:text-fg"
-                >
-                  {office.phone}
-                </a>
               </li>
             ))}
           </ul>

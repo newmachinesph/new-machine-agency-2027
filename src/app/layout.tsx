@@ -126,7 +126,6 @@ export default function RootLayout({
             logo: `${site.url}/og-image.png`,
             image: `${site.url}/og-image.png`,
             email: site.email,
-            telephone: site.offices[0].phone,
             areaServed: [...AREA_SERVED],
             // What buyers actually search for, alongside the studio's niche
             // loop/agent vocabulary, so assistants associate the entity with
@@ -143,13 +142,11 @@ export default function RootLayout({
               "Autonomous agent systems",
               "Answer engine optimization",
             ],
-            // Email and the business phone line are both real, launch-ready
-            // channels, so the contact point carries the verified phone too.
+            // Email is the launch-ready contact channel.
             contactPoint: {
               "@type": "ContactPoint",
               contactType: "customer support",
               email: site.email,
-              telephone: site.offices[0].phone,
               areaServed: [...AREA_SERVED],
               availableLanguage: ["en"],
             },

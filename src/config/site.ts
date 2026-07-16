@@ -45,7 +45,6 @@ export const site = {
         "PBCom Tower, 6795 Ayala Avenue",
         "cor. V.A. Rufino St, Makati City 1226, PH",
       ],
-      phone: "+63 947 790 2977",
       streetAddress: "PBCom Tower, 6795 Ayala Ave cor. V.A. Rufino St",
       city: "Makati City",
       region2: "Metro Manila",
