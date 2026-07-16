@@ -3,9 +3,9 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { IconArrowLeft, IconArrowRight, IconChat } from "@/components/ui/icons";
-import products from "@/content/products.json";
 import { site } from "@/config/site";
 import { productIcons, productBadgeClasses } from "@/lib/products";
+import { getProducts, getProductBySlug } from "@/lib/products.data";
 import { breadcrumbSchema, orgRef } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
@@ -20,13 +20,14 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const products = await getProducts();
   return products.map((product) => ({ slug: product.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
+  const product = await getProductBySlug(slug);
   if (!product) return {};
   return {
     title: product.name,
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ProductDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
+  const product = await getProductBySlug(slug);
   if (!product) notFound();
 
   const Icon = productIcons[product.icon] ?? IconChat;
