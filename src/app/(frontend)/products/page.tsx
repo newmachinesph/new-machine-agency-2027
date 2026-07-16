@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { IconArrowRight, IconChat } from "@/components/ui/icons";
-import products from "@/content/products.json";
 import { site } from "@/config/site";
 import { productIcons, productBadgeClasses } from "@/lib/products";
+import { getProducts } from "@/lib/products.data";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/products/" },
 };
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  const products = await getProducts();
   return (
     <div className="pt-32 pb-24">
       <div className="wrap">
