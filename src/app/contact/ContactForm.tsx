@@ -138,8 +138,8 @@ export default function ContactForm() {
         ) : null}
         {status === "error" ? (
           <p className="text-muted">
-            Something went wrong sending your message. Please try WhatsApp, or
-            email us directly at {site.email}.
+            Something went wrong sending your message. Please email us directly
+            at {site.email}, or try again.
           </p>
         ) : null}
       </div>

@@ -3,15 +3,13 @@ import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
-import VideoPlayer from "@/components/ui/VideoPlayer";
 
-/** Representative sample reels. Only two brand films exist so far, so they
- *  stand in across the three slots (same honesty policy as site.ts
- *  testimonials). Swap for real, client-consented footage as it's filmed. */
-const videoSrcs = [
-  "/video/founder-on-video-call.mp4",
-  "/video/founder-on-video-call.mp4",
-  "/video/team-in-studio.mp4",
+/** Representative sample images. Stand in across the slots (same honesty policy
+ *  as site.ts testimonials). Swap for real, client-consented photos as filmed. */
+const imageSrcs = [
+  "/industries/nomad-saas-startup.webp",
+  "/industries/nomad-ecommerce-retail.webp",
+  "/industries/nomad-hospitality-dine.webp",
 ] as const;
 
 export default function Testimonials() {
@@ -30,9 +28,11 @@ export default function Testimonials() {
                transform on Reveal, which would override a translate utility. */
             <Reveal key={testimonial.name} delay={i * 120} className={i === 1 ? "md:mt-12" : ""}>
               <div className="panel beam chamfer relative flex h-full flex-col overflow-hidden">
-                <VideoPlayer
-                  src={videoSrcs[i]}
-                  title={`${testimonial.name}: representative client conversation`}
+                <DuotoneImage
+                  src={imageSrcs[i]}
+                  alt={`${testimonial.name}: representative client`}
+                  className="aspect-video w-full"
+                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
                 <div className="relative flex flex-1 flex-col p-8">
                   <span
@@ -62,24 +62,25 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Bonus reel: third representative video, wide-canvas bento treatment */}
+        {/* Bonus: third representative image, wide-canvas bento treatment */}
         <Reveal delay={260} className="mt-6">
           <div className="panel beam chamfer relative overflow-hidden md:flex md:items-stretch">
-            <VideoPlayer
-              src={videoSrcs[2]}
-              title="Inside New Machine: representative studio walkthrough"
-              className="md:w-1/2"
+            <DuotoneImage
+              src={imageSrcs[2]}
+              alt="Inside New Machine: representative studio"
+              className="aspect-video w-full md:w-1/2"
+              sizes="(min-width: 768px) 50vw, 100vw"
             />
             <div className="flex flex-col justify-center p-8 md:w-1/2">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-fg">
                 Representative sample
               </span>
               <h3 className="mt-3 font-display text-2xl font-bold tracking-tight">
-                More client conversations, on camera.
+                More client conversations.
               </h3>
               <p className="mt-2 text-muted">
-                A taste of how a kickoff call actually feels. We’ll swap this reel
-                for real client footage as soon as we’ve filmed one together.
+                A taste of how a kickoff actually feels. We’ll swap this in for
+                real client photos as soon as we’ve worked together.
               </p>
             </div>
           </div>

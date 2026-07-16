@@ -10,7 +10,6 @@ import BackToTop from "@/components/ui/BackToTop";
 import CustomCursor from "@/components/ui/CustomCursor";
 import JsonLd from "@/components/ui/JsonLd";
 import MotionProvider from "@/components/ui/MotionProvider";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -113,7 +112,6 @@ export default function RootLayout({
           <main id="main-content">{children}</main>
           <Footer />
           <BackToTop />
-          <WhatsAppButton />
         </MotionProvider>
         <JsonLd
           data={{
@@ -145,7 +143,7 @@ export default function RootLayout({
               "Autonomous agent systems",
               "Answer engine optimization",
             ],
-            // Email and the business WhatsApp line are both real, launch-ready
+            // Email and the business phone line are both real, launch-ready
             // channels, so the contact point carries the verified phone too.
             contactPoint: {
               "@type": "ContactPoint",

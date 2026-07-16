@@ -114,8 +114,8 @@ export default function PrivacyPolicyPage() {
 
         <h2>Third-party links</h2>
         <p>
-          Our website contains links to external sites, such as WhatsApp and social
-          media platforms. We are not responsible for the privacy practices of those
+          Our website contains links to external sites, such as social media
+          platforms. We are not responsible for the privacy practices of those
           sites, and we encourage you to read their privacy policies before sharing
           information with them.
         </p>

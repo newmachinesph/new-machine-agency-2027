@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { IconArrowLeft, IconArrowRight, IconChat } from "@/components/ui/icons";
 import products from "@/content/products.json";
-import { site, whatsappHref } from "@/config/site";
+import { site } from "@/config/site";
 import { productIcons, productBadgeClasses } from "@/lib/products";
 import { breadcrumbSchema, orgRef } from "@/lib/schema";
 import Button from "@/components/ui/Button";
@@ -117,10 +117,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     Talk to us
                     <IconArrowRight size={16} />
                   </Button>
-                  <Button href={whatsappHref} variant="ghost">
-                    <IconChat size={16} />
-                    WhatsApp
-                  </Button>
                 </div>
               </Reveal>
             </div>
@@ -230,10 +226,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   <Button href="/contact">
                     Talk to us
                     <IconArrowRight size={16} />
-                  </Button>
-                  <Button href={whatsappHref} variant="ghost">
-                    <IconChat size={16} />
-                    WhatsApp
                   </Button>
                 </div>
               </div>

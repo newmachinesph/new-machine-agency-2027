@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { IconArrowRight, IconChat } from "@/components/ui/icons";
-import { whatsappHref } from "@/config/site";
+import { IconArrowRight } from "@/components/ui/icons";
 import PatternSignal from "@/components/ui/PatternSignal";
 import Reveal from "@/components/ui/Reveal";
 
@@ -27,9 +26,9 @@ export default function FinalCta() {
                 Free 30-minute call, honest advice, zero pressure.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                {/* ponytail: raw links, not <Button>. Its variants assume a
+                {/* ponytail: raw link, not <Button>. Its variants assume a
                     neutral surface; this band's bg-accent needs the inverted
-                    dark/outline treatment below for contrast. */}
+                    treatment below for contrast. */}
                 <Link
                   href="/contact"
                   className="chamfer inline-flex items-center justify-center gap-2 bg-bg px-6 py-3 text-sm font-semibold text-fg transition hover:opacity-90"
@@ -37,15 +36,6 @@ export default function FinalCta() {
                   Book a Strategy Call
                   <IconArrowRight size={16} />
                 </Link>
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 border border-accent-ink px-6 py-3 text-sm font-semibold transition hover:bg-accent-strong"
-                >
-                  <IconChat size={16} />
-                  WhatsApp Us
-                </a>
               </div>
             </div>
           </div>

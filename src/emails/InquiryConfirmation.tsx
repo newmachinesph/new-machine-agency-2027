@@ -1,5 +1,5 @@
-import { Button, Heading, Hr, Section, Text } from "@react-email/components";
-import { site, whatsappHref } from "@/config/site";
+import { Heading, Hr, Section, Text } from "@react-email/components";
+import { site } from "@/config/site";
 import Layout from "./Layout";
 import { brand } from "./theme";
 
@@ -42,15 +42,8 @@ export default function InquiryConfirmation({
       </Section>
 
       <Text style={intro}>
-        If it is urgent, the fastest way to reach us is WhatsApp. Otherwise, sit
-        tight, we will be in touch shortly.
+        Sit tight, we will be in touch shortly.
       </Text>
-
-      <Section style={{ textAlign: "center", padding: "6px 0 4px" }}>
-        <Button href={whatsappHref} style={button}>
-          Message us on WhatsApp
-        </Button>
-      </Section>
 
       <Hr style={rule} />
       <Text style={signoff}>
@@ -124,16 +117,6 @@ const messageText: React.CSSProperties = {
   lineHeight: "1.7",
   whiteSpace: "pre-wrap",
   margin: "4px 0 12px",
-};
-
-const button: React.CSSProperties = {
-  backgroundColor: brand.sageDeep,
-  borderRadius: "8px",
-  color: "#ffffff",
-  fontSize: "14px",
-  fontWeight: 700,
-  padding: "13px 26px",
-  textDecoration: "none",
 };
 
 const rule: React.CSSProperties = {

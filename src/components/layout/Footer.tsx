@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navLinks, site, whatsappHref } from "@/config/site";
+import { navLinks, site } from "@/config/site";
 import { stages } from "@/lib/services";
 import PatternMosaic from "@/components/ui/PatternMosaic";
 import PatternTrace from "@/components/ui/PatternTrace";
@@ -125,16 +125,6 @@ export default function Footer() {
                 className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
               >
                 {site.email}
-              </a>
-            </li>
-            <li>
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
-              >
-                WhatsApp
               </a>
             </li>
             <li className="text-sm text-muted">We reply within 24 hours.</li>

@@ -21,8 +21,13 @@ export default function DuotoneImage({
   sizes = "100vw",
   priority = false,
 }: DuotoneImageProps) {
+  // ponytail: only add the default `relative` when the caller hasn't set its
+  // own position. Otherwise Tailwind's `.relative` beats a caller `absolute`
+  // (stylesheet order, not class order), collapsing an `absolute inset-0` fill
+  // to height 0. Upgrade path: drop if we adopt a positionless image wrapper.
+  const hasPosition = /(^|\s)(absolute|fixed|relative|sticky)(\s|$)/.test(className);
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`${hasPosition ? "" : "relative"} overflow-hidden ${className}`.trim()}>
       <Image
         src={src}
         alt={alt}

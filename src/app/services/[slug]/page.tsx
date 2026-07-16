@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { IconArrowLeft, IconArrowRight, IconCheck, IconChat, IconWebsite } from "@/components/ui/icons";
+import { IconArrowLeft, IconArrowRight, IconCheck, IconWebsite } from "@/components/ui/icons";
 import services from "@/content/services.json";
-import { site, whatsappHref } from "@/config/site";
+import { site } from "@/config/site";
 import { serviceIcons, stageGroups } from "@/lib/services";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
@@ -89,10 +89,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   <Button href="/contact">
                     Book a Strategy Call
                     <IconArrowRight size={16} />
-                  </Button>
-                  <Button href={whatsappHref} variant="ghost">
-                    <IconChat size={16} />
-                    WhatsApp
                   </Button>
                 </div>
               </Reveal>
@@ -248,9 +244,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 <Button href="/contact">
                   Book a Strategy Call
                   <IconArrowRight size={16} />
-                </Button>
-                <Button href={whatsappHref} variant="ghost">
-                  WhatsApp Us
                 </Button>
               </div>
             </div>

@@ -32,8 +32,6 @@ export const site = {
   /** Hero / testimonials explainer video. TODO(owner): replace this
    *  placeholder YouTube ID with the real brand film before launch. */
   videoId: "ScMzIvxBSi4",
-  /** International format, digits only: the business WhatsApp line. */
-  whatsapp: "639477902977",
 
   /** Physical office: our hub at PBCom Tower on Ayala Avenue, Makati. The
    *  team is remote-first; this is the base of operations. */
@@ -99,8 +97,6 @@ export const site = {
     },
   ],
 } as const;
-
-export const whatsappHref = `https://wa.me/${site.whatsapp}`;
 
 export const navLinks = [
   { label: "Services", href: "/services" },

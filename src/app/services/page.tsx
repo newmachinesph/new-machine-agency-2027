@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { IconArrowRight, IconCheck, IconWebsite } from "@/components/ui/icons";
 import services from "@/content/services.json";
-import { site, whatsappHref } from "@/config/site";
+import { site } from "@/config/site";
 import { serviceIcons } from "@/lib/services";
 import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
@@ -244,9 +244,6 @@ export default function ServicesPage() {
                 <Button href="/contact">
                   Book a Strategy Call
                   <IconArrowRight size={16} />
-                </Button>
-                <Button href={whatsappHref} variant="ghost">
-                  WhatsApp Us
                 </Button>
               </div>
             </div>

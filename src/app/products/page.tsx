@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { IconArrowRight, IconChat } from "@/components/ui/icons";
 import products from "@/content/products.json";
-import { site, whatsappHref } from "@/config/site";
+import { site } from "@/config/site";
 import { productIcons, productBadgeClasses } from "@/lib/products";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
@@ -53,10 +53,6 @@ export default function ProductsPage() {
                 <Button href="/contact">
                   Talk to us
                   <IconArrowRight size={16} />
-                </Button>
-                <Button href={whatsappHref} variant="ghost">
-                  <IconChat size={16} />
-                  WhatsApp
                 </Button>
               </div>
             </Reveal>
@@ -156,9 +152,6 @@ export default function ProductsPage() {
                 <Button href="/contact">
                   Talk to us
                   <IconArrowRight size={16} />
-                </Button>
-                <Button href={whatsappHref} variant="ghost">
-                  WhatsApp
                 </Button>
               </div>
             </div>

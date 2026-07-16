@@ -1,5 +1,4 @@
-import { IconArrowRight, IconChat } from "@/components/ui/icons";
-import { whatsappHref } from "@/config/site";
+import { IconArrowRight } from "@/components/ui/icons";
 import Button from "@/components/ui/Button";
 import PatternGrid from "@/components/ui/PatternGrid";
 import Reveal from "@/components/ui/Reveal";
@@ -14,9 +13,9 @@ type CtaPanelProps = {
 };
 
 /**
- * Closing call-to-action panel: centered heading, lead, a primary button and
- * the standing "WhatsApp Us" button over a faint chamfered-tile field. Shared by
- * the about and careers pages; includes its own top margin.
+ * Closing call-to-action panel: centered heading, lead, and a primary button
+ * over a faint chamfered-tile field. Shared by the about and careers pages;
+ * includes its own top margin.
  */
 export default function CtaPanel({
   title,
@@ -45,10 +44,6 @@ export default function CtaPanel({
             <Button href={primaryHref}>
               {primaryLabel}
               <IconArrowRight size={16} />
-            </Button>
-            <Button href={whatsappHref} variant="ghost">
-              <IconChat size={16} />
-              WhatsApp Us
             </Button>
           </div>
         </div>

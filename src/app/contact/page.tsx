@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { IconCheck, IconMail, IconChat } from "@/components/ui/icons";
-import { site, whatsappHref } from "@/config/site";
+import { IconCheck, IconMail } from "@/components/ui/icons";
+import { site } from "@/config/site";
 import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
@@ -49,18 +49,6 @@ export default function ContactPage() {
 
             <Reveal delay={240}>
               <div className="mt-9 space-y-4">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="panel chamfer flex items-center gap-4 p-5 transition-colors hover:border-accent"
-                >
-                  <IconChat size={20} className="shrink-0 text-accent-fg" />
-                  <span>
-                    <span className="block font-semibold">WhatsApp</span>
-                    <span className="block text-sm text-muted">Fastest response</span>
-                  </span>
-                </a>
                 <a
                   href={`mailto:${site.email}`}
                   className="panel chamfer flex items-center gap-4 p-5 transition-colors hover:border-accent"
