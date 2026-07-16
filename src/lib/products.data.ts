@@ -5,7 +5,10 @@ import productsJson from "@/content/products.json";
 
 /** Product shape mirrors the seed JSON, so page field access is unchanged.
  *  Payload adds id/order/image/timestamps on top (harmless extra keys). */
-export type Product = (typeof productsJson)[number];
+export type Product = (typeof productsJson)[number] & {
+  id?: string;
+  image?: { url?: string | null } | string | null;
+};
 
 export async function getProducts(): Promise<Product[]> {
   const payload = await getPayload({ config });

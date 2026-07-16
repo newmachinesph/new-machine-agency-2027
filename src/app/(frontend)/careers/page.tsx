@@ -7,7 +7,7 @@ import {
   IconPricing,
   IconSpeed,
 } from "@/components/ui/icons";
-import careers from "@/content/careers.json";
+import { getJobs } from "@/lib/jobs.data";
 import { site } from "@/config/site";
 import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
 import JsonLd from "@/components/ui/JsonLd";
@@ -80,7 +80,8 @@ function employmentTypes(type: string): string[] {
   return out.length ? out : ["OTHER"];
 }
 
-export default function CareersPage() {
+export default async function CareersPage() {
+  const careers = await getJobs();
   return (
     <div className="pt-32 pb-24">
       <div className="wrap">

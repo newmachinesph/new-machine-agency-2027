@@ -3,9 +3,10 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { IconArrowLeft, IconArrowRight, IconCheck, IconWebsite } from "@/components/ui/icons";
-import services from "@/content/services.json";
 import { site } from "@/config/site";
-import { serviceIcons, stageGroups } from "@/lib/services";
+import { serviceIcons } from "@/lib/services";
+import { getServices, getServiceBySlug, getServiceStageGroups } from "@/lib/services.data";
+import { mediaUrl } from "@/lib/media";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
@@ -20,13 +21,14 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const services = await getServices();
   return services.map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const service = services.find((s) => s.slug === slug);
+  const service = await getServiceBySlug(slug);
   if (!service) return {};
   return {
     title: service.name,
@@ -37,9 +39,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ServiceDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const service = services.find((s) => s.slug === slug);
+  const service = await getServiceBySlug(slug);
   if (!service) notFound();
 
+  const [stageGroups, services] = await Promise.all([getServiceStageGroups(), getServices()]);
   const Icon = serviceIcons[service.icon] ?? IconWebsite;
   const stageNumber = String(stageGroups.findIndex((g) => g.stage === service.stage) + 1).padStart(
     2,
@@ -110,7 +113,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   </span>
                 </div>
                 <DuotoneImage
-                  src={`https://picsum.photos/seed/${service.slug}/1200/900`}
+                  src={mediaUrl(service.image, `https://picsum.photos/seed/${service.slug}/1200/900`)}
                   alt={`${service.name} | ${site.name}`}
                   className="aspect-[4/3] w-full"
                   sizes="(min-width: 1024px) 50vw, 100vw"

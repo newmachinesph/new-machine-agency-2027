@@ -18,10 +18,17 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import { IconArrowRight, IconWebsite } from "@/components/ui/icons";
 import { stageGroups, serviceIcons } from "@/lib/services";
-import { productImage } from "@/lib/media";
-import products from "@/content/products.json";
+import { productImageUrl } from "@/lib/media";
 
 type MegaKey = "services" | "products";
+
+type NavProduct = {
+  slug: string;
+  name: string;
+  status?: string;
+  oneLiner?: string;
+  image?: unknown;
+};
 
 /** Which nav items open a mega panel, keyed by their config href. */
 const MEGA_MENUS: Record<string, MegaKey> = {
@@ -188,11 +195,9 @@ function ServicesPanel() {
  *  carries the rest. Desktop pairs a featured build with the next three, so
  *  `slice(1)` keeps the featured product from appearing twice. Mobile has no
  *  featured card, so it simply takes the top three. */
-const MENU_PRODUCTS = products.slice(1, 4);
-const MOBILE_PRODUCTS = products.slice(0, 3);
-
-function ProductsPanel() {
+function ProductsPanel({ products }: { products: NavProduct[] }) {
   const featured = products[0];
+  const menuProducts = products.slice(1, 4);
   return (
     <div className="grid gap-6 md:grid-cols-[0.9fr_1.4fr]">
       {/* Featured build: image-led left column mirroring the services promo. */}
@@ -201,7 +206,7 @@ function ProductsPanel() {
         className="beam group/feat relative flex min-h-[15rem] flex-col justify-end overflow-hidden chamfer p-5"
       >
         <DuotoneImage
-          src={productImage(featured.slug)}
+          src={productImageUrl(featured.image, featured.slug)}
           className="absolute inset-0"
           sizes="(min-width: 768px) 22rem, 100vw"
         />
@@ -242,14 +247,14 @@ function ProductsPanel() {
           </Link>
         </div>
         <ul className="space-y-2">
-        {MENU_PRODUCTS.map((product) => (
+        {menuProducts.map((product) => (
           <li key={product.slug}>
             <Link
               href={`/products/${product.slug}/`}
               className="beam group/prod flex items-center gap-4 chamfer border border-border bg-card/60 p-3"
             >
               <DuotoneImage
-                src={productImage(product.slug)}
+                src={productImageUrl(product.image, product.slug)}
                 className="h-14 w-20 shrink-0 chamfer"
                 sizes="80px"
               />
@@ -275,7 +280,8 @@ function ProductsPanel() {
   );
 }
 
-export default function Navbar() {
+export default function Navbar({ products }: { products: NavProduct[] }) {
+  const mobileProducts = products.slice(0, 3);
   const scrolled = useSyncExternalStore(
     subscribeToScroll,
     () => window.scrollY > 8,
@@ -387,7 +393,7 @@ export default function Navbar() {
                     }
                     onClose={() => setActive(null)}
                   >
-                    {menuKey === "services" ? <ServicesPanel /> : <ProductsPanel />}
+                    {menuKey === "services" ? <ServicesPanel /> : <ProductsPanel products={products} />}
                   </MegaItem>
                 );
               })}
@@ -480,7 +486,7 @@ export default function Navbar() {
               Products
             </Link>
             <ul className="mt-3 space-y-1">
-              {MOBILE_PRODUCTS.map((product) => (
+              {mobileProducts.map((product) => (
                 <li key={product.slug}>
                   <Link
                     href={`/products/${product.slug}/`}

@@ -10,6 +10,13 @@ import sharp from "sharp";
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
 import { Products } from "./collections/Products";
+import { Services } from "./collections/Services";
+import { CaseStudies } from "./collections/CaseStudies";
+import { Jobs } from "./collections/Jobs";
+import { Faq } from "./collections/Faq";
+import { Testimonials } from "./collections/Testimonials";
+import { Posts } from "./collections/Posts";
+import { ContactSubmissions } from "./collections/ContactSubmissions";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -19,7 +26,18 @@ export default buildConfig({
     user: Users.slug,
     importMap: { baseDir: path.resolve(dirname) },
   },
-  collections: [Users, Media, Products],
+  collections: [
+    Users,
+    Media,
+    Products,
+    Services,
+    CaseStudies,
+    Jobs,
+    Faq,
+    Testimonials,
+    Posts,
+    ContactSubmissions,
+  ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

@@ -1,11 +1,14 @@
-import faq from "@/content/faq.json";
 import Faq from "@/components/ui/Faq";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { IconArrowRight } from "@/components/ui/icons";
 
-export default function HomeFaq() {
+type Props = {
+  faqs: { q: string; a: string }[];
+};
+
+export default function HomeFaq({ faqs }: Props) {
   return (
     <section className="py-16 md:py-24 lg:py-32">
       <div className="wrap grid gap-12 md:grid-cols-[1fr_1.6fr]">
@@ -26,7 +29,7 @@ export default function HomeFaq() {
 
         <Reveal delay={120}>
           <div className="panel chamfer p-2 md:p-4">
-            <Faq items={faq} />
+            <Faq items={faqs} />
           </div>
         </Reveal>
       </div>
