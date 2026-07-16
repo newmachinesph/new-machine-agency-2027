@@ -21,7 +21,15 @@ export const Products: CollectionConfig = {
     },
     // tint (hex) + icon (icon key) map to code; kept as text, set by editors.
     { name: "tint", type: "text", admin: { description: "Accent hex, e.g. #8fc57f" } },
-    { name: "icon", type: "text", admin: { description: "Icon key (see lib/products productIcons)" } },
+    {
+      name: "icon",
+      type: "select",
+      admin: { description: "Brand icon (maps to lib/products productIcons)" },
+      options: [
+        "social", "rank", "search", "leads", "splittest", "growth",
+        "website", "appwindow", "mail", "dashboard", "compass", "target",
+      ],
+    },
     { name: "oneLiner", type: "textarea" },
     { name: "problem", type: "textarea" },
     { name: "solution", type: "textarea" },
