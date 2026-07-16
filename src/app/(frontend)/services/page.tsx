@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { IconArrowRight, IconCheck, IconWebsite } from "@/components/ui/icons";
-import services from "@/content/services.json";
 import { site } from "@/config/site";
 import { serviceIcons } from "@/lib/services";
+import { getServices } from "@/lib/services.data";
 import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import JsonLd from "@/components/ui/JsonLd";
@@ -47,7 +47,8 @@ const stages = [
  *  so the progression reads consistently everywhere it appears. */
 const stageTints = ["var(--accent-strong)", "var(--accent)", "#67ad62", "var(--accent-deep)"];
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const services = await getServices();
   return (
     <div className="pt-32 pb-24">
       <div className="wrap">

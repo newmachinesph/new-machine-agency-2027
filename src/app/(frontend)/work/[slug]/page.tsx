@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { caseStudies, nextCaseStudy } from "@/lib/work";
+import { getCaseStudies, getCaseStudyBySlug, nextCaseStudy } from "@/lib/work.data";
 import { breadcrumbSchema, caseStudySchema } from "@/lib/schema";
 import Dumbbell from "@/components/charts/Dumbbell";
 import TrendChart from "@/components/charts/TrendChart";
@@ -19,13 +19,14 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const caseStudies = await getCaseStudies();
   return caseStudies.map((cs) => ({ slug: cs.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const cs = caseStudies.find((c) => c.slug === slug);
+  const cs = await getCaseStudyBySlug(slug);
   if (!cs) return {};
   return {
     title: `${cs.client}: ${cs.metric} ${cs.metricLabel}`,
@@ -36,10 +37,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function CaseStudyPage({ params }: PageProps) {
   const { slug } = await params;
-  const cs = caseStudies.find((c) => c.slug === slug);
+  const cs = await getCaseStudyBySlug(slug);
   if (!cs) notFound();
 
-  const next = nextCaseStudy(cs.slug);
+  const next = await nextCaseStudy(cs.slug);
 
   return (
     <div className="pt-32 pb-24">

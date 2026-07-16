@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts } from "@/lib/blog.data";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/" },
 };
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+export default async function BlogPage() {
+  const posts = await getAllPosts();
 
   return (
     <div className="pt-32 pb-24">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import faq from "@/content/faq.json";
+import { getFaqs } from "@/lib/faq.data";
 import { faqSchema } from "@/lib/schema";
 import JsonLd from "@/components/ui/JsonLd";
 import Hero from "@/components/sections/Hero";
@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export default function Home() {
+export default async function Home() {
+  const faqs = await getFaqs();
   return (
     <>
       <Hero />
@@ -36,9 +37,9 @@ export default function Home() {
       <StatsBar />
       <Testimonials />
       <ProductsTeaser />
-      <HomeFaq />
+      <HomeFaq faqs={faqs} />
       <FinalCta />
-      <JsonLd data={faqSchema(faq)} />
+      <JsonLd data={faqSchema(faqs)} />
     </>
   );
 }

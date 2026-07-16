@@ -1,4 +1,4 @@
-import { site } from "@/config/site";
+import { getTestimonials } from "@/lib/testimonials.data";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
@@ -12,7 +12,8 @@ const imageSrcs = [
   "/industries/nomad-hospitality-dine.webp",
 ] as const;
 
-export default function Testimonials() {
+export default async function Testimonials() {
+  const testimonials = await getTestimonials();
   return (
     <section className="bg-surface py-16 md:py-24 lg:py-32">
       <div className="wrap">
@@ -23,7 +24,7 @@ export default function Testimonials() {
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {site.testimonials.map((testimonial, i) => (
+          {testimonials.map((testimonial, i) => (
             /* ponytail: md:mt-12 instead of translate-y. Motion sets inline
                transform on Reveal, which would override a translate utility. */
             <Reveal key={testimonial.name} delay={i * 120} className={i === 1 ? "md:mt-12" : ""}>

@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { getPayload } from "payload";
+import payloadConfig from "@payload-config";
 import { site } from "@/config/site";
 import { getMailer } from "@/lib/mailer";
 import { LOGO_PNG } from "@/emails/logo";
@@ -110,6 +112,18 @@ export async function POST(request: Request) {
       { ok: false, error: "We couldn't send your message. Please try again." },
       { status: 502 },
     );
+  }
+
+  // Persist the lead to the admin (best-effort: a DB failure must not break the
+  // email response contract).
+  try {
+    const payloadClient = await getPayload({ config: payloadConfig });
+    await payloadClient.create({
+      collection: "contact-submissions",
+      data: { name, email, company, service, message },
+    });
+  } catch (err) {
+    console.error("[contact] failed to save submission (non-fatal):", err);
   }
 
   // 2) Confirmation to the visitor (best-effort: never fail the request on it).

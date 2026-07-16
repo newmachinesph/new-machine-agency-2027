@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { caseStudies } from "@/lib/work";
+import { getCaseStudies } from "@/lib/work.data";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import BrowserFrame from "@/components/ui/BrowserFrame";
 import CountUp from "@/components/ui/CountUp";
@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/work/" },
 };
 
-export default function WorkPage() {
+export default async function WorkPage() {
+  const caseStudies = await getCaseStudies();
   return (
     <div className="pt-32 pb-24">
       <div className="wrap">
