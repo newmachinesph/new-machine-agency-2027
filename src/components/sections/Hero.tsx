@@ -5,8 +5,6 @@ import PatternSignal from "@/components/ui/PatternSignal";
 export default function Hero() {
   return (
     <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-16">
-      <div className="hero-blob hero-blob--a" aria-hidden="true" />
-      <div className="hero-blob hero-blob--b" aria-hidden="true" />
       <div className="hero-trace" aria-hidden="true">
         <PatternSignal className="h-full w-full opacity-[0.2]" />
       </div>

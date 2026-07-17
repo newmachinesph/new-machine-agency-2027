@@ -90,6 +90,19 @@ const groups = [
   },
 ];
 
+// Column spans over a 6-col grid, keyed to `groups` order. Alternates wide and
+// standard cells (wide-narrow / narrow-wide / even) so the six industries read
+// as an intentional bento, not six identical thirds. A standard cell (span 2)
+// matches the previous md:grid-cols-3 width, so nothing gets narrower.
+const cardSpans = [
+  "md:col-span-4",
+  "md:col-span-2",
+  "md:col-span-2",
+  "md:col-span-4",
+  "md:col-span-3",
+  "md:col-span-3",
+];
+
 export default function WhoWeHelp() {
   return (
     <section className="py-16 md:py-24 lg:py-32">
@@ -100,9 +113,9 @@ export default function WhoWeHelp() {
           lead="Different industries win customers in different ways. We shape every engagement around how yours actually works, not a generic checklist."
         />
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-14 grid gap-5 md:grid-cols-6">
           {groups.map((group, i) => (
-            <Reveal key={group.title} delay={i * 90}>
+            <Reveal key={group.title} delay={i * 90} className={cardSpans[i]}>
               <div className="beam panel chamfer relative flex h-full flex-col overflow-hidden">
                 <DuotoneImage
                   src={`/industries/${group.seed}.webp`}

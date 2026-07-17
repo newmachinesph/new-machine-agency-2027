@@ -178,9 +178,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               {cs.approach.map((step, i) => (
                 <Reveal key={step.title} delay={i * 80}>
                   <div className="flex gap-4">
-                    <span className="font-display text-xl font-bold text-accent-fg/70">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
+                    <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 bg-accent" />
                     <div>
                       <h3 className="font-display font-semibold">{step.title}</h3>
                       <p className="mt-1 text-sm text-muted">{step.text}</p>

@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { IconArrowLeft, IconArrowRight, IconCheck, IconWebsite } from "@/components/ui/icons";
 import { site } from "@/config/site";
 import { serviceIcons } from "@/lib/services";
-import { getServices, getServiceBySlug, getServiceStageGroups } from "@/lib/services.data";
+import { getServices, getServiceBySlug } from "@/lib/services.data";
 import { mediaUrl } from "@/lib/media";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
@@ -42,12 +42,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   const service = await getServiceBySlug(slug);
   if (!service) notFound();
 
-  const [stageGroups, services] = await Promise.all([getServiceStageGroups(), getServices()]);
+  const services = await getServices();
   const Icon = serviceIcons[service.icon] ?? IconWebsite;
-  const stageNumber = String(stageGroups.findIndex((g) => g.stage === service.stage) + 1).padStart(
-    2,
-    "0",
-  );
   const related = services.filter((s) => s.stage === service.stage && s.slug !== service.slug);
 
   return (
@@ -145,9 +141,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               {service.approach.map((step, i) => (
                 <Reveal key={step.title} delay={i * 80}>
                   <div className="flex gap-4">
-                    <span className="font-display text-xl font-bold text-accent-fg/70">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
+                    <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 bg-accent" />
                     <div>
                       <h3 className="font-display font-semibold">{step.title}</h3>
                       <p className="mt-1 text-sm text-muted">{step.text}</p>
@@ -161,7 +155,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
         {/* What's included */}
         <div className="mt-24">
-          <SectionHeading number={stageNumber} eyebrow="Scope" title="What's included" />
+          <SectionHeading eyebrow="Scope" title="What's included" />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {service.includes.map((item, i) => (
               <Reveal key={item} delay={i * 50}>

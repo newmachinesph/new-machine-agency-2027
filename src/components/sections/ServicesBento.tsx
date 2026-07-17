@@ -60,13 +60,21 @@ export default function ServicesBento() {
           lead={`${total} services across four stages of the journey: from first brand to full scale. Take a single stage, or run the whole lifecycle with one remote-first team that ships work built to compete anywhere.`}
         />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {stageGroups.map((group, i) => {
             const meta = stageMeta[group.stage] ?? FALLBACK;
             const Icon = meta.icon;
             const names = group.services.map((service) => service.name);
+            // First (foundation) and last (scale) stages read as wide feature
+            // cells; the two middle stages stay single-column. Breaks the even
+            // four-up grid into an editorial 2-1 / 1-2 rhythm.
+            const isFeature = i === 0 || i === stageGroups.length - 1;
             return (
-              <Reveal key={group.stage} delay={i * 80}>
+              <Reveal
+                key={group.stage}
+                delay={i * 80}
+                className={isFeature ? "lg:col-span-2" : undefined}
+              >
                 <Link
                   href="/services/"
                   className="bento-cell group relative flex h-full flex-col overflow-hidden p-8"
@@ -87,24 +95,22 @@ export default function ServicesBento() {
                   />
 
                   <div className="relative flex h-full flex-col">
-                    <div className="flex items-center justify-between">
+                    <h3 className="flex items-center gap-3 font-display text-2xl font-bold tracking-tight">
                       <span
-                        className="grid h-14 w-14 place-items-center chamfer"
+                        className="grid h-9 w-9 shrink-0 place-items-center chamfer"
                         style={{ background: meta.tint }}
                       >
-                        <Icon size={26} className={meta.onTint} />
+                        <Icon size={18} className={meta.onTint} />
                       </span>
-                      <span className="font-display text-sm font-semibold text-accent-fg">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-
-                    <h3 className="mt-6 font-display text-2xl font-bold tracking-tight">
                       {group.stage}
                     </h3>
                     <p className="mt-3 text-sm text-muted">{meta.summary}</p>
 
-                    <ul className="mt-6 flex flex-col gap-2">
+                    <ul
+                      className={`mt-6 flex flex-col gap-2 ${
+                        isFeature ? "lg:grid lg:grid-cols-2 lg:gap-x-8" : ""
+                      }`}
+                    >
                       {names.map((name) => (
                         <li key={name} className="flex items-center gap-2.5 text-[13px] text-fg/85">
                           <span aria-hidden="true" className="h-1 w-1 shrink-0 bg-accent" />

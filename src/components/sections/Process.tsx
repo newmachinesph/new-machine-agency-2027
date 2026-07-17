@@ -34,25 +34,21 @@ export default function Process() {
           lead="No mystery phases, no jargon-filled status reports. Four steps, each with a clear deliverable."
         />
 
-        <div className="relative mt-16">
-          <span
-            aria-hidden="true"
-            className="absolute inset-x-0 top-7 hidden h-px bg-border md:block"
-          />
-
-          <div className="grid gap-10 md:grid-cols-4 md:gap-6">
-            {steps.map((step, i) => (
-              <Reveal key={step.number} delay={i * 90}>
-                <div className="relative">
-                  <span className="chamfer relative z-10 grid h-14 w-14 place-items-center bg-accent font-display text-lg font-bold text-accent-ink">
+        <div className="mt-16 grid gap-10 md:grid-cols-4 md:gap-6">
+          {steps.map((step, i) => (
+            <Reveal key={step.number} delay={i * 90}>
+              <div>
+                <span aria-hidden="true" className="block h-0.5 w-10 bg-accent" />
+                <h3 className="mt-5 flex items-baseline gap-3 font-display text-xl font-bold md:text-2xl">
+                  <span className="font-display text-2xl font-bold tabular-nums text-accent-fg md:text-3xl">
                     {step.number}
                   </span>
-                  <h3 className="mt-6 font-display text-xl font-bold md:text-2xl">{step.title}</h3>
-                  <p className="mt-3 text-muted">{step.text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-muted">{step.text}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

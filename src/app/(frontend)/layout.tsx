@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Schibsted_Grotesk } from "next/font/google";
+import { Manrope, Space_Grotesk } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 import "./globals.css";
@@ -13,15 +13,17 @@ import CustomCursor from "@/components/ui/CustomCursor";
 import JsonLd from "@/components/ui/JsonLd";
 import MotionProvider from "@/components/ui/MotionProvider";
 
-const bricolage = Bricolage_Grotesque({
+// Manrope — body (refined geometric grotesk); Space Grotesk — display/titles
+// (technical, distinctive, pairs with the geometric pattern system).
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-bricolage",
+  variable: "--font-manrope",
   display: "swap",
 });
 
-const schibsted = Schibsted_Grotesk({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-schibsted",
+  variable: "--font-display-face",
   display: "swap",
 });
 
@@ -96,7 +98,7 @@ export default async function RootLayout({
       lang="en"
       suppressHydrationWarning
       data-theme="dark"
-      className={`${bricolage.variable} ${schibsted.variable}`}
+      className={`${manrope.variable} ${spaceGrotesk.variable}`}
     >
       <body>
         <Script id="theme-init" strategy="beforeInteractive">

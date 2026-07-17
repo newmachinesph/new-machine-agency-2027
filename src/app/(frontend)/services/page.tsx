@@ -99,7 +99,7 @@ export default async function ServicesPage() {
               />
 
               <div className="relative">
-                <SectionHeading number={stage.number} eyebrow="Stage" title={stage.name} lead={stage.lead} />
+                <SectionHeading eyebrow="Stage" title={stage.name} lead={stage.lead} />
 
                 {/* Featured service: bold lead block with a mockup accent */}
                 <Reveal delay={80} className="mt-12">

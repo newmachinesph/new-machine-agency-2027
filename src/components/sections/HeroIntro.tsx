@@ -26,13 +26,13 @@ export default function HeroIntro() {
 
   return (
     <m.div
-      className="wrap relative flex flex-col items-center gap-12 py-16 text-center lg:gap-16 lg:py-20"
+      className="wrap relative flex flex-col gap-12 py-16 lg:gap-16 lg:py-20"
       variants={container}
       initial={reduced ? false : "hidden"}
       animate="show"
     >
-      <div className="mx-auto max-w-4xl">
-        <m.div variants={item} className="flex items-center justify-center gap-2.5">
+      <div className="max-w-3xl">
+        <m.div variants={item} className="flex items-center gap-2.5">
           <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
             Full-lifecycle studio · Remote-first
@@ -51,7 +51,7 @@ export default function HeroIntro() {
           Built for <TypeWriter words={site.builtFor} className="text-fg" />
         </m.p>
 
-        <m.div variants={item} className="mt-8 flex flex-wrap justify-center gap-4">
+        <m.div variants={item} className="mt-8 flex flex-wrap gap-4">
           <Button href="/contact">
             Book a Strategy Call
             <IconArrowRight size={16} />

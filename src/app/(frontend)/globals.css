@@ -11,9 +11,9 @@
   --accent-deep: #35753a;
   --accent-ink: #0a0a0a;
 
-  --bg: #0a0a0a;
-  --surface: #101012;
-  --card: #141417;
+  --bg: #0a0b0a;
+  --surface: #101210;
+  --card: #141613;
   --fg: #f4f4f5;
   --muted: #b3b3bd;
   --line: rgba(255, 255, 255, 0.09);
@@ -28,9 +28,9 @@
 }
 
 :root[data-theme="light"] {
-  --bg: #fafafa;
-  --surface: #f1f1f3;
-  --card: #ffffff;
+  --bg: #f8faf7;
+  --surface: #eef1ec;
+  --card: #fcfdfb;
   --fg: #131316;
   --muted: #52525b;
   --line: rgba(19, 19, 22, 0.1);
@@ -53,8 +53,8 @@
   --color-accent-deep: var(--accent-deep);
   --color-accent-ink: var(--accent-ink);
   --color-accent-fg: var(--accent-fg);
-  --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-bricolage), var(--font-schibsted), sans-serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display-face), var(--font-manrope), sans-serif;
 }
 
 /* ── Base ───────────────────────────────────────────────────────────── */
