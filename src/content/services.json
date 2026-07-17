@@ -144,6 +144,198 @@
     "metaDescription": "New Machine runs market research that validates demand and maps competitors, so you can commit budget on evidence instead of gut feel."
   },
   {
+    "stage": "Brand & Strategy",
+    "slug": "gtm-strategy",
+    "name": "GTM Strategy",
+    "icon": "compass",
+    "tint": "#a9d896",
+    "outcome": "A go-to-market plan that says exactly who to sell to first, how to reach them, and why they buy.",
+    "description": "Before you spend on ads, hires or channels, you need a decision on where to point them. We build the go-to-market plan: the segment to win first, the channels that reach them, the offer and pricing, and the order to do it in.",
+    "includes": [
+      "Ideal-customer & segment definition",
+      "Channel & sales-motion selection",
+      "Offer, pricing & packaging review",
+      "Messaging & objection map",
+      "Launch sequence & milestones",
+      "90-day GTM plan with metrics"
+    ],
+    "forWho": "Founders taking a product to market, or entering a new segment, who need one plan instead of five opinions.",
+    "problem": "You have a product and a budget, but no agreement on where to point them first. Sales chases every lead, marketing spreads thin across channels, and nobody can say which segment you actually win. So spend goes out in five directions and none of them add up.",
+    "approach": [
+      {
+        "title": "Pick the beachhead",
+        "text": "We define the one segment you can win first and the buyer inside it. Trying to sell to everyone at once is how early budget disappears with nothing to show for it."
+      },
+      {
+        "title": "Match channel to buyer",
+        "text": "We choose the channels and the sales motion that actually reach that buyer, instead of copying whatever worked for a company that sells to someone else. Where they already look decides where you show up."
+      },
+      {
+        "title": "Sequence the launch",
+        "text": "We hand back a 90-day plan with the offer, messaging and milestones in order, plus the metrics that tell you it’s working. You leave with a plan the whole team can run, not a slide."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from Positioning & Naming?",
+        "a": "Positioning decides what you stand for and how you tell the story. GTM strategy decides who you sell to first, through which channels, in what order. They fit together, and we’ll tell you if you need one before the other."
+      },
+      {
+        "q": "Do you execute the plan or just write it?",
+        "a": "The strategy is the deliverable here, but most of what it points to — ads, lead gen, outbound, content — we can run under Launch & Grow. We scope and price that separately, so you’re never paying for execution you didn’t ask for."
+      },
+      {
+        "q": "What do you need from us to start?",
+        "a": "Time with the founders and sales, whatever customer and pipeline data you have, and an honest read on what’s worked and what hasn’t. The sharper that input, the sharper the plan."
+      }
+    ],
+    "metaDescription": "New Machine builds a go-to-market strategy that names the segment to win first, the channels to reach them, and the order to get there."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "content-strategy",
+    "name": "Content Strategy",
+    "icon": "share",
+    "tint": "#67ad62",
+    "outcome": "A content plan tied to what you sell, not a calendar full of posts nobody asked for.",
+    "description": "Most content gets published because something had to go out, not because it moves anyone closer to buying. We build the plan: the topics that match how your buyers decide, the formats worth making, and a production system that holds the pace without dropping the quality.",
+    "includes": [
+      "Audience & buyer-question mapping",
+      "Topic & messaging pillars",
+      "Format & channel plan",
+      "Editorial calendar & cadence",
+      "AI-assisted production workflow",
+      "Measurement & content-ops handoff"
+    ],
+    "forWho": "Teams publishing content that isn’t tied to anything, or founders who know they should but have no plan.",
+    "problem": "You’re publishing to stay busy, not to sell. Topics get picked the morning they’re due, the tone drifts, and none of it maps to a question a buyer actually asks. Meanwhile the competitors who plan it out are the ones showing up when it counts.",
+    "approach": [
+      {
+        "title": "Start from the buyer’s questions",
+        "text": "We map what your buyers actually search, ask and worry about on the way to a decision. Topics come from that, not from whatever’s easiest to write this week."
+      },
+      {
+        "title": "Plan formats worth the effort",
+        "text": "We decide which formats and channels earn their keep for you, then set a cadence you can actually hold. A realistic pace you sustain beats an ambitious one you abandon in a month."
+      },
+      {
+        "title": "Build the production system",
+        "text": "We set up an AI-assisted workflow so drafts move faster while people still own the strategy, the edit and the final call. You get the pace of AI with a human keeping voice and accuracy honest."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Isn’t this just an SEO or social plan?",
+        "a": "It’s the layer above both. Content strategy decides the topics, formats and system; SEO and social are two of the channels it feeds. If you only need one channel, we’ll tell you and skip the rest."
+      },
+      {
+        "q": "Do you write the content too?",
+        "a": "This engagement is the strategy and the workflow to run it. Ongoing production we can handle under Launch & Grow, or hand to your team — the plan is built so either can execute it."
+      },
+      {
+        "q": "How do you use AI without it reading like everyone else’s AI content?",
+        "a": "AI speeds up research and first drafts; people set the angle, edit for voice and check every claim. The strategy is built so the machine does the fast part and a person keeps it yours."
+      }
+    ],
+    "metaDescription": "New Machine builds a content strategy tied to how your buyers decide — the topics, formats and AI-assisted workflow to publish with a point."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "ai-readiness-audit",
+    "name": "AI Readiness Audit",
+    "icon": "search",
+    "tint": "#35753a",
+    "outcome": "A straight answer on where AI actually pays off in your business, and where it’s just hype.",
+    "description": "Everyone’s telling you to “use AI,” but nobody’s told you where it fits your business or what has to be true first. We audit your data, tools, workflows and team, then hand back the handful of places AI is worth doing and the order to do them in.",
+    "includes": [
+      "Workflow & process review",
+      "Data & tooling assessment",
+      "Team AI-literacy & change readiness",
+      "Prioritized use-case shortlist",
+      "Build-vs-buy & risk guidance",
+      "Phased 6–12 month roadmap"
+    ],
+    "forWho": "Founders and teams under pressure to “do something with AI” who want a plan before they buy tools.",
+    "problem": "You keep hearing you’re behind on AI, so there’s pressure to buy a tool and look busy. But nobody’s checked whether your data is usable, whether the workflow can even take an agent, or where the payoff actually is. Spend now and you risk a pile of subscriptions nobody opens.",
+    "approach": [
+      {
+        "title": "Look before you buy",
+        "text": "We review your real workflows, data and tools instead of starting from a vendor’s demo. Half the value is finding the places AI won’t help yet and saying so, before you pay for them."
+      },
+      {
+        "title": "Rank by payoff, not hype",
+        "text": "We shortlist the use cases where AI actually moves time or money for you, ranked by impact and effort. You get a short list worth acting on, not fifteen ideas from a webinar."
+      },
+      {
+        "title": "Phase the rollout",
+        "text": "You get a 6-to-12-month roadmap that sequences the wins, flags what has to be fixed first, and names the real risks. Clear next steps you can hand to your team or ours."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Will you tell us if we’re not ready for most of it?",
+        "a": "Yes, plainly. If your data or workflows need work before AI helps, that’s the finding, and it’s cheaper to hear now than after you’ve bought the tools. We’d rather flag it than sell you something that sits unused."
+      },
+      {
+        "q": "Do we have to build with you afterward?",
+        "a": "No. The roadmap is yours to run with anyone. If you do want to build, our AI Product Development and AI Agents & Automation services pick up where the audit leaves off, scoped separately."
+      },
+      {
+        "q": "How is this different from a sales call with an AI vendor?",
+        "a": "A vendor’s audit points at their product. Ours starts from your workflows and is honest about where AI doesn’t fit yet. You own the findings and owe us nothing further."
+      }
+    ],
+    "metaDescription": "New Machine’s AI Readiness Audit reviews your data, tools and workflows, then hands back the few places AI actually pays off — and the order to do them."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "category-design",
+    "name": "Category Design",
+    "icon": "target",
+    "tint": "#4a934e",
+    "outcome": "A market you define and lead, instead of one more option on a comparison page.",
+    "description": "Some companies don’t win the category, they rename it. Category design reframes the problem so the old alternatives look dated and you’re the obvious answer. It’s a bigger bet than positioning, and we’ll tell you honestly whether you’re ready for it.",
+    "includes": [
+      "Category & competitive-frame analysis",
+      "Point-of-view & narrative development",
+      "Category name & language system",
+      "Proof points & evidence plan",
+      "Evangelism & content angle",
+      "Rollout plan across brand & sales"
+    ],
+    "forWho": "Ambitious founders with a genuinely different approach who want to lead a market, not compete inside one.",
+    "problem": "You’re stuck on a comparison page next to companies you know you’re better than, arguing over features and price. The problem isn’t your pitch, it’s that buyers are judging you by an old category’s rules. Until someone reframes the game, you’re just a slightly better version of what already exists.",
+    "approach": [
+      {
+        "title": "Check you’re ready",
+        "text": "First we make sure category design is the right move and not positioning. Most companies need their positioning sharp before this is even on the table, and we’ll say so rather than sell you the bigger project."
+      },
+      {
+        "title": "Name the new game",
+        "text": "We build the point of view that reframes the problem, then the category name and language that make the old way look dated. Done right, competitors end up described in your terms."
+      },
+      {
+        "title": "Plan the campaign",
+        "text": "Category design only works if you commit to teaching the market for a year or more. We hand back a rollout plan across brand, content and sales, and an honest read on the time and budget it takes."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from Positioning & Naming?",
+        "a": "Positioning makes you the clear choice inside an existing category. Category design changes the category itself. It’s a bigger, longer bet, and it only works once your positioning is already sharp — we’ll tell you which one you actually need."
+      },
+      {
+        "q": "How long does category design take to pay off?",
+        "a": "Longer than most work we do — usually a year or more of consistently teaching the market. We’re upfront about that. If you need pipeline this quarter, this isn’t the right first move, and we’ll point you to one that is."
+      },
+      {
+        "q": "What if we’re not ready for it?",
+        "a": "Then we say so and scope the positioning work that has to come first. We won’t sell you a category play you can’t back with commitment and budget."
+      }
+    ],
+    "metaDescription": "New Machine’s Category Design reframes your market so you lead it instead of competing inside it — with an honest read on whether you’re ready."
+  },
+  {
     "stage": "Design & Build",
     "slug": "website-design",
     "name": "Website Design",
@@ -384,6 +576,102 @@
     "metaDescription": "New Machine builds native-feeling iOS and Android apps with offline support, push, and store submission handled, so users keep them installed."
   },
   {
+    "stage": "Design & Build",
+    "slug": "ai-product-development",
+    "name": "AI Product Development",
+    "icon": "appwindow",
+    "tint": "#4a934e",
+    "outcome": "AI features inside your product that hold up on real user data, not a demo that breaks on stage.",
+    "description": "Adding AI to a product is easy to fake and hard to ship. We build the real thing: copilots, chat, search and agents grounded in your own data, with the retrieval, guardrails and testing that keep them accurate once real users show up.",
+    "includes": [
+      "AI feature scoping & feasibility",
+      "Retrieval (RAG) on your own data",
+      "LLM integration & prompt design",
+      "Guardrails & fallback handling",
+      "Accuracy evaluation & testing",
+      "Production deployment & monitoring"
+    ],
+    "forWho": "Product teams and founders adding AI features that have to work on real user data, not just in a demo.",
+    "problem": "A demo of an AI feature takes an afternoon. Making it reliable on your actual data, with real users asking real questions, is the hard part everyone skips. It answers confidently and wrongly, surfaces the wrong context, or falls over the moment it leaves the happy path — and now it’s live and embarrassing.",
+    "approach": [
+      {
+        "title": "Ground it in your data",
+        "text": "We set up retrieval so the model answers from your actual content and data, not from whatever it guessed. That’s the difference between a feature you trust and one you have to apologize for."
+      },
+      {
+        "title": "Build the guardrails",
+        "text": "We add the fallbacks, limits and checks that decide what happens when the model is unsure, instead of letting it improvise. Confident and wrong is the failure mode we design against."
+      },
+      {
+        "title": "Test before it ships",
+        "text": "We measure accuracy against real questions before it reaches users, then monitor it after. You launch on evidence it works, not a hope that it does, and you own the whole system."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from AI Agents & Automation?",
+        "a": "AI Agents & Automation handles your internal work — support triage, data entry, follow-ups. This builds AI features into the product your customers use. Different audience, and a higher bar for reliability."
+      },
+      {
+        "q": "Do we own the code and the model setup?",
+        "a": "Yes, all of it — the code, the prompts, the retrieval setup and the accounts. You run on your own model providers and keys, so nothing is locked to us and you can keep building after we’re done."
+      },
+      {
+        "q": "How do you keep it from making things up?",
+        "a": "We ground answers in your data, add guardrails for when the model is unsure, and test accuracy against real questions before launch. It won’t be perfect — nothing generative is — but it’s built to fail safely, not confidently."
+      }
+    ],
+    "metaDescription": "New Machine builds AI product features — copilots, chat, search and agents grounded in your data — with the retrieval, guardrails and testing to stay reliable."
+  },
+  {
+    "stage": "Design & Build",
+    "slug": "design-systems",
+    "name": "Design Systems",
+    "icon": "brandmark",
+    "tint": "#a9d896",
+    "outcome": "One component library your whole team builds from, so every screen looks like the same product.",
+    "description": "When every page is designed from scratch, the product drifts: mismatched buttons, five shades of the same color, spacing that changes screen to screen. We build the component library and design system that make consistency the default and new screens faster to ship.",
+    "includes": [
+      "Component & pattern library",
+      "Design tokens (color, type, spacing)",
+      "Accessibility & state coverage",
+      "Design-to-code component build",
+      "Usage documentation & guidelines",
+      "Handoff & team onboarding"
+    ],
+    "forWho": "Product and design teams whose UI has drifted, or who keep rebuilding the same components as they scale.",
+    "problem": "Every new screen gets designed and built from scratch, so nothing quite matches. There are three button styles, spacing changes page to page, and designers and engineers keep rebuilding the same components a little differently each time. It’s slow, and the product looks less finished than it actually is.",
+    "approach": [
+      {
+        "title": "Audit the drift",
+        "text": "We inventory what you’ve already got and find the duplicates and inconsistencies. You usually have fewer real components than you think, buried under a pile of one-off variations."
+      },
+      {
+        "title": "Build the system",
+        "text": "We design the tokens, components and patterns as one connected library, with states and accessibility baked in, then build them in code so design and engineering share one source. One place to change, and everywhere updates."
+      },
+      {
+        "title": "Document and hand off",
+        "text": "You get usage guidelines and onboarding so the team actually adopts it instead of drifting again. The system is yours, and it’s built to grow with the product."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from a brand identity?",
+        "a": "Brand identity defines how the company looks and sounds overall. A design system turns that into the actual buttons, forms and components your product is built from. Identity is the direction; the design system is the working parts."
+      },
+      {
+        "q": "Do we own the system and can our team extend it?",
+        "a": "Yes. You own the design files, the code and the documentation, and it’s built so your designers and engineers can add to it without us. That’s the point — no dependency on us to ship the next screen."
+      },
+      {
+        "q": "We’re small. Isn’t a design system overkill?",
+        "a": "It can be, and we’ll tell you if it is. A design system pays off once you’re building the same components repeatedly or more than one person touches the UI. Below that, we’ll scope something lighter."
+      }
+    ],
+    "metaDescription": "New Machine builds design systems — the component library, tokens and documentation that keep every screen consistent and make new ones faster to ship."
+  },
+  {
     "stage": "Launch & Grow",
     "slug": "social-media-management",
     "name": "Social Media Management",
@@ -622,6 +910,102 @@
       }
     ],
     "metaDescription": "Email and CRM automation that follows up every lead and nurtures every customer automatically, with no manual effort."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "ugc-content-production",
+    "name": "UGC Content Production",
+    "icon": "mobile",
+    "tint": "#a9d896",
+    "outcome": "A steady stream of creator-style videos that look native to the feed and are built to test as ads.",
+    "description": "The ads that work now don’t look like ads. We source vetted creators, brief them properly, and produce short-form video that looks like a real person filmed it on their phone — made in batches you can test, rotate and scale across TikTok, Reels and Shorts.",
+    "includes": [
+      "Creator sourcing & vetting",
+      "Hooks, scripts & briefs",
+      "Batch short-form video production",
+      "Multiple variants for ad testing",
+      "Editing, captions & formatting",
+      "Monthly creative refresh"
+    ],
+    "forWho": "Brands running paid social who need a constant supply of native-looking video, not one polished spot a quarter.",
+    "problem": "Your polished, produced ads get scrolled past because they look like ads. The videos that actually convert look like a customer filmed them on their phone, and you can’t make those in-house at the pace paid social burns through creative. Run the same tired clips another week, and performance drops.",
+    "approach": [
+      {
+        "title": "Cast the right creators",
+        "text": "We source and vet creators who fit your product and actually look the part, then handle the contracts and coordination. You get people who match the brand, not whoever was cheapest."
+      },
+      {
+        "title": "Brief for the hook",
+        "text": "We write hooks, scripts and briefs built around what stops a thumb in the first two seconds. Good UGC isn’t luck — it’s a brief that gives the creator something worth filming."
+      },
+      {
+        "title": "Produce in batches to test",
+        "text": "We deliver video in batches with multiple variants, so you’re always testing and rotating instead of running one clip to death. As the ad platforms chew through creative, you’ve got fresh angles ready."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from Social Media Management?",
+        "a": "Social media management runs your own accounts — planning, posting, engaging. UGC production makes creator-style video built mainly to run as paid ads and be tested at volume. Some clients buy both; they do different jobs."
+      },
+      {
+        "q": "Does this include the ad spend and campaign management?",
+        "a": "No. This is the creative — the videos themselves. Running and optimizing them as ads is our Performance Ads service, which we can pair with it or leave to your team. The footage is yours either way."
+      },
+      {
+        "q": "How many videos do we get?",
+        "a": "It depends on the plan and the number of creators, and we agree the volume up front so scope and pricing are clear. UGC works on volume and rotation, so we’ll steer you toward enough variants to actually test with."
+      }
+    ],
+    "metaDescription": "New Machine produces UGC video — vetted creators, sharp briefs and batches of native-looking short-form built to test and rotate as paid social ads."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "ai-outbound-sdr",
+    "name": "AI Outbound / SDR",
+    "icon": "aiagent",
+    "tint": "#67ad62",
+    "outcome": "A steady flow of booked meetings from outbound that’s personalized and doesn’t burn your domain.",
+    "description": "Outbound still works — mass-blasting the same template doesn’t, and now it gets you flagged as spam. We build a signal-based outbound system: the right accounts, enriched and prioritized, reached with AI-personalized messages across email and LinkedIn, with the deliverability discipline that keeps you landing in the inbox.",
+    "includes": [
+      "Ideal-account list building & enrichment",
+      "Buying-signal & trigger setup",
+      "AI-personalized multi-channel sequences",
+      "Deliverability & domain warmup",
+      "Meeting booking & CRM handoff",
+      "Reply monitoring & human review"
+    ],
+    "forWho": "B2B teams who want predictable outbound pipeline without hiring and managing a room full of SDRs.",
+    "problem": "Outbound is either not happening or it’s a spray of identical templates that gets you marked as spam. Hiring SDRs is slow and expensive, and half their day goes to copy-paste research. Meanwhile spam filters have learned exactly what lazy AI outreach looks like, so the blast approach is actively burning your domain.",
+    "approach": [
+      {
+        "title": "Target on signals",
+        "text": "We build and enrich your account list, then wire up the buying signals worth acting on — a new hire, a funding round, a tech change. You reach people when there’s a reason to, not at random."
+      },
+      {
+        "title": "Personalize at volume",
+        "text": "AI drafts messages off real research about each account, and a person reviews before it sends. You get outreach that reads like you meant it, at a volume a human team couldn’t hit by hand."
+      },
+      {
+        "title": "Protect deliverability",
+        "text": "We handle domain warmup, sending limits and list hygiene so you land in the inbox instead of the spam folder. Sloppy deliverability kills outbound faster than bad copy, so we treat it as the foundation."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Isn’t AI outbound just spam?",
+        "a": "It is if you blast the same template at everyone — and that’s exactly what we don’t do. The point is fewer, better-targeted messages built on real signals and reviewed by a person, with deliverability protected. Done right, it’s the opposite of spam."
+      },
+      {
+        "q": "How is this different from Lead Generation?",
+        "a": "Lead generation here is mostly inbound — ads and landing pages that bring people to you. This is outbound: you reaching out to specific target accounts. Plenty of teams run both, and we’ll tell you which fits your motion."
+      },
+      {
+        "q": "Do we own the system and the data?",
+        "a": "Yes. The tools, the account data, the sequences and the domains are yours, set up in your accounts. If we stop working together, the system and the pipeline stay with you."
+      }
+    ],
+    "metaDescription": "New Machine builds AI outbound / SDR systems — signal-based targeting, AI-personalized multi-channel outreach and deliverability discipline that books meetings."
   },
   {
     "stage": "Scale · Beyond",
@@ -910,5 +1294,53 @@
       }
     ],
     "metaDescription": "SEO & AI Campaigns from New Machine win Google rankings and AI assistant citations in one campaign, so you show up wherever buyers look."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "gtm-engineering-revops",
+    "name": "GTM Engineering & RevOps",
+    "icon": "zap",
+    "tint": "#4a934e",
+    "outcome": "A revenue engine where leads route, data stays clean, and you can see what’s actually driving pipeline.",
+    "description": "As you scale, the go-to-market machine turns into duct tape: leads fall through the cracks, the CRM is a mess, and nobody agrees on the numbers. We engineer the plumbing — enrichment, routing, scoring, attribution and reporting — so the revenue engine runs on systems instead of someone remembering to update a spreadsheet.",
+    "includes": [
+      "CRM architecture & data cleanup",
+      "Lead routing, scoring & enrichment",
+      "Marketing & sales tool integration",
+      "Attribution & pipeline reporting",
+      "Workflow & handoff automation",
+      "RevOps documentation & training"
+    ],
+    "forWho": "Scaling teams whose go-to-market has outgrown a founder-run CRM and a pile of disconnected tools.",
+    "problem": "Your go-to-market runs on duct tape. Leads sit unrouted, the CRM is full of duplicates and blanks, marketing and sales tools don’t talk to each other, and every pipeline number gets argued over. It worked when the founder ran it by hand, but at your size the cracks are leaking real revenue.",
+    "approach": [
+      {
+        "title": "Fix the data first",
+        "text": "We clean up the CRM and get the data trustworthy before automating anything on top of it. Automation built on messy data just moves the mess around faster."
+      },
+      {
+        "title": "Engineer the flow",
+        "text": "We build the routing, scoring, enrichment and integrations so leads reach the right place and the tools finally talk to each other. The handoffs that used to depend on someone remembering now just happen."
+      },
+      {
+        "title": "Make it measurable",
+        "text": "We set up attribution and pipeline reporting everyone can agree on, then document it and train the team. You run the engine on systems, not on tribal knowledge and a founder’s memory."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What’s the difference between GTM engineering and RevOps?",
+        "a": "RevOps keeps your existing tools and process running well. GTM engineering builds the new infrastructure — the pipelines, routing and integrations — underneath it. This service does both: build what’s missing, then operate it cleanly."
+      },
+      {
+        "q": "How is this different from GTM Strategy?",
+        "a": "GTM strategy decides who you sell to and how. This builds and runs the systems that execute it — the CRM, routing, data and reporting. Strategy is the plan; this is the engine that runs it."
+      },
+      {
+        "q": "Do we own the systems and data?",
+        "a": "Yes. Everything is built in your accounts — your CRM, your tools, your data. We document it and train your team so you’re not dependent on us to keep it running."
+      }
+    ],
+    "metaDescription": "New Machine’s GTM Engineering & RevOps builds the revenue plumbing — clean CRM, lead routing, enrichment, attribution and reporting — that runs on systems, not spreadsheets."
   }
 ]

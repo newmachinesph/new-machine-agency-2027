@@ -43,7 +43,7 @@ export default function HeroIntro() {
           variants={item}
           className="mt-6 font-display text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-6xl lg:text-7xl 2xl:text-8xl"
         >
-          We build the <span className="text-outline">machine</span> your growth{" "}
+          We build the <span className="text-image-fill">machine</span> your growth{" "}
           <span className="text-accent-fg">runs on.</span>
         </m.h1>
 
