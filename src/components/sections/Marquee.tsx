@@ -1,4 +1,5 @@
 import services from "@/content/services.json";
+import AccentTick from "@/components/ui/AccentTick";
 
 const items = [...services.map((s) => s.name), "Remote-first · Worldwide", "Est. 2026"];
 
@@ -11,7 +12,7 @@ function Row({ hidden }: { hidden?: boolean }) {
           className="flex items-center gap-6 pr-6 text-xs uppercase tracking-[0.2em] text-muted"
         >
           {item}
-          <span aria-hidden="true" className="inline-block h-1.5 w-1.5 bg-accent" />
+          <AccentTick className="h-2 w-2" />
         </span>
       ))}
     </div>

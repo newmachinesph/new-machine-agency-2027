@@ -1,4 +1,5 @@
 import Reveal from "@/components/ui/Reveal";
+import AccentTick from "@/components/ui/AccentTick";
 
 type SectionHeadingProps = {
   /** Kept for call-site compatibility; hallmark default-OFF — not rendered.
@@ -19,7 +20,7 @@ export default function SectionHeading({
   return (
     <div className={centered ? "text-center" : ""}>
       <Reveal className="flex items-center gap-2.5">
-        <span aria-hidden="true" className={`h-1.5 w-1.5 bg-accent ${centered ? "hidden" : ""}`} />
+        <AccentTick className={`mt-2 self-start ${centered ? "hidden" : ""}`} />
         <h2 className="font-display text-3xl font-bold tracking-tight md:text-4xl">
           {title}
         </h2>

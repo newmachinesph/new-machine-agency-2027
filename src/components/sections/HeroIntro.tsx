@@ -6,6 +6,7 @@ import { IconArrowRight } from "@/components/ui/icons";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
 import TypeWriter from "@/components/ui/TypeWriter";
+import AccentTick from "@/components/ui/AccentTick";
 
 const container: Variants = {
   hidden: {},
@@ -33,7 +34,7 @@ export default function HeroIntro() {
     >
       <div className="max-w-3xl">
         <m.div variants={item} className="flex items-center gap-2.5">
-          <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+          <AccentTick />
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
             Full-lifecycle studio · Remote-first
           </span>

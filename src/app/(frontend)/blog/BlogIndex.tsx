@@ -1,5 +1,6 @@
 "use client";
 
+import AccentTick from "@/components/ui/AccentTick";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { PostMeta } from "@/lib/blog";
@@ -99,7 +100,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
         />
         <div className="flex flex-col justify-center p-8 md:p-12">
           <span className="inline-flex w-fit items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent-fg">
-            <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+            <AccentTick />
             Latest
           </span>
           <h2 className="font-display mt-4 text-2xl font-bold tracking-tight md:text-4xl">
