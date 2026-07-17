@@ -6,39 +6,39 @@
    Change --accent below to rebrand the entire site (pending final brand
    confirmation; emerald is the working default). */
 :root {
-  --accent: #8fc57f;
-  --accent-strong: #a9d896;
-  --accent-deep: #35753a;
-  --accent-ink: #0a0a0a;
+  --accent: oklch(76.8% 0.112 138.7);
+  --accent-strong: oklch(83.3% 0.102 136.9);
+  --accent-deep: oklch(50.5% 0.112 145.2);
+  --accent-ink: oklch(14.5% 0 0);
 
-  --bg: #0a0b0a;
-  --surface: #101210;
-  --card: #141613;
-  --fg: #f4f4f5;
-  --muted: #b3b3bd;
+  --bg: oklch(14.8% 0.003 145.4);
+  --surface: oklch(17.9% 0.005 145.4);
+  --card: oklch(19.7% 0.007 135.0);
+  --fg: oklch(96.7% 0 0);
+  --muted: oklch(77.0% 0.014 286.1);
   --line: rgba(255, 255, 255, 0.09);
   --glass: rgba(255, 255, 255, 0.05);
-  --accent-fg: #a9d896;
+  --accent-fg: oklch(83.3% 0.102 136.9);
   --blob-opacity: 0.35;
 
   /* Chart palette: validated per theme with the dataviz six-checks script
      (lightness band, chroma, CVD separation, ≥3:1 contrast vs --card). */
-  --chart-data: #5d9e52;
-  --chart-dim: #75757f;
+  --chart-data: oklch(63.7% 0.127 140.8);
+  --chart-dim: oklch(56.6% 0.015 285.9);
 }
 
 :root[data-theme="light"] {
-  --bg: #f8faf7;
-  --surface: #eef1ec;
-  --card: #fcfdfb;
-  --fg: #131316;
-  --muted: #52525b;
+  --bg: oklch(98.3% 0.004 134.8);
+  --surface: oklch(95.4% 0.007 132.4);
+  --card: oklch(99.3% 0.003 128.5);
+  --fg: oklch(18.8% 0.006 285.8);
+  --muted: oklch(44.2% 0.015 285.8);
   --line: rgba(19, 19, 22, 0.1);
   --glass: rgba(255, 255, 255, 0.55);
-  --accent-fg: #2f6b34;
+  --accent-fg: oklch(47.3% 0.106 145.3);
   --blob-opacity: 0.28;
-  --chart-data: #35753a;
-  --chart-dim: #82828c;
+  --chart-data: oklch(50.5% 0.112 145.2);
+  --chart-dim: oklch(61.0% 0.015 285.9);
 }
 
 @theme inline {

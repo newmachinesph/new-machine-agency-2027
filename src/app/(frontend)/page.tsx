@@ -3,7 +3,6 @@ import { getFaqs } from "@/lib/faq.data";
 import { faqSchema } from "@/lib/schema";
 import JsonLd from "@/components/ui/JsonLd";
 import Hero from "@/components/sections/Hero";
-import Marquee from "@/components/sections/Marquee";
 import StatsBar from "@/components/sections/StatsBar";
 import SelectedWork from "@/components/sections/SelectedWork";
 import Impact from "@/components/sections/Impact";
@@ -26,7 +25,6 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <Marquee />
       <SelectedWork />
       <Impact />
       <ServicesBento />

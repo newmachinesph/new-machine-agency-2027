@@ -5,7 +5,6 @@ import { useReducedMotion, type Variants } from "motion/react";
 import { IconArrowRight } from "@/components/ui/icons";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
-import TypeWriter from "@/components/ui/TypeWriter";
 import AccentTick from "@/components/ui/AccentTick";
 
 const container: Variants = {
@@ -49,7 +48,8 @@ export default function HeroIntro() {
         </m.h1>
 
         <m.p variants={item} className="mt-6 text-lg font-medium text-fg/80 md:text-2xl">
-          Built for <TypeWriter words={site.builtFor} className="text-fg" />
+          Built for{" "}
+          <span className="text-fg">{site.builtFor.slice(0, 4).join(", ")} &amp; more</span>
         </m.p>
 
         <m.div variants={item} className="mt-8 flex flex-wrap gap-4">

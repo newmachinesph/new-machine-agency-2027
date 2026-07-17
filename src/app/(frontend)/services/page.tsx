@@ -65,7 +65,7 @@ export default async function ServicesPage() {
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display mt-5 max-w-3xl text-4xl font-extrabold tracking-tight md:text-6xl">
-                Brand to scale. Every stage, one world-class studio.
+                Brand to scale. Every stage, one studio.
               </h1>
             </Reveal>
             <Reveal delay={160}>
@@ -107,19 +107,6 @@ export default async function ServicesPage() {
                   <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
                     <div className={reversed ? "lg:order-2" : ""}>
                       <div className="chamfer panel beam overflow-hidden">
-                        <div
-                          aria-hidden="true"
-                          className="flex items-center gap-2 border-b border-border bg-surface px-4 py-3"
-                        >
-                          <span className="flex gap-1.5">
-                            <span className="h-2.5 w-2.5 bg-accent/70" />
-                            <span className="h-2.5 w-2.5 bg-muted/40" />
-                            <span className="h-2.5 w-2.5 bg-muted/25" />
-                          </span>
-                          <span className="ml-2 min-w-0 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                            {site.domain}/services/{featured.slug}
-                          </span>
-                        </div>
                         <DuotoneImage
                           src={`https://picsum.photos/seed/${featured.slug}/960/640`}
                           alt={`${featured.name}: ${featured.outcome}`}
@@ -136,7 +123,7 @@ export default async function ServicesPage() {
                       >
                         <FeaturedIcon size={26} className="text-accent-ink" />
                       </span>
-                      <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-accent-fg">
+                      <p className="mt-6 text-sm font-semibold text-accent-fg">
                         {featured.name}
                       </p>
                       <h3 className="mt-2 font-display text-2xl font-bold tracking-tight md:text-3xl">

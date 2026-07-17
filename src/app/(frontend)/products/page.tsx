@@ -77,21 +77,7 @@ export default async function ProductsPage() {
                     className="pointer-events-none absolute -right-5 -top-5 h-24 w-24 opacity-[0.16] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]"
                   />
 
-                  {/* Browser device-frame */}
-                  <div
-                    aria-hidden="true"
-                    className="relative flex items-center gap-2 border-b border-border bg-surface px-4 py-2.5"
-                  >
-                    <span className="flex gap-1.5">
-                      <span className="h-2.5 w-2.5 bg-accent/70" />
-                      <span className="h-2.5 w-2.5 bg-muted/40" />
-                      <span className="h-2.5 w-2.5 bg-muted/25" />
-                    </span>
-                    <span className="ml-2 min-w-0 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                      {site.domain}/products/{product.slug}
-                    </span>
-                  </div>
-                  {/* Screenshot with centered solid-white wordmark */}
+                  {/* Product art with centered solid-white wordmark */}
                   <div className="relative">
                     <DuotoneImage
                       src={productImageUrl(product.image, product.slug)}
