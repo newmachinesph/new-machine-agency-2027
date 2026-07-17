@@ -1,3 +1,4 @@
+import AccentTick from "@/components/ui/AccentTick";
 import { site } from "@/config/site";
 import CountUp from "@/components/ui/CountUp";
 import Reveal from "@/components/ui/Reveal";
@@ -19,7 +20,7 @@ export default function StatsBar() {
       <div className="wrap relative py-16 md:py-20">
         <Reveal>
           <div className="flex items-center gap-2.5">
-            <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+            <AccentTick />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
               Standing commitments
             </span>

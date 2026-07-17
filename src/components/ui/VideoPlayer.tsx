@@ -1,5 +1,6 @@
 "use client";
 
+import AccentTick from "@/components/ui/AccentTick";
 import { useRef, useState } from "react";
 
 type VideoPlayerProps = {
@@ -66,7 +67,7 @@ export default function VideoPlayer({ src, title, className = "", priority = fal
           </span>
           {/* title caption */}
           <span className="absolute inset-x-0 bottom-0 flex items-center gap-2 p-5">
-            <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+            <AccentTick />
             <span className="text-sm font-semibold text-white">{title}</span>
           </span>
         </button>

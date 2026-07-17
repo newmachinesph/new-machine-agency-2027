@@ -1,3 +1,4 @@
+import AccentTick from "@/components/ui/AccentTick";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { IconArrowRight, IconCheck, IconWebsite } from "@/components/ui/icons";
@@ -57,7 +58,7 @@ export default async function ServicesPage() {
 
           <div className="relative">
             <Reveal className="flex items-center gap-2.5">
-              <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+              <AccentTick />
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
                 Services
               </span>

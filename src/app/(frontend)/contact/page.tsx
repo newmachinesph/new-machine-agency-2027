@@ -1,3 +1,4 @@
+import AccentTick from "@/components/ui/AccentTick";
 import type { Metadata } from "next";
 import { IconCheck, IconMail } from "@/components/ui/icons";
 import { site } from "@/config/site";
@@ -29,7 +30,7 @@ export default function ContactPage() {
           <PatternSignal className="pointer-events-none absolute -left-12 -top-10 hidden h-72 w-56 opacity-[0.1] md:block" />
           <div className="relative">
             <Reveal className="flex items-center gap-2.5">
-              <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+              <AccentTick />
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
                 Contact
               </span>
@@ -64,7 +65,7 @@ export default function ContactPage() {
 
             <Reveal delay={320}>
               <div className="mt-8 flex items-center gap-2.5 text-sm font-semibold text-accent-fg">
-                <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent" />
+                <AccentTick />
                 Replies within 24 hours, usually much faster.
               </div>
               <ul className="mt-5 space-y-2.5">
