@@ -1,9 +1,23 @@
 import { getTestimonials } from "@/lib/testimonials.data";
-import { mediaUrl } from "@/lib/media";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+
+/** "Sarah Johnson" -> "Sarah J." — first name full, surname(s) to initials. */
+function displayName(name: string): string {
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (parts.length < 2) return name;
+  return `${parts[0]} ${parts.slice(1).map((w) => `${w[0].toUpperCase()}.`).join(" ")}`;
+}
+
+/** Monogram for the plain avatar tile: first + last initial. */
+function initials(name: string): string {
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return "";
+  if (parts.length === 1) return parts[0][0].toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
 
 /** Representative sample images. Stand in across the slots (same honesty policy
  *  as site.ts testimonials). Swap for real, client-consented photos as filmed. */
@@ -48,16 +62,14 @@ export default async function Testimonials() {
                     {testimonial.quote}
                   </p>
                   <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                    <DuotoneImage
-                      src={mediaUrl(
-                        testimonial.avatar,
-                        `https://i.pravatar.cc/96?u=${encodeURIComponent(testimonial.name)}`,
-                      )}
-                      className="h-10 w-10 shrink-0"
-                      sizes="40px"
-                    />
+                    <span
+                      aria-hidden="true"
+                      className="grid h-10 w-10 shrink-0 place-items-center chamfer bg-accent font-display text-sm font-bold text-accent-ink"
+                    >
+                      {initials(testimonial.name)}
+                    </span>
                     <div>
-                      <p className="font-semibold">{testimonial.name}</p>
+                      <p className="font-semibold">{displayName(testimonial.name)}</p>
                       <p className="text-sm text-muted">{testimonial.role}</p>
                     </div>
                   </div>
