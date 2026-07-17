@@ -294,7 +294,7 @@
     "icon": "target",
     "tint": "#4a934e",
     "outcome": "A market you define and lead, instead of one more option on a comparison page.",
-    "description": "Some companies don’t win the category, they rename it. Category design reframes the problem so the old alternatives look dated and you’re the obvious answer. It’s a bigger bet than positioning, and we’ll tell you honestly whether you’re ready for it.",
+    "description": "Positioning wins you the best seat in an existing category. Category design creates a new one and seats you at its head. We reframe the problem so the old alternatives look dated and you’re the obvious answer, not a slightly better option. It’s a much bigger bet than positioning, and we’ll tell you honestly whether you’re ready, most companies should nail Positioning & Naming first.",
     "includes": [
       "Category & competitive-frame analysis",
       "Point-of-view & narrative development",
@@ -722,21 +722,21 @@
   {
     "stage": "Launch & Grow",
     "slug": "lead-generation",
-    "name": "Lead Generation",
+    "name": "Lead Funnels",
     "icon": "magnet",
     "tint": "#a9d896",
-    "outcome": "Campaigns that fill your pipeline with people ready to buy.",
-    "description": "Traffic is easy. Qualified leads are the hard part. We combine targeted campaigns, focused landing pages and clear offers to bring you inquiries from people who actually want what you sell.",
+    "outcome": "Turn the traffic you already have into captured, qualified leads your sales team can actually work.",
+    "description": "The layer that catches traffic and turns it into leads, wherever the traffic comes from. Ads, search and outbound bring people; this is the offer, the page and the qualification that convert them and hand only real fits to sales. Not a traffic source, the funnel underneath all of them.",
     "includes": [
-      "Audience & offer strategy",
-      "Campaign setup & management",
-      "Dedicated landing pages",
-      "Lead capture & routing",
-      "Weekly optimization",
-      "Transparent reporting"
+      "Lead magnet & offer design",
+      "High-intent capture pages",
+      "Qualification & scoring logic",
+      "Instant routing to CRM & sales",
+      "Nurture entry & follow-up triggers",
+      "Funnel conversion reporting"
     ],
-    "forWho": "Businesses ready to grow who want a predictable flow of inquiries, not just likes and impressions.",
-    "problem": "You are getting clicks and traffic, but almost none of it turns into a real conversation. The inquiries that do come in are the wrong fit or never had money to spend. You need people ready to buy, not another spike in impressions.",
+    "forWho": "Businesses that already have traffic from ads, SEO or outbound but watch most of it leave without becoming a lead.",
+    "problem": "You are paying to bring people in, but the funnel underneath leaks. There is no strong offer to capture them, no qualification to separate buyers from tire-kickers, and leads that do come in sit unrouted until they go cold. The traffic isn’t the problem; what happens after the click is.",
     "approach": [
       {
         "title": "Offer first",
@@ -818,50 +818,51 @@
   {
     "stage": "Launch & Grow",
     "slug": "seo",
-    "name": "SEO",
+    "name": "SEO · AEO · GEO",
     "icon": "rank",
     "tint": "#a9d896",
-    "outcome": "Free, compounding traffic that keeps arriving after the campaign ends.",
-    "description": "Technical fixes, content strategy and link building aimed at one outcome: ranking for the searches your future customers are already typing. Slower than ads, and worth far more over time.",
+    "outcome": "Get found everywhere buyers search now: Google, AI answers, and the assistants they ask instead.",
+    "description": "Search isn’t just Google anymore. We optimize for all three: classic SEO to rank in results, AEO so you win answer boxes and featured snippets, and GEO so ChatGPT, Gemini and AI Overviews cite you. The foundation that makes you discoverable wherever the question gets asked.",
     "includes": [
       "Technical SEO audit",
-      "Keyword & content strategy",
-      "On-page optimization",
-      "Site speed & Core Web Vitals",
+      "Keyword & buyer-question strategy",
+      "On-page & structured-data optimization",
+      "Answer engine optimization (AEO)",
+      "Generative engine visibility (GEO)",
       "Link building & authority",
-      "Monthly rankings report"
+      "Monthly search & AI-citation report"
     ],
-    "forWho": "Businesses playing the long game who want organic traffic that doesn't stop when the budget does.",
-    "problem": "You are paying for every visitor through ads, and the moment you stop paying, the traffic stops too. Meanwhile your customers are searching for what you sell and finding competitors instead. You want traffic that keeps arriving without a meter running.",
+    "forWho": "Businesses playing the long game who want to be found across search and AI answers, not just paying for every click.",
+    "problem": "You are paying for every visitor through ads, and the moment you stop paying, the traffic stops too. Meanwhile your customers are searching on Google and asking ChatGPT, and finding competitors in both. You want to be the result and the answer, without a meter running.",
     "approach": [
       {
         "title": "Fix the foundation",
-        "text": "We start with a technical audit and site speed so search engines can actually read and rank your pages. Nothing else works if the foundation is broken."
+        "text": "We start with a technical audit, site speed and structured data so both search engines and AI systems can actually read, understand and rank your pages. Nothing else works if the foundation is broken."
       },
       {
-        "title": "Target real searches",
-        "text": "We build a keyword and content strategy around the exact terms your future customers type. Then we optimize your pages to rank for them."
+        "title": "Rank and get cited",
+        "text": "We build a strategy around the exact questions your future customers type and ask. Then we optimize your pages to rank in search (SEO), win answer boxes (AEO), and get quoted inside AI assistants (GEO)."
       },
       {
         "title": "Build authority",
-        "text": "We earn links and strengthen your site's authority so rankings hold over time. You get a monthly rankings report to track the climb."
+        "text": "We earn links and strengthen the signals both Google and AI models trust, so your visibility holds over time. You get a monthly report tracking rankings and AI citations alike."
       }
     ],
     "faqs": [
       {
-        "q": "How long until SEO works?",
-        "a": "Slower than ads, honestly. SEO compounds over months as pages gain authority and rankings, but that traffic keeps arriving long after the work is done. We report rankings monthly so you can watch it build."
+        "q": "What are AEO and GEO?",
+        "a": "AEO is answer engine optimization: getting you into featured snippets and answer boxes. GEO is generative engine optimization: getting you cited when someone asks ChatGPT, Gemini or Google’s AI Overviews. Both matter now because buyers ask AI before they scroll ten blue links."
       },
       {
-        "q": "How is this different from running ads?",
-        "a": "Ads stop the moment you stop paying. SEO earns organic traffic that keeps coming for free once you rank, which is slower to arrive but far more valuable over time."
+        "q": "How long until this works?",
+        "a": "Slower than ads, honestly. Search and AI visibility compound over months as pages gain authority and citations, but that traffic keeps arriving long after the work is done. We report monthly so you can watch it build."
       },
       {
         "q": "Who owns the content and site changes?",
         "a": "You do. Every page, optimization, and asset lives on your site and stays yours. We work transparently and hand over full access to everything we touch."
       }
     ],
-    "metaDescription": "SEO that earns free, compounding organic traffic by ranking your site for the searches your future customers are already typing."
+    "metaDescription": "SEO, AEO and GEO in one: rank on Google, win answer boxes, and get cited by ChatGPT, Gemini and AI Overviews. The foundation that makes you discoverable wherever buyers search."
   },
   {
     "stage": "Launch & Grow",
@@ -1253,8 +1254,8 @@
     "name": "SEO & AI Campaigns",
     "icon": "rank",
     "tint": "#8fc57f",
-    "outcome": "Traffic and answers that compound across Google and every AI assistant at once.",
-    "description": "One campaign built for both worlds: classic SEO that ranks in search, plus generative-engine optimization that gets you cited inside AI answers. Content, structure and authority aimed wherever your buyers are actually looking.",
+    "outcome": "Rankings and AI citations that keep climbing month over month, once the foundation is set.",
+    "description": "The always-on engine, once the foundation is set. Where our SEO · AEO · GEO service makes you discoverable, this is the ongoing programme that keeps pushing: content velocity, digital PR and authority-building that climb you up the rankings and into more AI answers month over month, across Google and every assistant at once.",
     "includes": [
       "Search + generative-engine strategy",
       "AI-assisted content production",
