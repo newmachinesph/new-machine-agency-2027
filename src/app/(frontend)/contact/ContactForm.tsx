@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Script from "next/script";
 import services from "@/content/services.json";
 import { site } from "@/config/site";
 import Button from "@/components/ui/Button";
@@ -9,6 +10,19 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 const inputClasses =
   "w-full border border-border bg-card px-4 py-3 text-sm placeholder:text-muted focus:border-accent outline-none";
+
+// Public by design — Turnstile site keys are meant to ship to the browser.
+// Unset locally means no widget, so the form still works in dev; the route
+// is what actually enforces the check, and it fails closed in production.
+const SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+/** Turnstile injects a hidden `cf-turnstile-response` input into the widget
+ *  container, so the token rides along in the form's FormData. */
+declare global {
+  interface Window {
+    turnstile?: { reset: (container?: string | HTMLElement) => void };
+  }
+}
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -32,6 +46,7 @@ export default function ContactForm() {
       service: String(data.get("service") ?? ""),
       message: String(data.get("message") ?? ""),
       website: String(data.get("website") ?? ""),
+      turnstileToken: String(data.get("cf-turnstile-response") ?? ""),
     };
 
     setStatus("sending");
@@ -46,6 +61,10 @@ export default function ContactForm() {
       form.reset();
     } catch {
       setStatus("error");
+    } finally {
+      // A Turnstile token is single-use: without a reset, a retry after any
+      // failure replays a spent token and the route rejects it.
+      window.turnstile?.reset();
     }
   };
 
@@ -127,6 +146,16 @@ export default function ContactForm() {
       <div aria-hidden="true" className="hidden">
         <input name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
+
+      {SITE_KEY ? (
+        <>
+          <Script
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            strategy="lazyOnload"
+          />
+          <div className="cf-turnstile" data-sitekey={SITE_KEY} data-theme="auto" />
+        </>
+      ) : null}
 
       <Button type="submit" className="w-full" disabled={status === "sending"}>
         {status === "sending" ? "Sending…" : "Send message"}

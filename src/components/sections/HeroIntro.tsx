@@ -39,13 +39,14 @@ export default function HeroIntro() {
           </span>
         </m.div>
 
-        <m.h1
-          variants={item}
-          className="mt-6 font-display text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-6xl lg:text-7xl 2xl:text-8xl"
-        >
+        {/* ponytail: plain element, no motion variants — this is the LCP
+            candidate (measured render delay ~1s when animated in), so it must
+            paint in its final visible state on first render, not wait on
+            motion's hydration + stagger + transition. */}
+        <h1 className="mt-6 font-display text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-6xl lg:text-7xl 2xl:text-8xl">
           We build the <span className="text-image-fill">machine</span> your growth{" "}
           <span className="text-accent-fg">runs on.</span>
-        </m.h1>
+        </h1>
 
         {/* Plain-language definition sentence: the H1 is a metaphor, and answer
             engines quote literal on-page copy. This is the extractable one. */}
