@@ -10,7 +10,12 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   // nodemailer is a Node-only package; keep it out of the bundle so its
   // dynamic requires resolve correctly at runtime.
-  serverExternalPackages: ["nodemailer"],
+  // nodemailer: Node-only, dynamic requires must resolve at runtime.
+  // sharp: `next/og` (ImageResponse) calls sharp to rasterize the OG cards.
+  // Bundling it pairs sharp's JS with the wrong native @img binary (the repo
+  // has sharp 0.35/libvips 8.18 at the root and 0.34/8.17 under next/), which
+  // throws "colourspace: parameter space not set" on every OG request.
+  serverExternalPackages: ["nodemailer", "sharp"],
 };
 
 export default withPayload(nextConfig);
