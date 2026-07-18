@@ -11,6 +11,7 @@ import {
 import { getJobs } from "@/lib/jobs.data";
 import { site } from "@/config/site";
 import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/ui/JsonLd";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
@@ -20,12 +21,13 @@ import PatternSignal from "@/components/ui/PatternSignal";
 import FeatureCard from "@/components/ui/FeatureCard";
 import CtaPanel from "@/components/ui/CtaPanel";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Careers",
   description:
     "Join New Machine's remote-first founding team: real ownership, honest work, and startups built end to end.",
-  alternates: { canonical: "/careers/" },
-};
+  path: "/careers/",
+  withImage: true,
+});
 
 const values = [
   {

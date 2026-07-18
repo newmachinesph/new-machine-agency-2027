@@ -4,9 +4,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { IconArrowLeft, IconArrowRight, IconChat } from "@/components/ui/icons";
 import { site } from "@/config/site";
-import { productIcons, productBadgeClasses } from "@/lib/products";
+import { productIcons } from "@/lib/products";
 import { getProducts, getProductBySlug } from "@/lib/products.data";
-import { breadcrumbSchema, orgRef } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, orgRef } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
+import Faq from "@/components/ui/Faq";
+import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import { productImageUrl } from "@/lib/media";
@@ -29,11 +32,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const product = await getProductBySlug(slug);
   if (!product) return {};
-  return {
+  // No `images`: the route's own opengraph-image.tsx populates them.
+  return pageMetadata({
     title: product.name,
     description: product.oneLiner,
-    alternates: { canonical: `/products/${slug}/` },
-  };
+    path: `/products/${slug}/`,
+  });
 }
 
 export default async function ProductDetailPage({ params }: PageProps) {
@@ -96,11 +100,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   style={{ background: product.tint }}
                 >
                   <Icon size={22} className="text-accent-ink" />
-                </span>
-                <span
-                  className={`inline-block border px-2.5 py-0.5 text-xs ${productBadgeClasses(product.status)}`}
-                >
-                  {product.status}
                 </span>
               </Reveal>
 
@@ -198,12 +197,22 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   ))}
                 </dl>
                 <p className="mt-10 text-xs uppercase tracking-[0.15em] text-muted">
-                  {product.status} · no client results published yet
+                  No client results published yet
                 </p>
               </div>
             </div>
           </Reveal>
         </div>
+
+        {/* FAQ */}
+        {product.faqs?.length ? (
+          <div className="mt-24 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            <SectionHeading eyebrow="FAQ" title={`Questions about ${product.name}`} />
+            <Reveal delay={80}>
+              <Faq items={product.faqs} />
+            </Reveal>
+          </div>
+        ) : null}
 
         {/* CTA */}
         <div className="mt-24">
@@ -251,6 +260,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
           provider: orgRef,
         }}
       />
+      {product.faqs?.length ? <JsonLd data={faqSchema(product.faqs)} /> : null}
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },

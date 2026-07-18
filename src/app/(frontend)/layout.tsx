@@ -7,6 +7,7 @@ import { site } from "@/config/site";
 import { ORG_ID, WEBSITE_ID, orgRef, AREA_SERVED } from "@/lib/schema";
 import Navbar from "@/components/layout/Navbar";
 import { getProducts } from "@/lib/products.data";
+import { getServiceStageGroups } from "@/lib/services.data";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
 import CustomCursor from "@/components/ui/CustomCursor";
@@ -92,7 +93,14 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const products = await getProducts();
+  let products: Awaited<ReturnType<typeof getProducts>> = [];
+  let serviceStageGroups: Awaited<ReturnType<typeof getServiceStageGroups>> = [];
+  try {
+    [products, serviceStageGroups] = await Promise.all([getProducts(), getServiceStageGroups()]);
+  } catch (err) {
+    console.error("[layout] failed to load CMS nav data:", err);
+  }
+  const stages = serviceStageGroups.map((group) => group.stage);
   return (
     <html
       lang="en"
@@ -113,9 +121,9 @@ export default async function RootLayout({
         <div className="scroll-progress" aria-hidden="true" />
         <CustomCursor />
         <MotionProvider>
-          <Navbar products={products} />
+          <Navbar products={products} serviceStageGroups={serviceStageGroups} />
           <main id="main-content">{children}</main>
-          <Footer />
+          <Footer stages={stages} />
           <BackToTop />
         </MotionProvider>
         <JsonLd

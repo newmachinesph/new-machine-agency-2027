@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { caseStudies } from "@/lib/work";
+import { getCaseStudies } from "@/lib/work.data";
 import TrendChart from "@/components/charts/TrendChart";
 import CountUp from "@/components/ui/CountUp";
 import Reveal from "@/components/ui/Reveal";
@@ -13,8 +13,10 @@ const tiles = [
   { value: "100%", label: "Engagements on a fixed quote: zero hourly billing" },
 ];
 
-export default function Impact() {
+export default async function Impact() {
+  const caseStudies = await getCaseStudies();
   const flagship = caseStudies[0];
+  if (!flagship) return null;
 
   return (
     <section className="bg-surface py-16 md:py-24 lg:py-32">

@@ -7,13 +7,6 @@ import Logo from "@/components/ui/Logo";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-function badgeClasses(status: string): string {
-  if (status === "Beta" || status === "Live") {
-    return "border-accent text-accent-fg";
-  }
-  return "border-border text-muted";
-}
-
 export default async function ProductsTeaser() {
   const products = await getProducts();
   return (
@@ -42,12 +35,7 @@ export default async function ProductsTeaser() {
                   </span>
                 </div>
                 <div className="p-6">
-                  <span
-                    className={`inline-block border px-2.5 py-0.5 text-xs ${badgeClasses(product.status)}`}
-                  >
-                    {product.status}
-                  </span>
-                  <h3 className="mt-4 text-lg font-semibold">{product.name}</h3>
+                  <h3 className="text-lg font-semibold">{product.name}</h3>
                   <p className="mt-2 text-sm text-muted">{product.oneLiner}</p>
                 </div>
               </Link>

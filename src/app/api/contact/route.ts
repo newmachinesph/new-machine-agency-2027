@@ -18,6 +18,23 @@ export const dynamic = "force-dynamic";
 const MAX = { name: 200, email: 254, company: 200, service: 120, message: 5000 };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Per-instance in-memory limiter: 5 submissions / 10 min per IP. Resets on
+// redeploy/cold start and doesn't share state across instances — fine for
+// this endpoint's honeypot-backed abuse level, revisit with Upstash if traffic grows.
+const RATE_LIMIT = { max: 5, windowMs: 10 * 60 * 1000 };
+const rateLimitHits = new Map<string, { count: number; resetAt: number }>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitHits.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitHits.set(ip, { count: 1, resetAt: now + RATE_LIMIT.windowMs });
+    return false;
+  }
+  entry.count += 1;
+  return entry.count > RATE_LIMIT.max;
+}
+
 /** Trim, collapse newlines out of single-line fields, and cap length. */
 function clean(value: unknown, max: number, singleLine = true): string {
   let s = typeof value === "string" ? value.trim() : "";
@@ -37,6 +54,14 @@ function logoAttachment() {
 }
 
 export async function POST(request: Request) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  if (isRateLimited(ip)) {
+    return NextResponse.json(
+      { ok: false, error: "Too many requests. Please try again later." },
+      { status: 429 },
+    );
+  }
+
   let payload: Record<string, unknown>;
   try {
     payload = await request.json();

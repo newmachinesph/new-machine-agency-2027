@@ -6,6 +6,7 @@ import { site } from "@/config/site";
 import { serviceIcons } from "@/lib/services";
 import { getServices } from "@/lib/services.data";
 import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import Button from "@/components/ui/Button";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
@@ -14,12 +15,13 @@ import DuotoneImage from "@/components/ui/DuotoneImage";
 import PatternGrid from "@/components/ui/PatternGrid";
 import PatternSignal from "@/components/ui/PatternSignal";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Services",
   description:
     "Brand, product, growth and scale services built for the full startup lifecycle: from first identity to fractional leadership, wherever your team is in the world.",
-  alternates: { canonical: "/services/" },
-};
+  path: "/services/",
+  withImage: true,
+});
 
 const stages = [
   {

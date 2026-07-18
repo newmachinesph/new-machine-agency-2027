@@ -2,7 +2,7 @@
   {
     "slug": "content-machine",
     "name": "Content Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#8fc57f",
     "icon": "social",
     "oneLiner": "One brief in, a month of platform-native content out: drafted, checked against your brand rules, and queued for a single approval.",
@@ -31,12 +31,34 @@
       "verify": "Brand-rule, banned-phrase and format lint on every draft, plus a second agent scoring tone against your writing samples.",
       "stop": "Every post clears the gate, or six rewrite passes, then it stops and reports what it could not fix."
     },
+    "faqs": [
+      {
+        "q": "How do I get started with Content Machine?",
+        "a": "Content Machine is available today, and it starts with a brief and your brand rules. From there Content Machine researches the angle, drafts a native version for each platform, checks every draft against those rules, and puts what passes in your approval queue."
+      },
+      {
+        "q": "What does Content Machine actually automate?",
+        "a": "Research, drafting and self-review. Content Machine pulls current context on a topic, writes a native version for each platform, then scores the draft against your brand rules and banned-phrase list and rewrites whatever fails."
+      },
+      {
+        "q": "Does Content Machine publish without me?",
+        "a": "No. Approval is the one human step and nothing publishes without it. Drafts only reach your queue after they have already cleared the brand, claims and format checks."
+      },
+      {
+        "q": "How is one brief turned into a month of content?",
+        "a": "Each idea is rewritten to the format of every channel — an X post, a LinkedIn piece, a caption, a newsletter — rather than the same paragraph pasted four times."
+      },
+      {
+        "q": "Who is Content Machine for?",
+        "a": "Founders and teams whose channels go quiet because posting is nobody's full-time job. It fits anyone who can judge taste in a minute but cannot spend a day a week writing."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "reputation-machine",
     "name": "Reputation Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#a9d896",
     "icon": "rank",
     "oneLiner": "Turns quiet happy clients into public reviews, and never leaves a review unanswered.",
@@ -65,12 +87,34 @@
       "verify": "Each reply passes a tone-and-policy check; anything below your rating threshold is blocked from auto-publish; listing data is diffed against your source of truth.",
       "stop": "The queue is clear, or a review needs judgment, then it escalates to a human instead of guessing."
     },
+    "faqs": [
+      {
+        "q": "What does Reputation Machine need to start?",
+        "a": "Reputation Machine is available today, and it needs your review surfaces, the rating threshold below which a review escalates to a person, and one source of truth for your listing data."
+      },
+      {
+        "q": "What does Reputation Machine actually do?",
+        "a": "Reputation Machine watches your review surfaces, drafts a reply in your voice within minutes of a review landing, asks happy clients for reviews, and checks your listing data against one source of truth."
+      },
+      {
+        "q": "Will Reputation Machine auto-reply to a bad review?",
+        "a": "No. Anything below your rating threshold is escalated to a person and never auto-published. The machine drafts, a person decides, and that line is not configurable."
+      },
+      {
+        "q": "When does Reputation Machine ask a client for a review?",
+        "a": "Off the events that mean someone is happy — a completed treatment, a closed matter — rather than a monthly blast to your whole list."
+      },
+      {
+        "q": "Who is Reputation Machine for?",
+        "a": "Local businesses where reviews decide who calls: clinics, law firms and restaurants. It suits any operator who has no one owning the review inbox."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "answer-engine-machine",
     "name": "Answer Engine Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#67ad62",
     "icon": "search",
     "oneLiner": "Gets your brand cited inside AI answers, then measures honestly whether it worked.",
@@ -99,12 +143,34 @@
       "verify": "Scheduled re-queries against live assistants: a citation either appears in the answer or it does not. There is nothing to argue with.",
       "stop": "Coverage target reached, or the run budget is spent, then it reports the remaining gap rather than quietly spending more."
     },
+    "faqs": [
+      {
+        "q": "How do I get started with Answer Engine Machine?",
+        "a": "Answer Engine Machine is available today, and it starts from the priority questions you want to be cited on. Answer Engine Machine then fills the structured gaps that let an assistant quote you, and re-asks the live assistants on a schedule to record whether you were."
+      },
+      {
+        "q": "What does Answer Engine Machine actually do?",
+        "a": "Answer Engine Machine builds the structured, entity-rich ground truth an assistant needs before it will quote you, then re-asks the real assistants on a schedule to check whether you were actually cited."
+      },
+      {
+        "q": "Can Answer Engine Machine guarantee a number one ranking in AI answers?",
+        "a": "No. AI answers do not have a rank, so there is no number to sell. Answer Engine Machine reports coverage and citation frequency, which are the things that can actually be observed."
+      },
+      {
+        "q": "How is a citation measured?",
+        "a": "Your priority questions are run through the live assistants on a schedule and the result is recorded: the citation either appears in the answer or it does not."
+      },
+      {
+        "q": "Who is Answer Engine Machine for?",
+        "a": "Brands whose buyers now ask an assistant instead of clicking a search result, and who cannot tell from a falling traffic chart that this is the reason."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "lead-machine",
     "name": "Lead Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#7cbb70",
     "icon": "leads",
     "oneLiner": "Finds the accounts that look like your best clients, disqualifies the rest, and books the call.",
@@ -133,12 +199,34 @@
       "verify": "Profile-fit score, bounce rate, spam-complaint rate and reply classification: sending halts automatically the moment any threshold trips.",
       "stop": "The meeting target is met, or a deliverability threshold trips, then it stops sending and reports rather than pushing through."
     },
+    "faqs": [
+      {
+        "q": "What does Lead Machine need before it starts sending?",
+        "a": "Lead Machine is available today, and it needs one narrow, named target market, the profile that defines a good account, and a domain to warm. Lead Machine builds and enriches the list from there, and drops off-profile accounts before a word is written."
+      },
+      {
+        "q": "What does Lead Machine actually automate?",
+        "a": "List building, enrichment, disqualification, personalization and sending. Lead Machine scores every account against your profile, drops the bad fits, writes openers from checkable evidence, and sends from a warmed domain under hard volume caps."
+      },
+      {
+        "q": "Why does Lead Machine send fewer emails than a typical outbound tool?",
+        "a": "Because outbound fails on relevance, not volume. Dropping off-profile accounts before a word is written is the cheapest way there is to protect a sending domain."
+      },
+      {
+        "q": "What stops Lead Machine from burning a sending domain?",
+        "a": "Warm-up, volume caps, bounce thresholds, suppression lists and honored opt-outs are enforced by the system. Sending halts the moment a threshold trips rather than pushing through."
+      },
+      {
+        "q": "What counts as a result for Lead Machine?",
+        "a": "Qualified meetings on the calendar. Open and reply rates are treated as diagnostics, not as the outcome."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "ads-machine",
     "name": "Ads Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#93cf84",
     "icon": "splittest",
     "oneLiner": "Generates the creative, tests it under a hard spend cap, and moves budget only when a variant genuinely wins.",
@@ -167,12 +255,34 @@
       "verify": "Variant performance tested for statistical significance against control, with the acquisition-cost ceiling and daily cap enforced before any budget moves.",
       "stop": "Target cost per acquisition holds through the test window, or a spend cap trips, then it pauses and reports rather than optimizing into a hole."
     },
+    "faqs": [
+      {
+        "q": "What does Ads Machine need before it starts spending?",
+        "a": "Ads Machine is available today, and it needs your offer, your brand rules, a daily cap, an acquisition-cost ceiling and the significance threshold a variant has to clear. Ads Machine generates the creative and enforces those limits itself from there."
+      },
+      {
+        "q": "What does Ads Machine actually automate?",
+        "a": "Creative generation, testing and budget allocation. Ads Machine produces fresh variants against your offer and brand rules, runs them under spend caps, and shifts budget only when a variant beats control."
+      },
+      {
+        "q": "Can Ads Machine overspend my budget?",
+        "a": "No. The daily cap and the acquisition-cost ceiling are hard limits enforced by the system. Cross either and Ads Machine pauses spend and reports instead of optimizing deeper into a hole."
+      },
+      {
+        "q": "When does Ads Machine promote a winning variant?",
+        "a": "Only when it beats control at a statistical significance threshold you set. One good afternoon does not earn a budget shift."
+      },
+      {
+        "q": "Who is Ads Machine for?",
+        "a": "Advertisers whose accounts decay quietly — creative fatigues, cost per acquisition drifts up, and the monthly report catches it a quarter of the budget too late."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "conversion-machine",
     "name": "Conversion Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#6fb268",
     "icon": "growth",
     "oneLiner": "Builds the page, tests the variants, and ships only the ones that beat control at statistical significance.",
@@ -201,12 +311,34 @@
       "verify": "A winner is declared only above a preset significance level and minimum sample; every variant must first clear performance and accessibility budgets.",
       "stop": "A variant wins at significance, or the traffic budget is spent, then it reports the null result honestly instead of picking a favorite."
     },
+    "faqs": [
+      {
+        "q": "How do I get started with Conversion Machine?",
+        "a": "Conversion Machine is available today, and it starts from your offer, the current control page and the significance level and minimum sample a winner has to clear. Conversion Machine builds the variants and runs them against that control."
+      },
+      {
+        "q": "What does Conversion Machine actually do?",
+        "a": "Conversion Machine builds page variants from your offer, runs them against the current control, and ships only the ones that beat it at statistical significance."
+      },
+      {
+        "q": "How does Conversion Machine decide a variant has won?",
+        "a": "A variant is promoted only after it clears a preset significance level and a minimum sample size. Below either, it stays a candidate and keeps running."
+      },
+      {
+        "q": "What happens to variants that lose?",
+        "a": "Losing variants are archived with their numbers and the reasoning behind them, so the next round starts from what you already learned instead of from zero."
+      },
+      {
+        "q": "Does a variant have to be fast and accessible before it gets traffic?",
+        "a": "Yes. Every variant must pass performance and accessibility budgets before it is allowed to receive a single visitor of real traffic."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "site-machine",
     "name": "Site Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#b5dfa4",
     "icon": "website",
     "oneLiner": "Ships and maintains a corporate site that stays fast, accessible and correct, and blocks any change that isn't.",
@@ -235,12 +367,34 @@
       "verify": "Automated performance, contrast, link-integrity and schema validation run on every publish. A regression fails the build outright.",
       "stop": "All budgets green, or a regression fails the build, then it blocks the publish and reports the offending page."
     },
+    "faqs": [
+      {
+        "q": "How do I get started with Site Machine?",
+        "a": "Site Machine is available today, and it starts from your design system and the performance and accessibility budgets the site has to hold. Site Machine assembles the pages from there and gates every publish against those budgets."
+      },
+      {
+        "q": "What does Site Machine actually do?",
+        "a": "Site Machine builds pages from your design system and then holds the line on them. Performance budgets, contrast and accessibility checks, link integrity and structured data are gates on every publish."
+      },
+      {
+        "q": "What happens if a change breaks a performance or accessibility budget?",
+        "a": "It does not go live. Budgets are gates rather than goals, so a regression fails the build regardless of who requested the change."
+      },
+      {
+        "q": "Is accessibility checked once or continuously?",
+        "a": "Continuously. Contrast, labels, focus order and alt text are verified on every change, not audited once at launch and then forgotten."
+      },
+      {
+        "q": "Who is Site Machine for?",
+        "a": "Companies whose corporate site has to stay fast, accessible and correct as it grows, rather than rotting quietly through a year of small edits."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "mvp-machine",
     "name": "MVP Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#4f8f4b",
     "icon": "appwindow",
     "oneLiner": "Turns a written spec into a working, tested product, and never calls it done while a test is red.",
@@ -269,12 +423,34 @@
       "verify": "The full suite, type check and production build run on every pass, and a separate reviewer agent must approve the diff before it lands.",
       "stop": "The suite is green and the spec is satisfied, or the iteration cap is reached, then it stops and reports exactly what still fails."
     },
+    "faqs": [
+      {
+        "q": "How does a project with MVP Machine start?",
+        "a": "MVP Machine is available today, and it starts with a written spec and its acceptance criteria. MVP Machine builds the slice, runs the suite, fixes the highest-impact failure and repeats, and the repository is yours from the first commit."
+      },
+      {
+        "q": "What does MVP Machine actually do?",
+        "a": "MVP Machine works from a written spec: build the slice, run the suite, read every failure, fix the highest-impact one, repeat. A test either passes or it does not, so there is nothing to talk past."
+      },
+      {
+        "q": "What counts as done for MVP Machine?",
+        "a": "Every acceptance criterion in the spec met, with the test suite, the type check and the production build green. Done is a checklist that can be verified, not an opinion."
+      },
+      {
+        "q": "Who owns the code MVP Machine writes?",
+        "a": "You do. Repository, infrastructure and dependencies are yours from the first commit — no lock-in and no rented codebase."
+      },
+      {
+        "q": "Who reviews the code the machine writes?",
+        "a": "A separate, stricter reviewer agent. The model that wrote the code does not grade it, and its diff must be approved before anything lands."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "lifecycle-machine",
     "name": "Lifecycle Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#86c477",
     "icon": "mail",
     "oneLiner": "Runs the email and CRM lifecycle, and will not send to anyone who never agreed to hear from you.",
@@ -303,12 +479,34 @@
       "verify": "Consent and suppression checked per recipient before every send; bounce and complaint thresholds monitored continuously; variant winners require significance.",
       "stop": "The sequence hits its conversion target, or a consent or deliverability gate trips, then sending halts immediately and reports."
     },
+    "faqs": [
+      {
+        "q": "What does Lifecycle Machine need before the first send?",
+        "a": "Lifecycle Machine is available today, and it needs your CRM records, your consent records and your suppression lists. Lifecycle Machine deduplicates and enriches the records on the way in, and no contact without a consent record gets a send."
+      },
+      {
+        "q": "What does Lifecycle Machine actually run?",
+        "a": "Lifecycle Machine builds and runs the email sequences — onboarding, nurture and win-back — and keeps the CRM records behind them deduplicated and enriched."
+      },
+      {
+        "q": "Will Lifecycle Machine email someone who never opted in?",
+        "a": "No. No consent record means no send. Suppression lists and opt-outs are enforced by the system rather than by whoever ran the export that morning."
+      },
+      {
+        "q": "How are subject lines and offers chosen?",
+        "a": "They are tested across cohorts, and a winner is promoted only once it clears significance — not once it looks promising."
+      },
+      {
+        "q": "What happens if deliverability starts slipping?",
+        "a": "Bounce and complaint rates are monitored on every send, and sending halts automatically when a threshold is crossed, before the damage compounds."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "dashboard-machine",
     "name": "Dashboard Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#9ed08c",
     "icon": "dashboard",
     "oneLiner": "Assembles the reporting layer, and refuses to publish a number that does not reconcile with its source.",
@@ -337,12 +535,34 @@
       "verify": "Scheduled reconciliation of each published figure against the source system; drift beyond tolerance blocks the refresh.",
       "stop": "All metrics reconcile, or drift is detected, then it holds the refresh and alerts, rather than publishing a number that is wrong."
     },
+    "faqs": [
+      {
+        "q": "How do I get started with Dashboard Machine?",
+        "a": "Dashboard Machine is available today, and it starts from your source systems and one agreed definition per metric. Dashboard Machine builds the models and views on top of that, then reconciles every published figure against its source on a schedule."
+      },
+      {
+        "q": "What does Dashboard Machine actually build?",
+        "a": "Dashboard Machine builds the data models and the views, then reconciles every published figure against the source system on a schedule."
+      },
+      {
+        "q": "What happens when a number does not reconcile with its source?",
+        "a": "The refresh is blocked and an alert is raised. A metric that has drifted from its source is held back rather than quietly shown to someone about to decide on it."
+      },
+      {
+        "q": "How does Dashboard Machine stop two dashboards from disagreeing?",
+        "a": "Each metric is defined once, in one place. Two views cannot quietly hold different ideas of what a word like revenue means."
+      },
+      {
+        "q": "Who is Dashboard Machine for?",
+        "a": "Leadership teams whose meetings have started with an argument about whose number is correct, where the reporting layer has become a tax instead of an asset."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "research-machine",
     "name": "Research Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#5aa35a",
     "icon": "compass",
     "oneLiner": "Produces market and competitor intelligence in which every claim carries a source, or it does not ship.",
@@ -371,12 +591,34 @@
       "verify": "Each claim checked against its citation, and an adversarial reviewer agent attempts to refute the findings; unsourced claims block the report.",
       "stop": "Every claim is sourced and survives the adversarial pass, or the open questions are reported as open."
     },
+    "faqs": [
+      {
+        "q": "How do I get started with Research Machine?",
+        "a": "Research Machine is available today, and it starts from the decision you are about to make and the questions behind it. Research Machine gathers, reads and synthesizes from there, and a claim that will not resolve to a retrievable source is either sourced or cut."
+      },
+      {
+        "q": "What does Research Machine produce?",
+        "a": "A decision-ready market and competitor brief in which every factual claim resolves to a retrievable source. Positioning, pricing and messaging are pulled from current public sources with the retrieval date recorded."
+      },
+      {
+        "q": "How does Research Machine avoid confident, wrong output?",
+        "a": "An unsourced factual claim blocks the report and is either sourced or cut. A separate agent then argues against the findings and flags what the first one assumed rather than established."
+      },
+      {
+        "q": "What does Research Machine do when it does not know something?",
+        "a": "It says so. Gaps and low-confidence areas are stated outright, because a decision made on an invented certainty is the expensive kind of mistake."
+      },
+      {
+        "q": "Who is Research Machine for?",
+        "a": "Teams about to make a decision on a research document, who cannot afford a fluent paragraph that turns out to be wrong."
+      }
+    ],
     "link": ""
   },
   {
     "slug": "hiring-machine",
     "name": "Hiring Machine",
-    "status": "In Development",
+    "status": "Live",
     "tint": "#5c9e57",
     "icon": "target",
     "oneLiner": "Turns an open role into a vetted Philippine shortlist: sourced, work-sampled, and scored on one published rubric.",
@@ -405,6 +647,28 @@
       "verify": "Every candidate scored against the same published rubric, with a second reviewer agent re-scoring independently; any unscored candidate blocks the shortlist.",
       "stop": "The shortlist clears the bar, or the pool runs dry, then it reports what the market actually has rather than padding the list."
     },
+    "faqs": [
+      {
+        "q": "How does a role start with Hiring Machine?",
+        "a": "Hiring Machine is available today, and it starts with one open role. Hiring Machine drafts the role, sources candidates, runs the same structured work sample on everyone, and hands back a ranked shortlist scored against one published rubric."
+      },
+      {
+        "q": "What does Hiring Machine actually do?",
+        "a": "Hiring Machine drafts the role, sources candidates, runs a structured work sample, and scores everyone against one published rubric. What you get back is a ranked shortlist and the evidence behind every rank."
+      },
+      {
+        "q": "Does Hiring Machine reject candidates on its own?",
+        "a": "No. It ranks and explains its reasoning, but it never sends a rejection or filters a person out by itself. A human makes every reject, because that decision carries legal and human weight."
+      },
+      {
+        "q": "What are candidates scored on?",
+        "a": "What they produced under the work sample, scored against the same published rubric as everyone else — not where they went to school or how the CV was formatted."
+      },
+      {
+        "q": "Who is Hiring Machine for?",
+        "a": "US founders hiring Philippine talent, who know the value is there but cannot make screening a hundred applicants by hand anyone's full-time job."
+      }
+    ],
     "link": ""
   }
 ]

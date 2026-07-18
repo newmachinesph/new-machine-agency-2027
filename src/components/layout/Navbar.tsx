@@ -17,10 +17,13 @@ import Button from "@/components/ui/Button";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import { IconArrowRight, IconWebsite } from "@/components/ui/icons";
-import { stageGroups, serviceIcons } from "@/lib/services";
+import { serviceIcons } from "@/lib/services";
 import { productImageUrl } from "@/lib/media";
+import type { Service } from "@/lib/services.data";
 
 type MegaKey = "services" | "products";
+
+type ServiceStageGroup = { stage: string; services: Service[] };
 
 type NavProduct = {
   slug: string;
@@ -128,7 +131,7 @@ function MegaItem({
   );
 }
 
-function ServicesPanel() {
+function ServicesPanel({ stageGroups }: { stageGroups: ServiceStageGroup[] }) {
   return (
     <div className="grid grid-cols-2 gap-x-8 gap-y-7 md:grid-cols-4 lg:grid-cols-[repeat(4,minmax(0,1fr))_1.2fr]">
       {stageGroups.map((group) => (
@@ -198,6 +201,7 @@ function ServicesPanel() {
 function ProductsPanel({ products }: { products: NavProduct[] }) {
   const featured = products[0];
   const menuProducts = products.slice(1, 4);
+  if (!featured) return null;
   return (
     <div className="grid gap-6 md:grid-cols-[0.9fr_1.4fr]">
       {/* Featured build: image-led left column mirroring the services promo. */}
@@ -221,9 +225,6 @@ function ProductsPanel({ products }: { products: NavProduct[] }) {
           <div className="mt-2 flex flex-wrap items-center gap-2">
             <span className="font-display text-lg font-semibold leading-tight text-white">
               {featured.name}
-            </span>
-            <span className="chamfer bg-white/15 px-2 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide text-white">
-              {featured.status}
             </span>
           </div>
           <p className="mt-2 line-clamp-2 text-sm text-white/85">{featured.oneLiner}</p>
@@ -261,9 +262,6 @@ function ProductsPanel({ products }: { products: NavProduct[] }) {
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-fg">{product.name}</span>
-                  <span className="chamfer bg-accent/15 px-2 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide text-accent-fg">
-                    {product.status}
-                  </span>
                 </div>
                 <p className="mt-1 line-clamp-2 text-xs text-muted">{product.oneLiner}</p>
               </div>
@@ -280,7 +278,13 @@ function ProductsPanel({ products }: { products: NavProduct[] }) {
   );
 }
 
-export default function Navbar({ products }: { products: NavProduct[] }) {
+export default function Navbar({
+  products,
+  serviceStageGroups,
+}: {
+  products: NavProduct[];
+  serviceStageGroups: ServiceStageGroup[];
+}) {
   const mobileProducts = products.slice(0, 3);
   const scrolled = useSyncExternalStore(
     subscribeToScroll,
@@ -393,7 +397,11 @@ export default function Navbar({ products }: { products: NavProduct[] }) {
                     }
                     onClose={() => setActive(null)}
                   >
-                    {menuKey === "services" ? <ServicesPanel /> : <ProductsPanel products={products} />}
+                    {menuKey === "services" ? (
+                      <ServicesPanel stageGroups={serviceStageGroups} />
+                    ) : (
+                      <ProductsPanel products={products} />
+                    )}
                   </MegaItem>
                 );
               })}
@@ -453,7 +461,7 @@ export default function Navbar({ products }: { products: NavProduct[] }) {
               Services
             </Link>
             <div className="mt-4 space-y-4">
-              {stageGroups.map((group) => (
+              {serviceStageGroups.map((group) => (
                 <div key={group.stage}>
                   <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-fg">
                     {group.stage}
@@ -493,9 +501,6 @@ export default function Navbar({ products }: { products: NavProduct[] }) {
                     className="flex items-center gap-2 py-1.5 text-sm text-muted"
                   >
                     <span className="text-fg">{product.name}</span>
-                    <span className="chamfer bg-accent/15 px-1.5 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide text-accent-fg">
-                      {product.status}
-                    </span>
                   </Link>
                 </li>
               ))}

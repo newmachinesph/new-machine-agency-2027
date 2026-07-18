@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/icons";
 import { site } from "@/config/site";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import JsonLd from "@/components/ui/JsonLd";
 import Logo from "@/components/ui/Logo";
@@ -19,12 +20,13 @@ import CountUp from "@/components/ui/CountUp";
 import FeatureCard from "@/components/ui/FeatureCard";
 import CtaPanel from "@/components/ui/CtaPanel";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
     "Why we started, what we believe, and how we work: the story behind the anti-agency agency.",
-  alternates: { canonical: "/about/" },
-};
+  path: "/about/",
+  withImage: true,
+});
 
 type Value = { icon: BrandIcon; title: string; text: string; tint: string; onTint: string };
 
@@ -139,6 +141,7 @@ export default function AboutPage() {
             <div className="chamfer beam mt-8 overflow-hidden">
               <DuotoneImage
                 src="https://picsum.photos/seed/nomad-about/1200/750"
+                alt={`The ${site.name} studio: a small, remote-first team working from our Makati hub`}
                 className="aspect-[16/10] w-full"
                 sizes="(min-width: 768px) 55vw, 100vw"
                 priority
@@ -178,6 +181,7 @@ export default function AboutPage() {
                   <div className="relative">
                     <DuotoneImage
                       src={`https://picsum.photos/seed/${discipline.seed}/600/750`}
+                      alt={`${discipline.name} at ${site.name}`}
                       className="aspect-[4/5] w-full"
                       sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     />

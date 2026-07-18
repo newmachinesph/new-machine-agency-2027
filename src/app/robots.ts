@@ -11,6 +11,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
       {
+        // Deliberate: AI crawlers above are welcome, the archive is not. Archived
+        // snapshots resurface stale pricing and copy long after we've changed them.
         userAgent: "ia_archiver",
         disallow: "/",
       },

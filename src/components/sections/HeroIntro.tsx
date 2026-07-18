@@ -47,7 +47,15 @@ export default function HeroIntro() {
           <span className="text-accent-fg">runs on.</span>
         </m.h1>
 
-        <m.p variants={item} className="mt-6 text-lg font-medium text-fg/80 md:text-2xl">
+        {/* Plain-language definition sentence: the H1 is a metaphor, and answer
+            engines quote literal on-page copy. This is the extractable one. */}
+        <m.p variants={item} className="measure mt-6 text-lg text-muted md:text-xl">
+          New Machine is a full-lifecycle startup studio — brand and positioning, web
+          and app development, and growth marketing — for founders in the US, the
+          Philippines, and worldwide.
+        </m.p>
+
+        <m.p variants={item} className="mt-5 text-lg font-medium text-fg/80 md:text-2xl">
           Built for{" "}
           <span className="text-fg">{site.builtFor.slice(0, 4).join(", ")} &amp; more</span>
         </m.p>

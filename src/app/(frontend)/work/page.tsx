@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getCaseStudies } from "@/lib/work.data";
 import { mediaUrl } from "@/lib/media";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import BrowserFrame from "@/components/ui/BrowserFrame";
 import CountUp from "@/components/ui/CountUp";
 import CtaPanel from "@/components/ui/CtaPanel";
@@ -13,12 +14,13 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Sparkline from "@/components/charts/Sparkline";
 import { IconArrowRight } from "@/components/ui/icons";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Work",
   description:
     "Case studies measured in numbers, not adjectives: every engagement charted month by month, before and after launch.",
-  alternates: { canonical: "/work/" },
-};
+  path: "/work/",
+  withImage: true,
+});
 
 export default async function WorkPage() {
   const caseStudies = await getCaseStudies();

@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { navLinks, site } from "@/config/site";
-import { stages } from "@/lib/services";
 import PatternMosaic from "@/components/ui/PatternMosaic";
 import PatternTrace from "@/components/ui/PatternTrace";
 import PatternGrid from "@/components/ui/PatternGrid";
 
-export default function Footer() {
+export default function Footer({ stages }: { stages: string[] }) {
   const year = new Date().getFullYear();
 
   return (

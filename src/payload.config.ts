@@ -21,6 +21,12 @@ import { ContactSubmissions } from "./collections/ContactSubmissions";
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
+const REQUIRED_ENV = ["PAYLOAD_SECRET", "DATABASE_URL"] as const;
+const missingEnv = REQUIRED_ENV.filter((key) => !process.env[key]);
+if (missingEnv.length > 0) {
+  throw new Error(`Missing required environment variable(s): ${missingEnv.join(", ")}`);
+}
+
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -39,12 +45,12 @@ export default buildConfig({
     ContactSubmissions,
   ],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || "",
+  secret: process.env.PAYLOAD_SECRET as string,
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db: postgresAdapter({
-    pool: { connectionString: process.env.DATABASE_URL || "" },
+    pool: { connectionString: process.env.DATABASE_URL as string },
   }),
   sharp,
   plugins: [

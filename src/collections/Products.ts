@@ -50,6 +50,15 @@ export const Products: CollectionConfig = {
         { name: "stop", type: "textarea" },
       ],
     },
+    {
+      // Keys q/a mirror products.json, Services.faqs, and the Faq component + faqSchema.
+      name: "faqs",
+      type: "array",
+      fields: [
+        { name: "q", type: "text" },
+        { name: "a", type: "textarea" },
+      ],
+    },
     { name: "link", type: "text" },
     // Optional: migrate /public/products/<slug>.webp here later. For now the
     // frontend still resolves imagery by slug via lib/media#productImage.

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { caseStudies } from "@/lib/work";
+import { getCaseStudies } from "@/lib/work.data";
 import BrowserFrame from "@/components/ui/BrowserFrame";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import CountUp from "@/components/ui/CountUp";
@@ -11,7 +11,8 @@ import { IconArrowRight } from "@/components/ui/icons";
 /** Vertical offset per column: staggered editorial rhythm on the wide canvas. */
 const OFFSET = ["", "lg:mt-16", "lg:mt-8"];
 
-export default function SelectedWork() {
+export default async function SelectedWork() {
+  const caseStudies = await getCaseStudies();
   return (
     <section className="py-16 md:py-24 lg:py-32">
       <div className="wrap">

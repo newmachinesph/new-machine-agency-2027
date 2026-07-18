@@ -6,6 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { IconArrowLeft, IconArrowRight } from "@/components/ui/icons";
 import { getAllPosts, getPostBySlug } from "@/lib/blog.data";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import JsonLd from "@/components/ui/JsonLd";
@@ -23,20 +24,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
-  return {
+  // No `images`: the route's own opengraph-image.tsx populates them.
+  return pageMetadata({
     title: post.meta.title,
     description: post.meta.description,
-    alternates: { canonical: `/blog/${slug}/` },
-    openGraph: {
-      type: "article",
-      title: post.meta.title,
-      description: post.meta.description,
-      publishedTime: post.meta.date,
-      // A child openGraph object doesn't inherit the parent's images, so
-      // without this every article would share with no card image.
-      images: ["/og-image.png"],
-    },
-  };
+    path: `/blog/${slug}/`,
+    type: "article",
+    publishedTime: post.meta.date,
+  });
 }
 
 function formatDate(iso: string): string {

@@ -3,18 +3,20 @@ import type { Metadata } from "next";
 import { IconCheck, IconMail } from "@/components/ui/icons";
 import { site } from "@/config/site";
 import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import PatternSignal from "@/components/ui/PatternSignal";
 import LandmarkSilhouette from "@/components/ui/LandmarkSilhouette";
 import ContactForm from "./ContactForm";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact",
   description:
     "Book a free strategy call or send us a message. We reply within 24 hours, usually much faster.",
-  alternates: { canonical: "/contact/" },
-};
+  path: "/contact/",
+  withImage: true,
+});
 
 const reassurances = [
   "Free 30-minute strategy call",

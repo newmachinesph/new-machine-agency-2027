@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getCaseStudies, getCaseStudyBySlug, nextCaseStudy } from "@/lib/work.data";
 import { mediaUrl } from "@/lib/media";
 import { breadcrumbSchema, caseStudySchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import Dumbbell from "@/components/charts/Dumbbell";
 import TrendChart from "@/components/charts/TrendChart";
 import BrowserFrame from "@/components/ui/BrowserFrame";
@@ -29,11 +30,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const cs = await getCaseStudyBySlug(slug);
   if (!cs) return {};
-  return {
+  // No `images`: the route's own opengraph-image.tsx populates them.
+  return pageMetadata({
     title: `${cs.client}: ${cs.metric} ${cs.metricLabel}`,
     description: cs.summary,
-    alternates: { canonical: `/work/${slug}/` },
-  };
+    path: `/work/${slug}/`,
+    type: "article",
+  });
 }
 
 export default async function CaseStudyPage({ params }: PageProps) {

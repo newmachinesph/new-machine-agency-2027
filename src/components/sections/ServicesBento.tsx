@@ -8,7 +8,7 @@ import {
   IconAIAgent,
   type BrandIcon,
 } from "@/components/ui/icons";
-import { stageGroups } from "@/lib/services";
+import { getServiceStageGroups } from "@/lib/services.data";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import PatternGrid from "@/components/ui/PatternGrid";
@@ -48,7 +48,8 @@ const stageMeta: Record<
 
 const FALLBACK = { icon: IconBrandMark, summary: "", tint: "var(--accent)", onTint: "text-accent-ink" };
 
-export default function ServicesBento() {
+export default async function ServicesBento() {
+  const stageGroups = await getServiceStageGroups();
   const total = stageGroups.reduce((n, group) => n + group.services.length, 0);
 
   return (

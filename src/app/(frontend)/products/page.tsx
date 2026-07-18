@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { IconArrowRight, IconChat } from "@/components/ui/icons";
 import { site } from "@/config/site";
-import { productIcons, productBadgeClasses } from "@/lib/products";
+import { productIcons } from "@/lib/products";
 import { getProducts } from "@/lib/products.data";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import { productImageUrl } from "@/lib/media";
@@ -15,11 +16,12 @@ import PatternGrid from "@/components/ui/PatternGrid";
 import PatternSignal from "@/components/ui/PatternSignal";
 import Reveal from "@/components/ui/Reveal";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Products",
   description: `${site.principle} The Machines: loop-engineered systems that run a job end to end, verify their own work, and stop when it is done.`,
-  alternates: { canonical: "/products/" },
-};
+  path: "/products/",
+  withImage: true,
+});
 
 export default async function ProductsPage() {
   const products = await getProducts();
@@ -97,11 +99,6 @@ export default async function ProductsPage() {
                         style={{ background: product.tint }}
                       >
                         <Icon size={18} className="text-accent-ink" />
-                      </span>
-                      <span
-                        className={`inline-block border px-2.5 py-0.5 text-xs ${productBadgeClasses(product.status)}`}
-                      >
-                        {product.status}
                       </span>
                     </div>
                     <h2 className="font-display mt-5 text-xl font-bold tracking-tight">

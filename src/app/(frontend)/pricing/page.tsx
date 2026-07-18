@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { site } from "@/config/site";
+import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import Button from "@/components/ui/Button";
 import CtaPanel from "@/components/ui/CtaPanel";
 import Faq from "@/components/ui/Faq";
@@ -10,12 +12,15 @@ import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { IconArrowRight, IconCheck } from "@/components/ui/icons";
 
-export const metadata: Metadata = {
+const PRICING_DESCRIPTION =
+  "Public pricing, fixed quotes, zero surprises. Three engagement models: from a conversion-first landing page to a full growth partnership.";
+
+export const metadata: Metadata = pageMetadata({
   title: "Pricing",
-  description:
-    "Public pricing, fixed quotes, zero surprises. Three engagement models: from a conversion-first landing page to a full growth partnership.",
-  alternates: { canonical: "/pricing/" },
-};
+  description: PRICING_DESCRIPTION,
+  path: "/pricing/",
+  withImage: true,
+});
 
 const tiers = [
   {
@@ -217,16 +222,20 @@ export default function PricingPage() {
       </div>
 
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: pricingFaq.map((item) => ({
-            "@type": "Question",
-            name: item.q,
-            acceptedAnswer: { "@type": "Answer", text: item.a },
-          })),
-        }}
+        data={webPageSchema({
+          type: "WebPage",
+          name: `Pricing | ${site.name}`,
+          description: PRICING_DESCRIPTION,
+          path: "/pricing/",
+        })}
       />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Pricing", path: "/pricing/" },
+        ])}
+      />
+      <JsonLd data={faqSchema(pricingFaq)} />
       <JsonLd
         data={{
           "@context": "https://schema.org",

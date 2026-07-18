@@ -7,6 +7,7 @@ import { site } from "@/config/site";
 import { serviceIcons } from "@/lib/services";
 import { getServices, getServiceBySlug } from "@/lib/services.data";
 import { mediaUrl } from "@/lib/media";
+import { pageMetadata } from "@/lib/metadata";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
@@ -30,11 +31,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const service = await getServiceBySlug(slug);
   if (!service) return {};
-  return {
+  // No `images`: the route's own opengraph-image.tsx populates them.
+  return pageMetadata({
     title: service.name,
     description: service.metaDescription,
-    alternates: { canonical: `/services/${slug}/` },
-  };
+    path: `/services/${slug}/`,
+  });
 }
 
 export default async function ServiceDetailPage({ params }: PageProps) {
@@ -77,7 +79,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
               <Reveal delay={80}>
                 <h1 className="font-display mt-6 text-4xl font-extrabold tracking-tight md:text-5xl">
-                  {service.outcome}
+                  <span className="block text-sm font-semibold uppercase tracking-[0.2em] text-accent-fg">
+                    {service.name}
+                  </span>
+                  <span className="mt-3 block">{service.outcome}</span>
                 </h1>
               </Reveal>
               <Reveal delay={140}>
