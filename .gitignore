@@ -41,6 +41,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .gstack/
+.claude-flow
+.swarm
+.impeccable
+ruvector.db
 
 # local graphics scratch (not deployed)
 /graphics/
