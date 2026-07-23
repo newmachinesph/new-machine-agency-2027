@@ -33,7 +33,7 @@ export const site = {
    *  placeholder YouTube ID with the real brand film before launch. */
   videoId: "ScMzIvxBSi4",
 
-  /** Physical office: our hub at PBCom Tower on Ayala Avenue, Makati. The
+  /** Physical office: our hub on Ayala Avenue, Makati. The
    *  team is remote-first; this is the base of operations. */
   offices: [
     {
@@ -42,10 +42,10 @@ export const site = {
       flag: "🇵🇭",
       landmark: "mayon",
       address: [
-        "PBCom Tower, 6795 Ayala Avenue",
-        "cor. V.A. Rufino St, Makati City 1226, PH",
+        "Ayala Avenue, cor. V.A. Rufino St,",
+        "Makati City 1226, PH",
       ],
-      streetAddress: "PBCom Tower, 6795 Ayala Ave cor. V.A. Rufino St",
+      streetAddress: "Ayala Ave cor. V.A. Rufino St",
       city: "Makati City",
       region2: "Metro Manila",
       postalCode: "1226",

@@ -164,7 +164,7 @@ export default async function RootLayout({
             sameAs: site.socials.map((social) => social.href),
             address: {
               "@type": "PostalAddress",
-              streetAddress: "PBCom Tower, 6795 Ayala Ave cor. V.A. Rufino St",
+              streetAddress: "Ayala Ave cor. V.A. Rufino St",
               addressLocality: "Makati",
               addressRegion: "Metro Manila",
               postalCode: "1226",
