@@ -12,8 +12,7 @@ export default function V2Stats() {
   return (
     <section className="relative border-y border-border py-20 md:py-28">
       <div className="wrap">
-        <p className="v2-counter uppercase">004 · Numbers</p>
-        <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {STATS.map((stat, i) => (
             <Reveal key={stat.value} delay={i * 90}>
               <p className="font-display text-[clamp(3.5rem,7vw,6.5rem)] font-semibold leading-none text-accent-fg">

@@ -39,7 +39,7 @@ export default function V2Hero() {
       <div className="wrap relative flex flex-1 flex-col justify-center py-10">
         <m.p
           {...enter(0)}
-          className="v2-counter uppercase"
+          className="font-display text-[13px] uppercase tracking-[0.16em] text-muted"
         >
           Full-lifecycle studio · Makati → worldwide
         </m.p>
@@ -76,28 +76,20 @@ export default function V2Hero() {
         </m.div>
       </div>
 
-      <m.div {...enter(4)} className="relative border-t border-border py-5">
-        <div className="v2-marquee" aria-hidden="true">
-          <div className="v2-marquee-track">
-            {[0, 1].map((copy) => (
-              <div key={copy} className="flex shrink-0 items-center gap-14">
-                {INDUSTRIES.map((label) => (
-                  <span
-                    key={label}
-                    className="flex items-center gap-14 font-display text-sm uppercase tracking-[0.18em] text-muted"
-                  >
-                    {label}
-                    <span className="inline-block h-1.5 w-1.5 rotate-45 bg-accent/60" />
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-        <p className="sr-only">
-          Built for clinics, real estate, SMEs, startups, marketplaces, retail,
-          AI SaaS, and home services.
-        </p>
+      <m.div {...enter(4)} className="relative border-t border-border">
+        <ul className="wrap flex flex-wrap items-center gap-x-8 gap-y-2 py-5">
+          <li className="font-display text-[11px] uppercase tracking-[0.16em] text-fg/70">
+            Built for
+          </li>
+          {INDUSTRIES.map((label) => (
+            <li
+              key={label}
+              className="font-display text-[11px] uppercase tracking-[0.16em] text-muted"
+            >
+              {label}
+            </li>
+          ))}
+        </ul>
       </m.div>
     </section>
   );

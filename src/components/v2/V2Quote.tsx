@@ -11,8 +11,7 @@ export default async function V2Quote() {
     <section className="relative border-y border-border py-24 md:py-36">
       <div className="wrap">
         <Reveal>
-          <p className="v2-counter uppercase">006 · Word</p>
-          <blockquote className="mt-10 max-w-4xl">
+          <blockquote className="max-w-4xl">
             <p className="v2-display text-[clamp(1.6rem,3.6vw,3.25rem)] text-fg">
               &ldquo;{t.quote}&rdquo;
             </p>

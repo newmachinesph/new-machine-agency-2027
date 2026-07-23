@@ -14,8 +14,7 @@ export default async function V2Products() {
     <section className="relative py-24 md:py-36">
       <div className="wrap">
         <Reveal>
-          <p className="v2-counter uppercase">005 · Machines</p>
-          <h2 className="v2-ghost mt-6 text-[clamp(2.5rem,6vw,5.5rem)]">
+          <h2 className="v2-ghost text-[clamp(2.5rem,6vw,5.5rem)]">
             Growth, productized.
           </h2>
         </Reveal>

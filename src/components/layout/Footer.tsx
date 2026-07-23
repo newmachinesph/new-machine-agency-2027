@@ -3,10 +3,13 @@ import Link from "next/link";
 import { navLinks, site } from "@/config/site";
 import PatternMosaic from "@/components/ui/PatternMosaic";
 import PatternTrace from "@/components/ui/PatternTrace";
-import PatternGrid from "@/components/ui/PatternGrid";
+import { IconArrowRight } from "@/components/ui/icons";
 
+/** Statement footer: MACHINE band closes the page, one display-sized email
+ *  link carries the CTA, navigation collapses to a single inline row. */
 export default function Footer({ stages }: { stages: string[] }) {
   const year = new Date().getFullYear();
+  const office = site.offices[0];
 
   return (
     <footer className="border-t border-border">
@@ -28,125 +31,84 @@ export default function Footer({ stages }: { stages: string[] }) {
         <p className="footer-word relative text-center">MACHINE</p>
       </div>
 
-      <div className="wrap relative grid gap-10 overflow-x-clip py-16 md:grid-cols-[1.7fr_1fr_1fr_1fr] md:py-20">
-        <PatternGrid
-          cols={3}
-          rows={3}
-          seed={3}
-          className="pointer-events-none absolute -left-6 top-0 hidden h-40 w-40 opacity-[0.08] md:block"
-        />
+      <div className="wrap grid gap-12 py-16 md:grid-cols-2 md:py-20">
         <div>
           <p className="font-display text-xl font-bold uppercase tracking-tight">
             New<span className="text-accent-fg">*</span>Machine
           </p>
-          <p className="mt-4 max-w-xs text-sm font-medium leading-relaxed text-accent-fg">
+          <p className="mt-4 max-w-sm text-sm font-medium leading-relaxed text-accent-fg">
             {site.principle}
           </p>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
             Full-lifecycle startup studio based in Makati, building with
-            founders across the US, the Philippines, and worldwide.
+            founders worldwide.
           </p>
-          <div className="mt-6 flex gap-5">
-            {site.socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
-              >
-                {social.label}
-              </a>
-            ))}
-          </div>
         </div>
 
-        <div>
+        <div className="md:text-right">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">
-            Pages
+            Start the conversation
           </p>
-          <ul className="mt-5 space-y-3">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <Link
-                href="/contact"
-                className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
+          <a
+            href={`mailto:${site.email}`}
+            className="group mt-4 inline-flex items-center gap-3 font-display text-[clamp(1.4rem,3vw,2.5rem)] font-semibold tracking-tight text-fg transition-colors hover:text-accent-fg"
+          >
+            {site.email}
+            <IconArrowRight className="h-6 w-6 shrink-0 text-accent-fg transition-transform duration-200 group-hover:translate-x-1" />
+          </a>
+          <p className="mt-3 text-sm text-muted">
+            We reply within 24 hours ·{" "}
+            {office ? `${office.region}: ${office.address.join(", ")}` : null}
+          </p>
         </div>
+      </div>
 
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">
-            Services
-          </p>
-          <ul className="mt-5 space-y-3">
-            {stages.map((stage) => (
-              <li key={stage}>
-                <Link
-                  href="/services/"
-                  className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
-                >
-                  {stage}
-                </Link>
-              </li>
-            ))}
-            <li>
+      <div className="border-t border-border">
+        <nav
+          aria-label="Footer"
+          className="wrap flex flex-wrap items-center gap-x-7 gap-y-3 py-6"
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm text-muted transition-colors hover:text-fg"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            className="text-sm text-muted transition-colors hover:text-fg"
+          >
+            Contact
+          </Link>
+          <span className="hidden flex-1 md:block" />
+          {site.socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted transition-colors hover:text-fg"
+            >
+              {social.label}
+            </a>
+          ))}
+        </nav>
+        <p className="wrap pb-6 text-xs text-muted">
+          {stages.map((stage, i) => (
+            <span key={stage}>
+              {i > 0 && " · "}
               <Link
                 href="/services/"
-                className="text-sm font-semibold text-accent-fg transition-colors hover:text-fg"
+                className="transition-colors hover:text-fg"
               >
-                All services →
+                {stage}
               </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">
-            Get in touch
-          </p>
-          <ul className="mt-5 space-y-3">
-            <li>
-              <a
-                href={`mailto:${site.email}`}
-                className="inline-block py-1 text-sm text-muted transition-colors hover:text-fg"
-              >
-                {site.email}
-              </a>
-            </li>
-            <li className="text-sm text-muted">We reply within 24 hours.</li>
-          </ul>
-
-          <p className="mt-7 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
-            Offices
-          </p>
-          <ul className="mt-4 space-y-4">
-            {site.offices.map((office) => (
-              <li key={office.region} className="text-sm leading-relaxed text-muted">
-                <span className="block text-fg">
-                  {office.flag} {office.region}
-                </span>
-                {office.address.map((line) => (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
-                ))}
-              </li>
-            ))}
-          </ul>
-        </div>
+            </span>
+          ))}
+        </p>
       </div>
 
       <div className="border-t border-border">

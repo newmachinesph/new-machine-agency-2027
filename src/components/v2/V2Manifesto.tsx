@@ -47,10 +47,9 @@ export default function V2Manifesto() {
   return (
     <section className="relative py-28 md:py-44">
       <div className="wrap">
-        <p className="v2-counter uppercase">002 · Principle</p>
         <p
           ref={ref}
-          className="v2-display mt-10 max-w-5xl text-[clamp(1.9rem,4.6vw,4.25rem)]"
+          className="v2-display max-w-5xl text-[clamp(1.9rem,4.6vw,4.25rem)]"
         >
           {STATEMENT.split(" ").map((word, i) => (
             <span key={i} className="v2-word">

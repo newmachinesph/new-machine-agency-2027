@@ -869,23 +869,6 @@ body:has(.v2-scope),
   line-height: 1;
 }
 
-/* Editorial section counter: 001 + hairline + kicker, stacked vertical. */
-.v2-counter {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-family: var(--font-display);
-  font-size: 0.8125rem;
-  letter-spacing: 0.14em;
-  color: var(--muted);
-}
-.v2-counter::before {
-  content: "";
-  width: 2px;
-  height: 1.75rem;
-  background: var(--accent);
-}
-
 /* Corner-marked frame (agentflow DNA): four ticks, drawn with gradients. */
 .v2-frame {
   position: relative;
@@ -908,26 +891,6 @@ body:has(.v2-scope),
 .v2-frame::after {
   bottom: -4px;
   right: -4px;
-}
-
-/* Industries marquee. Slow, pausable, off under reduced motion. */
-.v2-marquee {
-  overflow: hidden;
-  mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
-}
-.v2-marquee-track {
-  display: flex;
-  gap: 3.5rem;
-  width: max-content;
-  animation: v2-marquee 36s linear infinite;
-}
-.v2-marquee:hover .v2-marquee-track {
-  animation-play-state: paused;
-}
-@keyframes v2-marquee {
-  to {
-    transform: translateX(-50%);
-  }
 }
 
 /* Scroll word-reveal (plat-form signature). JS flips --p per word. */
@@ -994,9 +957,6 @@ body:has(.v2-scope),
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .v2-marquee-track {
-    animation: none;
-  }
   .v2-word {
     opacity: 1;
   }

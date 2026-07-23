@@ -46,8 +46,7 @@ export default function V2Services() {
   return (
     <section className="relative py-24 md:py-36">
       <div className="wrap">
-        <p className="v2-counter uppercase">003 · Services</p>
-        <h2 className="v2-ghost mt-6 text-[clamp(2.5rem,6vw,5.5rem)]">
+        <h2 className="v2-ghost text-[clamp(2.5rem,6vw,5.5rem)]">
           One studio, whole lifecycle.
         </h2>
 
