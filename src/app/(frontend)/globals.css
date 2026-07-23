@@ -121,9 +121,10 @@ svg {
   border: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
 }
 
-/* ── Chamfer signature (echoes the pattern motif; no rounded corners) ─ */
+/* ── Chamfer retired in v2: sharp rectangles only. Class kept as a no-op
+   until the inner v1 pages drop their literal `chamfer` usages. ─────── */
 .chamfer {
-  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  clip-path: none;
 }
 
 /* ── Outlined display word (hero) ───────────────────────────────────── */
