@@ -27,20 +27,6 @@
   --chart-dim: oklch(56.6% 0.015 285.9);
 }
 
-:root[data-theme="light"] {
-  --bg: oklch(98.3% 0.004 134.8);
-  --surface: oklch(95.4% 0.007 132.4);
-  --card: oklch(99.3% 0.003 128.5);
-  --fg: oklch(18.8% 0.006 285.8);
-  --muted: oklch(44.2% 0.015 285.8);
-  --line: rgba(19, 19, 22, 0.1);
-  --glass: rgba(255, 255, 255, 0.55);
-  --accent-fg: oklch(47.3% 0.106 145.3);
-  --blob-opacity: 0.28;
-  --chart-data: oklch(50.5% 0.112 145.2);
-  --chart-dim: oklch(61.0% 0.015 285.9);
-}
-
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

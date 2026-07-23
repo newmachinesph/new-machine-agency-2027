@@ -9,7 +9,6 @@ import { IconArrowRight } from "@/components/ui/icons";
  *  link carries the CTA, navigation collapses to a single inline row. */
 export default function Footer({ stages }: { stages: string[] }) {
   const year = new Date().getFullYear();
-  const office = site.offices[0];
 
   return (
     <footer className="border-t border-border">
@@ -57,8 +56,9 @@ export default function Footer({ stages }: { stages: string[] }) {
             <IconArrowRight className="h-6 w-6 shrink-0 text-accent-fg transition-transform duration-200 group-hover:translate-x-1" />
           </a>
           <p className="mt-3 text-sm text-muted">
-            We reply within 24 hours ·{" "}
-            {office ? `${office.region}: ${office.address.join(", ")}` : null}
+            Ayala Avenue, cor. V.A. Rufino St,
+            <br />
+            Makati City 1226, PH
           </p>
         </div>
       </div>

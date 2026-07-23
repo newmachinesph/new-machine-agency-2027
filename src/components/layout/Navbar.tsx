@@ -14,7 +14,6 @@ import { Menu, X } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import { navLinks } from "@/config/site";
 import Button from "@/components/ui/Button";
-import ThemeToggle from "@/components/ui/ThemeToggle";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import { IconArrowRight, IconWebsite } from "@/components/ui/icons";
 import { serviceIcons } from "@/lib/services";
@@ -424,7 +423,6 @@ export default function Navbar({
                 ) : null}
               </Link>
             ))}
-            <ThemeToggle />
             <Button href="/contact" className="px-5 py-2.5">
               Contact Us
             </Button>
@@ -432,7 +430,6 @@ export default function Navbar({
 
           {/* Mobile controls */}
           <div className="flex items-center gap-3 lg:hidden">
-            <ThemeToggle />
             <button
               type="button"
               aria-expanded={open}

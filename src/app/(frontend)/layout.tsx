@@ -80,13 +80,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
-    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
-  ],
+  themeColor: "#0a0a0a",
 };
 
-const themeScript = `(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}d.dataset.theme=t}catch(e){d.dataset.theme="dark"}})();`;
+/* Dark-only site: no stored preference, just flag JS availability. */
+const themeScript = `document.documentElement.classList.add("js");`;
 
 export default async function RootLayout({
   children,
