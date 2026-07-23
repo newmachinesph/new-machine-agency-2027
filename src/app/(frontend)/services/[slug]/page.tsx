@@ -4,11 +4,9 @@ import { notFound } from "next/navigation";
 import { IconArrowLeft, IconArrowRight } from "@/components/ui/icons";
 import { site } from "@/config/site";
 import { getServices, getServiceBySlug } from "@/lib/services.data";
-import { mediaUrl } from "@/lib/media";
 import { pageMetadata } from "@/lib/metadata";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import Button from "@/components/ui/Button";
-import DuotoneImage from "@/components/ui/DuotoneImage";
 import Faq from "@/components/ui/Faq";
 import GhostTitle from "@/components/v2/GhostTitle";
 import JsonLd from "@/components/ui/JsonLd";
@@ -57,55 +55,26 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             All services
           </Link>
 
-          <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
-            <div>
-              <Reveal>
-                <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
-                  {service.stage}
-                </p>
-              </Reveal>
-              <Reveal delay={90}>
-                <h1 className="v2-display mt-6 text-[clamp(2.6rem,6.5vw,6rem)]">
-                  {service.name}
-                </h1>
-              </Reveal>
-              <Reveal delay={180}>
-                <p className="mt-6 max-w-xl text-lg text-muted">{service.outcome}</p>
-              </Reveal>
-              <Reveal delay={260}>
-                <div className="mt-8">
-                  <Button href="/contact">
-                    Book a Strategy Call
-                    <IconArrowRight size={16} />
-                  </Button>
-                </div>
-              </Reveal>
-            </div>
-
-            <Reveal delay={140}>
-              <div className="v2-frame">
-                <div
-                  aria-hidden="true"
-                  className="flex items-center gap-2 border-b border-border bg-surface px-4 py-3"
-                >
-                  <span className="flex gap-1.5">
-                    <span className="h-2.5 w-2.5 bg-accent/70" />
-                    <span className="h-2.5 w-2.5 bg-muted/40" />
-                    <span className="h-2.5 w-2.5 bg-muted/25" />
-                  </span>
-                  <span className="ml-2 min-w-0 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                    {site.domain}/services/{service.slug}
-                  </span>
-                </div>
-                <div className="overflow-hidden">
-                  <DuotoneImage
-                    src={mediaUrl(service.image, `https://picsum.photos/seed/${service.slug}/1200/900`)}
-                    alt={`${service.name} | ${site.name}`}
-                    className="aspect-[4/3] w-full"
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    priority
-                  />
-                </div>
+          <div className="mt-10">
+            <Reveal>
+              <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+                {service.stage}
+              </p>
+            </Reveal>
+            <Reveal delay={90}>
+              <h1 className="v2-display mt-6 text-[clamp(2.6rem,6.5vw,6rem)]">
+                {service.name}
+              </h1>
+            </Reveal>
+            <Reveal delay={180}>
+              <p className="mt-6 max-w-xl text-lg text-muted">{service.outcome}</p>
+            </Reveal>
+            <Reveal delay={260}>
+              <div className="mt-8">
+                <Button href="/contact">
+                  Book a Strategy Call
+                  <IconArrowRight size={16} />
+                </Button>
               </div>
             </Reveal>
           </div>
