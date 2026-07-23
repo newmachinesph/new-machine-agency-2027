@@ -206,8 +206,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               Start with <span className="text-accent">{service.name}</span>.
             </h2>
             <p className="mt-6 max-w-xl text-muted">
-              Book a free call. We&rsquo;ll tell you honestly what will move the needle
-              and what won&rsquo;t.
+              Book a free call. We&rsquo;ll tell you honestly what will move
+              your numbers and what won&rsquo;t.
             </p>
             <div className="mt-8">
               <Button href="/contact">

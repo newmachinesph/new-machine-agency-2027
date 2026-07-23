@@ -42,13 +42,15 @@ export function faqSchema(items: { q: string; a: string }[]) {
 /** A service the studio sells. Always references the one Organization node and
  *  the shared `areaServed`, so the index list and each detail page agree. */
 export function serviceSchema(input: { name: string; description: string; slug: string }) {
+  const url = absoluteUrl(`/services/${input.slug}/`);
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${url}#service`,
     name: input.name,
     serviceType: input.name,
     description: input.description,
-    url: absoluteUrl(`/services/${input.slug}/`),
+    url,
     provider: orgRef,
     areaServed: [...AREA_SERVED],
   };
@@ -71,6 +73,7 @@ export function blogPostingSchema(input: {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": `${url}#article`,
     headline: input.title,
     description: input.description,
     datePublished: input.date,
@@ -106,6 +109,7 @@ export function caseStudySchema(input: {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${url}#article`,
     headline: `${input.client}: case study`,
     description: input.summary,
     url,
@@ -176,12 +180,14 @@ export function webPageSchema(input: {
   description: string;
   path: string;
 }) {
+  const url = absoluteUrl(input.path);
   return {
     "@context": "https://schema.org",
     "@type": input.type,
+    "@id": `${url}#webpage`,
     name: input.name,
     description: input.description,
-    url: absoluteUrl(input.path),
+    url,
     isPartOf: { "@id": WEBSITE_ID },
     publisher: orgRef,
   };

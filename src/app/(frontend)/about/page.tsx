@@ -108,7 +108,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={90}>
             <p className="mt-10 max-w-2xl text-lg text-muted">
-              A company that scales is really a machine — brand, product and
+              A company that scales is a machine — brand, product and
               growth running without the founder in the loop. We build that
               machine from Makati, remote-first, across the full lifecycle.
             </p>
@@ -146,7 +146,7 @@ export default function AboutPage() {
           <Reveal delay={90}>
             <p className="mt-8 max-w-xl text-muted">
               A small, remote-first founding team — the disciplines every
-              launch actually needs, not a fabricated headcount.
+              launch needs, not a fabricated headcount.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">

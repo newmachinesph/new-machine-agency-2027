@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { site } from "@/config/site";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/ui/JsonLd";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Terms of Service",
   description: `The terms that govern your use of ${site.legalName}’s website and services.`,
-  alternates: { canonical: "/terms-of-service/" },
-};
+  path: "/terms-of-service/",
+  withImage: true,
+});
 
 export default function TermsOfServicePage() {
   return (

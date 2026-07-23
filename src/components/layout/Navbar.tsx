@@ -269,7 +269,6 @@ export default function Navbar({
   products: NavProduct[];
   serviceStageGroups: ServiceStageGroup[];
 }) {
-  const mobileProducts = products.slice(0, 3);
   const scrolled = useSyncExternalStore(
     subscribeToScroll,
     () => window.scrollY > 8,
@@ -431,81 +430,43 @@ export default function Navbar({
       {/* Mobile menu, outside <header>: its backdrop-blur creates a containing
           block that would trap this fixed overlay and collapse its height. */}
       {open ? (
-        <div className="fixed inset-0 top-16 z-40 flex flex-col gap-8 overflow-y-auto bg-bg px-6 py-10 lg:hidden">
-          {/* Services: grouped by lifecycle stage */}
-          <div>
-            <Link
-              href="/services/"
-              className={`font-display text-2xl font-semibold ${
-                isActive("/services") ? "text-accent-fg" : "text-fg"
-              }`}
+        <div className="fixed inset-0 top-16 z-40 flex flex-col overflow-y-auto bg-bg lg:hidden">
+          <div className="v2-ground" aria-hidden="true" />
+          <nav
+            aria-label="Mobile"
+            className="relative flex flex-1 flex-col px-6 py-8"
+          >
+            {[...navLinks, { href: "/contact", label: "Contact" }].map(
+              (link, i) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  style={{ animationDelay: `${i * 45}ms` }}
+                  className={`v2-mobile-link border-b border-border py-4 font-display text-3xl font-semibold tracking-tight ${
+                    isActive(link.href) ? "text-accent-fg" : "text-fg"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
+          </nav>
+
+          <div className="relative px-6 pb-10">
+            <Button href="/contact" className="w-full py-4">
+              Book a strategy call
+            </Button>
+            <a
+              href="mailto:hello@newmachine.ph"
+              className="mt-6 block text-sm font-semibold text-fg"
             >
-              Services
-            </Link>
-            <div className="mt-4 space-y-4">
-              {serviceStageGroups.map((group) => (
-                <div key={group.stage}>
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-fg">
-                    {group.stage}
-                  </p>
-                  <ul className="mt-2 grid grid-cols-2 gap-x-4 gap-y-0.5">
-                    {group.services.map((service) => (
-                      <li key={service.slug}>
-                        <Link
-                          href={`/services/${service.slug}/`}
-                          className="block py-1.5 text-sm text-muted"
-                        >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Products */}
-          <div>
-            <Link
-              href="/products/"
-              className={`font-display text-2xl font-semibold ${
-                isActive("/products") ? "text-accent-fg" : "text-fg"
-              }`}
-            >
-              Products
-            </Link>
-            <ul className="mt-3 space-y-1">
-              {mobileProducts.map((product) => (
-                <li key={product.slug}>
-                  <Link
-                    href={`/products/${product.slug}/`}
-                    className="flex items-center gap-2 py-1.5 text-sm text-muted"
-                  >
-                    <span className="text-fg">{product.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Remaining links */}
-          <div className="flex flex-col gap-5">
-            {plainLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`font-display text-2xl font-semibold ${
-                  isActive(link.href) ? "text-accent-fg" : "text-fg"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="mt-2">
-            <Button href="/contact">Contact Us</Button>
+              hello@newmachine.ph
+            </a>
+            <p className="mt-2 text-xs leading-relaxed text-muted">
+              Ayala Avenue, cor. V.A. Rufino St,
+              <br />
+              Makati City 1226, PH
+            </p>
           </div>
         </div>
       ) : null}

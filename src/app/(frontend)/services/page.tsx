@@ -13,7 +13,7 @@ import Reveal from "@/components/ui/Reveal";
 export const metadata: Metadata = pageMetadata({
   title: "Services",
   description:
-    "Brand, product, growth and scale services built for the full startup lifecycle: from first identity to fractional leadership, wherever your team is in the world.",
+    "Brand, product, growth and scale services for the full startup lifecycle: from first identity to fractional leadership, wherever your team is in the world.",
   path: "/services/",
   withImage: true,
 });
@@ -25,7 +25,7 @@ const stages = [
   },
   {
     name: "Design & Build",
-    lead: "Turn the strategy into a product and a presence people actually trust.",
+    lead: "Turn the strategy into a product and a presence people trust.",
   },
   {
     name: "Launch & Grow",
@@ -107,8 +107,8 @@ export default async function ServicesPage() {
               Not sure which <span className="text-accent">stage</span>?
             </h2>
             <p className="mt-6 max-w-xl text-muted">
-              Book a free call. We&rsquo;ll tell you honestly what will move the needle
-              and what won&rsquo;t.
+              Book a free call. We&rsquo;ll tell you honestly what will move
+              your numbers and what won&rsquo;t.
             </p>
             <div className="mt-8">
               <Button href="/contact">

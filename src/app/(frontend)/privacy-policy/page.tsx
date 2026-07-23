@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { site } from "@/config/site";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/ui/JsonLd";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
   description: `How ${site.legalName} collects, uses and protects your personal information.`,
-  alternates: { canonical: "/privacy-policy/" },
-};
+  path: "/privacy-policy/",
+  withImage: true,
+});
 
 export default function PrivacyPolicyPage() {
   return (

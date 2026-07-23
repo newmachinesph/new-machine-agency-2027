@@ -9,6 +9,10 @@ import V2Quote from "@/components/v2/V2Quote";
 import V2Cta from "@/components/v2/V2Cta";
 
 export const metadata: Metadata = {
+  // Root layout supplies the default title + OG card; the home page only
+  // overrides the meta description (site.description runs long for a SERP).
+  description:
+    "Full-lifecycle startup studio in Makati working with founders in the US, the Philippines and worldwide: brand, web, apps, launch, growth and AI automation.",
   alternates: { canonical: "/" },
 };
 

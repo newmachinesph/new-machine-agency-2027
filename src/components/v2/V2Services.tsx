@@ -91,7 +91,7 @@ export default function V2Services() {
                     href="/services"
                     className="v2-rail-body group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent-fg"
                   >
-                    Explore stage
+                    See all services
                     <IconArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                   </Link>
                 </div>

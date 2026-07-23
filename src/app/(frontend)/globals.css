@@ -48,9 +48,11 @@ html {
   scroll-behavior: smooth;
   background: var(--bg);
   font-size: 16px;
+  overflow-x: clip;
 }
 
 body {
+  overflow-x: clip;
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font-sans);
@@ -878,6 +880,27 @@ body:has(.v2-scope),
 .v2-frame::after {
   bottom: -4px;
   right: -4px;
+}
+
+/* Mobile menu links: staggered rise-in on open. */
+.v2-mobile-link {
+  opacity: 0;
+  animation: v2-mobile-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes v2-mobile-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .v2-mobile-link {
+    animation-duration: 1ms;
+  }
 }
 
 /* Scroll word-reveal (plat-form signature). JS flips --p per word. */

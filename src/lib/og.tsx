@@ -2,18 +2,20 @@ import type { ReactElement } from "react";
 
 /**
  * Shared 1200x630 Open Graph card for the dynamic `opengraph-image.tsx`
- * routes. Colors are the sRGB equivalents of the OKLCH tokens in
- * globals.css — satori (next/og) does not parse oklch().
+ * routes, in the v2 machine-dark vocabulary: near-black green canvas,
+ * hairline grid, corner-ticked frame, triangle-mosaic wordmark.
+ * Colors are sRGB equivalents of the OKLCH tokens in globals.css —
+ * satori (next/og) does not parse oklch().
  */
 export const OG_SIZE = { width: 1200, height: 630 } as const;
 export const OG_CONTENT_TYPE = "image/png";
 
-const BG = "#0a0b0a";
-const CARD = "#141613";
-const FG = "#f4f4f4";
-const MUTED = "#b3b3bd";
-const ACCENT = "#8fc57f";
-const ACCENT_DEEP = "#35753a";
+const BG = "#101311"; // oklch(12.5% 0.006 150)
+const FG = "#f4f6f3";
+const MUTED = "#9aa39a";
+const ACCENT = "#8fc57f"; // oklch(76.8% 0.112 138.7)
+const GRID = "rgba(255,255,255,0.08)";
+const FRAME = "rgba(255,255,255,0.16)";
 
 /** Hard character clamp — satori's line-clamp support is patchy, and a
  *  truncated string is cheaper than a broken render. */
@@ -22,20 +24,43 @@ function clamp(text: string, max: number): string {
   return t.length > max ? `${t.slice(0, max - 1).trimEnd()}…` : t;
 }
 
-/** The NM monogram from components/ui/Logo, with a literal accent fill. */
+/** The NM triangle mosaic from components/ui/Logo + NEW*MACHINE wordmark. */
 function Wordmark() {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-      <svg width="126" height="28" viewBox="0 0 180 40">
+    <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+      <svg width="112" height="25" viewBox="0 0 180 40">
         <polygon points="0,0 40,0 0,40" fill={ACCENT} />
         <polygon points="80,0 80,40 40,40" fill={ACCENT} />
         <polygon points="100,0 140,40 100,40" fill={ACCENT} />
         <polygon points="180,0 180,40 140,40" fill={ACCENT} />
       </svg>
-      <span style={{ color: FG, fontSize: 26, fontWeight: 600, letterSpacing: -0.4 }}>
-        New Machine
+      <span
+        style={{
+          display: "flex",
+          color: FG,
+          fontSize: 23,
+          fontWeight: 700,
+          letterSpacing: 3,
+        }}
+      >
+        NEW<span style={{ color: ACCENT }}>*</span>MACHINE
       </span>
     </div>
+  );
+}
+
+/** 7px solid corner tick — the site's .v2-frame signature. */
+function Tick({ corner }: { corner: "tl" | "br" }) {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        width: 11,
+        height: 11,
+        backgroundColor: FG,
+        ...(corner === "tl" ? { top: -6, left: -6 } : { bottom: -6, right: -6 }),
+      }}
+    />
   );
 }
 
@@ -45,7 +70,7 @@ type CardProps = {
   title: string;
   /** Supporting line under the title. */
   subtitle?: string;
-  /** Bottom-left meta line, e.g. "8 min read · Mar 2026". */
+  /** Bottom meta line, e.g. "8 min read · Mar 2026". */
   meta?: string;
   /** Hero number (case studies lead with this). */
   metric?: string;
@@ -60,8 +85,8 @@ export function ogCard({
   metric,
   metricLabel,
 }: CardProps): ReactElement {
-  const clamped = clamp(title, metric ? 46 : 78);
-  const titleSize = clamped.length > 52 ? 62 : clamped.length > 30 ? 76 : 92;
+  const clamped = clamp(title, metric ? 46 : 72);
+  const titleSize = clamped.length > 48 ? 60 : clamped.length > 28 ? 74 : 92;
 
   return (
     <div
@@ -69,51 +94,75 @@ export function ogCard({
         width: "100%",
         height: "100%",
         display: "flex",
+        position: "relative",
         backgroundColor: BG,
         color: FG,
         fontFamily: "sans-serif",
+        padding: 44,
       }}
     >
-      {/* Left accent rail */}
+      {/* Hairline grid: one div per axis (satori tiles single gradients reliably) */}
       <div
         style={{
-          width: 14,
-          height: "100%",
-          display: "flex",
-          backgroundImage: `linear-gradient(180deg, ${ACCENT} 0%, ${ACCENT_DEEP} 100%)`,
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: 1200,
+          height: 630,
+          backgroundImage: `linear-gradient(90deg, ${GRID} 0px, ${GRID} 1px, transparent 1px)`,
+          backgroundSize: "100px 630px",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: 1200,
+          height: 630,
+          backgroundImage: `linear-gradient(180deg, ${GRID} 0px, ${GRID} 1px, transparent 1px)`,
+          backgroundSize: "1200px 100px",
+        }}
+      />
+      {/* Soft radial green glow, top-right corner */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: 1200,
+          height: 630,
+          backgroundImage:
+            "radial-gradient(circle at 100% 0%, rgba(143,197,127,0.20) 0%, rgba(143,197,127,0) 55%)",
         }}
       />
 
+      {/* Corner-ticked frame (.v2-frame signature) */}
       <div
         style={{
           flex: 1,
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: "62px 72px",
+          position: "relative",
+          border: `1px solid ${FRAME}`,
+          padding: "48px 56px",
         }}
       >
-        {/* Top: wordmark + kicker */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <Wordmark />
+        <Tick corner="tl" />
+        <Tick corner="br" />
+
+        {/* Kicker: accent square + small caps, letter-spaced, muted */}
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <div style={{ width: 12, height: 12, backgroundColor: ACCENT }} />
           <span
             style={{
               display: "flex",
-              color: ACCENT,
-              backgroundColor: CARD,
-              border: `1px solid ${ACCENT_DEEP}`,
-              borderRadius: 999,
-              fontSize: 19,
-              letterSpacing: 3,
+              color: MUTED,
+              fontSize: 21,
+              letterSpacing: 5,
               textTransform: "uppercase",
               fontWeight: 600,
-              padding: "8px 20px",
             }}
           >
             {kicker}
@@ -123,11 +172,11 @@ export function ogCard({
         {/* Middle: the payload */}
         <div style={{ display: "flex", flexDirection: "column" }}>
           {metric ? (
-            <div style={{ display: "flex", flexDirection: "column", marginBottom: 30 }}>
+            <div style={{ display: "flex", flexDirection: "column", marginBottom: 28 }}>
               <span
                 style={{
                   color: ACCENT,
-                  fontSize: 178,
+                  fontSize: 172,
                   fontWeight: 700,
                   letterSpacing: -6,
                   lineHeight: 1,
@@ -136,7 +185,7 @@ export function ogCard({
                 {clamp(metric, 10)}
               </span>
               {metricLabel ? (
-                <span style={{ color: MUTED, fontSize: 28, marginTop: 12 }}>
+                <span style={{ color: MUTED, fontSize: 28, marginTop: 14 }}>
                   {clamp(metricLabel, 76)}
                 </span>
               ) : null}
@@ -145,10 +194,11 @@ export function ogCard({
 
           <span
             style={{
+              color: FG,
               fontSize: metric ? 46 : titleSize,
               fontWeight: 700,
               letterSpacing: -2,
-              lineHeight: 1.08,
+              lineHeight: 1.04,
             }}
           >
             {clamped}
@@ -158,10 +208,10 @@ export function ogCard({
             <span
               style={{
                 color: MUTED,
-                fontSize: 30,
+                fontSize: 29,
                 lineHeight: 1.35,
                 marginTop: 22,
-                maxWidth: 900,
+                maxWidth: 880,
               }}
             >
               {clamp(subtitle, 150)}
@@ -169,20 +219,28 @@ export function ogCard({
           ) : null}
         </div>
 
-        {/* Bottom: meta + domain */}
+        {/* Bottom row: wordmark + meta · domain */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            borderTop: `1px solid rgba(255,255,255,0.10)`,
-            paddingTop: 26,
-            fontSize: 24,
-            color: MUTED,
           }}
         >
-          <span>{meta ? clamp(meta, 70) : ""}</span>
-          <span style={{ color: ACCENT }}>newmachine.ph</span>
+          <Wordmark />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 18,
+              fontSize: 23,
+              color: MUTED,
+            }}
+          >
+            {meta ? <span style={{ display: "flex" }}>{clamp(meta, 60)}</span> : null}
+            {meta ? <span style={{ display: "flex", color: FRAME }}>·</span> : null}
+            <span style={{ display: "flex", color: FG }}>newmachine.ph</span>
+          </div>
         </div>
       </div>
     </div>

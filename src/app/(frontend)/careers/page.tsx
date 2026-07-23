@@ -79,7 +79,7 @@ export default async function CareersPage() {
       <section className="relative py-20 md:py-28">
         <div className="wrap">
           <Reveal>
-            <GhostTitle>How we actually work.</GhostTitle>
+            <GhostTitle>How we work.</GhostTitle>
           </Reveal>
           <div className="mt-14">
             {values.map((value, i) => (

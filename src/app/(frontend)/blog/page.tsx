@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog.data";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Blog",
   description:
     "Plain-language articles on brand, product, websites and growth, written for founders, not marketers.",
-  alternates: { canonical: "/blog/" },
-};
+  path: "/blog/",
+  withImage: true,
+});
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("en-GB", {

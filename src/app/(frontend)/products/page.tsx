@@ -13,7 +13,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = pageMetadata({
   title: "Products",
-  description: `${site.principle} The Machines: loop-engineered systems that run a job end to end, verify their own work, and stop when it is done.`,
+  description: `${site.principle} The Machines run a job end to end, verify their own work, and stop when it is done.`,
   path: "/products/",
   withImage: true,
 });
