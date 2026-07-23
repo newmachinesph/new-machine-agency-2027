@@ -15,8 +15,7 @@ import Logo from "@/components/ui/Logo";
 import { navLinks } from "@/config/site";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
-import { IconArrowRight, IconWebsite } from "@/components/ui/icons";
-import { serviceIcons } from "@/lib/services";
+import { IconArrowRight } from "@/components/ui/icons";
 import { productImageUrl } from "@/lib/media";
 import type { Service } from "@/lib/services.data";
 
@@ -118,7 +117,7 @@ function MegaItem({
         <div className="absolute inset-x-0 top-full pt-4">
           <div
             id={panelId}
-            className="mega-panel glass chamfer p-6 md:p-8"
+            className="mega-panel glass p-6 md:p-8"
             aria-label={`${label} menu`}
             onClick={closeOnLinkClick}
           >
@@ -139,53 +138,39 @@ function ServicesPanel({ stageGroups }: { stageGroups: ServiceStageGroup[] }) {
             {group.stage}
           </p>
           <ul className="mt-3 space-y-0.5">
-            {group.services.map((service) => {
-              const Icon = serviceIcons[service.icon] ?? IconWebsite;
-              return (
-                <li key={service.slug}>
-                  <Link
-                    href={`/services/${service.slug}/`}
-                    className="group/svc flex items-center gap-2.5 py-1 text-sm text-muted transition-colors hover:text-fg"
-                  >
-                    <Icon
-                      size={15}
-                      className="shrink-0 text-muted/70 transition-colors group-hover/svc:text-accent-fg"
-                    />
-                    <span>{service.name}</span>
-                  </Link>
-                </li>
-              );
-            })}
+            {group.services.map((service) => (
+              <li key={service.slug}>
+                <Link
+                  href={`/services/${service.slug}/`}
+                  className="block py-1 text-sm text-muted transition-colors hover:text-fg"
+                >
+                  {service.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       ))}
 
-      {/* Featured 2027 promo: links + image, the "combination" callout. */}
+      {/* Statement card in the v2 vocabulary: flat surface, corner ticks. */}
       <Link
         href="/services/"
-        className="beam group/promo relative flex min-h-[13rem] flex-col justify-end overflow-hidden chamfer p-5 md:col-span-4 lg:col-span-1"
+        className="v2-frame group/promo relative flex min-h-[13rem] flex-col justify-between p-6 md:col-span-4 lg:col-span-1"
       >
-        <DuotoneImage
-          src="/products/answer-engine-machine.webp"
-          className="absolute inset-0"
-          sizes="(min-width: 1024px) 16rem, 100vw"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent"
-        />
-        <span className="absolute left-4 top-4 chamfer bg-black/40 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm">
-          Featured
-        </span>
-        <div className="relative">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-accent-strong">
-            Scale · Beyond
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-muted">
+          Scale · Beyond
+        </p>
+        <div>
+          <p className="font-display text-xl font-semibold leading-snug text-fg">
+            AI agents that run <span className="text-accent-fg">growth</span>{" "}
+            for you.
           </p>
-          <p className="mt-2 font-display text-lg font-semibold leading-tight text-white">
-            AI agents that run growth for you.
-          </p>
-          <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white">
-            Explore all services <IconArrowRight size={14} />
+          <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-fg">
+            Explore all services
+            <IconArrowRight
+              size={14}
+              className="transition-transform duration-200 group-hover/promo:translate-x-1"
+            />
           </span>
         </div>
       </Link>
@@ -206,7 +191,7 @@ function ProductsPanel({ products }: { products: NavProduct[] }) {
       {/* Featured build: image-led left column mirroring the services promo. */}
       <Link
         href={`/products/${featured.slug}/`}
-        className="beam group/feat relative flex min-h-[15rem] flex-col justify-end overflow-hidden chamfer p-5"
+        className="v2-frame beam group/feat relative flex min-h-[15rem] flex-col justify-end overflow-hidden p-5"
       >
         <DuotoneImage
           src={productImageUrl(featured.image, featured.slug)}
@@ -251,11 +236,11 @@ function ProductsPanel({ products }: { products: NavProduct[] }) {
           <li key={product.slug}>
             <Link
               href={`/products/${product.slug}/`}
-              className="beam group/prod flex items-center gap-4 chamfer border border-border bg-card/60 p-3"
+              className="v2-frame beam group/prod flex items-center gap-4 p-3"
             >
               <DuotoneImage
                 src={productImageUrl(product.image, product.slug)}
-                className="h-14 w-20 shrink-0 chamfer"
+                className="h-14 w-20 shrink-0"
                 sizes="80px"
               />
               <div className="min-w-0 flex-1">
