@@ -1,43 +1,31 @@
 import type { Metadata } from "next";
-import { getFaqs } from "@/lib/faq.data";
-import { faqSchema } from "@/lib/schema";
-import JsonLd from "@/components/ui/JsonLd";
-import Hero from "@/components/sections/Hero";
-import StatsBar from "@/components/sections/StatsBar";
-import SelectedWork from "@/components/sections/SelectedWork";
-import Impact from "@/components/sections/Impact";
-import ServicesBento from "@/components/sections/ServicesBento";
-import WhyItMatters from "@/components/sections/WhyItMatters";
-import WhoWeHelp from "@/components/sections/WhoWeHelp";
-import Process from "@/components/sections/Process";
-import Comparison from "@/components/sections/Comparison";
-import Testimonials from "@/components/sections/Testimonials";
-import ProductsTeaser from "@/components/sections/ProductsTeaser";
-import HomeFaq from "@/components/sections/HomeFaq";
-import FinalCta from "@/components/sections/FinalCta";
+import V2Hero from "@/components/v2/V2Hero";
+import V2Proof from "@/components/v2/V2Proof";
+import V2Manifesto from "@/components/v2/V2Manifesto";
+import V2Services from "@/components/v2/V2Services";
+import V2Stats from "@/components/v2/V2Stats";
+import V2Products from "@/components/v2/V2Products";
+import V2Quote from "@/components/v2/V2Quote";
+import V2Cta from "@/components/v2/V2Cta";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export default async function Home() {
-  const faqs = await getFaqs();
+/** V2 homepage — machine-dark marquee composition. The .v2-scope wrapper
+ *  pins the dark token set so the canvas stays cinematic in both themes.
+ *  V1 sections remain in src/components/sections/ untouched. */
+export default function Home() {
   return (
-    <>
-      <Hero />
-      <SelectedWork />
-      <Impact />
-      <ServicesBento />
-      <WhyItMatters />
-      <WhoWeHelp />
-      <Process />
-      <Comparison />
-      <StatsBar />
-      <Testimonials />
-      <ProductsTeaser />
-      <HomeFaq faqs={faqs} />
-      <FinalCta />
-      <JsonLd data={faqSchema(faqs)} />
-    </>
+    <div className="v2-scope">
+      <V2Hero />
+      <V2Proof />
+      <V2Manifesto />
+      <V2Services />
+      <V2Stats />
+      <V2Products />
+      <V2Quote />
+      <V2Cta />
+    </div>
   );
 }
