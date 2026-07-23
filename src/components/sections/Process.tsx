@@ -34,7 +34,7 @@ export default function Process() {
           lead="No mystery phases, no jargon-filled status reports. Four steps, each with a clear deliverable."
         />
 
-        <div className="mt-16 grid gap-10 md:grid-cols-4 md:gap-6">
+        <div className="mt-16 grid gap-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-6">
           {steps.map((step, i) => (
             <Reveal key={step.number} delay={i * 90}>
               <div>

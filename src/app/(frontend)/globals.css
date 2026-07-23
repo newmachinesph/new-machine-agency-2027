@@ -111,6 +111,19 @@ svg {
   max-width: 68ch;
 }
 
+/* Turnstile renders at a fixed ~300px min-width; scale it down on the
+   narrowest phones so it doesn't clip inside the contact card. */
+.cf-turnstile {
+  max-width: 100%;
+}
+
+@media (max-width: 380px) {
+  .cf-turnstile {
+    transform: scale(0.8);
+    transform-origin: top left;
+  }
+}
+
 .panel {
   background: var(--card);
   border: 1px solid var(--line);
@@ -443,6 +456,11 @@ svg {
   line-height: 1.75;
 }
 
+.prose p,
+.prose li {
+  overflow-wrap: break-word;
+}
+
 .prose p {
   color: var(--muted);
   margin-block: 1.1rem;
@@ -518,6 +536,47 @@ svg {
   border: 1px solid var(--line);
   padding: 0.15em 0.4em;
   font-size: 0.9em;
+}
+
+.prose pre {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1rem 1.25rem;
+  margin-block: 1.5rem;
+  overflow-x: auto;
+}
+
+.prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.prose table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-block: 1.5rem;
+  color: var(--muted);
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--line);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.prose th {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ── Reduced motion: calm everything down ───────────────────────────── */
@@ -856,6 +915,8 @@ body:has(.v2-scope),
   letter-spacing: -0.03em;
   color: oklch(35% 0.008 160);
   line-height: 1;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 /* Corner-marked frame (agentflow DNA): four ticks, drawn with gradients. */

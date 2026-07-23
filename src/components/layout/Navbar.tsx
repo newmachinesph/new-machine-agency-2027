@@ -343,10 +343,10 @@ export default function Navbar({
           </Link>
 
           {/* Desktop nav */}
-          <nav aria-label="Main navigation" className="hidden items-center gap-7 lg:flex">
+          <nav aria-label="Main navigation" className="hidden items-center gap-5 lg:flex xl:gap-7">
             <div
               ref={groupRef}
-              className="flex items-center gap-7 self-stretch"
+              className="flex items-center gap-5 self-stretch xl:gap-7"
               onMouseEnter={cancelClose}
               onMouseLeave={() => {
                 if (!groupRef.current?.contains(document.activeElement)) scheduleClose();

@@ -22,7 +22,7 @@ export default async function SelectedWork() {
           lead="Three representative engagements, each measured by what changed after launch. Every card opens into the full case study: the numbers charted month by month, before and after."
         />
 
-        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-20 sm:grid-cols-2 lg:grid-cols-3">
           {caseStudies.map((project, i) => (
             <Reveal key={project.slug} delay={i * 110} className={OFFSET[i] ?? ""}>
               <Link
@@ -36,7 +36,7 @@ export default async function SelectedWork() {
                     <DuotoneImage
                       src={`/work/${project.slug}.webp`}
                       className="aspect-[16/10] w-full"
-                      sizes="(min-width: 768px) 33vw, 100vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     />
                   </div>
 

@@ -18,7 +18,7 @@ export default async function ProductsTeaser() {
           lead="Each Machine runs a job end to end, checks its own work against a gate it cannot talk its way past, and stops when the job is done."
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {products.slice(0, 3).map((product, i) => (
             <Reveal key={product.slug} delay={i * 90}>
               <Link href={`/products/${product.slug}/`} className="panel beam block h-full overflow-hidden">
@@ -28,7 +28,7 @@ export default async function ProductsTeaser() {
                   <DuotoneImage
                     src={productImageUrl(product.image, product.slug)}
                     className="aspect-[16/10] w-full"
-                    sizes="(min-width: 768px) 33vw, 100vw"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   />
                   <span className="pointer-events-none absolute inset-0 grid place-items-center">
                     <Logo className="h-7 w-auto opacity-90 [&_polygon]:fill-white" />

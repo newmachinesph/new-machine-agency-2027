@@ -27,7 +27,7 @@ export default function CtaPanel({
   return (
     <Reveal>
       <div
-        className={`panel relative mt-24 overflow-hidden p-10 text-center md:p-14 ${className}`.trim()}
+        className={`panel relative mt-16 overflow-hidden p-6 text-center sm:p-10 md:mt-24 md:p-14 ${className}`.trim()}
       >
         <PatternGrid
           cols={6}

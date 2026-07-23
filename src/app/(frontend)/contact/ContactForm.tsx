@@ -9,7 +9,7 @@ import Button from "@/components/ui/Button";
 type Status = "idle" | "sending" | "sent" | "error";
 
 const inputClasses =
-  "w-full border border-border bg-card px-4 py-3 text-sm placeholder:text-muted focus:border-accent outline-none";
+  "w-full border border-border bg-card px-4 py-3 text-base placeholder:text-muted focus:border-accent outline-none sm:text-sm";
 
 // Public by design — Turnstile site keys are meant to ship to the browser.
 // Unset locally means no widget, so the form still works in dev; the route
@@ -69,7 +69,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} className="v2-frame relative space-y-5 p-8 md:p-10">
+    <form onSubmit={onSubmit} className="v2-frame relative space-y-5 p-5 sm:p-8 md:p-10">
       <div>
         <label htmlFor="contact-name" className="mb-1.5 block text-sm font-medium">
           Name <span className="text-accent-fg" aria-hidden="true">*</span>

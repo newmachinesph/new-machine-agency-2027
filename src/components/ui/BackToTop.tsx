@@ -33,7 +33,7 @@ export default function BackToTop() {
       type="button"
       aria-label="Back to top"
       onClick={scrollToTop}
-      className={`fixed bottom-24 right-5 z-40 grid h-10 w-10 place-items-center border border-border bg-card text-fg transition-[opacity,transform,border-color] duration-300 hover:border-accent ${
+      className={`fixed bottom-24 right-5 z-40 grid h-11 w-11 place-items-center border border-border bg-card text-fg transition-[opacity,transform,border-color] duration-300 hover:border-accent ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-2 opacity-0"
       }`}
     >

@@ -50,9 +50,9 @@ export default function Footer({ stages }: { stages: string[] }) {
           </p>
           <a
             href={`mailto:${site.email}`}
-            className="group mt-4 inline-flex items-center gap-3 font-display text-[clamp(1.4rem,3vw,2.5rem)] font-semibold tracking-tight text-fg transition-colors hover:text-accent-fg"
+            className="group mt-4 inline-flex max-w-full items-center gap-2 font-display text-[clamp(1.25rem,3vw,2.5rem)] font-semibold tracking-tight text-fg transition-colors hover:text-accent-fg md:gap-3"
           >
-            {site.email}
+            <span className="min-w-0 break-words">{site.email}</span>
             <IconArrowRight className="h-6 w-6 shrink-0 text-accent-fg transition-transform duration-200 group-hover:translate-x-1" />
           </a>
           <p className="mt-3 text-sm text-muted">

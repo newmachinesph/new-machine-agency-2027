@@ -18,7 +18,7 @@ export default async function V2Proof() {
           <GhostTitle>Results you can audit.</GhostTitle>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {caseStudies.map((cs, i) => {
             const img = mediaUrl(cs.image, `/work/${cs.slug}.webp`);
             return (
@@ -32,7 +32,7 @@ export default async function V2Proof() {
                       src={img}
                       alt={cs.client}
                       fill
-                      sizes="(min-width: 768px) 33vw, 100vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />

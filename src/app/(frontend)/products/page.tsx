@@ -56,7 +56,7 @@ export default async function ProductsPage() {
       {/* Grid */}
       <section className="pb-24">
         <div className="wrap">
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((product, i) => (
               <Reveal key={product.slug} delay={i * 90}>
                 <Link
@@ -68,7 +68,7 @@ export default async function ProductsPage() {
                       src={productImageUrl(product.image, product.slug)}
                       alt={product.name}
                       fill
-                      sizes="(min-width: 768px) 33vw, 100vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />

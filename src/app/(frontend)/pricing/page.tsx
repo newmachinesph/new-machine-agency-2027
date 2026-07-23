@@ -138,7 +138,7 @@ export default function PricingPage() {
                 <h2 className="font-display text-xl font-semibold tracking-tight">
                   {tier.name}
                 </h2>
-                <p className="mt-5 font-display text-5xl font-semibold tracking-[-0.03em] text-accent-fg">
+                <p className="mt-5 font-display text-4xl font-semibold tracking-[-0.03em] text-accent-fg sm:text-5xl">
                   {tier.price}
                 </p>
                 <p className="mt-3 font-display text-[13px] uppercase tracking-[0.16em] text-muted">

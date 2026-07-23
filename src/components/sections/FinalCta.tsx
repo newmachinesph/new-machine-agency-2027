@@ -5,7 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function FinalCta() {
   return (
-    <section className="py-24">
+    <section className="py-16 md:py-24">
       <div className="wrap">
         <Reveal>
           <div className="chamfer relative overflow-hidden bg-accent text-accent-ink">
