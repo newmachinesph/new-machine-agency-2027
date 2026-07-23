@@ -4,6 +4,7 @@ import { getCaseStudies } from "@/lib/work.data";
 import { mediaUrl } from "@/lib/media";
 import CountUp from "@/components/ui/CountUp";
 import Reveal from "@/components/ui/Reveal";
+import GhostTitle from "@/components/v2/GhostTitle";
 import { IconArrowRight } from "@/components/ui/icons";
 
 /** 001 · Proof — three engagements, metric-first cinematic cards. */
@@ -14,9 +15,7 @@ export default async function V2Proof() {
     <section className="relative py-24 md:py-36">
       <div className="wrap">
         <Reveal>
-          <h2 className="v2-ghost text-[clamp(2.5rem,6vw,5.5rem)]">
-            Results you can audit.
-          </h2>
+          <GhostTitle>Results you can audit.</GhostTitle>
         </Reveal>
 
         <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">

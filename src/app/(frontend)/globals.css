@@ -633,7 +633,7 @@ footer .wrap a:hover::after {
 }
 
 /* Primary button: sheen sweep + icon nudge */
-.chamfer.bg-accent {
+.btn-primary {
   position: relative;
   overflow: hidden;
 }
@@ -641,15 +641,15 @@ footer .wrap a:hover::after {
 /* Floating buttons keep their fixed placement (utilities are layered,
    so the sheen rule above would otherwise override them). Same reason the
    VideoEmbed play button needs its absolute centering back. */
-.chamfer.bg-accent.fixed {
+.btn-primary.fixed {
   position: fixed;
 }
 
-.chamfer.bg-accent.absolute {
+.btn-primary.absolute {
   position: absolute;
 }
 
-.chamfer.bg-accent::before {
+.btn-primary::before {
   content: "";
   position: absolute;
   top: -20%;
@@ -662,15 +662,15 @@ footer .wrap a:hover::after {
   pointer-events: none;
 }
 
-.chamfer.bg-accent:hover::before {
+.btn-primary:hover::before {
   transform: skewX(-18deg) translateX(580%);
 }
 
-.chamfer svg {
+.btn-primary svg {
   transition: transform 0.25s ease;
 }
 
-.chamfer:hover svg {
+.btn-primary:hover svg {
   transform: translateX(3px);
 }
 

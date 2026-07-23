@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import * as m from "motion/react-m";
 import { useReducedMotion } from "motion/react";
+import Button from "@/components/ui/Button";
 import { IconArrowRight } from "@/components/ui/icons";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -60,19 +60,13 @@ export default function V2Hero() {
         </m.p>
 
         <m.div {...enter(3)} className="mt-10 flex flex-wrap items-center gap-4">
-          <Link
-            href="/contact"
-            className="group inline-flex items-center gap-2 bg-accent px-7 py-4 font-semibold text-accent-ink transition-transform duration-200 hover:-translate-y-0.5"
-          >
+          <Button href="/contact" className="px-7 py-4 text-base">
             Book a strategy call
-            <IconArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-          </Link>
-          <Link
-            href="/work"
-            className="inline-flex items-center gap-2 border border-border px-7 py-4 font-semibold text-fg transition-colors hover:border-accent hover:text-accent"
-          >
+            <IconArrowRight className="h-4 w-4" />
+          </Button>
+          <Button href="/work" variant="ghost" className="px-7 py-4 text-base">
             See the numbers
-          </Link>
+          </Button>
         </m.div>
       </div>
 

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import { IconArrowRight } from "@/components/ui/icons";
 
@@ -14,13 +14,10 @@ export default function V2Cta() {
             Let&rsquo;s build <span className="text-accent">your machine</span>.
           </h2>
           <div className="mt-10 flex flex-wrap items-center gap-5">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 bg-accent px-8 py-4 font-semibold text-accent-ink transition-transform duration-200 hover:-translate-y-0.5"
-            >
+            <Button href="/contact" className="px-8 py-4 text-base">
               Book a strategy call
-              <IconArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-            </Link>
+              <IconArrowRight className="h-4 w-4" />
+            </Button>
             <p className="text-sm text-muted">
               Fixed quote · reply within one business day
             </p>

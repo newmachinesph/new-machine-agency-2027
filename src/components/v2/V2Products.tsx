@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getProducts } from "@/lib/products.data";
 import Reveal from "@/components/ui/Reveal";
+import GhostTitle from "@/components/v2/GhostTitle";
 import { IconArrowRight } from "@/components/ui/icons";
 
 /** 005 · Machines — product line as a dark bento: one anchor card + grid.
@@ -14,9 +15,7 @@ export default async function V2Products() {
     <section className="relative py-24 md:py-36">
       <div className="wrap">
         <Reveal>
-          <h2 className="v2-ghost text-[clamp(2.5rem,6vw,5.5rem)]">
-            Growth, productized.
-          </h2>
+          <GhostTitle>Growth, productized.</GhostTitle>
         </Reveal>
 
         <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3">

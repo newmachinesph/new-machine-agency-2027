@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { IconArrowRight } from "@/components/ui/icons";
+import GhostTitle from "@/components/v2/GhostTitle";
 
 type Stage = {
   n: string;
@@ -46,9 +47,7 @@ export default function V2Services() {
   return (
     <section className="relative py-24 md:py-36">
       <div className="wrap">
-        <h2 className="v2-ghost text-[clamp(2.5rem,6vw,5.5rem)]">
-          One studio, whole lifecycle.
-        </h2>
+        <GhostTitle>One studio, whole lifecycle.</GhostTitle>
 
         <div className="v2-rail mt-16 lg:h-[26rem]" role="list">
           {STAGES.map((stage, i) => {
