@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import { site } from "@/config/site";
 import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 import Button from "@/components/ui/Button";
-import CtaPanel from "@/components/ui/CtaPanel";
 import Faq from "@/components/ui/Faq";
+import GhostTitle from "@/components/v2/GhostTitle";
 import JsonLd from "@/components/ui/JsonLd";
-import PatternGrid from "@/components/ui/PatternGrid";
 import Reveal from "@/components/ui/Reveal";
-import SectionHeading from "@/components/ui/SectionHeading";
-import { IconArrowRight, IconCheck } from "@/components/ui/icons";
+import { IconArrowRight } from "@/components/ui/icons";
 
 const PRICING_DESCRIPTION =
   "Public pricing, fixed quotes, zero surprises. Three engagement models: from a conversion-first landing page to a full growth partnership.";
@@ -28,7 +25,6 @@ const tiers = [
     price: "$4,800",
     terms: "Fixed quote · 2–3 weeks",
     line: "One page with one job: convert. For validating an offer, launching a campaign, or replacing a page that isn't pulling its weight.",
-    tint: "var(--accent-strong)",
     featured: false,
     cta: "Start with Launch",
     includes: [
@@ -45,7 +41,6 @@ const tiers = [
     price: "$12,500",
     terms: "Fixed quote · 4–7 weeks",
     line: "The full presence: brand plus website or MVP, built as one system and measured from day one.",
-    tint: "var(--accent)",
     featured: true,
     cta: "Start with Build",
     includes: [
@@ -62,7 +57,6 @@ const tiers = [
     price: "$6,000/mo",
     terms: "3-month minimum · cancel anytime after",
     line: "The team that keeps the machine running: experiments, content, campaigns and automation, reported in revenue terms.",
-    tint: "var(--accent-deep)",
     featured: false,
     cta: "Talk about Growth",
     includes: [
@@ -108,49 +102,54 @@ const pricingFaq = [
 
 export default function PricingPage() {
   return (
-    <div className="pt-32 pb-24">
-      <div className="wrap">
-        <SectionHeading
-          eyebrow="Pricing"
-          title="Public pricing. Fixed quotes. Zero surprises."
-          lead="Most agencies make you sit through a discovery call just to hear a number. Here's ours up front: in USD, quoted fixed after one scoping call, and the quote doesn't move."
-        />
+    <div className="v2-scope">
+      {/* Hero */}
+      <section className="relative overflow-hidden pt-32 pb-16 md:pb-20">
+        <div className="v2-ground" aria-hidden="true" />
+        <div className="wrap relative">
+          <Reveal>
+            <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+              Pricing
+            </p>
+          </Reveal>
+          <Reveal delay={90}>
+            <h1 className="v2-display mt-6 max-w-4xl text-[clamp(2.6rem,6.5vw,6rem)]">
+              Public pricing. <span className="text-accent">Fixed</span> quotes.
+            </h1>
+          </Reveal>
+          <Reveal delay={180}>
+            <p className="mt-6 max-w-xl text-lg text-muted">
+              Real starting points in USD, quoted fixed after one scoping call — and
+              the quote doesn&rsquo;t move.
+            </p>
+          </Reveal>
+        </div>
+      </section>
 
-        {/* Tiers */}
-        <div className="mt-14 grid gap-5 lg:grid-cols-3">
+      {/* Tiers */}
+      <section className="wrap py-14 md:py-20">
+        <div className="grid gap-6 lg:grid-cols-3">
           {tiers.map((tier, i) => (
             <Reveal key={tier.name} delay={i * 90} className="h-full">
               <div
-                className={`bento-cell relative flex h-full flex-col p-8 ${
-                  tier.featured ? "border-accent" : ""
-                }`}
-                style={
-                  {
-                    "--tint": tier.tint,
-                    background:
-                      "linear-gradient(160deg, color-mix(in srgb, var(--tint) 22%, var(--card)) 0%, var(--card) 60%)",
-                  } as CSSProperties
-                }
+                className="v2-frame flex h-full flex-col p-8"
+                style={tier.featured ? { borderColor: "var(--accent)" } : undefined}
               >
-                {tier.featured ? (
-                  <span className="absolute right-0 top-0 chamfer bg-accent px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-accent-ink">
-                    Most popular
-                  </span>
-                ) : null}
-
-                <h2 className="font-display text-2xl font-bold tracking-tight">{tier.name}</h2>
-                <p className="mt-5 font-display text-5xl font-extrabold tracking-[-0.03em] text-accent-fg">
+                <h2 className="font-display text-xl font-semibold tracking-tight">
+                  {tier.name}
+                </h2>
+                <p className="mt-5 font-display text-5xl font-semibold tracking-[-0.03em] text-accent-fg">
                   {tier.price}
                 </p>
-                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
+                <p className="mt-3 font-display text-[13px] uppercase tracking-[0.16em] text-muted">
                   {tier.terms}
                 </p>
                 <p className="mt-4 text-sm text-muted">{tier.line}</p>
 
                 <ul className="mt-7 flex flex-col gap-2.5 border-t border-border pt-6">
                   {tier.includes.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm text-fg/85">
-                      <IconCheck size={16} className="mt-0.5 shrink-0 text-accent-fg" />
+                    <li key={item} className="flex items-start gap-3 text-sm text-fg/85">
+                      <span aria-hidden="true" className="mt-1.5 h-1 w-1 shrink-0 bg-accent" />
                       {item}
                     </li>
                   ))}
@@ -170,56 +169,66 @@ export default function PricingPage() {
             </Reveal>
           ))}
         </div>
-
         <Reveal delay={120}>
           <p className="mt-6 text-xs text-muted">
-            Starting prices in USD. Your exact quote is fixed in writing after one scoping call,
-            before you commit to anything.
+            Starting prices in USD. Your exact quote is fixed in writing after one
+            scoping call, before you commit to anything.
           </p>
         </Reveal>
+      </section>
 
-        {/* Every engagement */}
-        <Reveal className="mt-20">
-          <div className="panel chamfer relative overflow-hidden p-8 md:p-10">
-            <PatternGrid
-              cols={4}
-              rows={3}
-              seed={7}
-              className="pointer-events-none absolute -right-8 -top-8 h-36 w-36 opacity-[0.1]"
-            />
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-fg">
-              Every engagement, every tier
-            </p>
-            <ul className="mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2">
-              {guarantees.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm font-medium">
-                  <IconCheck size={17} className="mt-0.5 shrink-0 text-accent-fg" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+      {/* Every engagement */}
+      <section className="wrap py-14 md:py-20">
+        <Reveal>
+          <GhostTitle>Every engagement.</GhostTitle>
+        </Reveal>
+        <Reveal delay={90}>
+          <ul className="mt-10 grid gap-x-12 sm:grid-cols-2">
+            {guarantees.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 border-b border-border py-3.5 text-sm font-medium"
+              >
+                <span aria-hidden="true" className="mt-1.5 h-1 w-1 shrink-0 bg-accent" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </section>
+
+      {/* FAQ */}
+      <section className="wrap py-14 md:py-20">
+        <Reveal>
+          <GhostTitle>The money questions.</GhostTitle>
+        </Reveal>
+        <Reveal delay={90}>
+          <div className="mt-10 max-w-3xl">
+            <Faq items={pricingFaq} />
           </div>
         </Reveal>
+      </section>
 
-        {/* FAQ */}
-        <div className="mt-24 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <SectionHeading
-            eyebrow="Pricing FAQ"
-            title="The money questions, answered plainly."
-            lead="If yours isn't here, ask us directly. You'll get a straight answer, not a pitch."
-          />
-          <Reveal delay={80}>
-            <Faq items={pricingFaq} />
+      {/* CTA */}
+      <section className="relative overflow-hidden py-24 md:py-32">
+        <div className="v2-ground" aria-hidden="true" />
+        <div className="wrap relative">
+          <Reveal>
+            <h2 className="v2-display max-w-3xl text-[clamp(2.2rem,5.5vw,4.5rem)]">
+              Get your <span className="text-accent">fixed quote</span>.
+            </h2>
+            <p className="mt-6 max-w-xl text-muted">
+              One scoping call, one number in writing, zero pressure.
+            </p>
+            <div className="mt-8">
+              <Button href="/contact">
+                Book a Strategy Call
+                <IconArrowRight size={16} />
+              </Button>
+            </div>
           </Reveal>
         </div>
-
-        <CtaPanel
-          title="Get your fixed quote."
-          lead="One scoping call, one number in writing, zero pressure. If we're not the right fit, we'll say so and point you somewhere better."
-          primaryHref="/contact"
-          primaryLabel="Book a Strategy Call"
-        />
-      </div>
+      </section>
 
       <JsonLd
         data={webPageSchema({

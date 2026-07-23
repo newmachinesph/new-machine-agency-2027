@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { IconArrowLeft, IconArrowRight, IconChat } from "@/components/ui/icons";
+import { IconArrowLeft, IconArrowRight } from "@/components/ui/icons";
 import { site } from "@/config/site";
-import { productIcons } from "@/lib/products";
 import { getProducts, getProductBySlug } from "@/lib/products.data";
 import { breadcrumbSchema, faqSchema, orgRef } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 import Faq from "@/components/ui/Faq";
-import SectionHeading from "@/components/ui/SectionHeading";
+import GhostTitle from "@/components/v2/GhostTitle";
 import Button from "@/components/ui/Button";
 import DuotoneImage from "@/components/ui/DuotoneImage";
 import { productImageUrl } from "@/lib/media";
 import JsonLd from "@/components/ui/JsonLd";
-import Logo from "@/components/ui/Logo";
-import PatternGrid from "@/components/ui/PatternGrid";
-import PatternSignal from "@/components/ui/PatternSignal";
 import Reveal from "@/components/ui/Reveal";
 
 type PageProps = {
@@ -45,74 +40,37 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const product = await getProductBySlug(slug);
   if (!product) notFound();
 
-  const Icon = productIcons[product.icon] ?? IconChat;
-
   return (
-    <div className="pt-32 pb-24">
-      <div className="wrap">
-        <Link
-          href="/products/"
-          className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-fg"
-        >
-          <IconArrowLeft size={14} />
-          All products
-        </Link>
+    <div className="v2-scope">
+      {/* Hero */}
+      <section className="relative overflow-hidden pt-32 pb-16 md:pb-20">
+        <div className="v2-ground" aria-hidden="true" />
+        <div className="wrap relative">
+          <Link
+            href="/products/"
+            className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-fg"
+          >
+            <IconArrowLeft size={14} />
+            All products
+          </Link>
 
-        {/* Hero */}
-        <div className="relative mt-8 overflow-hidden">
-          <PatternSignal className="pointer-events-none absolute -top-16 right-0 h-80 w-80 opacity-[0.1] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]" />
-
-          <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
-            <Reveal delay={80}>
-              <div className="chamfer panel beam overflow-hidden">
-                <div
-                  aria-hidden="true"
-                  className="flex items-center gap-2 border-b border-border bg-surface px-4 py-3"
-                >
-                  <span className="flex gap-1.5">
-                    <span className="h-2.5 w-2.5 bg-accent/70" />
-                    <span className="h-2.5 w-2.5 bg-muted/40" />
-                    <span className="h-2.5 w-2.5 bg-muted/25" />
-                  </span>
-                  <span className="ml-2 min-w-0 flex-1 truncate bg-card px-3 py-1 text-[10px] tracking-[0.14em] text-muted">
-                    {site.domain}/products/{product.slug}
-                  </span>
-                </div>
-                <div className="relative">
-                  <DuotoneImage
-                    src={productImageUrl(product.image, product.slug)}
-                    alt={product.name}
-                    className="aspect-[4/3] w-full"
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    priority
-                  />
-                  <span className="pointer-events-none absolute inset-0 grid place-items-center">
-                    <Logo className="h-10 w-auto opacity-90 [&_polygon]:fill-white" />
-                  </span>
-                </div>
-              </div>
-            </Reveal>
-
+          <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
             <div>
-              <Reveal className="flex items-center gap-3">
-                <span
-                  className="grid h-12 w-12 shrink-0 place-items-center chamfer"
-                  style={{ background: product.tint }}
-                >
-                  <Icon size={22} className="text-accent-ink" />
-                </span>
+              <Reveal>
+                <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+                  {product.status}
+                </p>
               </Reveal>
-
               <Reveal delay={80}>
-                <h1 className="font-display mt-6 text-4xl font-extrabold tracking-tight md:text-5xl">
+                <h1 className="v2-display mt-6 text-[clamp(2.6rem,6.5vw,6rem)]">
                   {product.name}
                 </h1>
               </Reveal>
               <Reveal delay={140}>
-                <p className="measure mt-5 text-lg text-muted">{product.oneLiner}</p>
+                <p className="mt-6 max-w-xl text-lg text-muted">{product.oneLiner}</p>
               </Reveal>
               <Reveal delay={200}>
-                <div className="mt-7 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap gap-4">
                   <Button href="/contact">
                     Talk to us
                     <IconArrowRight size={16} />
@@ -120,43 +78,49 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 </div>
               </Reveal>
             </div>
+
+            <Reveal delay={120}>
+              <div className="v2-frame overflow-hidden">
+                <DuotoneImage
+                  src={productImageUrl(product.image, product.slug)}
+                  alt={product.name}
+                  className="aspect-[4/3] w-full"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  priority
+                />
+              </div>
+            </Reveal>
           </div>
         </div>
+      </section>
 
+      <div className="wrap pb-24">
         {/* Problem -> Solution */}
-        <div className="mt-24 grid gap-10 md:grid-cols-2 md:gap-14">
+        <div className="grid gap-10 border-t border-border pt-16 md:grid-cols-2 md:gap-14">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-accent-fg">
+            <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
               The problem
             </p>
-            <p className="measure mt-4 text-muted">{product.problem}</p>
+            <p className="mt-4 max-w-xl text-muted">{product.problem}</p>
           </Reveal>
           <Reveal delay={80}>
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-accent-fg">
+            <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
               The solution
             </p>
-            <p className="measure mt-4 text-muted">{product.solution}</p>
+            <p className="mt-4 max-w-xl text-muted">{product.solution}</p>
           </Reveal>
         </div>
 
         {/* Features */}
         <div className="mt-24">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-accent-fg">
-              What&apos;s inside
-            </p>
-            <h2 className="font-display mt-3 text-2xl font-bold tracking-tight md:text-3xl">
-              Features
-            </h2>
+            <GhostTitle>What&rsquo;s inside.</GhostTitle>
           </Reveal>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2">
             {product.features.map((feature, i) => (
-              <Reveal key={feature.title} delay={i * 80}>
-                <div
-                  className="bento-cell h-full p-6"
-                  style={{ "--tint": product.tint } as CSSProperties}
-                >
-                  <h3 className="font-display font-semibold">{feature.title}</h3>
+              <Reveal key={feature.title} delay={i * 90}>
+                <div className="border-t border-border pt-5">
+                  <h3 className="font-display font-semibold text-fg">{feature.title}</h3>
                   <p className="mt-2 text-sm text-muted">{feature.text}</p>
                 </div>
               </Reveal>
@@ -167,82 +131,69 @@ export default async function ProductDetailPage({ params }: PageProps) {
         {/* The loop: a machine is only real if something can reject its output */}
         <div className="mt-24">
           <Reveal>
-            <div className="panel beam relative overflow-hidden p-8 md:p-12">
-              <PatternGrid
-                cols={6}
-                rows={3}
-                seed={3}
-                className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
-              />
-              <div className="relative">
-                <span className="inline-block border border-border px-2.5 py-0.5 text-xs uppercase tracking-[0.12em] text-muted">
-                  The loop
-                </span>
-                <p className="measure mt-5 text-muted">
-                  Anything can generate. A machine earns the name when something can
-                  automatically reject its work and make it try again.
-                </p>
-                <dl className="mt-10 grid gap-8 md:grid-cols-3 md:gap-10">
-                  {[
-                    { term: "Goal", def: product.loop.goal },
-                    { term: "Verify", def: product.loop.verify },
-                    { term: "Stop when", def: product.loop.stop },
-                  ].map((row) => (
-                    <div key={row.term} className="border-t border-border pt-5">
-                      <dt className="text-xs uppercase tracking-[0.15em] text-accent-fg">
-                        {row.term}
-                      </dt>
-                      <dd className="mt-3 text-sm leading-relaxed text-muted">{row.def}</dd>
-                    </div>
-                  ))}
-                </dl>
-                <p className="mt-10 text-xs uppercase tracking-[0.15em] text-muted">
-                  No client results published yet
-                </p>
-              </div>
+            <div className="v2-frame p-8 md:p-12">
+              <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+                The loop
+              </p>
+              <p className="mt-5 max-w-xl text-muted">
+                A machine earns the name when something can automatically reject
+                its work and make it try again.
+              </p>
+              <dl className="mt-10 grid gap-8 md:grid-cols-3 md:gap-10">
+                {[
+                  { term: "Goal", def: product.loop.goal },
+                  { term: "Verify", def: product.loop.verify },
+                  { term: "Stop when", def: product.loop.stop },
+                ].map((row) => (
+                  <div key={row.term} className="border-t border-border pt-5">
+                    <dt className="text-xs uppercase tracking-[0.15em] text-accent-fg">
+                      {row.term}
+                    </dt>
+                    <dd className="mt-3 text-sm leading-relaxed text-muted">{row.def}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="mt-10 text-xs uppercase tracking-[0.15em] text-muted">
+                No client results published yet
+              </p>
             </div>
           </Reveal>
         </div>
 
         {/* FAQ */}
         {product.faqs?.length ? (
-          <div className="mt-24 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-            <SectionHeading eyebrow="FAQ" title={`Questions about ${product.name}`} />
+          <div className="mt-24">
+            <Reveal>
+              <GhostTitle>Questions.</GhostTitle>
+            </Reveal>
             <Reveal delay={80}>
-              <Faq items={product.faqs} />
+              <div className="mt-12 max-w-3xl">
+                <Faq items={product.faqs} />
+              </div>
             </Reveal>
           </div>
         ) : null}
+      </div>
 
-        {/* CTA */}
-        <div className="mt-24">
+      {/* CTA */}
+      <section className="border-t border-border py-24 md:py-32">
+        <div className="wrap">
           <Reveal>
-            <div className="panel relative overflow-hidden p-10 text-center md:p-14">
-              <PatternGrid
-                cols={6}
-                rows={3}
-                seed={9}
-                className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
-              />
-              <div className="relative">
-                <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
-                  Want {product.name} for your business?
-                </h2>
-                <p className="measure mx-auto mt-3 text-muted">
-                  We&apos;re building it in the open. Tell us what you need and we&apos;ll
-                  factor it into the roadmap.
-                </p>
-                <div className="mt-6 flex flex-wrap justify-center gap-3">
-                  <Button href="/contact">
-                    Talk to us
-                    <IconArrowRight size={16} />
-                  </Button>
-                </div>
-              </div>
+            <h2 className="v2-display max-w-3xl text-[clamp(2.2rem,5vw,4.5rem)]">
+              Want {product.name} for your <span className="text-accent">business</span>?
+            </h2>
+            <p className="mt-6 max-w-xl text-muted">
+              We&rsquo;re building it in the open — tell us what you need.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Button href="/contact">
+                Talk to us
+                <IconArrowRight size={16} />
+              </Button>
             </div>
           </Reveal>
         </div>
-      </div>
+      </section>
 
       <JsonLd
         data={{

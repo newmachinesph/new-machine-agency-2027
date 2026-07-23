@@ -1,11 +1,9 @@
-import AccentTick from "@/components/ui/AccentTick";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getAllPosts } from "@/lib/blog.data";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
-import PatternSignal from "@/components/ui/PatternSignal";
-import BlogIndex from "./BlogIndex";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -14,38 +12,55 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/" },
 };
 
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+}
+
 export default async function BlogPage() {
   const posts = await getAllPosts();
 
   return (
-    <div className="pt-32 pb-24">
-      <div className="wrap">
-        <div className="relative overflow-hidden">
-          <PatternSignal className="pointer-events-none absolute -top-10 right-0 h-72 w-72 opacity-[0.1] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]" />
+    <div className="v2-scope">
+      <div className="pt-32 pb-24">
+        <div className="wrap">
+          <Reveal>
+            <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+              Blog
+            </p>
+          </Reveal>
+          <Reveal delay={80}>
+            <h1 className="v2-display mt-6 max-w-4xl text-[clamp(2.6rem,6.5vw,6rem)]">
+              Ideas that <span className="text-accent">grow</span> businesses.
+            </h1>
+          </Reveal>
 
-          <div className="relative">
-            <Reveal className="flex items-center gap-2.5">
-              <AccentTick />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-                Blog
-              </span>
-            </Reveal>
-            <Reveal delay={80}>
-              <h1 className="font-display mt-5 max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
-                Ideas that grow businesses.
-              </h1>
-            </Reveal>
-            <Reveal delay={160}>
-              <p className="measure mt-5 text-muted">
-                No fluff, no jargon: practical answers to the questions business owners
-                actually ask us, from a team that has shipped the work.
-              </p>
-            </Reveal>
+          {/* ponytail: plain typographic list replaces BlogIndex (thumbnails,
+              tag chips, infinite scroll) — Payload caps posts at 200, static
+              render carries that fine. */}
+          <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post, i) => (
+              <Reveal key={post.slug} className="h-full" delay={(i % 3) * 90}>
+                <Link
+                  href={`/blog/${post.slug}/`}
+                  className="v2-frame group block h-full p-6"
+                >
+                  <p className="font-display text-[11px] uppercase tracking-[0.16em] text-muted">
+                    {formatDate(post.date)}
+                  </p>
+                  <h2 className="mt-3 font-display text-lg font-semibold text-fg transition-colors group-hover:text-accent-fg">
+                    {post.title}
+                  </h2>
+                  <p className="mt-2 line-clamp-1 text-sm text-muted">
+                    {post.description}
+                  </p>
+                </Link>
+              </Reveal>
+            ))}
           </div>
-        </div>
-
-        <div className="mt-14">
-          <BlogIndex posts={posts} />
         </div>
       </div>
 

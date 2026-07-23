@@ -1,19 +1,14 @@
-import AccentTick from "@/components/ui/AccentTick";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { IconArrowRight, IconChat } from "@/components/ui/icons";
+import Image from "next/image";
+import { IconArrowRight } from "@/components/ui/icons";
 import { site } from "@/config/site";
-import { productIcons } from "@/lib/products";
 import { getProducts } from "@/lib/products.data";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 import Button from "@/components/ui/Button";
-import DuotoneImage from "@/components/ui/DuotoneImage";
 import { productImageUrl } from "@/lib/media";
 import JsonLd from "@/components/ui/JsonLd";
-import Logo from "@/components/ui/Logo";
-import PatternGrid from "@/components/ui/PatternGrid";
-import PatternSignal from "@/components/ui/PatternSignal";
 import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = pageMetadata({
@@ -26,123 +21,100 @@ export const metadata: Metadata = pageMetadata({
 export default async function ProductsPage() {
   const products = await getProducts();
   return (
-    <div className="pt-32 pb-24">
-      <div className="wrap">
-        <div className="relative overflow-hidden">
-          <PatternSignal className="pointer-events-none absolute -top-10 right-0 h-72 w-72 opacity-[0.1] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]" />
-
-          <div className="relative">
-            <Reveal className="flex items-center gap-2.5">
-              <AccentTick />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-                The Machines
-              </span>
-            </Reveal>
-            <Reveal delay={80}>
-              <h1 className="font-display mt-5 max-w-3xl text-4xl font-extrabold tracking-tight md:text-6xl">
-                We don&apos;t automate tasks. We build systems that{" "}
-                <span className="text-accent-fg">improve themselves.</span>
-              </h1>
-            </Reveal>
-            <Reveal delay={160}>
-              <p className="measure mt-5 text-muted">
-                Anything can generate. A Machine earns the name because something can
-                automatically reject its work and make it try again: a goal it runs
-                toward, a gate it has to pass, and a point at which it stops. Each one
-                below publishes that loop before it asks for your trust.
-              </p>
-            </Reveal>
-            <Reveal delay={220}>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="/contact">
-                  Talk to us
-                  <IconArrowRight size={16} />
-                </Button>
-              </div>
-            </Reveal>
-          </div>
+    <div className="v2-scope">
+      {/* Hero */}
+      <section className="relative overflow-hidden pt-32 pb-16 md:pb-20">
+        <div className="v2-ground" aria-hidden="true" />
+        <div className="wrap relative">
+          <Reveal>
+            <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+              The Machines
+            </p>
+          </Reveal>
+          <Reveal delay={80}>
+            <h1 className="v2-display mt-6 max-w-4xl text-[clamp(2.6rem,6.5vw,6rem)]">
+              Systems that improve <span className="text-accent">themselves</span>.
+            </h1>
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="mt-7 max-w-xl text-lg text-muted">
+              Each Machine runs toward a goal, passes a gate, and stops when the
+              job is done.
+            </p>
+          </Reveal>
+          <Reveal delay={220}>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Button href="/contact">
+                Talk to us
+                <IconArrowRight size={16} />
+              </Button>
+            </div>
+          </Reveal>
         </div>
+      </section>
 
-        <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3">
-          {products.map((product, i) => {
-            const Icon = productIcons[product.icon] ?? IconChat;
-            return (
+      {/* Grid */}
+      <section className="pb-24">
+        <div className="wrap">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            {products.map((product, i) => (
               <Reveal key={product.slug} delay={i * 90}>
                 <Link
                   href={`/products/${product.slug}/`}
-                  className="panel beam relative flex h-full flex-col overflow-hidden"
+                  className="v2-case v2-frame group flex h-full flex-col"
                 >
-                  <PatternGrid
-                    cols={3}
-                    rows={3}
-                    seed={i + 1}
-                    className="pointer-events-none absolute -right-5 -top-5 h-24 w-24 opacity-[0.16] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]"
-                  />
-
-                  {/* Product art with centered solid-white wordmark */}
-                  <div className="relative">
-                    <DuotoneImage
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
                       src={productImageUrl(product.image, product.slug)}
                       alt={product.name}
-                      className="aspect-[16/10] w-full"
+                      fill
                       sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover"
                     />
-                    <span className="pointer-events-none absolute inset-0 grid place-items-center">
-                      <Logo className="h-8 w-auto opacity-90 [&_polygon]:fill-white" />
-                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                   </div>
-
-                  <div className="relative flex flex-1 flex-col p-7">
-                    <div className="flex items-center gap-3">
-                      <span
-                        className="grid h-11 w-11 shrink-0 place-items-center chamfer"
-                        style={{ background: product.tint }}
-                      >
-                        <Icon size={18} className="text-accent-ink" />
-                      </span>
-                    </div>
-                    <h2 className="font-display mt-5 text-xl font-bold tracking-tight">
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="text-[11px] uppercase tracking-[0.16em] text-muted">
+                      {product.status}
+                    </p>
+                    <h2 className="mt-2 font-display text-lg font-semibold text-fg">
                       {product.name}
                     </h2>
                     <p className="mt-2 flex-1 text-sm text-muted">{product.oneLiner}</p>
-                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-accent-fg">
-                      View product
-                      <IconArrowRight size={14} />
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent-fg">
+                      See the machine
+                      <IconArrowRight
+                        size={14}
+                        className="transition-transform duration-200 group-hover:translate-x-1"
+                      />
                     </span>
                   </div>
                 </Link>
               </Reveal>
-            );
-          })}
-        </div>
-
-        <Reveal delay={340}>
-          <div className="panel relative mt-20 overflow-hidden p-10 text-center md:p-14">
-            <PatternGrid
-              cols={6}
-              rows={3}
-              seed={9}
-              className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
-            />
-            <div className="relative">
-              <h2 className="font-display text-2xl font-bold tracking-tight md:text-3xl">
-                Got a job worth turning into a Machine?
-              </h2>
-              <p className="measure mx-auto mt-3 text-muted">
-                All {products.length} are in active development. If a job in your business
-                repeats every week and something could tell good output from bad, it can
-                probably be a Machine. Tell us about it.
-              </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <Button href="/contact">
-                  Talk to us
-                  <IconArrowRight size={16} />
-                </Button>
-              </div>
-            </div>
+            ))}
           </div>
-        </Reveal>
-      </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-border py-24 md:py-32">
+        <div className="wrap">
+          <Reveal>
+            <h2 className="v2-display max-w-3xl text-[clamp(2.2rem,5vw,4.5rem)]">
+              Got a job worth a <span className="text-accent">Machine</span>?
+            </h2>
+            <p className="mt-6 max-w-xl text-muted">
+              All {products.length} are in active development — tell us about yours.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Button href="/contact">
+                Talk to us
+                <IconArrowRight size={16} />
+              </Button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       <JsonLd
         data={webPageSchema({

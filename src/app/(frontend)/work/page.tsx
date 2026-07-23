@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getCaseStudies } from "@/lib/work.data";
 import { mediaUrl } from "@/lib/media";
 import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
-import BrowserFrame from "@/components/ui/BrowserFrame";
+import Button from "@/components/ui/Button";
 import CountUp from "@/components/ui/CountUp";
-import CtaPanel from "@/components/ui/CtaPanel";
-import DuotoneImage from "@/components/ui/DuotoneImage";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Sparkline from "@/components/charts/Sparkline";
 import { IconArrowRight } from "@/components/ui/icons";
 
@@ -25,90 +23,122 @@ export const metadata: Metadata = pageMetadata({
 export default async function WorkPage() {
   const caseStudies = await getCaseStudies();
   return (
-    <div className="pt-32 pb-24">
-      <div className="wrap">
-        <SectionHeading
-          eyebrow="Work"
-          title="Every project ships with its numbers."
-          lead="We publish what changed after launch, charted month by month, before and after. Representative sample engagements shown until client-consented case studies replace them; the measurement is exactly what every client gets."
-        />
-
-        <div className="mt-16 flex flex-col gap-8">
-          {caseStudies.map((cs, i) => (
-            <Reveal key={cs.slug} delay={i * 90}>
-              <Link
-                href={`/work/${cs.slug}/`}
-                className="panel beam chamfer group grid overflow-hidden md:grid-cols-[1.1fr_1fr]"
-              >
-                {/* Mockup: flex column so the image fills whatever height the
-                    text column gives the row (aspect-ratio + h-full would fight
-                    the grid's row sizing and clip the card). */}
-                <div className="relative border-b border-border md:border-b-0 md:border-r md:flex md:flex-col">
-                  <BrowserFrame path={`/work/${cs.slug}`} />
-                  <DuotoneImage
-                    src={mediaUrl(cs.image, `/work/${cs.slug}.webp`)}
-                    alt={`${cs.client}: ${cs.metricLabel}`}
-                    className="aspect-[16/9] w-full md:aspect-auto md:min-h-[16rem] md:flex-1"
-                    sizes="(min-width: 768px) 55vw, 100vw"
-                  />
-                  <div className="absolute bottom-0 left-0 chamfer bg-accent px-4 py-3 text-accent-ink">
-                    <p className="font-display text-3xl font-bold leading-none tracking-tight">
-                      <CountUp value={cs.metric} />
-                    </p>
-                    <p className="mt-1.5 max-w-[12rem] text-[11px] font-medium uppercase leading-snug tracking-[0.1em] text-accent-ink/70">
-                      {cs.metricLabel}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Case summary */}
-                <div className="flex flex-col p-7 md:p-9">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex border border-border px-2.5 py-0.5 text-[11px] uppercase tracking-[0.12em] text-muted">
-                      {cs.industry}
-                    </span>
-                    <span className="inline-flex border border-border px-2.5 py-0.5 text-[11px] uppercase tracking-[0.12em] text-muted">
-                      {cs.year} · {cs.timeline}
-                    </span>
-                  </div>
-                  <h2 className="mt-5 font-display text-2xl font-bold tracking-tight md:text-3xl">
-                    {cs.client}
-                  </h2>
-                  <p className="measure mt-3 text-sm text-muted md:text-base">{cs.summary}</p>
-
-                  <div className="mt-6">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-muted">
-                      {cs.series.label}
-                    </p>
-                    <Sparkline
-                      values={cs.series.values}
-                      launchIndex={cs.series.launchIndex}
-                      className="mt-2 h-10 w-full max-w-xs"
-                    />
-                  </div>
-
-                  <div className="mt-auto flex items-center justify-between gap-4 pt-7">
-                    <p className="text-xs uppercase tracking-[0.15em] text-accent-fg">
-                      {cs.service}
-                    </p>
-                    <span className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-accent-fg">
-                      Read the case study
-                      <IconArrowRight size={15} />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
+    <div className="v2-scope">
+      {/* Hero */}
+      <section className="relative overflow-hidden pt-32 pb-16 md:pb-20">
+        <div className="v2-ground" aria-hidden="true" />
+        <div className="wrap relative">
+          <Reveal>
+            <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+              Work
+            </p>
+          </Reveal>
+          <Reveal delay={80}>
+            <h1 className="v2-display mt-6 max-w-4xl text-[clamp(2.6rem,6.5vw,6rem)]">
+              Every project ships with its <span className="text-accent">numbers</span>.
+            </h1>
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="mt-7 max-w-xl text-lg text-muted">
+              Representative samples for now — the measurement is exactly what
+              every client gets.
+            </p>
+          </Reveal>
         </div>
+      </section>
 
-        <CtaPanel
-          title="Your project, measured the same way."
-          lead="Every engagement starts with a measurement plan and ends with numbers like these. Book a free strategy call. We'll tell you what's realistic before you spend anything."
-          primaryHref="/contact"
-          primaryLabel="Book a Strategy Call"
-        />
-      </div>
+      {/* Case list */}
+      <section className="pb-24">
+        <div className="wrap">
+          <div className="flex flex-col gap-8">
+            {caseStudies.map((cs, i) => (
+              <Reveal key={cs.slug} delay={i * 90}>
+                <Link
+                  href={`/work/${cs.slug}/`}
+                  className="v2-case v2-frame group grid overflow-hidden md:grid-cols-[1.1fr_1fr]"
+                >
+                  <div className="relative aspect-[16/9] border-b border-border md:aspect-auto md:min-h-[18rem] md:border-b-0 md:border-r">
+                    <Image
+                      src={mediaUrl(cs.image, `/work/${cs.slug}.webp`)}
+                      alt={`${cs.client}: ${cs.metricLabel}`}
+                      fill
+                      sizes="(min-width: 768px) 55vw, 100vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 p-6">
+                      <p className="font-display text-5xl font-semibold text-accent-fg">
+                        <CountUp value={cs.metric} />
+                      </p>
+                      <p className="mt-1 max-w-[26ch] text-xs uppercase tracking-[0.14em] text-white/70">
+                        {cs.metricLabel}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Case summary */}
+                  <div className="flex flex-col p-7 md:p-9">
+                    <p className="text-[11px] uppercase tracking-[0.16em] text-muted">
+                      {cs.industry} · {cs.year} · {cs.timeline}
+                    </p>
+                    <h2 className="mt-4 font-display text-2xl font-semibold tracking-tight text-fg md:text-3xl">
+                      {cs.client}
+                    </h2>
+                    <p className="mt-3 max-w-xl text-sm text-muted md:text-base">
+                      {cs.summary}
+                    </p>
+
+                    <div className="mt-6">
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-muted">
+                        {cs.series.label}
+                      </p>
+                      <Sparkline
+                        values={cs.series.values}
+                        launchIndex={cs.series.launchIndex}
+                        className="mt-2 h-10 w-full max-w-xs"
+                      />
+                    </div>
+
+                    <div className="mt-auto flex items-center justify-between gap-4 pt-7">
+                      <p className="text-xs uppercase tracking-[0.15em] text-accent-fg">
+                        {cs.service}
+                      </p>
+                      <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-accent-fg">
+                        Read the case study
+                        <IconArrowRight
+                          size={15}
+                          className="transition-transform duration-200 group-hover:translate-x-1"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-border py-24 md:py-32">
+        <div className="wrap">
+          <Reveal>
+            <h2 className="v2-display max-w-3xl text-[clamp(2.2rem,5vw,4.5rem)]">
+              Your project, measured the <span className="text-accent">same way</span>.
+            </h2>
+            <p className="mt-6 max-w-xl text-muted">
+              Book a free strategy call — we&rsquo;ll tell you what&rsquo;s
+              realistic before you spend anything.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Button href="/contact">
+                Book a Strategy Call
+                <IconArrowRight size={16} />
+              </Button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       <JsonLd
         data={webPageSchema({

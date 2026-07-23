@@ -1,13 +1,4 @@
-import AccentTick from "@/components/ui/AccentTick";
 import type { Metadata } from "next";
-import {
-  IconArrowRight,
-  IconChat,
-  IconCheck,
-  IconGrowth,
-  IconPricing,
-  IconSpeed,
-} from "@/components/ui/icons";
 import { getJobs } from "@/lib/jobs.data";
 import { site } from "@/config/site";
 import { AREA_SERVED, breadcrumbSchema, orgRef, webPageSchema } from "@/lib/schema";
@@ -15,11 +6,8 @@ import { pageMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/ui/JsonLd";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import SectionHeading from "@/components/ui/SectionHeading";
-import PatternGrid from "@/components/ui/PatternGrid";
-import PatternSignal from "@/components/ui/PatternSignal";
-import FeatureCard from "@/components/ui/FeatureCard";
-import CtaPanel from "@/components/ui/CtaPanel";
+import GhostTitle from "@/components/v2/GhostTitle";
+import { IconArrowRight } from "@/components/ui/icons";
 
 export const metadata: Metadata = pageMetadata({
   title: "Careers",
@@ -31,43 +19,22 @@ export const metadata: Metadata = pageMetadata({
 
 const values = [
   {
-    icon: IconSpeed,
     title: "Remote-first, always",
-    text: "We hire globally and work async by default. Our Makati hub is there when you want it, not a place to perform.",
-    tint: "var(--accent-strong)",
-    onTint: "text-accent-ink",
+    text: "We hire globally and work async by default. The Makati hub is there when you want it.",
   },
   {
-    icon: IconPricing,
     title: "Direct ownership",
     text: "You own a project end to end, not a slice of one behind three approvals.",
-    tint: "var(--accent)",
-    onTint: "text-accent-ink",
   },
   {
-    icon: IconGrowth,
     title: "Real impact, fast",
     text: "Small team, no bureaucracy: what you ship this week is live next week.",
-    tint: "#67ad62",
-    onTint: "text-accent-ink",
   },
   {
-    icon: IconChat,
     title: "Honest by default",
     text: "The same directness we sell to clients, we use on each other internally.",
-    tint: "var(--accent-deep)",
-    onTint: "text-fg",
   },
 ];
-
-/** Green ramp per department, same vocabulary as the services/homepage bento
- *  so the color language reads consistently everywhere it appears. */
-const deptTint: Record<string, string> = {
-  Engineering: "var(--accent-strong)",
-  Design: "var(--accent)",
-  Growth: "#67ad62",
-  General: "var(--accent-deep)",
-};
 
 function mailtoHref(title: string) {
   return `mailto:${site.email}?subject=${encodeURIComponent(`Application: ${title}`)}`;
@@ -86,147 +53,146 @@ function employmentTypes(type: string): string[] {
 export default async function CareersPage() {
   const careers = await getJobs();
   return (
-    <div className="pt-32 pb-24">
-      <div className="wrap">
-        <div className="relative overflow-hidden">
-          <PatternSignal className="pointer-events-none absolute -top-16 right-0 h-80 w-80 opacity-[0.1] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_70%)]" />
-
-          <div className="relative">
-            <Reveal className="flex items-center gap-2.5">
-              <AccentTick />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-                Careers
-              </span>
-            </Reveal>
-            <Reveal delay={80}>
-              <h1 className="font-display mt-5 max-w-3xl text-4xl font-extrabold tracking-tight md:text-6xl">
-                Join the founding team.
-              </h1>
-            </Reveal>
-            <Reveal delay={160}>
-              <p className="measure mt-5 text-muted">
-                {site.name} is a small, remote-first team running the full startup
-                lifecycle, build, launch, grow, for clients across the US, the
-                Philippines, and beyond. We&rsquo;re not
-                hiring for headcount. We&rsquo;re hiring people who want direct ownership
-                of real work, not a seat in a bigger machine.
-              </p>
-            </Reveal>
-          </div>
+    <div className="v2-scope">
+      <section className="relative overflow-hidden pt-32 pb-16 md:pb-24">
+        <div className="v2-ground" aria-hidden="true" />
+        <div className="wrap relative">
+          <Reveal>
+            <p className="font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+              Careers
+            </p>
+          </Reveal>
+          <Reveal delay={90}>
+            <h1 className="v2-display mt-6 max-w-4xl text-[clamp(2.6rem,6.5vw,6rem)]">
+              Join the founding <span className="text-accent">team</span>.
+            </h1>
+          </Reveal>
+          <Reveal delay={180}>
+            <p className="mt-7 max-w-xl text-lg text-muted">
+              We&rsquo;re hiring people who want direct ownership of real work,
+              not a seat in a bigger machine.
+            </p>
+          </Reveal>
         </div>
+      </section>
 
-        <div className="mt-24">
-          <SectionHeading eyebrow="Why join" title="How we actually work." />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="relative py-20 md:py-28">
+        <div className="wrap">
+          <Reveal>
+            <GhostTitle>How we actually work.</GhostTitle>
+          </Reveal>
+          <div className="mt-14">
             {values.map((value, i) => (
-              <Reveal key={value.title} delay={i * 80}>
-                <FeatureCard
-                  icon={value.icon}
-                  title={value.title}
-                  text={value.text}
-                  tint={value.tint}
-                  onTint={value.onTint}
-                  seed={i + 1}
-                />
+              <Reveal key={value.title} delay={i * 90}>
+                <div className="grid gap-3 border-t border-border py-8 md:grid-cols-[1fr_1.2fr] md:gap-10 md:py-10">
+                  <h3 className="font-display text-2xl font-semibold text-fg md:text-3xl">
+                    {value.title}
+                  </h3>
+                  <p className="max-w-md text-muted md:justify-self-end">
+                    {value.text}
+                  </p>
+                </div>
               </Reveal>
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="mt-24">
-          <SectionHeading
-            eyebrow="Open roles"
-            title="Where we need help right now."
-            lead="Every role below reports directly to the founding team, no account layer in between."
-          />
+      <section className="relative border-t border-border py-20 md:py-28">
+        <div className="wrap">
+          <Reveal>
+            <GhostTitle>Open roles.</GhostTitle>
+          </Reveal>
+          <Reveal delay={90}>
+            <p className="mt-8 max-w-xl text-muted">
+              Every role reports directly to the founding team — no account
+              layer in between.
+            </p>
+          </Reveal>
 
-          <div className="mt-10 space-y-5">
-            {careers.map((role, i) => {
-              const tint = deptTint[role.dept] ?? "var(--accent)";
-              return (
-                <Reveal key={role.slug} delay={i * 60}>
-                  <div className="panel beam chamfer relative overflow-hidden p-7 md:p-9">
-                    <PatternGrid
-                      cols={4}
-                      rows={3}
-                      seed={i + 1}
-                      className="pointer-events-none absolute -right-6 -top-6 h-32 w-32 opacity-[0.14] [mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)] [-webkit-mask-image:radial-gradient(circle_at_top_right,#000,transparent_72%)]"
-                    />
-                    <span
-                      aria-hidden="true"
-                      className="absolute left-0 top-0 h-full w-[3px]"
-                      style={{ background: tint }}
-                    />
-
-                    <div className="relative">
-                      <div className="flex flex-wrap items-start justify-between gap-4">
-                        <div>
-                          <h3 className="font-display text-xl font-bold md:text-2xl">
-                            {role.title}
-                          </h3>
-                          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs font-semibold uppercase tracking-[0.15em] text-accent-fg">
-                            <span>{role.type}</span>
-                            <span>{role.location}</span>
-                            <span>{role.dept}</span>
-                          </div>
-                        </div>
-                        <Button href={mailtoHref(role.title)} className="shrink-0">
-                          Apply
-                          <IconArrowRight size={16} />
-                        </Button>
-                      </div>
-
-                      <p className="measure mt-5 text-muted">{role.summary}</p>
-
-                      <div className="mt-6 grid gap-6 md:grid-cols-2">
-                        <div>
-                          <p className="text-xs font-semibold uppercase tracking-[0.15em]">
-                            Responsibilities
-                          </p>
-                          <ul className="mt-3 space-y-2.5">
-                            {role.responsibilities.map((item) => (
-                              <li
-                                key={item}
-                                className="flex items-start gap-2.5 text-sm text-muted"
-                              >
-                                <IconCheck size={15} className="mt-0.5 shrink-0 text-accent-fg" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <p className="text-xs font-semibold uppercase tracking-[0.15em]">
-                            What we&rsquo;re looking for
-                          </p>
-                          <ul className="mt-3 space-y-2.5">
-                            {role.requirements.map((item) => (
-                              <li
-                                key={item}
-                                className="flex items-start gap-2.5 text-sm text-muted"
-                              >
-                                <IconCheck size={15} className="mt-0.5 shrink-0 text-accent-fg" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+          <div className="mt-12 space-y-6">
+            {careers.map((role, i) => (
+              <Reveal key={role.slug} delay={i * 60}>
+                <div className="v2-frame p-7 md:p-9">
+                  <div className="flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                      <h3 className="font-display text-xl font-semibold text-fg md:text-2xl">
+                        {role.title}
+                      </h3>
+                      <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1 font-display text-[11px] uppercase tracking-[0.16em] text-muted">
+                        <span>{role.type}</span>
+                        <span>{role.location}</span>
+                        <span>{role.dept}</span>
                       </div>
                     </div>
+                    <Button href={mailtoHref(role.title)} className="shrink-0">
+                      Apply
+                      <IconArrowRight className="h-4 w-4" />
+                    </Button>
                   </div>
-                </Reveal>
-              );
-            })}
+
+                  <p className="mt-5 max-w-2xl text-muted">{role.summary}</p>
+
+                  <div className="mt-8 grid gap-8 md:grid-cols-2">
+                    <div>
+                      <p className="font-display text-[13px] uppercase tracking-[0.16em] text-fg">
+                        Responsibilities
+                      </p>
+                      <ul className="mt-4 space-y-2.5">
+                        {role.responsibilities.map((item) => (
+                          <li
+                            key={item}
+                            className="flex items-start gap-2.5 text-sm text-muted"
+                          >
+                            <span className="mt-[0.55em] h-1 w-1 shrink-0 bg-accent" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-display text-[13px] uppercase tracking-[0.16em] text-fg">
+                        What we&rsquo;re looking for
+                      </p>
+                      <ul className="mt-4 space-y-2.5">
+                        {role.requirements.map((item) => (
+                          <li
+                            key={item}
+                            className="flex items-start gap-2.5 text-sm text-muted"
+                          >
+                            <span className="mt-[0.55em] h-1 w-1 shrink-0 bg-accent" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
+      </section>
 
-        <CtaPanel
-          title="Don’t see the right role?"
-          lead="We’re always open to hearing from people who’d add real value to a small, remote-first team. Send us an open application."
-          primaryHref={mailtoHref("Open Application")}
-          primaryLabel="Send an Open Application"
-        />
-      </div>
+      <section className="relative overflow-hidden py-24 md:py-36">
+        <div className="v2-ground" aria-hidden="true" />
+        <div className="wrap relative">
+          <Reveal>
+            <h2 className="v2-display max-w-4xl text-[clamp(2.6rem,6.5vw,6rem)]">
+              Don&rsquo;t see the right <span className="text-accent">role</span>?
+            </h2>
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+              <Button
+                href={mailtoHref("Open Application")}
+                className="px-8 py-4 text-base"
+              >
+                Send an open application
+                <IconArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       <JsonLd
         data={webPageSchema({

@@ -11,13 +11,17 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <div className="mx-auto w-full max-w-2xl px-6 pt-32 pb-24">
-      <h1 className="font-display text-3xl font-extrabold tracking-tight md:text-5xl">
-        Terms of Service
-      </h1>
-      <p className="mt-4 text-sm text-muted">Last updated: 1 July 2026</p>
+    <div className="v2-scope">
+      <div className="wrap pt-32 pb-24">
+        <div className="mx-auto w-full max-w-2xl">
+          <h1 className="v2-display text-[clamp(2.6rem,6.5vw,6rem)]">
+            Terms of Service
+          </h1>
+          <p className="mt-6 font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+            Last updated: 1 July 2026
+          </p>
 
-      <div className="prose mt-10">
+          <div className="prose mt-12">
         <h2>Agreement to terms</h2>
         <p>
           These Terms of Service (“Terms”) govern your use of the website operated by{" "}
@@ -142,6 +146,8 @@ export default function TermsOfServicePage() {
           Questions about these Terms? Email us at {site.email} and we’ll be glad to
           clarify anything.
         </p>
+          </div>
+        </div>
       </div>
 
       <JsonLd

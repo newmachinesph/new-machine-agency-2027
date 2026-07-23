@@ -11,11 +11,17 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="mx-auto w-full max-w-2xl px-6 pt-32 pb-24">
-      <h1 className="font-display text-3xl font-extrabold tracking-tight md:text-5xl">Privacy Policy</h1>
-      <p className="mt-4 text-sm text-muted">Last updated: 1 July 2026</p>
+    <div className="v2-scope">
+      <div className="wrap pt-32 pb-24">
+        <div className="mx-auto w-full max-w-2xl">
+          <h1 className="v2-display text-[clamp(2.6rem,6.5vw,6rem)]">
+            Privacy Policy
+          </h1>
+          <p className="mt-6 font-display text-[13px] uppercase tracking-[0.16em] text-muted">
+            Last updated: 1 July 2026
+          </p>
 
-      <div className="prose mt-10">
+          <div className="prose mt-12">
         <h2>Who we are</h2>
         <p>
           {site.legalName} (“we”, “us”, “our”) is a digital studio based in the
@@ -141,6 +147,8 @@ export default function PrivacyPolicyPage() {
           Questions about this policy or your personal information? Email us at{" "}
           {site.email} and we’ll be glad to help.
         </p>
+          </div>
+        </div>
       </div>
 
       <JsonLd
