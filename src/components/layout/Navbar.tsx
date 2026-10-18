@@ -1,0 +1,475 @@
+"use client";
+
+import {
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+  type MouseEvent as ReactMouseEvent,
+  type ReactNode,
+} from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import Logo from "@/components/ui/Logo";
+import { navLinks } from "@/config/site";
+import Button from "@/components/ui/Button";
+import DuotoneImage from "@/components/ui/DuotoneImage";
+import { IconArrowRight } from "@/components/ui/icons";
+import { productImageUrl } from "@/lib/media";
+import type { Service } from "@/lib/services.data";
+
+type MegaKey = "services" | "products";
+
+type ServiceStageGroup = { stage: string; services: Service[] };
+
+type NavProduct = {
+  slug: string;
+  name: string;
+  status?: string;
+  oneLiner?: string;
+  image?: unknown;
+};
+
+/** Which nav items open a mega panel, keyed by their config href. */
+const MEGA_MENUS: Record<string, MegaKey> = {
+  "/services": "services",
+  "/products": "products",
+};
+
+function subscribeToScroll(callback: () => void) {
+  window.addEventListener("scroll", callback, { passive: true });
+  return () => window.removeEventListener("scroll", callback);
+}
+
+function Caret({ open }: { open: boolean }) {
+  return (
+    <svg
+      width="9"
+      height="9"
+      viewBox="0 0 10 10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+      aria-hidden="true"
+      className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+    >
+      <path d="M2 3.5 L5 6.5 L8 3.5" />
+    </svg>
+  );
+}
+
+/** Desktop mega-menu trigger + its dropdown panel. Shared open/close and
+ *  keyboard handling live on the wrapping group in Navbar. */
+function MegaItem({
+  label,
+  menuKey,
+  active,
+  isCurrent,
+  registerTrigger,
+  onOpen,
+  onToggle,
+  onClose,
+  children,
+}: {
+  label: string;
+  menuKey: MegaKey;
+  active: boolean;
+  isCurrent: boolean;
+  registerTrigger: (el: HTMLButtonElement | null) => void;
+  onOpen: () => void;
+  onToggle: () => void;
+  onClose: () => void;
+  children: ReactNode;
+}) {
+  const panelId = `mega-${menuKey}`;
+
+  // Close as soon as a link inside the panel is clicked. Route-change alone is
+  // not enough: a link to the page you are already on never changes `pathname`,
+  // and the wrapper's onFocus/onMouseEnter can re-open the panel mid-navigation.
+  const closeOnLinkClick = (e: ReactMouseEvent<HTMLDivElement>) => {
+    if (e.target instanceof Element && e.target.closest("a")) onClose();
+  };
+  return (
+    <div className="flex items-center" onMouseEnter={onOpen} onFocus={onOpen}>
+      <button
+        ref={registerTrigger}
+        type="button"
+        aria-haspopup="true"
+        aria-expanded={active}
+        aria-controls={panelId}
+        onClick={onToggle}
+        className={`relative flex items-center gap-1.5 text-xs uppercase tracking-[0.15em] transition-colors ${
+          isCurrent || active ? "font-semibold text-fg" : "text-muted hover:text-fg"
+        }`}
+      >
+        {label}
+        <Caret open={active} />
+        {isCurrent ? (
+          <span
+            aria-hidden="true"
+            className="absolute -bottom-1.5 left-[calc(50%-7px)] h-1 w-1 -translate-x-1/2 bg-accent"
+          />
+        ) : null}
+      </button>
+      {active ? (
+        <div className="absolute inset-x-0 top-full pt-4">
+          <div
+            id={panelId}
+            className="mega-panel glass p-6 md:p-8"
+            aria-label={`${label} menu`}
+            onClick={closeOnLinkClick}
+          >
+            {children}
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function ServicesPanel({ stageGroups }: { stageGroups: ServiceStageGroup[] }) {
+  return (
+    <div className="grid grid-cols-2 gap-x-8 gap-y-7 md:grid-cols-4 lg:grid-cols-[repeat(4,minmax(0,1fr))_1.2fr]">
+      {stageGroups.map((group) => (
+        <div key={group.stage}>
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-fg">
+            {group.stage}
+          </p>
+          <ul className="mt-3 space-y-0.5">
+            {group.services.map((service) => (
+              <li key={service.slug}>
+                <Link
+                  href={`/services/${service.slug}/`}
+                  className="block py-1 text-sm text-muted transition-colors hover:text-fg"
+                >
+                  {service.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      {/* Statement card in the v2 vocabulary: flat surface, corner ticks. */}
+      <Link
+        href="/services/"
+        className="v2-frame group/promo relative flex min-h-[13rem] flex-col justify-between p-6 md:col-span-4 lg:col-span-1"
+      >
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-muted">
+          Scale · Beyond
+        </p>
+        <div>
+          <p className="font-display text-xl font-semibold leading-snug text-fg">
+            AI agents that run <span className="text-accent-fg">growth</span>{" "}
+            for you.
+          </p>
+          <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-fg">
+            Explore all services
+            <IconArrowRight
+              size={14}
+              className="transition-transform duration-200 group-hover/promo:translate-x-1"
+            />
+          </span>
+        </div>
+      </Link>
+    </div>
+  );
+}
+
+/** Menus preview the catalogue, they don't reproduce it. "View all products"
+ *  carries the rest. Desktop pairs a featured build with the next three, so
+ *  `slice(1)` keeps the featured product from appearing twice. Mobile has no
+ *  featured card, so it simply takes the top three. */
+function ProductsPanel({ products }: { products: NavProduct[] }) {
+  const featured = products[0];
+  const menuProducts = products.slice(1, 4);
+  if (!featured) return null;
+  return (
+    <div className="grid gap-6 md:grid-cols-[0.9fr_1.4fr]">
+      {/* Featured build: image-led left column mirroring the services promo. */}
+      <Link
+        href={`/products/${featured.slug}/`}
+        className="v2-frame beam group/feat relative flex min-h-[15rem] flex-col justify-end overflow-hidden p-5"
+      >
+        <DuotoneImage
+          src={productImageUrl(featured.image, featured.slug)}
+          className="absolute inset-0"
+          sizes="(min-width: 768px) 22rem, 100vw"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"
+        />
+        <div className="relative">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-accent-strong">
+            Featured build
+          </p>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <span className="font-display text-lg font-semibold leading-tight text-white">
+              {featured.name}
+            </span>
+          </div>
+          <p className="mt-2 line-clamp-2 text-sm text-white/85">{featured.oneLiner}</p>
+          <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white">
+            Explore {featured.name} <IconArrowRight size={14} />
+          </span>
+        </div>
+      </Link>
+
+      {/* Product list: kept as-is. */}
+      <div>
+        <div className="mb-4 flex items-center justify-between">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent-fg">
+            Our products
+          </p>
+          <Link
+            href="/products/"
+            className="inline-flex items-center gap-1 text-xs font-semibold text-muted transition-colors hover:text-fg"
+          >
+            View all products <IconArrowRight size={13} />
+          </Link>
+        </div>
+        <ul className="space-y-2">
+        {menuProducts.map((product) => (
+          <li key={product.slug}>
+            <Link
+              href={`/products/${product.slug}/`}
+              className="v2-frame beam group/prod flex items-center gap-4 p-3"
+            >
+              <DuotoneImage
+                src={productImageUrl(product.image, product.slug)}
+                className="h-14 w-20 shrink-0"
+                sizes="80px"
+              />
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-fg">{product.name}</span>
+                </div>
+                <p className="mt-1 line-clamp-2 text-xs text-muted">{product.oneLiner}</p>
+              </div>
+              <IconArrowRight
+                size={16}
+                className="shrink-0 text-muted/70 transition-colors group-hover/prod:text-accent-fg"
+              />
+            </Link>
+          </li>
+        ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export default function Navbar({
+  products,
+  serviceStageGroups,
+}: {
+  products: NavProduct[];
+  serviceStageGroups: ServiceStageGroup[];
+}) {
+  const scrolled = useSyncExternalStore(
+    subscribeToScroll,
+    () => window.scrollY > 8,
+    () => false,
+  );
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<MegaKey | null>(null);
+  const pathname = usePathname();
+  const groupRef = useRef<HTMLDivElement>(null);
+  const triggerRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Close menus on navigation (state adjustment during render).
+  const [lastPathname, setLastPathname] = useState(pathname);
+  if (pathname !== lastPathname) {
+    setLastPathname(pathname);
+    if (open) setOpen(false);
+    if (active) setActive(null);
+  }
+
+  // Lock page scroll while the mobile menu is open, and close it on Escape
+  // (returning focus to the toggle, which owns the [open] state).
+  useEffect(() => {
+    if (!open) return;
+    document.documentElement.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const isActive = (href: string) => pathname.startsWith(href);
+  const megaLinks = navLinks.filter((link) => MEGA_MENUS[link.href]);
+  const plainLinks = navLinks.filter((link) => !MEGA_MENUS[link.href]);
+  const cancelClose = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  };
+  const openMega = (key: MegaKey) => {
+    cancelClose();
+    setActive(key);
+  };
+  const closeMega = () => {
+    cancelClose();
+    setActive(null);
+  };
+  // Delay the close so crossing the header→panel seam doesn't drop the panel
+  // before the cursor reaches it; re-entering the group cancels the timer.
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer.current = setTimeout(() => setActive(null), 150);
+  };
+
+  return (
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-colors ${
+          scrolled || open || active
+            ? "border-b border-border bg-bg/80 backdrop-blur-md"
+            : "border-b border-transparent"
+        }`}
+      >
+        <div className="wrap relative flex h-16 items-center justify-between">
+          <Link href="/" className="flex items-center" aria-label="New Machine home">
+            <Logo className="h-5 w-auto transition duration-200 hover:brightness-75" />
+          </Link>
+
+          {/* Desktop nav */}
+          <nav aria-label="Main navigation" className="hidden items-center gap-5 lg:flex xl:gap-7">
+            <div
+              ref={groupRef}
+              className="flex items-center gap-5 self-stretch xl:gap-7"
+              onMouseEnter={cancelClose}
+              onMouseLeave={() => {
+                if (!groupRef.current?.contains(document.activeElement)) scheduleClose();
+              }}
+              onBlur={(e) => {
+                if (!groupRef.current?.contains(e.relatedTarget as Node)) closeMega();
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Escape" && active) {
+                  const trigger = triggerRefs.current[active];
+                  closeMega();
+                  trigger?.focus();
+                }
+              }}
+            >
+              {megaLinks.map((link) => {
+                const menuKey = MEGA_MENUS[link.href]!;
+                return (
+                  <MegaItem
+                    key={link.href}
+                    label={link.label}
+                    menuKey={menuKey}
+                    active={active === menuKey}
+                    isCurrent={isActive(link.href)}
+                    registerTrigger={(el) => {
+                      triggerRefs.current[menuKey] = el;
+                    }}
+                    onOpen={() => openMega(menuKey)}
+                    onToggle={() =>
+                      setActive((cur) => (cur === menuKey ? null : menuKey))
+                    }
+                    onClose={() => setActive(null)}
+                  >
+                    {menuKey === "services" ? (
+                      <ServicesPanel stageGroups={serviceStageGroups} />
+                    ) : (
+                      <ProductsPanel products={products} />
+                    )}
+                  </MegaItem>
+                );
+              })}
+            </div>
+
+            {plainLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative text-xs uppercase tracking-[0.15em] transition-colors ${
+                  isActive(link.href) ? "font-semibold text-fg" : "text-muted hover:text-fg"
+                }`}
+              >
+                {link.label}
+                {isActive(link.href) ? (
+                  <span
+                    aria-hidden="true"
+                    className="absolute -bottom-1.5 left-1/2 h-1 w-1 -translate-x-1/2 bg-accent"
+                  />
+                ) : null}
+              </Link>
+            ))}
+            <Button href="/contact" className="px-5 py-2.5">
+              Contact Us
+            </Button>
+          </nav>
+
+          {/* Mobile controls */}
+          <div className="flex items-center gap-3 lg:hidden">
+            <button
+              type="button"
+              aria-expanded={open}
+              aria-label={open ? "Close menu" : "Open menu"}
+              onClick={() => setOpen((v) => !v)}
+              className="grid h-11 w-11 place-items-center border border-border"
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile menu, outside <header>: its backdrop-blur creates a containing
+          block that would trap this fixed overlay and collapse its height. */}
+      {open ? (
+        <div className="fixed inset-0 top-16 z-40 flex flex-col overflow-y-auto bg-bg lg:hidden">
+          <div className="v2-ground" aria-hidden="true" />
+          <nav
+            aria-label="Mobile"
+            className="relative flex flex-1 flex-col px-6 py-8"
+          >
+            {[...navLinks, { href: "/contact", label: "Contact" }].map(
+              (link, i) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  style={{ animationDelay: `${i * 45}ms` }}
+                  className={`v2-mobile-link border-b border-border py-4 font-display text-3xl font-semibold tracking-tight ${
+                    isActive(link.href) ? "text-accent-fg" : "text-fg"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
+          </nav>
+
+          <div className="relative px-6 pb-10">
+            <Button href="/contact" className="w-full py-4">
+              Book a strategy call
+            </Button>
+            <a
+              href="mailto:hello@newmachine.ph"
+              className="mt-6 block text-sm font-semibold text-fg"
+            >
+              hello@newmachine.ph
+            </a>
+            <p className="mt-2 text-xs leading-relaxed text-muted">
+              Ayala Avenue, cor. V.A. Rufino St,
+              <br />
+              Makati City 1226, PH
+            </p>
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+}

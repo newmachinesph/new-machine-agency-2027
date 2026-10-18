@@ -1,0 +1,1347 @@
+[
+  {
+    "stage": "Brand & Strategy",
+    "slug": "brand-identity",
+    "name": "Brand Identity",
+    "icon": "brandmark",
+    "tint": "#8fc57f",
+    "outcome": "A brand that looks and sounds like it belongs at the top of its category.",
+    "description": "Logo, color, type, voice: designed as one coherent system, not a scattered set of assets. We build brand identities that hold up across a pitch deck, a product UI and a billboard.",
+    "includes": [
+      "Logo & mark design",
+      "Color & type system",
+      "Brand voice & messaging",
+      "Brand guidelines document",
+      "Social & pitch-deck templates",
+      "Asset library handoff"
+    ],
+    "forWho": "Founders launching a new venture or rebranding one that has outgrown its first identity.",
+    "problem": "Your brand is a pile of mismatched assets. The logo came from one place, the deck from another, the website from a third, and none of them look like the same company. Every time you need something new, you're guessing at the color, the font, the tone, and it shows.",
+    "approach": [
+      {
+        "title": "Strategy first",
+        "text": "We start with who you are and where you're headed, so the identity is built on a clear point of view instead of taste alone. No design happens until we agree on what the brand needs to say."
+      },
+      {
+        "title": "Build the system",
+        "text": "We design the logo, color, type and voice as one connected system, then pressure-test it across a pitch deck, a product screen and a big print format. If it breaks anywhere, we fix it before handoff."
+      },
+      {
+        "title": "Package and hand off",
+        "text": "You get a guidelines document, ready-to-use templates and a full asset library. Everything is organized so your team or your next agency can run with it on day one."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I actually own the final files and can I edit them myself?",
+        "a": "Yes. You own everything, including editable source files. There's no license, no lock-in, and no need to come back to us to change a color or add a slide."
+      },
+      {
+        "q": "We already have a logo we like. Can you build around it?",
+        "a": "Yes. If the mark still works, we keep it and build the rest of the system, voice and templates around it. If it's holding you back, we'll tell you honestly and show you why."
+      },
+      {
+        "q": "How is this different from hiring a freelancer on a marketplace?",
+        "a": "A freelancer usually delivers a logo and disappears. We design the full system, document how to use it, and hand off a complete library, so the brand stays consistent long after we're done. Pricing is fixed and agreed up front."
+      }
+    ],
+    "metaDescription": "New Machine builds brand identity as one coherent system of logo, color, type and voice that holds up everywhere your company shows up."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "positioning-naming",
+    "name": "Positioning & Naming",
+    "icon": "compass",
+    "tint": "#a9d896",
+    "outcome": "A name and a story that make the choice obvious before the pitch starts.",
+    "description": "Before a single asset gets designed, we answer the harder question: what do you stand for, and why should anyone pick you over the next tab open in their browser. Naming, positioning and messaging built to survive a competitive market.",
+    "includes": [
+      "Category & competitor mapping",
+      "Naming & tagline development",
+      "Positioning statement",
+      "Audience & persona definition",
+      "Core messaging pillars",
+      "Elevator pitch & one-pager"
+    ],
+    "forWho": "Early-stage founders and teams entering a crowded market who need a sharper story.",
+    "problem": "You know your product is good, but explaining why it's different takes five minutes and a whiteboard. Prospects compare you to the other tab open in their browser and can't tell you apart. The name, the pitch and the messaging all shift depending on who's talking.",
+    "approach": [
+      {
+        "title": "Map the field",
+        "text": "We study your category, your competitors and the language they use, so we can find the space that's actually open. You can't stand out until you know what everyone else already sounds like."
+      },
+      {
+        "title": "Sharpen the story",
+        "text": "We build your positioning, core messaging and audience definition into one clear argument for why someone should pick you. Every claim is written to survive a skeptical buyer, not just a friendly one."
+      },
+      {
+        "title": "Name and pitch",
+        "text": "We develop naming and a tagline that fit the positioning, then package it into an elevator pitch and one-pager your whole team can repeat. Everyone ends up telling the same story."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How does naming work if the domain or trademark is already taken?",
+        "a": "We factor availability into the process and steer toward names with a realistic path to a domain and a mark. We're not lawyers, so we'll flag when it's time to get a trademark search, but we won't hand you a name that's obviously blocked."
+      },
+      {
+        "q": "What do you need from us to get started?",
+        "a": "Time with the people who know the business and the customer, plus any research or sales calls you can share. The sharper your input on who you're for, the sharper the positioning comes out."
+      },
+      {
+        "q": "Can you do positioning without a full rename?",
+        "a": "Yes. Naming and positioning are often bought together, but plenty of teams keep their name and just need a clearer story. We scope to what you actually need and price it up front."
+      }
+    ],
+    "metaDescription": "New Machine delivers positioning and naming that make the choice obvious, so buyers pick you before the pitch even starts."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "market-research",
+    "name": "Market Research",
+    "icon": "search",
+    "tint": "#67ad62",
+    "outcome": "Decisions backed by evidence, not gut feel and internal opinion.",
+    "description": "We validate demand, map the competitive landscape and talk to real customers before you commit budget to a direction. Research built to de-risk the next twelve months, not fill a slide deck.",
+    "includes": [
+      "Market sizing & opportunity analysis",
+      "Competitor & pricing audit",
+      "Customer interviews & surveys",
+      "Demand validation testing",
+      "SWOT & positioning insights",
+      "Actionable findings report"
+    ],
+    "forWho": "Founders and product teams about to invest in a new market, product or audience.",
+    "problem": "You're about to bet real budget and months of work on a direction, and the case for it is mostly internal opinion and a gut feeling. Nobody in the room has actually talked to the customer you're counting on. If the assumption is wrong, you won't find out until the money's already spent.",
+    "approach": [
+      {
+        "title": "Frame the questions",
+        "text": "We start by naming the decisions this research needs to inform and the assumptions you're betting on. That keeps the work focused on what changes your mind, not on filling slides."
+      },
+      {
+        "title": "Gather the evidence",
+        "text": "We size the market, audit competitors and pricing, and talk to real customers through interviews, surveys and demand tests. You hear what buyers actually say, not what you hoped they'd say."
+      },
+      {
+        "title": "Turn it into a call",
+        "text": "We hand back a clear findings report with a recommendation you can act on, not a data dump. It tells you what we learned, what it means, and what we'd do next."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What if the research says our idea won't work?",
+        "a": "Then we tell you, plainly, and show you the evidence. Finding that out now is the whole point, and it's a lot cheaper than finding out after launch."
+      },
+      {
+        "q": "How many customers do you actually talk to?",
+        "a": "Enough to see clear patterns, scoped to your market and question. We won't promise a fixed headcount up front, because the right number depends on how varied your audience is and how quickly the signal becomes consistent."
+      },
+      {
+        "q": "How is this different from a report I could buy off the shelf?",
+        "a": "A market report tells you about the market in general. We answer your specific decision, including primary interviews with the customers you're targeting, and hand back findings tied to what you should do next. You own the full report and the raw inputs."
+      }
+    ],
+    "metaDescription": "New Machine runs market research that validates demand and maps competitors, so you can commit budget on evidence instead of gut feel."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "gtm-strategy",
+    "name": "GTM Strategy",
+    "icon": "compass",
+    "tint": "#a9d896",
+    "outcome": "A go-to-market plan that says exactly who to sell to first, how to reach them, and why they buy.",
+    "description": "Before you spend on ads, hires or channels, you need a decision on where to point them. We build the go-to-market plan: the segment to win first, the channels that reach them, the offer and pricing, and the order to do it in.",
+    "includes": [
+      "Ideal-customer & segment definition",
+      "Channel & sales-motion selection",
+      "Offer, pricing & packaging review",
+      "Messaging & objection map",
+      "Launch sequence & milestones",
+      "90-day GTM plan with metrics"
+    ],
+    "forWho": "Founders taking a product to market, or entering a new segment, who need one plan instead of five opinions.",
+    "problem": "You have a product and a budget, but no agreement on where to point them first. Sales chases every lead, marketing spreads thin across channels, and nobody can say which segment you actually win. So spend goes out in five directions and none of them add up.",
+    "approach": [
+      {
+        "title": "Pick the beachhead",
+        "text": "We define the one segment you can win first and the buyer inside it. Trying to sell to everyone at once is how early budget disappears with nothing to show for it."
+      },
+      {
+        "title": "Match channel to buyer",
+        "text": "We choose the channels and the sales motion that actually reach that buyer, instead of copying whatever worked for a company that sells to someone else. Where they already look decides where you show up."
+      },
+      {
+        "title": "Sequence the launch",
+        "text": "We hand back a 90-day plan with the offer, messaging and milestones in order, plus the metrics that tell you it’s working. You leave with a plan the whole team can run, not a slide."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from Positioning & Naming?",
+        "a": "Positioning decides what you stand for and how you tell the story. GTM strategy decides who you sell to first, through which channels, in what order. They fit together, and we’ll tell you if you need one before the other."
+      },
+      {
+        "q": "Do you execute the plan or just write it?",
+        "a": "The strategy is the deliverable here, but most of what it points to — ads, lead gen, outbound, content — we can run under Launch & Grow. We scope and price that separately, so you’re never paying for execution you didn’t ask for."
+      },
+      {
+        "q": "What do you need from us to start?",
+        "a": "Time with the founders and sales, whatever customer and pipeline data you have, and an honest read on what’s worked and what hasn’t. The sharper that input, the sharper the plan."
+      }
+    ],
+    "metaDescription": "New Machine builds a go-to-market strategy that names the segment to win first, the channels to reach them, and the order to get there."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "content-strategy",
+    "name": "Content Strategy",
+    "icon": "share",
+    "tint": "#67ad62",
+    "outcome": "A content plan tied to what you sell, not a calendar full of posts nobody asked for.",
+    "description": "Most content gets published because something had to go out, not because it moves anyone closer to buying. We build the plan: the topics that match how your buyers decide, the formats worth making, and a production system that holds the pace without dropping the quality.",
+    "includes": [
+      "Audience & buyer-question mapping",
+      "Topic & messaging pillars",
+      "Format & channel plan",
+      "Editorial calendar & cadence",
+      "AI-assisted production workflow",
+      "Measurement & content-ops handoff"
+    ],
+    "forWho": "Teams publishing content that isn’t tied to anything, or founders who know they should but have no plan.",
+    "problem": "You’re publishing to stay busy, not to sell. Topics get picked the morning they’re due, the tone drifts, and none of it maps to a question a buyer actually asks. Meanwhile the competitors who plan it out are the ones showing up when it counts.",
+    "approach": [
+      {
+        "title": "Start from the buyer’s questions",
+        "text": "We map what your buyers actually search, ask and worry about on the way to a decision. Topics come from that, not from whatever’s easiest to write this week."
+      },
+      {
+        "title": "Plan formats worth the effort",
+        "text": "We decide which formats and channels earn their keep for you, then set a cadence you can actually hold. A realistic pace you sustain beats an ambitious one you abandon in a month."
+      },
+      {
+        "title": "Build the production system",
+        "text": "We set up an AI-assisted workflow so drafts move faster while people still own the strategy, the edit and the final call. You get the pace of AI with a human keeping voice and accuracy honest."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Isn’t this just an SEO or social plan?",
+        "a": "It’s the layer above both. Content strategy decides the topics, formats and system; SEO and social are two of the channels it feeds. If you only need one channel, we’ll tell you and skip the rest."
+      },
+      {
+        "q": "Do you write the content too?",
+        "a": "This engagement is the strategy and the workflow to run it. Ongoing production we can handle under Launch & Grow, or hand to your team — the plan is built so either can execute it."
+      },
+      {
+        "q": "How do you use AI without it reading like everyone else’s AI content?",
+        "a": "AI speeds up research and first drafts; people set the angle, edit for voice and check every claim. The strategy is built so the machine does the fast part and a person keeps it yours."
+      }
+    ],
+    "metaDescription": "New Machine builds a content strategy tied to how your buyers decide — the topics, formats and AI-assisted workflow to publish with a point."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "ai-readiness-audit",
+    "name": "AI Readiness Audit",
+    "icon": "search",
+    "tint": "#35753a",
+    "outcome": "A straight answer on where AI actually pays off in your business, and where it’s just hype.",
+    "description": "Everyone’s telling you to “use AI,” but nobody’s told you where it fits your business or what has to be true first. We audit your data, tools, workflows and team, then hand back the handful of places AI is worth doing and the order to do them in.",
+    "includes": [
+      "Workflow & process review",
+      "Data & tooling assessment",
+      "Team AI-literacy & change readiness",
+      "Prioritized use-case shortlist",
+      "Build-vs-buy & risk guidance",
+      "Phased 6–12 month roadmap"
+    ],
+    "forWho": "Founders and teams under pressure to “do something with AI” who want a plan before they buy tools.",
+    "problem": "You keep hearing you’re behind on AI, so there’s pressure to buy a tool and look busy. But nobody’s checked whether your data is usable, whether the workflow can even take an agent, or where the payoff actually is. Spend now and you risk a pile of subscriptions nobody opens.",
+    "approach": [
+      {
+        "title": "Look before you buy",
+        "text": "We review your real workflows, data and tools instead of starting from a vendor’s demo. Half the value is finding the places AI won’t help yet and saying so, before you pay for them."
+      },
+      {
+        "title": "Rank by payoff, not hype",
+        "text": "We shortlist the use cases where AI actually moves time or money for you, ranked by impact and effort. You get a short list worth acting on, not fifteen ideas from a webinar."
+      },
+      {
+        "title": "Phase the rollout",
+        "text": "You get a 6-to-12-month roadmap that sequences the wins, flags what has to be fixed first, and names the real risks. Clear next steps you can hand to your team or ours."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Will you tell us if we’re not ready for most of it?",
+        "a": "Yes, plainly. If your data or workflows need work before AI helps, that’s the finding, and it’s cheaper to hear now than after you’ve bought the tools. We’d rather flag it than sell you something that sits unused."
+      },
+      {
+        "q": "Do we have to build with you afterward?",
+        "a": "No. The roadmap is yours to run with anyone. If you do want to build, our AI Product Development and AI Agents & Automation services pick up where the audit leaves off, scoped separately."
+      },
+      {
+        "q": "How is this different from a sales call with an AI vendor?",
+        "a": "A vendor’s audit points at their product. Ours starts from your workflows and is honest about where AI doesn’t fit yet. You own the findings and owe us nothing further."
+      }
+    ],
+    "metaDescription": "New Machine’s AI Readiness Audit reviews your data, tools and workflows, then hands back the few places AI actually pays off — and the order to do them."
+  },
+  {
+    "stage": "Brand & Strategy",
+    "slug": "category-design",
+    "name": "Category Design",
+    "icon": "target",
+    "tint": "#4a934e",
+    "outcome": "A market you define and lead, instead of one more option on a comparison page.",
+    "description": "Positioning wins you the best seat in an existing category. Category design creates a new one and seats you at its head. We reframe the problem so the old alternatives look dated and you’re the obvious answer, not a slightly better option. It’s a much bigger bet than positioning, and we’ll tell you honestly whether you’re ready, most companies should nail Positioning & Naming first.",
+    "includes": [
+      "Category & competitive-frame analysis",
+      "Point-of-view & narrative development",
+      "Category name & language system",
+      "Proof points & evidence plan",
+      "Evangelism & content angle",
+      "Rollout plan across brand & sales"
+    ],
+    "forWho": "Ambitious founders with a genuinely different approach who want to lead a market, not compete inside one.",
+    "problem": "You’re stuck on a comparison page next to companies you know you’re better than, arguing over features and price. The problem isn’t your pitch, it’s that buyers are judging you by an old category’s rules. Until someone reframes the game, you’re just a slightly better version of what already exists.",
+    "approach": [
+      {
+        "title": "Check you’re ready",
+        "text": "First we make sure category design is the right move and not positioning. Most companies need their positioning sharp before this is even on the table, and we’ll say so rather than sell you the bigger project."
+      },
+      {
+        "title": "Name the new game",
+        "text": "We build the point of view that reframes the problem, then the category name and language that make the old way look dated. Done right, competitors end up described in your terms."
+      },
+      {
+        "title": "Plan the campaign",
+        "text": "Category design only works if you commit to teaching the market for a year or more. We hand back a rollout plan across brand, content and sales, and an honest read on the time and budget it takes."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from Positioning & Naming?",
+        "a": "Positioning makes you the clear choice inside an existing category. Category design changes the category itself. It’s a bigger, longer bet, and it only works once your positioning is already sharp — we’ll tell you which one you actually need."
+      },
+      {
+        "q": "How long does category design take to pay off?",
+        "a": "Longer than most work we do — usually a year or more of consistently teaching the market. We’re upfront about that. If you need pipeline this quarter, this isn’t the right first move, and we’ll point you to one that is."
+      },
+      {
+        "q": "What if we’re not ready for it?",
+        "a": "Then we say so and scope the positioning work that has to come first. We won’t sell you a category play you can’t back with commitment and budget."
+      }
+    ],
+    "metaDescription": "New Machine’s Category Design reframes your market so you lead it instead of competing inside it — with an honest read on whether you’re ready."
+  },
+  {
+    "stage": "Design & Build",
+    "slug": "website-design",
+    "name": "Website Design",
+    "icon": "monitor",
+    "tint": "#8fc57f",
+    "outcome": "Websites that turn visitors into inquiries.",
+    "description": "A custom-designed website built around one job: convincing your visitors to get in touch. Fast, mobile-first and designed to look like the business you want to be, not a template everyone has seen before.",
+    "includes": [
+      "Custom design (no templates)",
+      "Mobile-first build",
+      "Copy guidance for every page",
+      "Contact & inquiry flows",
+      "Speed & SEO foundations",
+      "Analytics setup"
+    ],
+    "forWho": "Businesses whose current site looks dated, loads slowly, or simply doesn't bring in customers.",
+    "problem": "Your website looks like it was built five years ago, and you can feel prospects judging it. It loads slowly, it's hard to use on a phone, and the people who do land on it leave without ever getting in touch. You know it's costing you business, but you're not sure where to start.",
+    "approach": [
+      {
+        "title": "Understand the goal",
+        "text": "We start by getting clear on who you're trying to reach and what a good visitor action looks like. Every design decision after that serves getting more of those inquiries."
+      },
+      {
+        "title": "Design and build",
+        "text": "We custom-design each page around your content and build it mobile-first, so it looks sharp and loads fast on every device. No templates, no layouts you've seen a hundred times before."
+      },
+      {
+        "title": "Launch and hand over",
+        "text": "We set up analytics, wire up your contact and inquiry flows, and get the site live. You own the code and accounts outright, so nothing is locked to us."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from buying a template?",
+        "a": "A template forces your business into someone else's layout, and your visitors have seen it before. We design around your actual content and the inquiries you want, so the site fits your business instead of the other way around."
+      },
+      {
+        "q": "How long does a website take?",
+        "a": "Most sites are done in weeks, not months. The exact timeline depends on how many pages you need and how ready your content is, and we agree on it upfront with fixed pricing."
+      },
+      {
+        "q": "Do I own the site when it's finished?",
+        "a": "Yes. You own the code, the content, and all the accounts. Nothing is tied to us, so you can host it, update it, or move it whenever you want."
+      }
+    ],
+    "metaDescription": "Custom website design from New Machine: fast, mobile-first sites built to turn visitors into real inquiries, not templates everyone has seen."
+  },
+  {
+    "stage": "Design & Build",
+    "slug": "landing-pages",
+    "name": "Landing Pages",
+    "icon": "zap",
+    "tint": "#67ad62",
+    "outcome": "Focused pages built to convert one visitor into one action.",
+    "description": "One page, one goal. Whether it's bookings, sign-ups or sales, we design landing pages that remove distractions and guide every visitor toward a single clear action.",
+    "includes": [
+      "Conversion-focused layout",
+      "Persuasive copy structure",
+      "A/B-test-ready sections",
+      "Fast load times",
+      "Form capture & routing",
+      "Campaign tracking setup"
+    ],
+    "forWho": "Anyone running ads or campaigns who needs clicks to actually become customers.",
+    "problem": "You're paying for clicks, but the traffic hits your page and bounces. Your homepage has too much going on, so visitors get distracted and never take the one action you actually paid to get. Every wasted click is money gone.",
+    "approach": [
+      {
+        "title": "Define the action",
+        "text": "We pin down the single action the page exists to drive, whether that's a booking, a sign-up, or a sale. Everything else gets stripped out."
+      },
+      {
+        "title": "Design to convert",
+        "text": "We build a focused layout with a persuasive copy structure and fast load times, so nothing distracts from that one action. Sections are built ready for A/B testing so you can keep improving."
+      },
+      {
+        "title": "Wire up tracking",
+        "text": "We connect form capture, routing, and campaign tracking so every lead lands where it should and you can see what your ad spend is doing. Then we launch."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is a landing page different from a regular web page?",
+        "a": "A landing page has one job and removes everything that doesn't serve it. There's no navigation to wander off into and no competing messages, just a clear path to a single action."
+      },
+      {
+        "q": "Can I run A/B tests on it later?",
+        "a": "Yes. We build the sections to be test-ready so you can swap headlines, copy, or layouts and measure what converts better without rebuilding the page."
+      },
+      {
+        "q": "What do you need from me to start?",
+        "a": "The offer you're promoting, where the traffic is coming from, and the one action you want visitors to take. We handle the copy structure, design, and tracking from there."
+      }
+    ],
+    "metaDescription": "New Machine builds focused landing pages that remove distractions and turn ad and campaign clicks into one clear action, from booking to sale."
+  },
+  {
+    "stage": "Design & Build",
+    "slug": "corporate-websites",
+    "name": "Corporate Websites",
+    "icon": "building",
+    "tint": "#35753a",
+    "outcome": "A credible home for your company that wins trust before the first call.",
+    "description": "For established companies, your website is your handshake. We build corporate sites that communicate scale, credibility and professionalism, so prospects arrive at the meeting already convinced.",
+    "includes": [
+      "Multi-page architecture",
+      "Team, services & project sections",
+      "Multilingual-ready structure",
+      "Careers & news modules",
+      "Brand-consistent design system",
+      "Easy content updates"
+    ],
+    "forWho": "Established companies whose online presence hasn't caught up with their real-world reputation.",
+    "problem": "Your company has earned a strong reputation, but your website makes you look smaller and less established than you are. Prospects check you out before a meeting and come away unsure, so you spend the first call rebuilding credibility you should already have. The gap between your real standing and your online presence is costing you trust.",
+    "approach": [
+      {
+        "title": "Map the structure",
+        "text": "We plan the full multi-page architecture around what prospects, hires, and partners need to see, from services and projects to team and news. The structure is built to scale as you grow."
+      },
+      {
+        "title": "Build the design system",
+        "text": "We design a brand-consistent system that communicates the scale and professionalism you actually operate at. It stays coherent across every page and section."
+      },
+      {
+        "title": "Set up for the long run",
+        "text": "We build in easy content updates, a multilingual-ready structure, and careers and news modules, then hand it over. You own everything and can keep it current without calling us."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can our team update the site without a developer?",
+        "a": "Yes. We build in easy content updates so your team can add news, roles, and project pages on their own. You own the accounts and content outright."
+      },
+      {
+        "q": "Can it support more than one language?",
+        "a": "We build the structure to be multilingual-ready, so adding languages later doesn't mean rebuilding the site. We can scope the initial languages you need upfront."
+      },
+      {
+        "q": "How is this different from a small-business website?",
+        "a": "A corporate site has to carry more weight: multiple audiences, deeper architecture, and a design system that signals scale. We build for credibility and growth, not just a few pages."
+      }
+    ],
+    "metaDescription": "New Machine builds corporate websites that signal scale and credibility, so prospects arrive at the meeting already trusting your company."
+  },
+  {
+    "stage": "Design & Build",
+    "slug": "web-app-mvp",
+    "name": "Web App / MVP Development",
+    "icon": "appwindow",
+    "tint": "#4a934e",
+    "outcome": "A working product in your users' hands, not a deck of promises.",
+    "description": "We design and build the first real version of your product, fast enough to test with actual users, solid enough to keep building on. From idea to a live, usable MVP without the six-month agency runway.",
+    "includes": [
+      "Product scoping & user flows",
+      "UI/UX design",
+      "Full-stack development",
+      "Database & API architecture",
+      "Auth, billing & core integrations",
+      "Launch-ready deployment"
+    ],
+    "forWho": "Founders who need to prove a product idea works before raising or scaling further.",
+    "problem": "You have a product idea and you need to know if it actually works before you raise money or pour in more of your own. But most agencies want a six-month runway and a big budget just to get to a first version. You need something real in users' hands now, not a slide deck and an invoice.",
+    "approach": [
+      {
+        "title": "Scope the product",
+        "text": "We work out the core user flows and the smallest version that proves your idea. Anything that isn't essential to the test gets cut so we can move fast."
+      },
+      {
+        "title": "Design and build",
+        "text": "We handle UI/UX design and full-stack development together, including the database, APIs, and the auth, billing, and integrations your product needs to actually run."
+      },
+      {
+        "title": "Launch to real users",
+        "text": "We deploy a live, usable MVP you can put in front of actual users. It's solid enough to keep building on, and you own the code from day one."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much of my product will the MVP include?",
+        "a": "Just enough to prove the idea with real users. We focus on the core flows that answer your biggest question and leave the nice-to-haves for after you've learned what works."
+      },
+      {
+        "q": "Do I own the code and accounts?",
+        "a": "Yes, completely. You own the code, the database, and all the accounts, so you can keep building with us, your own team, or anyone else."
+      },
+      {
+        "q": "Why not just use a no-code tool or template?",
+        "a": "No-code is fine for a quick test, but it often can't handle real auth, billing, or custom logic, and you hit a wall when you scale. We build a real full-stack product you can keep growing from."
+      }
+    ],
+    "metaDescription": "New Machine designs and builds web app MVPs fast: a live, usable product in your users' hands to prove the idea before you raise or scale."
+  },
+  {
+    "stage": "Design & Build",
+    "slug": "mobile-apps",
+    "name": "Mobile Apps",
+    "icon": "mobile",
+    "tint": "#35753a",
+    "outcome": "A native-feeling app your users actually keep on their phone.",
+    "description": "iOS and Android apps designed around real usage, not just a shrunk-down website. Built for speed, offline resilience and the store approval process most teams underestimate.",
+    "includes": [
+      "iOS & Android design",
+      "Cross-platform development",
+      "Push notifications & offline support",
+      "App Store & Play Store submission",
+      "Analytics & crash reporting",
+      "Post-launch update support"
+    ],
+    "forWho": "Businesses whose product lives on a phone, not just a browser tab.",
+    "problem": "Your product really lives on a phone, but a mobile website just doesn't feel right to your users, so they don't keep coming back. Real apps also mean push notifications, offline use, and getting through App Store and Play Store review, which is harder than most teams expect. You need an app that feels native and actually makes it into the stores.",
+    "approach": [
+      {
+        "title": "Design for real use",
+        "text": "We design iOS and Android experiences around how people actually use your product on a phone, not a shrunk-down website. That means it feels native, not like a page squeezed onto a small screen."
+      },
+      {
+        "title": "Build for the phone",
+        "text": "We handle cross-platform development with push notifications and offline support, so the app stays fast and useful even when the connection drops."
+      },
+      {
+        "title": "Ship and support",
+        "text": "We manage App Store and Play Store submission, set up analytics and crash reporting, and support updates after launch. You own the app and the store accounts."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do you build for both iOS and Android?",
+        "a": "Yes. We design for both platforms and build cross-platform, so you get an app on iOS and Android without maintaining two entirely separate codebases."
+      },
+      {
+        "q": "Will you handle getting it into the app stores?",
+        "a": "Yes. We manage App Store and Play Store submission, which trips up a lot of teams, and set up analytics and crash reporting so you can see how the app performs after launch."
+      },
+      {
+        "q": "Why not just make our website mobile-friendly?",
+        "a": "A mobile site can't match a native app for speed, offline use, or push notifications, and it doesn't earn a spot on the home screen. We build for how people actually use their phones so users keep the app."
+      }
+    ],
+    "metaDescription": "New Machine builds native-feeling iOS and Android apps with offline support, push, and store submission handled, so users keep them installed."
+  },
+  {
+    "stage": "Design & Build",
+    "slug": "ai-product-development",
+    "name": "AI Product Development",
+    "icon": "appwindow",
+    "tint": "#4a934e",
+    "outcome": "AI features inside your product that hold up on real user data, not a demo that breaks on stage.",
+    "description": "Adding AI to a product is easy to fake and hard to ship. We build the real thing: copilots, chat, search and agents grounded in your own data, with the retrieval, guardrails and testing that keep them accurate once real users show up.",
+    "includes": [
+      "AI feature scoping & feasibility",
+      "Retrieval (RAG) on your own data",
+      "LLM integration & prompt design",
+      "Guardrails & fallback handling",
+      "Accuracy evaluation & testing",
+      "Production deployment & monitoring"
+    ],
+    "forWho": "Product teams and founders adding AI features that have to work on real user data, not just in a demo.",
+    "problem": "A demo of an AI feature takes an afternoon. Making it reliable on your actual data, with real users asking real questions, is the hard part everyone skips. It answers confidently and wrongly, surfaces the wrong context, or falls over the moment it leaves the happy path — and now it’s live and embarrassing.",
+    "approach": [
+      {
+        "title": "Ground it in your data",
+        "text": "We set up retrieval so the model answers from your actual content and data, not from whatever it guessed. That’s the difference between a feature you trust and one you have to apologize for."
+      },
+      {
+        "title": "Build the guardrails",
+        "text": "We add the fallbacks, limits and checks that decide what happens when the model is unsure, instead of letting it improvise. Confident and wrong is the failure mode we design against."
+      },
+      {
+        "title": "Test before it ships",
+        "text": "We measure accuracy against real questions before it reaches users, then monitor it after. You launch on evidence it works, not a hope that it does, and you own the whole system."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from AI Agents & Automation?",
+        "a": "AI Agents & Automation handles your internal work — support triage, data entry, follow-ups. This builds AI features into the product your customers use. Different audience, and a higher bar for reliability."
+      },
+      {
+        "q": "Do we own the code and the model setup?",
+        "a": "Yes, all of it — the code, the prompts, the retrieval setup and the accounts. You run on your own model providers and keys, so nothing is locked to us and you can keep building after we’re done."
+      },
+      {
+        "q": "How do you keep it from making things up?",
+        "a": "We ground answers in your data, add guardrails for when the model is unsure, and test accuracy against real questions before launch. It won’t be perfect — nothing generative is — but it’s built to fail safely, not confidently."
+      }
+    ],
+    "metaDescription": "New Machine builds AI product features — copilots, chat, search and agents grounded in your data — with the retrieval, guardrails and testing to stay reliable."
+  },
+  {
+    "stage": "Design & Build",
+    "slug": "design-systems",
+    "name": "Design Systems",
+    "icon": "brandmark",
+    "tint": "#a9d896",
+    "outcome": "One component library your whole team builds from, so every screen looks like the same product.",
+    "description": "When every page is designed from scratch, the product drifts: mismatched buttons, five shades of the same color, spacing that changes screen to screen. We build the component library and design system that make consistency the default and new screens faster to ship.",
+    "includes": [
+      "Component & pattern library",
+      "Design tokens (color, type, spacing)",
+      "Accessibility & state coverage",
+      "Design-to-code component build",
+      "Usage documentation & guidelines",
+      "Handoff & team onboarding"
+    ],
+    "forWho": "Product and design teams whose UI has drifted, or who keep rebuilding the same components as they scale.",
+    "problem": "Every new screen gets designed and built from scratch, so nothing quite matches. There are three button styles, spacing changes page to page, and designers and engineers keep rebuilding the same components a little differently each time. It’s slow, and the product looks less finished than it actually is.",
+    "approach": [
+      {
+        "title": "Audit the drift",
+        "text": "We inventory what you’ve already got and find the duplicates and inconsistencies. You usually have fewer real components than you think, buried under a pile of one-off variations."
+      },
+      {
+        "title": "Build the system",
+        "text": "We design the tokens, components and patterns as one connected library, with states and accessibility baked in, then build them in code so design and engineering share one source. One place to change, and everywhere updates."
+      },
+      {
+        "title": "Document and hand off",
+        "text": "You get usage guidelines and onboarding so the team actually adopts it instead of drifting again. The system is yours, and it’s built to grow with the product."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from a brand identity?",
+        "a": "Brand identity defines how the company looks and sounds overall. A design system turns that into the actual buttons, forms and components your product is built from. Identity is the direction; the design system is the working parts."
+      },
+      {
+        "q": "Do we own the system and can our team extend it?",
+        "a": "Yes. You own the design files, the code and the documentation, and it’s built so your designers and engineers can add to it without us. That’s the point — no dependency on us to ship the next screen."
+      },
+      {
+        "q": "We’re small. Isn’t a design system overkill?",
+        "a": "It can be, and we’ll tell you if it is. A design system pays off once you’re building the same components repeatedly or more than one person touches the UI. Below that, we’ll scope something lighter."
+      }
+    ],
+    "metaDescription": "New Machine builds design systems — the component library, tokens and documentation that keep every screen consistent and make new ones faster to ship."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "social-media-management",
+    "name": "Social Media Management",
+    "icon": "share",
+    "tint": "#4a934e",
+    "outcome": "Consistent, on-brand content that keeps you in front of your audience.",
+    "description": "Posting consistently is hard when you're running a business. We plan, design and publish content that sounds like you, looks professional, and keeps your brand top-of-mind.",
+    "includes": [
+      "Monthly content calendar",
+      "Branded post & story design",
+      "Caption writing",
+      "Scheduling & publishing",
+      "Community engagement",
+      "Monthly performance report"
+    ],
+    "forWho": "Businesses that know they should be active on social media but don't have the time or team to do it well.",
+    "problem": "You know your business should show up on social every day, but the posts keep slipping because you are busy running everything else. When you do post, it feels rushed and off-brand. Weeks go quiet, and your audience forgets you exist.",
+    "approach": [
+      {
+        "title": "Plan in advance",
+        "text": "We build a monthly content calendar so nothing is posted at the last minute. You approve the plan before anything goes live."
+      },
+      {
+        "title": "Sound like you",
+        "text": "We write captions and design posts in your actual voice, not generic filler. Your feed looks professional and stays recognizably yours."
+      },
+      {
+        "title": "Publish and engage",
+        "text": "We schedule everything and reply to comments and messages so the account stays active. You get a monthly report on what people responded to."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How many posts do I get each month?",
+        "a": "It depends on the plan we agree on and the platforms you want to be on. We set the volume up front so the scope and pricing are clear before we start."
+      },
+      {
+        "q": "How long before I see results?",
+        "a": "Social builds slowly. Reach and engagement grow as we post consistently over months, not from a single viral post. We report the trend every month so you can see it moving."
+      },
+      {
+        "q": "Who owns the accounts and content?",
+        "a": "You do. Every profile, post, and asset stays yours, and you keep full access the whole time we work together and after."
+      }
+    ],
+    "metaDescription": "Social media management that keeps your brand consistent, on-brand, and in front of your audience without adding work to your plate."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "lead-generation",
+    "name": "Lead Funnels",
+    "icon": "magnet",
+    "tint": "#a9d896",
+    "outcome": "Turn the traffic you already have into captured, qualified leads your sales team can actually work.",
+    "description": "The layer that catches traffic and turns it into leads, wherever the traffic comes from. Ads, search and outbound bring people; this is the offer, the page and the qualification that convert them and hand only real fits to sales. Not a traffic source, the funnel underneath all of them.",
+    "includes": [
+      "Lead magnet & offer design",
+      "High-intent capture pages",
+      "Qualification & scoring logic",
+      "Instant routing to CRM & sales",
+      "Nurture entry & follow-up triggers",
+      "Funnel conversion reporting"
+    ],
+    "forWho": "Businesses that already have traffic from ads, SEO or outbound but watch most of it leave without becoming a lead.",
+    "problem": "You are paying to bring people in, but the funnel underneath leaks. There is no strong offer to capture them, no qualification to separate buyers from tire-kickers, and leads that do come in sit unrouted until they go cold. The traffic isn’t the problem; what happens after the click is.",
+    "approach": [
+      {
+        "title": "Offer first",
+        "text": "We start with who you want and the offer that makes them act, because targeting is worthless without a reason to respond. That strategy drives every campaign."
+      },
+      {
+        "title": "Focused landing pages",
+        "text": "We build dedicated pages tied to each campaign so visitors do one thing: inquire. No distractions, no sending paid traffic to a busy homepage."
+      },
+      {
+        "title": "Capture and route",
+        "text": "Leads are captured and sent straight to you or your CRM so nothing sits waiting. We optimize weekly and report transparently on cost and quality."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is ad spend included in your fee?",
+        "a": "No. Your ad budget is paid to the platforms and is separate from our management fee. We agree on both up front so there are no surprises."
+      },
+      {
+        "q": "How is this different from just running ads?",
+        "a": "Ads bring traffic; lead generation is built end to end around turning that traffic into qualified inquiries, with the offer, landing page, and follow-up routing all handled together."
+      },
+      {
+        "q": "When will leads start coming in?",
+        "a": "Campaigns can produce inquiries fairly quickly once live, but the first weeks are about testing and optimizing. We report weekly so you see cost and quality as it improves, and we keep the accounts and data in your name."
+      }
+    ],
+    "metaDescription": "Lead generation that fills your pipeline with qualified inquiries from people ready to buy, not just clicks and impressions."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "performance-ads",
+    "name": "Performance Ads",
+    "icon": "target",
+    "tint": "#8fc57f",
+    "outcome": "Ad spend that comes back as revenue, tracked to the dollar.",
+    "description": "Paid campaigns across search and social, built around a single question: does this ad make more money than it costs. We manage targeting, creative and budget so every dollar is accountable.",
+    "includes": [
+      "Channel & audience strategy",
+      "Ad creative & copywriting",
+      "Campaign setup & management",
+      "Conversion tracking & pixels",
+      "Weekly budget optimization",
+      "ROAS reporting dashboard"
+    ],
+    "forWho": "Businesses ready to put real budget behind growth and see exactly what it returns.",
+    "problem": "You have real budget to spend but no clear picture of what it earns back. Money goes into ads and you are left guessing whether it made anything. Without accountable tracking, every dollar feels like a gamble.",
+    "approach": [
+      {
+        "title": "Track everything",
+        "text": "We set up conversion tracking and pixels first so every dollar is tied to a result. If we cannot measure it, we do not run it."
+      },
+      {
+        "title": "Test the creative",
+        "text": "We write and design ads across search and social, then test them against each other. Budget follows whatever is actually converting."
+      },
+      {
+        "title": "Optimize weekly",
+        "text": "We adjust targeting and spend every week toward return, not vanity metrics. You get a ROAS dashboard showing exactly what the spend returned."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does your fee include the ad budget?",
+        "a": "No. What you spend on the platforms is separate from our management fee. We define both clearly before launch so you know your total commitment."
+      },
+      {
+        "q": "How soon will I see a return?",
+        "a": "Paid ads can move fast, but the first weeks go into testing creative and audiences to find what converts. Returns become clearer and steadier as we optimize, and we report ROAS honestly the whole way."
+      },
+      {
+        "q": "Do I keep access to the ad accounts and data?",
+        "a": "Yes. The ad accounts, pixels, and performance data are yours. You own them during our work together and keep them if we ever part ways."
+      }
+    ],
+    "metaDescription": "Performance ads across search and social, managed so every dollar of spend is tracked to the revenue it returns."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "seo",
+    "name": "SEO · AEO · GEO",
+    "icon": "rank",
+    "tint": "#a9d896",
+    "outcome": "Get found everywhere buyers search now: Google, AI answers, and the assistants they ask instead.",
+    "description": "Search isn’t just Google anymore. We optimize for all three: classic SEO to rank in results, AEO so you win answer boxes and featured snippets, and GEO so ChatGPT, Gemini and AI Overviews cite you. The foundation that makes you discoverable wherever the question gets asked.",
+    "includes": [
+      "Technical SEO audit",
+      "Keyword & buyer-question strategy",
+      "On-page & structured-data optimization",
+      "Answer engine optimization (AEO)",
+      "Generative engine visibility (GEO)",
+      "Link building & authority",
+      "Monthly search & AI-citation report"
+    ],
+    "forWho": "Businesses playing the long game who want to be found across search and AI answers, not just paying for every click.",
+    "problem": "You are paying for every visitor through ads, and the moment you stop paying, the traffic stops too. Meanwhile your customers are searching on Google and asking ChatGPT, and finding competitors in both. You want to be the result and the answer, without a meter running.",
+    "approach": [
+      {
+        "title": "Fix the foundation",
+        "text": "We start with a technical audit, site speed and structured data so both search engines and AI systems can actually read, understand and rank your pages. Nothing else works if the foundation is broken."
+      },
+      {
+        "title": "Rank and get cited",
+        "text": "We build a strategy around the exact questions your future customers type and ask. Then we optimize your pages to rank in search (SEO), win answer boxes (AEO), and get quoted inside AI assistants (GEO)."
+      },
+      {
+        "title": "Build authority",
+        "text": "We earn links and strengthen the signals both Google and AI models trust, so your visibility holds over time. You get a monthly report tracking rankings and AI citations alike."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What are AEO and GEO?",
+        "a": "AEO is answer engine optimization: getting you into featured snippets and answer boxes. GEO is generative engine optimization: getting you cited when someone asks ChatGPT, Gemini or Google’s AI Overviews. Both matter now because buyers ask AI before they scroll ten blue links."
+      },
+      {
+        "q": "How long until this works?",
+        "a": "Slower than ads, honestly. Search and AI visibility compound over months as pages gain authority and citations, but that traffic keeps arriving long after the work is done. We report monthly so you can watch it build."
+      },
+      {
+        "q": "Who owns the content and site changes?",
+        "a": "You do. Every page, optimization, and asset lives on your site and stays yours. We work transparently and hand over full access to everything we touch."
+      }
+    ],
+    "metaDescription": "SEO, AEO and GEO in one: rank on Google, win answer boxes, and get cited by ChatGPT, Gemini and AI Overviews. The foundation that makes you discoverable wherever buyers search."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "email-crm-automation",
+    "name": "Email & CRM Automation",
+    "icon": "mail",
+    "tint": "#67ad62",
+    "outcome": "Every lead followed up, every customer nurtured, without manual effort.",
+    "description": "We design the email flows and CRM automations that turn a one-time visitor into a repeat customer: welcome sequences, abandoned-cart recovery, re-engagement, all running in the background.",
+    "includes": [
+      "CRM setup & data hygiene",
+      "Lifecycle email sequences",
+      "Segmentation & personalization",
+      "Abandoned-cart & win-back flows",
+      "Automation workflow build",
+      "Open, click & revenue reporting"
+    ],
+    "forWho": "Businesses generating leads or customers who are currently going cold in a spreadsheet.",
+    "problem": "Leads come in and then just sit there, going cold in a spreadsheet or inbox. Customers buy once and you never hear from them again because no one has time to follow up by hand. Every missed follow-up is money quietly leaking out.",
+    "approach": [
+      {
+        "title": "Clean the data",
+        "text": "We set up your CRM and tidy the data first so automations fire on accurate information. Good flows fail on messy lists."
+      },
+      {
+        "title": "Build the flows",
+        "text": "We create the lifecycle sequences that do the follow-up for you: welcome, abandoned-cart recovery, and win-back. They run in the background around the clock."
+      },
+      {
+        "title": "Segment and refine",
+        "text": "We segment and personalize so people get messages that fit where they are. You get reporting on opens, clicks, and revenue so we can improve what works."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does the setup cover?",
+        "a": "It covers CRM setup, data cleanup, the automation workflows, and the email sequences themselves. We agree on the exact scope up front so pricing is clear before any build starts."
+      },
+      {
+        "q": "How soon will automation pay off?",
+        "a": "Once flows are live they work immediately on every new lead, but the compounding value shows over the following months as more contacts move through them. We report opens, clicks, and revenue so you see it."
+      },
+      {
+        "q": "Do I own the CRM, list, and automations?",
+        "a": "Yes. The CRM, your contact data, and every workflow are yours. You keep full access and ownership during our work and after."
+      }
+    ],
+    "metaDescription": "Email and CRM automation that follows up every lead and nurtures every customer automatically, with no manual effort."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "ugc-content-production",
+    "name": "UGC Content Production",
+    "icon": "mobile",
+    "tint": "#a9d896",
+    "outcome": "A steady stream of creator-style videos that look native to the feed and are built to test as ads.",
+    "description": "The ads that work now don’t look like ads. We source vetted creators, brief them properly, and produce short-form video that looks like a real person filmed it on their phone — made in batches you can test, rotate and scale across TikTok, Reels and Shorts.",
+    "includes": [
+      "Creator sourcing & vetting",
+      "Hooks, scripts & briefs",
+      "Batch short-form video production",
+      "Multiple variants for ad testing",
+      "Editing, captions & formatting",
+      "Monthly creative refresh"
+    ],
+    "forWho": "Brands running paid social who need a constant supply of native-looking video, not one polished spot a quarter.",
+    "problem": "Your polished, produced ads get scrolled past because they look like ads. The videos that actually convert look like a customer filmed them on their phone, and you can’t make those in-house at the pace paid social burns through creative. Run the same tired clips another week, and performance drops.",
+    "approach": [
+      {
+        "title": "Cast the right creators",
+        "text": "We source and vet creators who fit your product and actually look the part, then handle the contracts and coordination. You get people who match the brand, not whoever was cheapest."
+      },
+      {
+        "title": "Brief for the hook",
+        "text": "We write hooks, scripts and briefs built around what stops a thumb in the first two seconds. Good UGC isn’t luck — it’s a brief that gives the creator something worth filming."
+      },
+      {
+        "title": "Produce in batches to test",
+        "text": "We deliver video in batches with multiple variants, so you’re always testing and rotating instead of running one clip to death. As the ad platforms chew through creative, you’ve got fresh angles ready."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How is this different from Social Media Management?",
+        "a": "Social media management runs your own accounts — planning, posting, engaging. UGC production makes creator-style video built mainly to run as paid ads and be tested at volume. Some clients buy both; they do different jobs."
+      },
+      {
+        "q": "Does this include the ad spend and campaign management?",
+        "a": "No. This is the creative — the videos themselves. Running and optimizing them as ads is our Performance Ads service, which we can pair with it or leave to your team. The footage is yours either way."
+      },
+      {
+        "q": "How many videos do we get?",
+        "a": "It depends on the plan and the number of creators, and we agree the volume up front so scope and pricing are clear. UGC works on volume and rotation, so we’ll steer you toward enough variants to actually test with."
+      }
+    ],
+    "metaDescription": "New Machine produces UGC video — vetted creators, sharp briefs and batches of native-looking short-form built to test and rotate as paid social ads."
+  },
+  {
+    "stage": "Launch & Grow",
+    "slug": "ai-outbound-sdr",
+    "name": "AI Outbound / SDR",
+    "icon": "aiagent",
+    "tint": "#67ad62",
+    "outcome": "A steady flow of booked meetings from outbound that’s personalized and doesn’t burn your domain.",
+    "description": "Outbound still works — mass-blasting the same template doesn’t, and now it gets you flagged as spam. We build a signal-based outbound system: the right accounts, enriched and prioritized, reached with AI-personalized messages across email and LinkedIn, with the deliverability discipline that keeps you landing in the inbox.",
+    "includes": [
+      "Ideal-account list building & enrichment",
+      "Buying-signal & trigger setup",
+      "AI-personalized multi-channel sequences",
+      "Deliverability & domain warmup",
+      "Meeting booking & CRM handoff",
+      "Reply monitoring & human review"
+    ],
+    "forWho": "B2B teams who want predictable outbound pipeline without hiring and managing a room full of SDRs.",
+    "problem": "Outbound is either not happening or it’s a spray of identical templates that gets you marked as spam. Hiring SDRs is slow and expensive, and half their day goes to copy-paste research. Meanwhile spam filters have learned exactly what lazy AI outreach looks like, so the blast approach is actively burning your domain.",
+    "approach": [
+      {
+        "title": "Target on signals",
+        "text": "We build and enrich your account list, then wire up the buying signals worth acting on — a new hire, a funding round, a tech change. You reach people when there’s a reason to, not at random."
+      },
+      {
+        "title": "Personalize at volume",
+        "text": "AI drafts messages off real research about each account, and a person reviews before it sends. You get outreach that reads like you meant it, at a volume a human team couldn’t hit by hand."
+      },
+      {
+        "title": "Protect deliverability",
+        "text": "We handle domain warmup, sending limits and list hygiene so you land in the inbox instead of the spam folder. Sloppy deliverability kills outbound faster than bad copy, so we treat it as the foundation."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Isn’t AI outbound just spam?",
+        "a": "It is if you blast the same template at everyone — and that’s exactly what we don’t do. The point is fewer, better-targeted messages built on real signals and reviewed by a person, with deliverability protected. Done right, it’s the opposite of spam."
+      },
+      {
+        "q": "How is this different from Lead Generation?",
+        "a": "Lead generation here is mostly inbound — ads and landing pages that bring people to you. This is outbound: you reaching out to specific target accounts. Plenty of teams run both, and we’ll tell you which fits your motion."
+      },
+      {
+        "q": "Do we own the system and the data?",
+        "a": "Yes. The tools, the account data, the sequences and the domains are yours, set up in your accounts. If we stop working together, the system and the pipeline stay with you."
+      }
+    ],
+    "metaDescription": "New Machine builds AI outbound / SDR systems — signal-based targeting, AI-personalized multi-channel outreach and deliverability discipline that books meetings."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "ai-agents-automation",
+    "name": "AI Agents & Automation",
+    "icon": "aiagent",
+    "tint": "#4a934e",
+    "outcome": "Repetitive work handled by software, not another hire.",
+    "description": "Custom AI agents and workflow automations that handle support triage, data entry, reporting and follow-ups around the clock, built into the tools your team already uses.",
+    "includes": [
+      "Workflow & process audit",
+      "Custom AI agent design",
+      "Integration with existing tools",
+      "Human-in-the-loop safeguards",
+      "Automation of repetitive tasks",
+      "Ongoing monitoring & tuning"
+    ],
+    "forWho": "Growing teams drowning in manual work that software could be doing instead.",
+    "problem": "Your team spends hours every day on work software could handle: copying data between tools, triaging the same support tickets, chasing follow-ups. The obvious fix is another hire, but headcount is slow and expensive. Meanwhile the busywork keeps growing and your best people are stuck doing it.",
+    "approach": [
+      {
+        "title": "Audit first",
+        "text": "We map your actual workflows before building anything, so we automate the tasks that waste the most time. No agent gets built for work that doesn't need doing."
+      },
+      {
+        "title": "Built into your stack",
+        "text": "Agents live inside the tools your team already uses, not some new dashboard nobody opens. The work gets done where it already happens."
+      },
+      {
+        "title": "Human-in-the-loop",
+        "text": "You decide which actions run automatically and which pause for a person to approve. Nothing consequential happens without a checkpoint you control."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What access do you need to build the agents?",
+        "a": "We need access to the tools and workflows we're automating, granted at the permission level the work requires. We scope this with you up front, and you can revoke or narrow it at any time."
+      },
+      {
+        "q": "How do the safeguards actually work?",
+        "a": "Every automation has human-in-the-loop checkpoints where a person reviews or approves before an action runs. You set which steps are fully automatic and which require sign-off, so nothing risky happens unsupervised."
+      },
+      {
+        "q": "Do we own the agents once they're built?",
+        "a": "Yes. You own the systems, the automations and the data they run on. If we stop working together, everything stays with you and keeps running."
+      }
+    ],
+    "metaDescription": "AI Agents & Automation from New Machine handles support triage, data entry and follow-ups around the clock, inside the tools you already use."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "analytics-bi",
+    "name": "Analytics & BI Dashboards",
+    "icon": "dashboard",
+    "tint": "#35753a",
+    "outcome": "One source of truth for what's actually working.",
+    "description": "We connect your marketing, sales and product data into dashboards built for decisions, not vanity metrics. See what's driving revenue in real time, without exporting five spreadsheets a week.",
+    "includes": [
+      "Data source integration",
+      "Custom dashboard design",
+      "Revenue & funnel tracking",
+      "Automated reporting",
+      "KPI & goal alignment",
+      "Team training & handoff"
+    ],
+    "forWho": "Leadership teams making decisions on gut feel because the data lives in ten different tools.",
+    "problem": "Your numbers live in ten different tools and none of them agree. Every decision means exporting spreadsheets, stitching them together and hoping you got it right. By the time the picture is clear, the moment to act has passed.",
+    "approach": [
+      {
+        "title": "Connect the sources",
+        "text": "We pull your marketing, sales and product data into one place so the numbers finally reconcile. No more exporting and merging by hand."
+      },
+      {
+        "title": "Built for decisions",
+        "text": "Dashboards track revenue and funnel movement, not vanity metrics that look good and mean nothing. Every view answers a question you actually ask."
+      },
+      {
+        "title": "Handed off clean",
+        "text": "We train your team to read and trust the dashboards before we step back. You run on them daily without needing us in the room."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What data sources can you connect?",
+        "a": "We integrate the marketing, sales and product tools you already run on. Tell us your stack and we'll confirm what connects and how before any work starts."
+      },
+      {
+        "q": "Who owns the dashboards and the data?",
+        "a": "You do. The dashboards, the data pipelines and the underlying data are yours. We build them in your environment and hand them off with training."
+      },
+      {
+        "q": "How is this different from the reporting built into our tools?",
+        "a": "Native reports only see one tool's data. We combine every source into one source of truth, so you're comparing the whole funnel instead of guessing across disconnected views."
+      }
+    ],
+    "metaDescription": "Analytics & BI dashboards from New Machine unify your marketing, sales and product data into one source of truth built for real decisions."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "conversion-optimization",
+    "name": "Conversion Optimization",
+    "icon": "splittest",
+    "tint": "#8fc57f",
+    "outcome": "More revenue from the traffic you're already paying for.",
+    "description": "We test and refine the pages, flows and offers between a visitor and a sale, structured A/B testing, not guesswork. Small, compounding wins that add up to a materially better conversion rate.",
+    "includes": [
+      "Funnel & heatmap analysis",
+      "Hypothesis-driven A/B testing",
+      "Checkout & form optimization",
+      "Copy & offer testing",
+      "Statistical significance tracking",
+      "Monthly uplift reporting"
+    ],
+    "forWho": "Businesses with steady traffic who are ready to stop leaking revenue at the last step.",
+    "problem": "You're paying for traffic that shows up, looks around and leaves without buying. Every visitor who drops off at checkout or a form is money you already spent to acquire. Guessing at fixes and redesigning on a hunch usually makes it worse, not better.",
+    "approach": [
+      {
+        "title": "Evidence, not opinion",
+        "text": "We study funnels and heatmaps to find where visitors actually drop off. Changes come from what the data shows, not what anyone thinks looks nicer."
+      },
+      {
+        "title": "Structured testing",
+        "text": "Every change runs as a hypothesis-driven A/B test and holds until it reaches statistical significance. We keep what wins and drop what doesn't."
+      },
+      {
+        "title": "Compounding wins",
+        "text": "We stack small, proven improvements across pages, forms and offers. Each one is modest on its own, but they add up to a materially better conversion rate."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much traffic do we need for this to work?",
+        "a": "You need steady, consistent traffic so tests can reach statistical significance in a reasonable time. If volume is low, we'll tell you honestly and focus on the changes most likely to move the needle."
+      },
+      {
+        "q": "What access to our site and tools do you need?",
+        "a": "We need access to your analytics, your testing setup and the pages we're optimizing. We scope this with you up front, and the accounts and data stay yours throughout."
+      },
+      {
+        "q": "How is this different from a redesign?",
+        "a": "A redesign changes everything at once and hopes it helps. We test one change at a time against your real visitors, so you only keep what's proven to lift conversion."
+      }
+    ],
+    "metaDescription": "Conversion Optimization from New Machine uses structured A/B testing to turn the traffic you already pay for into more revenue."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "fractional-leadership",
+    "name": "Fractional CMO / CTO",
+    "icon": "helm",
+    "tint": "#a9d896",
+    "outcome": "Senior leadership steering growth and tech, without a full-time executive salary.",
+    "description": "An experienced CMO or CTO embedded in your business part-time, setting strategy, running the team and owning outcomes. Built for companies that have outgrown DIY but aren't ready for a full executive hire.",
+    "includes": [
+      "Growth or tech strategy ownership",
+      "Team leadership & hiring input",
+      "Roadmap & budget planning",
+      "Vendor & tool evaluation",
+      "Monthly leadership reporting",
+      "Board & stakeholder updates"
+    ],
+    "forWho": "Scaling businesses that need senior judgment on marketing or engineering, on a fractional budget.",
+    "problem": "You've outgrown running marketing or engineering yourself, but a full-time CMO or CTO is a salary you can't justify yet. So strategy drifts, the team lacks direction and big decisions get made without senior judgment. You need experience steering the ship, not another expensive full-time bet.",
+    "approach": [
+      {
+        "title": "Embedded, not advisory",
+        "text": "Your fractional leader runs the function part-time and owns outcomes, not just hands you a slide deck. They're in the work, leading the team and accountable for results."
+      },
+      {
+        "title": "Strategy plus execution",
+        "text": "They set the roadmap, plan the budget and make the calls on vendors and tools. Direction and delivery come from the same person."
+      },
+      {
+        "title": "Clear reporting",
+        "text": "You get monthly leadership reporting and stakeholder or board updates you can stand behind. Senior visibility without a full-time seat to fill."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How does a fractional engagement actually work?",
+        "a": "Your leader works part-time on a set scope and cadence agreed with you, embedded in your team and reporting on outcomes. You get senior judgment and ownership without a full-time salary or a long hiring process."
+      },
+      {
+        "q": "How is this different from a full-time executive hire?",
+        "a": "You get the same seniority and accountability at a fraction of the cost and commitment. It's built for companies that have outgrown DIY but aren't ready to commit to a full executive salary."
+      },
+      {
+        "q": "Will they lead our team and vendors directly?",
+        "a": "Yes. They own the function, give input on hiring, lead the existing team and evaluate vendors and tools. They act as your CMO or CTO, just on a fractional basis."
+      }
+    ],
+    "metaDescription": "Fractional CMO / CTO from New Machine puts senior marketing or tech leadership in your business part-time, without a full-time executive salary."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "ai-visibility-audit",
+    "name": "AI Visibility Audit",
+    "icon": "search",
+    "tint": "#67ad62",
+    "outcome": "Know exactly how AI search and assistants describe you, before your customers ask them.",
+    "description": "Buyers now ask ChatGPT, Gemini and Google's AI Overviews instead of scrolling ten blue links. We audit how those systems see, cite and rank your brand, then hand you a fix list to become the answer they give.",
+    "includes": [
+      "AI & LLM visibility scan",
+      "Prompt & citation testing",
+      "Share-of-answer vs. competitors",
+      "Structured data & entity gaps",
+      "Content & authority recommendations",
+      "Prioritized fix roadmap"
+    ],
+    "forWho": "Brands that want to show up when their next customer asks an AI instead of a search bar.",
+    "problem": "Your customers are asking ChatGPT, Gemini and Google's AI Overviews about your category instead of scrolling search results. You have no idea what those systems say about you, whether they cite you, or if they hand the answer to a competitor. Right now you're invisible in the exact place buyers are making up their minds.",
+    "approach": [
+      {
+        "title": "Test the assistants",
+        "text": "We run real prompts through the AI systems your buyers use and record how they describe, cite and rank you. You see exactly what customers see, not a guess."
+      },
+      {
+        "title": "Share of answer",
+        "text": "We measure how often you show up versus your competitors when buyers ask. You learn where you're winning the answer and where you're missing entirely."
+      },
+      {
+        "title": "Prioritized fix list",
+        "text": "You get a roadmap of the entity, structured-data and authority gaps to close, ranked by impact. Clear next steps, not a vague report."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What do you need from us to run the audit?",
+        "a": "Mostly just your brand details, competitors and the topics your buyers ask about. The audit tests public AI systems from the outside, so we need very little access to your own tools."
+      },
+      {
+        "q": "Do I get something I can actually act on?",
+        "a": "Yes. You get a prioritized fix roadmap covering content, structured data and authority gaps, ordered by impact. It's built to hand to your team or ours to execute."
+      },
+      {
+        "q": "How is this different from a normal SEO audit?",
+        "a": "A standard SEO audit checks how you rank in traditional search. This checks how AI assistants see, cite and describe you, which is a different system with different signals your buyers now rely on."
+      }
+    ],
+    "metaDescription": "An AI Visibility Audit from New Machine shows exactly how ChatGPT, Gemini and AI Overviews describe and cite your brand, with a prioritized fix list."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "seo-ai-campaigns",
+    "name": "SEO & AI Campaigns",
+    "icon": "rank",
+    "tint": "#8fc57f",
+    "outcome": "Rankings and AI citations that keep climbing month over month, once the foundation is set.",
+    "description": "The always-on engine, once the foundation is set. Where our SEO · AEO · GEO service makes you discoverable, this is the ongoing programme that keeps pushing: content velocity, digital PR and authority-building that climb you up the rankings and into more AI answers month over month, across Google and every assistant at once.",
+    "includes": [
+      "Search + generative-engine strategy",
+      "AI-assisted content production",
+      "On-page & structured-data optimization",
+      "Authority & citation building",
+      "Answer-engine (GEO/AEO) tuning",
+      "Monthly visibility & ranking report"
+    ],
+    "forWho": "Businesses that want to win both Google rankings and the AI answers replacing them.",
+    "problem": "Buyers now split their time between Google and AI assistants, and most campaigns only aim at one. You can rank on page one and still be missing from the AI answer that replaces the click. Running two separate efforts to cover both is slow, expensive and rarely joins up.",
+    "approach": [
+      {
+        "title": "One campaign, both worlds",
+        "text": "We build a single strategy that ranks in classic search and gets you cited inside AI answers. Content, structure and authority all point the same direction."
+      },
+      {
+        "title": "Structured to be cited",
+        "text": "On-page work and structured data make your content easy for both search engines and answer engines to read and quote. You're built to be the source they pick."
+      },
+      {
+        "title": "Authority that carries",
+        "text": "We build citations and authority signals that lift you in Google rankings and AI answers at once. The same groundwork works wherever buyers are looking."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What's the difference between SEO and generative-engine optimization here?",
+        "a": "SEO gets you ranking in traditional search results. Generative-engine optimization gets you cited inside AI answers from tools like ChatGPT and AI Overviews. This campaign does both in one effort instead of two disconnected ones."
+      },
+      {
+        "q": "Do we own the content and results?",
+        "a": "Yes. The content we produce and the authority you build are yours. Rankings and citations stay with your brand whether or not we keep working together."
+      },
+      {
+        "q": "How do you use AI in the content without hurting quality?",
+        "a": "We use AI to speed up production, but people direct the strategy and review everything before it ships. You get the pace of AI with human judgment on accuracy and voice."
+      }
+    ],
+    "metaDescription": "SEO & AI Campaigns from New Machine win Google rankings and AI assistant citations in one campaign, so you show up wherever buyers look."
+  },
+  {
+    "stage": "Scale · Beyond",
+    "slug": "gtm-engineering-revops",
+    "name": "GTM Engineering & RevOps",
+    "icon": "zap",
+    "tint": "#4a934e",
+    "outcome": "A revenue engine where leads route, data stays clean, and you can see what’s actually driving pipeline.",
+    "description": "As you scale, the go-to-market machine turns into duct tape: leads fall through the cracks, the CRM is a mess, and nobody agrees on the numbers. We engineer the plumbing — enrichment, routing, scoring, attribution and reporting — so the revenue engine runs on systems instead of someone remembering to update a spreadsheet.",
+    "includes": [
+      "CRM architecture & data cleanup",
+      "Lead routing, scoring & enrichment",
+      "Marketing & sales tool integration",
+      "Attribution & pipeline reporting",
+      "Workflow & handoff automation",
+      "RevOps documentation & training"
+    ],
+    "forWho": "Scaling teams whose go-to-market has outgrown a founder-run CRM and a pile of disconnected tools.",
+    "problem": "Your go-to-market runs on duct tape. Leads sit unrouted, the CRM is full of duplicates and blanks, marketing and sales tools don’t talk to each other, and every pipeline number gets argued over. It worked when the founder ran it by hand, but at your size the cracks are leaking real revenue.",
+    "approach": [
+      {
+        "title": "Fix the data first",
+        "text": "We clean up the CRM and get the data trustworthy before automating anything on top of it. Automation built on messy data just moves the mess around faster."
+      },
+      {
+        "title": "Engineer the flow",
+        "text": "We build the routing, scoring, enrichment and integrations so leads reach the right place and the tools finally talk to each other. The handoffs that used to depend on someone remembering now just happen."
+      },
+      {
+        "title": "Make it measurable",
+        "text": "We set up attribution and pipeline reporting everyone can agree on, then document it and train the team. You run the engine on systems, not on tribal knowledge and a founder’s memory."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What’s the difference between GTM engineering and RevOps?",
+        "a": "RevOps keeps your existing tools and process running well. GTM engineering builds the new infrastructure — the pipelines, routing and integrations — underneath it. This service does both: build what’s missing, then operate it cleanly."
+      },
+      {
+        "q": "How is this different from GTM Strategy?",
+        "a": "GTM strategy decides who you sell to and how. This builds and runs the systems that execute it — the CRM, routing, data and reporting. Strategy is the plan; this is the engine that runs it."
+      },
+      {
+        "q": "Do we own the systems and data?",
+        "a": "Yes. Everything is built in your accounts — your CRM, your tools, your data. We document it and train your team so you’re not dependent on us to keep it running."
+      }
+    ],
+    "metaDescription": "New Machine’s GTM Engineering & RevOps builds the revenue plumbing — clean CRM, lead routing, enrichment, attribution and reporting — that runs on systems, not spreadsheets."
+  }
+]

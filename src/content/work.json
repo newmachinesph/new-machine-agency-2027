@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "homeservice-marketplace",
+    "client": "Homeservice Marketplace",
+    "industry": "Marketplace · Philippines",
+    "service": "Product Design + Full-Stack Build",
+    "services": ["Product Design", "Full-Stack Development"],
+    "year": "2026",
+    "timeline": "10 weeks to MVP launch",
+    "story": "A two-sided booking platform replaced the spreadsheets and group chats an operator used to match homeowners with vetted pros.",
+    "metric": "4.0×",
+    "metricLabel": "completed bookings per month within 90 days",
+    "summary": "A home-services operator was matching homeowners to plumbers, electricians and cleaners by hand: Facebook messages, a shared spreadsheet, and a lot of phone tag. We built the two-sided marketplace that automates the match, the schedule and the payment, and the same demand started converting into bookings that actually completed.",
+    "challenge": "Every job was coordinated manually. A homeowner messaged the page, someone checked a spreadsheet for an available pro, and three separate chats tried to agree on a time. Providers no-showed with no accountability, payment happened off-platform, and nobody could tell which requests turned into finished jobs. Growth meant hiring more coordinators, not serving more customers.",
+    "approach": [
+      {
+        "title": "Book, schedule, pay in one flow",
+        "text": "A homeowner picks a service, sees real availability, and books in a single flow, with a vetted provider assigned automatically instead of coordinated across three chat threads."
+      },
+      {
+        "title": "Providers people can trust",
+        "text": "An onboarding and verification flow gates who gets listed, and post-job ratings keep the good providers visible, so the marketplace curates quality instead of just listing everyone."
+      },
+      {
+        "title": "Payments and accountability on-platform",
+        "text": "Payment, confirmations and cancellations all run through the platform, so every request is traceable end to end and a no-show finally leaves a paper trail."
+      }
+    ],
+    "outcome": "Within ninety days of launch, completed bookings were running at 4× the manual baseline, from around 46 a month to 186, while the coordination team stayed the same size. Booking completion climbed from 61% to 88%, the time from request to a matched provider fell from about a day to minutes, and repeat bookings more than doubled.",
+    "deliverables": [
+      "Two-sided marketplace web app",
+      "Provider onboarding & verification flow",
+      "In-app booking & scheduling engine",
+      "Online payments integration",
+      "Ratings & reviews system",
+      "Admin operations dashboard"
+    ],
+    "quote": {
+      "text": "We were drowning in group chats and a spreadsheet. Now a booking books itself, the right pro shows up, and I can actually see what's happening. It feels like a company instead of a hustle.",
+      "name": "Nadia Reyes",
+      "role": "Founder, Homeservice Marketplace"
+    },
+    "series": {
+      "label": "Completed bookings per month",
+      "unit": "bookings",
+      "goodDirection": "up",
+      "launchIndex": 6,
+      "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "values": [42, 45, 44, 48, 46, 47, 95, 132, 158, 171, 179, 186]
+    },
+    "kpis": [
+      {
+        "label": "Completed bookings / month",
+        "before": 46,
+        "after": 186,
+        "beforeLabel": "46",
+        "afterLabel": "186",
+        "delta": "4.0×",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Booking completion rate",
+        "before": 61,
+        "after": 88,
+        "beforeLabel": "61%",
+        "afterLabel": "88%",
+        "delta": "+27 pts",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Time to matched provider",
+        "before": 1440,
+        "after": 9,
+        "beforeLabel": "~1 day",
+        "afterLabel": "9 min",
+        "delta": "−99%",
+        "goodDirection": "down"
+      },
+      {
+        "label": "Repeat booking rate",
+        "before": 18,
+        "after": 44,
+        "beforeLabel": "18%",
+        "afterLabel": "44%",
+        "delta": "+26 pts",
+        "goodDirection": "up"
+      }
+    ]
+  },
+  {
+    "slug": "reddit-brand-intelligence",
+    "client": "AI-Powered Reddit Brand Intelligence",
+    "industry": "AI SaaS · Global",
+    "service": "AI Engineering + Data Pipeline",
+    "services": ["AI Engineering", "Data Pipeline"],
+    "year": "2026",
+    "timeline": "8 weeks to first insights",
+    "story": "An always-on pipeline reads Reddit for a brand, classifies every mention, and surfaces the conversations worth acting on, instead of an analyst skimming threads by hand.",
+    "metric": "10×",
+    "metricLabel": "actionable brand mentions surfaced each week",
+    "summary": "A consumer brand was monitoring Reddit the manual way: one analyst, a handful of subreddits, a lot of missed threads. We built an AI pipeline that ingests the conversation at scale, classifies sentiment and intent, and scores each mention for how much it matters, so the team acts on ten times the signal without ten times the work.",
+    "challenge": "Reddit was where the brand's buyers argued, complained and recommended, and almost none of it was being seen. An analyst could watch five subreddits and still miss the thread that turned into a PR headache two days later. There was no way to separate a buying-intent question from noise, no sentiment trend to brief on, and no alert when something started to spread.",
+    "approach": [
+      {
+        "title": "Ingest the whole conversation",
+        "text": "A streaming pipeline pulls posts and comments across every relevant subreddit continuously, so coverage stops depending on which tabs someone remembered to open."
+      },
+      {
+        "title": "Classify with an LLM, score for priority",
+        "text": "Each mention is tagged for sentiment and intent, then scored on reach and urgency, so a spreading complaint or a buying-intent question rises to the top instead of drowning in the feed."
+      },
+      {
+        "title": "Alerts and a living dashboard",
+        "text": "High-priority mentions fire a Slack alert within minutes, and a topic-and-sentiment dashboard turns the week's chatter into a trend the team can actually brief on."
+      }
+    ],
+    "outcome": "Coverage went from five subreddits to more than two hundred, and actionable mentions surfaced each week rose roughly tenfold, from about 13 to 130, with far less analyst time. The time to flag an emerging brand risk collapsed from a day or two to about fifteen minutes, and weekly reporting that used to eat a morning now assembles itself.",
+    "deliverables": [
+      "Reddit ingestion & streaming pipeline",
+      "LLM sentiment & intent classification",
+      "Relevance & priority scoring model",
+      "Slack + email alerting",
+      "Topic & sentiment trend dashboard",
+      "Automated weekly intelligence report"
+    ],
+    "quote": {
+      "text": "We used to find out about the bad threads after they'd already spread. Now they hit our Slack within minutes, ranked by how much they matter. It turned brand monitoring from guesswork into something we can actually staff.",
+      "name": "Daniel Cruz",
+      "role": "Head of Brand"
+    },
+    "series": {
+      "label": "Actionable mentions surfaced per week",
+      "unit": "mentions",
+      "goodDirection": "up",
+      "launchIndex": 6,
+      "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "values": [12, 14, 11, 13, 15, 12, 74, 98, 116, 124, 129, 132]
+    },
+    "kpis": [
+      {
+        "label": "Actionable mentions / week",
+        "before": 13,
+        "after": 130,
+        "beforeLabel": "13",
+        "afterLabel": "130",
+        "delta": "10×",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Subreddits monitored",
+        "before": 5,
+        "after": 220,
+        "beforeLabel": "5",
+        "afterLabel": "220",
+        "delta": "44×",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Time to flag a brand risk",
+        "before": 2880,
+        "after": 15,
+        "beforeLabel": "~2 days",
+        "afterLabel": "15 min",
+        "delta": "−99%",
+        "goodDirection": "down"
+      },
+      {
+        "label": "Analyst hours / week",
+        "before": 20,
+        "after": 3,
+        "beforeLabel": "20h",
+        "afterLabel": "3h",
+        "delta": "−85%",
+        "goodDirection": "down"
+      }
+    ]
+  },
+  {
+    "slug": "hardware-store-ims",
+    "client": "Hardware Store IMS",
+    "industry": "Retail · Philippines",
+    "service": "Custom Software + Inventory Automation",
+    "services": ["Custom Software", "Inventory Automation"],
+    "year": "2026",
+    "timeline": "7 weeks to rollout",
+    "story": "A barcode-driven inventory system replaced the paper stock cards and end-of-day guesswork a hardware store ran on.",
+    "metric": "−81%",
+    "metricLabel": "stockouts per month after rollout",
+    "summary": "A hardware store was losing sales it never saw. Fast-moving items ran out while dead stock tied up the shelf and the cash. Counts were done on paper, reorders on instinct. We built an inventory management system that tracks every item in real time and reorders before the shelf goes empty, and the stockouts that were quietly costing sales fell off a cliff.",
+    "challenge": "Stock levels lived on paper cards and in the owner's head. Bestsellers ran out between manual counts, so customers walked; meanwhile capital sat frozen in items that hadn't moved in a year. A full count took a day and was wrong by the time it finished, and there was no signal to reorder until a shelf was already bare.",
+    "approach": [
+      {
+        "title": "Every item, tracked in real time",
+        "text": "Barcode intake and point-of-sale updates keep a live count of every SKU, so the number on the screen matches the number on the shelf instead of a week-old paper card."
+      },
+      {
+        "title": "Reorder before the shelf empties",
+        "text": "Per-item thresholds trigger low-stock alerts and draft purchase orders, so fast movers get reordered on time and buying stops running on gut feel."
+      },
+      {
+        "title": "See what's stuck, free the cash",
+        "text": "Aging and sales-velocity reports surface dead stock and slow movers, turning frozen capital back into shelf space that actually sells."
+      }
+    ],
+    "outcome": "Two months after rollout, stockouts had fallen 81%, from around 58 a month to 11, while inventory accuracy climbed from 72% to 98%. A full stock count went from a full day to under an hour, and roughly two-thirds of the capital that had been frozen in dead stock was freed back into product that moves.",
+    "deliverables": [
+      "Barcode-based stock intake",
+      "Real-time inventory tracking",
+      "Low-stock alerts & reorder points",
+      "Supplier & purchase-order management",
+      "Point-of-sale integration",
+      "Sales & inventory reporting dashboard"
+    ],
+    "quote": {
+      "text": "I used to reorder by walking the aisles and hoping. Now the system tells me what's running low before it's gone and what's just sitting there eating cash. We stopped running out of the things people actually come in for.",
+      "name": "Marco Villanueva",
+      "role": "Owner, Hardware Store IMS"
+    },
+    "series": {
+      "label": "Stockouts per month",
+      "unit": "stockouts",
+      "goodDirection": "down",
+      "launchIndex": 6,
+      "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "values": [58, 62, 55, 60, 57, 59, 41, 28, 19, 14, 12, 11]
+    },
+    "kpis": [
+      {
+        "label": "Stockouts / month",
+        "before": 58,
+        "after": 11,
+        "beforeLabel": "58",
+        "afterLabel": "11",
+        "delta": "−81%",
+        "goodDirection": "down"
+      },
+      {
+        "label": "Inventory accuracy",
+        "before": 72,
+        "after": 98,
+        "beforeLabel": "72%",
+        "afterLabel": "98%",
+        "delta": "+26 pts",
+        "goodDirection": "up"
+      },
+      {
+        "label": "Full stock count time",
+        "before": 480,
+        "after": 45,
+        "beforeLabel": "8h",
+        "afterLabel": "45 min",
+        "delta": "−91%",
+        "goodDirection": "down"
+      },
+      {
+        "label": "Capital in dead stock",
+        "before": 1200000,
+        "after": 380000,
+        "beforeLabel": "₱1.2M",
+        "afterLabel": "₱380k",
+        "delta": "−68%",
+        "goodDirection": "down"
+      }
+    ]
+  }
+]
